@@ -1,0 +1,17 @@
+---
+description: Produkcioni deploy javnog marketing sajta (ridelogger-site)
+globs: "**/*"
+---
+
+# Deploy (ridelogger-site)
+
+Isti sadržaj u repou: **`docs/DEPLOY_PRODUCTION.md`**.
+
+## Kratak tok
+
+1. Build u Dockeru: `docker exec -e PUBLIC_APP_URL=https://app.servisna-knjizica.com sk-site sh -c 'cd /app && npm run build'`
+2. Rsync `dist/` na server: `root@159.89.22.200:/var/www/ridelogger-site/`
+3. `chown -R www-data:www-data /var/www/ridelogger-site`
+4. Apache `DocumentRoot` za `www.servisna-knjizica.com`: `/var/www/ridelogger-site` (HTTP + HTTPS vhostovi u `sites-available/servisna-knjizica.com*.conf`)
+
+Posle izmene vhosta: `apache2ctl configtest && systemctl reload apache2`.

@@ -1,0 +1,134 @@
+{
+	"meta": {
+		"title": "Digitalna servisna knjižica",
+		"description": "Pratite gorivo, servise, podsetnike i troškove na jednom mestu. Za vozače koji žele preglednost bez tabela."
+	},
+	"nav": {
+		"home": "Početna",
+		"openApp": "Otvori aplikaciju",
+		"privacy": "Privatnost",
+		"cookies": "Kolačići"
+	},
+	"hero": {
+		"eyebrow": "Održavanje i troškovi",
+		"headline": "Istorija vozila, konačno na jednom mestu.",
+		"sub": "Beležite servise, gorivo i troškove uz podsetnike koji pomažu da izbegnete skupa iznenađenja.",
+		"primaryCta": "Otvori web aplikaciju",
+		"secondaryCta": "Kako funkcioniše",
+		"placeholderTitle": "Hero vizuel",
+		"placeholderBody": "Slika još nije spremna: dodajte generisani hero u media/generated/ (task 0021), zatim ga integrišite ovde.",
+		"imageAlt": "Ilustracija proizvoda: desktop kontrolna tabla i mobilna aplikacija za vozila, troškove i podsetnike na servis."
+	},
+	"trust": {
+		"title": "Dizajnirano za jasnoću",
+		"items": [
+			{
+				"title": "Više vozila",
+				"detail": "Svakodnevni auto, projekat iz garaže ili par vozila u porodici — svako zadržava svoju priču urednom."
+			},
+			{
+				"title": "Podsetnici koji štede živce",
+				"detail": "Servis, registracija, osiguranje — blagi trzaji pre nego rok postane skup problem."
+			},
+			{
+				"title": "Gorivo i troškovi u istom ritmu",
+				"detail": "Točenja i troškovi se slažu u jasan pregled — bez akrobacija u tabelama."
+			},
+			{
+				"title": "Vaši podaci, vaša pravila",
+				"detail": "Jasni izbori privatnosti i politika koja se zaista čita, ne samo potvrđuje."
+			}
+		]
+	},
+	"problem": {
+		"title": "Od rasutih beleški do jasne evidencije",
+		"problemTitle": "Problem",
+		"problemBody": "Računi, sveske i tabele lako izađu iz takta. Istorija se izgubi pri prodaji ili jednostavno zaboravite šta je urađeno.",
+		"solutionTitle": "Rešenje",
+		"solutionBody": "Strukturisan servisni zapis vezan za vaš nalog: unosi za sekunde, kontekst uz njih, podsetnici pre isteka rokova.",
+		"imageAlt": "Ilustracija: neuredni računi i beleške naspram organizovane mobilne aplikacije sa istorijom servisa i troškovima goriva."
+	},
+	"how": {
+		"title": "Kako funkcioniše",
+		"lead": "Tri jednostavna koraka — posle servisa ili točenja ubacite par stvari u telefon i evidencija ostaje čista.",
+		"steps": [
+			{
+				"title": "Napravite profil",
+				"body": "Registrujte se i dodajte jedno ili više vozila sa onim što već znate — marka, model, tablica, kilometraža, šta vam pomaže.",
+				"tip": "Detalje uvek možete naknadno; važno je da krenite jednostavno i zadržite naviku."
+			},
+			{
+				"title": "Beležite bitno",
+				"body": "Gorivo, servis, popravke, putarine, osiguranje — troškove i kilometražu u hodu, sa računara ili telefona.",
+				"tip": "Unos odmah posle radionice ili pumpe pobedi „uradiću uveče“ skoro uvek."
+			},
+			{
+				"title": "Ostanite ispred",
+				"body": "Uključite podsetnike za male i velike servise, registraciju, vinjetu, kasko — šta ne želite da jurite u poslednji čas.",
+				"tip": "Podsetnici su tu da pomognu, ne da gnjave — lako ih prilagodite sebi."
+			}
+		]
+	},
+	"features": {
+		"title": "Šta možete da radite",
+		"items": [
+			{
+				"title": "Istorija servisa",
+				"body": "Vremenska linija održavanja i popravki sa beleškama i fajlovima kad zatreba."
+			},
+			{
+				"title": "Gorivo i potrošnja",
+				"body": "Pratite točenja i trendove da ranije primetite promene."
+			},
+			{
+				"title": "Troškovi na jednom mestu",
+				"body": "Pregled kategorija umesto potrage po porukama i PDF-ovima."
+			},
+			{
+				"title": "Pogodno za predaju",
+				"body": "Kod prodaje evidencija može da ide sa vozilom—čisto i potpuno."
+			}
+		]
+	},
+	"showcase": {
+		"title": "Pogled u aplikaciju",
+		"body": "Trenutno web iskustvo je optimizovano za brz unos na računaru i telefonu—isti nalog, dosledni podaci.",
+		"wideAlt": "Servisna Knjižica web aplikacija na širokom ekranu",
+		"narrowAlt": "Servisna Knjižica web aplikacija na uskom mobilnom prikazu"
+	},
+	"security": {
+		"title": "Vaši podaci, vaša kontrola",
+		"body": "Pažljivo pristupamo podacima naloga i vozila: moderna bezbednost prenosa, kontrola pristupa i jasna pravila. Detalji su u Politici privatnosti.",
+		"imageAlt": "Ilustracija: dokumenti i korisnički podaci zaštićeni štitom i katancom, uz suptilne oblak i mrežne elemente."
+	},
+	"testimonials": {
+		"title": "Šta kažu vozači",
+		"items": [
+			{
+				"quote": "Papirne beleške i Excel nisu pratile tempo posla. Sada je sve na jednom mestu i uvek dostupno.",
+				"author": "Miloš, menadžer ljudskih resursa"
+			},
+			{
+				"quote": "Podsetnici su bili prekretnica—mali servis, veliki servis, vinjeta, kasko. Aplikacija me podseti pre roka.",
+				"author": "Tijana, IT inženjerka"
+			},
+			{
+				"quote": "Pratim restauraciju iz hobija. Mnogo je lakše pregledati troškove i do tada obavljen posao.",
+				"author": "Momčilo, dizajner"
+			},
+			{
+				"quote": "Jednostavno, transparentno—odgovara načinu na koji volim da ostanem organizovana, bar kad je auto u pitanju.",
+				"author": "Jovana, menadžer prodaje"
+			}
+		]
+	},
+	"cta": {
+		"title": "Počnite za nekoliko minuta",
+		"body": "Koristite web aplikaciju na uređaju koji već imate—nije potrebna instalacija za start.",
+		"button": "Otvori web aplikaciju"
+	},
+	"footer": {
+		"tagline": "Servisna knjižica za ljude koji stvarno voze.",
+		"note": "Nazivi proizvoda i dostupnost se mogu menjati; web aplikacija ostaje glavni ulaz."
+	}
+}

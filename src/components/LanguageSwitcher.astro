@@ -1,0 +1,50 @@
+---
+import { LOCALES, LOCALE_LABELS, LOCALE_SHORT, type Locale } from '../i18n/config';
+
+interface Props {
+	locale: Locale;
+}
+
+const { locale } = Astro.props;
+
+const pathname = Astro.url.pathname.replace(/\/+$/, '');
+const segments = pathname.split('/').filter(Boolean);
+const maybeLocale = segments[0];
+const rest = (LOCALES as readonly string[]).includes(maybeLocale ?? '')
+	? segments.slice(1).join('/')
+	: segments.join('/');
+
+function hrefFor(loc: Locale): string {
+	const tail = rest ? `${rest}/` : '';
+	return `/${loc}/${tail}`;
+}
+---
+
+<details class="lang-switcher">
+	<summary aria-label={LOCALE_LABELS[locale]}>
+		<span class="lang-switcher__label lang-switcher__label--full">{LOCALE_LABELS[locale]}</span>
+		<span class="lang-switcher__label lang-switcher__label--short" aria-hidden="true">{LOCALE_SHORT[locale]}</span>
+	</summary>
+	<div class="lang-switcher__panel" role="navigation" aria-label="Language">
+		{
+			LOCALES.map((loc) => (
+				<a href={hrefFor(loc)} hreflang={loc} aria-current={loc === locale ? 'page' : undefined}>
+					<span class="lang-switcher__label lang-switcher__label--full">{LOCALE_LABELS[loc]}</span>
+					<span class="lang-switcher__label lang-switcher__label--short" aria-hidden="true">{LOCALE_SHORT[loc]}</span>
+				</a>
+			))
+		}
+	</div>
+</details>
+
+<script is:inline>
+	document.addEventListener('click', function (e) {
+		var t = e.target;
+		if (!(t instanceof Node)) return;
+		document.querySelectorAll('details.lang-switcher[open]').forEach(function (el) {
+			if (!el.contains(t)) {
+				el.removeAttribute('open');
+			}
+		});
+	});
+</script>

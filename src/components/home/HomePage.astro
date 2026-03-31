@@ -1,0 +1,193 @@
+---
+import type { HomeMessages } from '../../types/home';
+import type { Locale } from '../../i18n/config';
+import { brandName } from '../../i18n/config';
+import { getAppUrl } from '../../config/public';
+import TrustStrip from './TrustStrip.astro';
+import HowItWorks from './HowItWorks.astro';
+
+interface Props {
+	locale: Locale;
+	home: HomeMessages;
+}
+
+const { locale, home } = Astro.props;
+const brand = brandName(locale);
+
+/**
+ * Same people/photos as legacy `landing_page.blade.php` (ref1→t1 … ref4→t3).
+ * Filenames avoid `t2.jpg`-style paths — some dev setups returned 404 for those.
+ */
+const testimonialAvatars = [
+	'/images/testimonials/milos.jpg',
+	'/images/testimonials/tijana.jpg',
+	'/images/testimonials/momcilo.jpg',
+	'/images/testimonials/jovana.jpg',
+];
+---
+
+<section class="hero">
+	<div class="shell hero__grid">
+		<div>
+			<div class="hero__eyebrow">{home.hero.eyebrow}</div>
+			<h1>{home.hero.headline}</h1>
+			<p class="lead">{home.hero.sub}</p>
+			<div class="hero__actions">
+				<a class="btn btn--primary" href={getAppUrl()} rel="noopener">{home.hero.primaryCta}</a>
+				<a class="btn btn--ghost" href="#how">{home.hero.secondaryCta}</a>
+			</div>
+			<p class="muted" style="margin-top: 1rem; font-size: 0.95rem">
+				{brand} — {home.meta.description}
+			</p>
+		</div>
+		<div class="hero__art hero__art--image">
+			<img
+				src="/images/home-hero.jpg"
+				width="1024"
+				height="682"
+				alt={home.hero.imageAlt}
+				loading="eager"
+				fetchpriority="high"
+				decoding="async"
+			/>
+		</div>
+	</div>
+</section>
+
+<section class="section section--trust" aria-labelledby="trust-title">
+	<div class="shell">
+		<h2 id="trust-title">{home.trust.title}</h2>
+		<TrustStrip items={home.trust.items} />
+	</div>
+</section>
+
+<section class="section" aria-labelledby="problem-title">
+	<div class="shell">
+		<h2 id="problem-title">{home.problem.title}</h2>
+		<figure class="problem-figure">
+			<img
+				src="/images/problem-solution.jpg"
+				width="1024"
+				height="682"
+				alt={home.problem.imageAlt}
+				loading="lazy"
+				decoding="async"
+			/>
+		</figure>
+		<div class="split">
+			<div class="card">
+				<h3 style="margin: 0 0 0.5rem">{home.problem.problemTitle}</h3>
+				<p class="muted" style="margin: 0">{home.problem.problemBody}</p>
+			</div>
+			<div class="card">
+				<h3 style="margin: 0 0 0.5rem">{home.problem.solutionTitle}</h3>
+				<p class="muted" style="margin: 0">{home.problem.solutionBody}</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section section--how" id="how" aria-labelledby="how-title">
+	<div class="shell">
+		<h2 id="how-title">{home.how.title}</h2>
+		<p class="how__lead">{home.how.lead}</p>
+		<HowItWorks steps={home.how.steps} />
+	</div>
+</section>
+
+<section class="section">
+	<div class="shell">
+		<h2>{home.features.title}</h2>
+		<div class="features">
+			{
+				home.features.items.map((f) => (
+					<div class="card">
+						<h3 style="margin: 0 0 0.5rem">{f.title}</h3>
+						<p class="muted" style="margin: 0">
+							{f.body}
+						</p>
+					</div>
+				))
+			}
+		</div>
+	</div>
+</section>
+
+<section class="section">
+	<div class="shell">
+		<h2>{home.showcase.title}</h2>
+		<p class="muted" style="margin-top: 0">{home.showcase.body}</p>
+		<div class="showcase__grid" style="margin-top: 1rem">
+			<div class="frame">
+				<img src="/pwa-screenshots/wide.jpg" alt={home.showcase.wideAlt} loading="lazy" width="1024" height="540" />
+			</div>
+			<div class="frame">
+				<img
+					src="/pwa-screenshots/narrow.jpg"
+					alt={home.showcase.narrowAlt}
+					loading="lazy"
+					width="682"
+					height="1024"
+				/>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="section" aria-labelledby="security-title">
+	<div class="shell">
+		<div class="card">
+			<h2 id="security-title" style="margin-top: 0">{home.security.title}</h2>
+			<figure class="problem-figure">
+				<img
+					src="/images/security.jpg"
+					width="1024"
+					height="682"
+					alt={home.security.imageAlt}
+					loading="lazy"
+					decoding="async"
+				/>
+			</figure>
+			<p class="muted" style="margin: 0">{home.security.body}</p>
+		</div>
+	</div>
+</section>
+
+<section class="section" aria-labelledby="testimonials-title">
+	<div class="shell">
+		<h2 id="testimonials-title">{home.testimonials.title}</h2>
+		<div class="testimonials">
+			{
+				home.testimonials.items.map((t, i) => (
+					<figure class="card quote">
+						<div class="quote__header">
+							<img
+								class="quote__avatar"
+								src={testimonialAvatars[i] ?? testimonialAvatars[0]}
+								alt=""
+								width="48"
+								height="48"
+								loading="lazy"
+								decoding="async"
+							/>
+						</div>
+						<blockquote cite="https://www.servisna-knjizica.com" style="margin: 0">
+							“{t.quote}”
+						</blockquote>
+						<footer>— {t.author}</footer>
+					</figure>
+				))
+			}
+		</div>
+	</div>
+</section>
+
+<section class="section">
+	<div class="shell">
+		<div class="cta-band">
+			<h2 style="margin: 0 0 0.5rem">{home.cta.title}</h2>
+			<p style="margin: 0 0 1rem; opacity: 0.95">{home.cta.body}</p>
+			<a class="btn btn--primary" href={getAppUrl()} rel="noopener">{home.cta.button}</a>
+		</div>
+	</div>
+</section>

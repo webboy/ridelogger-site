@@ -1,0 +1,31 @@
+---
+import type { HomeMessages } from '../types/home';
+import type { Locale } from '../i18n/config';
+import { brandName } from '../i18n/config';
+import { getAppUrl } from '../config/public';
+import LanguageSwitcher from './LanguageSwitcher.astro';
+
+interface Props {
+	locale: Locale;
+	home: HomeMessages;
+}
+
+const { locale, home } = Astro.props;
+const brand = brandName(locale);
+---
+
+<header class="site-header">
+	<a class="skip-link" href="#main">Skip to content</a>
+	<div class="shell site-header__inner">
+		<a class="brand" href={`/${locale}/`}>
+			<img src="/brand/caloboo.png" width="40" height="40" alt="" />
+			<span class="brand__name">{brand}</span>
+		</a>
+		<div class="site-header__cta">
+			<a class="btn btn--primary" href={getAppUrl()} rel="noopener">{home.nav.openApp}</a>
+		</div>
+		<div class="site-header__tools">
+			<LanguageSwitcher locale={locale} />
+		</div>
+	</div>
+</header>

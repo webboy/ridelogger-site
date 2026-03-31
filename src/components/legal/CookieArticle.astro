@@ -1,0 +1,69 @@
+---
+import type { LegalBundle } from '../../i18n/loadLegal';
+import { replacePrivacyUrl } from '../../utils/legalReplace';
+
+interface Props {
+	legal: LegalBundle;
+	privacyUrl: string;
+}
+
+const { legal, privacyUrl } = Astro.props;
+const c = legal.cookie_policy;
+
+const intro = replacePrivacyUrl(c.intro_note, privacyUrl);
+const manage = replacePrivacyUrl(c.manage_body, privacyUrl);
+---
+
+<article class="legal-article">
+	<p class="legal-meta">{c.updated_line}</p>
+	<h1>{c.h1}</h1>
+	<p class="muted" set:html={intro} />
+
+	<h2>{c.owner_title}</h2>
+	<p>{c.owner_intro}</p>
+	<ul>
+		<li set:html={c.owner_li_name} />
+		<li set:html={c.owner_li_address} />
+		<li set:html={c.owner_li_phone} />
+		<li set:html={c.owner_li_website} />
+	</ul>
+
+	<h2>{c.what_title}</h2>
+	<p>{c.what_body}</p>
+
+	<h2>{c.types_title}</h2>
+	<p>{c.types_intro}</p>
+	<h3>{c.type_essential_title}</h3>
+	<p>{c.type_essential_body}</p>
+	<h3>{c.type_functional_title}</h3>
+	<p>{c.type_functional_body}</p>
+	<h3>{c.type_analytics_title}</h3>
+	<p>{c.type_analytics_body}</p>
+	<h3>{c.type_marketing_title}</h3>
+	<p>{c.type_marketing_body}</p>
+
+	<h2>{c.third_party_title}</h2>
+	<p>{c.third_party_body}</p>
+	<ul>
+		<li>{c.tp_ga}</li>
+		<li>{c.tp_fb}</li>
+	</ul>
+
+	<h2>{c.retention_title}</h2>
+	<p>{c.retention_body}</p>
+
+	<h2>{c.manage_title}</h2>
+	<p set:html={manage} />
+
+	<h2>{c.changes_title}</h2>
+	<p>{c.changes_body}</p>
+
+	<h2>{c.contact_title}</h2>
+	<p>{c.contact_intro}</p>
+	<ul>
+		<li set:html={c.contact_li_company} />
+		<li set:html={c.contact_li_address} />
+		<li set:html={c.contact_li_phone} />
+		<li set:html={c.contact_li_website} />
+	</ul>
+</article>

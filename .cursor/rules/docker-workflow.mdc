@@ -1,0 +1,39 @@
+---
+description: Docker workflow za ridelogger-site (Astro dev u sk-site)
+globs: "**/*"
+---
+
+# Docker workflow (ridelogger-site)
+
+## Pravilo
+
+**Komande za ovaj projekat (npm, npx, astro)** u Docker okruženju izvršavaj kao:
+
+```bash
+docker exec sk-site <komanda>
+```
+
+- Provera da li kontejner radi: `docker ps` (ime **`sk-site`**).
+- Ako kontejner nije pokrenut: javi korisniku da pokrene `docker compose … up -d sk-site` iz `~/sk` (vidi `README.md`).
+- **Ne** pokretati `docker compose up` samostalno osim ako korisnik to traži; za tipičan rad na kodu na volume-u dovoljan je `docker restart sk-site` posle izmene kojoj treba svež proces.
+
+## Dev server
+
+- Host port: **8086** (mapiran na Astro unutra).
+- URL: http://localhost:8086/
+
+## Primeri
+
+```bash
+docker exec sk-site npm install
+docker exec sk-site npm run build
+docker exec sk-site npx astro check
+```
+
+Restart posle izmene `.env` ili kad dev server „zaglaví”:
+
+```bash
+docker restart sk-site
+```
+
+Workspace pravilo za mapiranje projekat → kontejner: `~/sk/.cursor/rules/docker-restart-after-changes.mdc`.
