@@ -15,8 +15,8 @@ export const LOCALE_LABELS: Record<Locale, string> = {
 
 /** Kratke oznake za uski ekran (header / language picker). */
 export const LOCALE_SHORT: Record<Locale, string> = {
-	'sr-latn': 'LAT',
-	'sr-cyrl': 'ЋИР',
+	'sr-latn': 'SR',
+	'sr-cyrl': 'СР',
 	hr: 'HR',
 	de: 'DE',
 	en: 'EN',
