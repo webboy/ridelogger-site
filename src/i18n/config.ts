@@ -22,6 +22,15 @@ export const LOCALE_SHORT: Record<Locale, string> = {
 	en: 'EN',
 };
 
+/** Ime fajla u `public/flags/*.svg` (isti skup kao u ridelogger-pwa). */
+export const LOCALE_FLAG: Record<Locale, string> = {
+	'sr-latn': 'rs',
+	'sr-cyrl': 'rs',
+	hr: 'hr',
+	de: 'de',
+	en: 'gb',
+};
+
 /** BCP 47 tags for hreflang. */
 export const LOCALE_HREFLANG: Record<Locale, string> = {
 	'sr-latn': 'sr-Latn',

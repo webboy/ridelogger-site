@@ -1,5 +1,5 @@
 ---
-import { LOCALES, LOCALE_LABELS, LOCALE_SHORT, type Locale } from '../i18n/config';
+import { LOCALES, LOCALE_LABELS, LOCALE_SHORT, LOCALE_FLAG, type Locale } from '../i18n/config';
 
 interface Props {
 	locale: Locale;
@@ -22,13 +22,33 @@ function hrefFor(loc: Locale): string {
 
 <details class="lang-switcher">
 	<summary aria-label={LOCALE_LABELS[locale]}>
-		<span class="lang-switcher__label lang-switcher__label--full">{LOCALE_LABELS[locale]}</span>
-		<span class="lang-switcher__label lang-switcher__label--short" aria-hidden="true">{LOCALE_SHORT[locale]}</span>
+		<span class="lang-switcher__summary-inner">
+			<img
+				class="lang-switcher__flag"
+				src={`/flags/${LOCALE_FLAG[locale]}.svg`}
+				width="22"
+				height="16"
+				alt=""
+				decoding="async"
+				fetchpriority="high"
+			/>
+			<span class="lang-switcher__label lang-switcher__label--full">{LOCALE_LABELS[locale]}</span>
+			<span class="lang-switcher__label lang-switcher__label--short" aria-hidden="true">{LOCALE_SHORT[locale]}</span>
+		</span>
 	</summary>
 	<div class="lang-switcher__panel" role="navigation" aria-label="Language">
 		{
 			LOCALES.map((loc) => (
 				<a href={hrefFor(loc)} hreflang={loc} aria-current={loc === locale ? 'page' : undefined}>
+					<img
+						class="lang-switcher__flag"
+						src={`/flags/${LOCALE_FLAG[loc]}.svg`}
+						width="22"
+						height="16"
+						alt=""
+						loading="lazy"
+						decoding="async"
+					/>
 					<span class="lang-switcher__label lang-switcher__label--full">{LOCALE_LABELS[loc]}</span>
 					<span class="lang-switcher__label lang-switcher__label--short" aria-hidden="true">{LOCALE_SHORT[loc]}</span>
 				</a>
