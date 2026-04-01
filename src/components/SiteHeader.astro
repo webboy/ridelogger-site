@@ -22,7 +22,7 @@ const brand = brandName(locale);
 			<span class="brand__name">{brand}</span>
 		</a>
 		<div class="site-header__cta">
-			<a class="btn btn--primary" href={getAppUrl()} rel="noopener">{home.nav.openApp}</a>
+			<a class="btn btn--primary" href={getAppUrl(locale)} rel="noopener">{home.nav.openApp}</a>
 		</div>
 		<div class="site-header__tools">
 			<LanguageSwitcher locale={locale} />

@@ -33,7 +33,7 @@ const testimonialAvatars = [
 			<h1>{home.hero.headline}</h1>
 			<p class="lead">{home.hero.sub}</p>
 			<div class="hero__actions">
-				<a class="btn btn--primary" href={getAppUrl()} rel="noopener">{home.hero.primaryCta}</a>
+				<a class="btn btn--primary" href={getAppUrl(locale)} rel="noopener">{home.hero.primaryCta}</a>
 				<a class="btn btn--ghost" href="#how">{home.hero.secondaryCta}</a>
 			</div>
 			<p class="muted" style="margin-top: 1rem; font-size: 0.95rem">
@@ -187,7 +187,7 @@ const testimonialAvatars = [
 		<div class="cta-band">
 			<h2 style="margin: 0 0 0.5rem">{home.cta.title}</h2>
 			<p style="margin: 0 0 1rem; opacity: 0.95">{home.cta.body}</p>
-			<a class="btn btn--primary" href={getAppUrl()} rel="noopener">{home.cta.button}</a>
+			<a class="btn btn--primary" href={getAppUrl(locale)} rel="noopener">{home.cta.button}</a>
 		</div>
 	</div>
 </section>
