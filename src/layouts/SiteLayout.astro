@@ -3,6 +3,7 @@ import '../styles/global.css';
 import { DEFAULT_LOCALE, LOCALES, LOCALE_HREFLANG, type Locale } from '../i18n/config';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
+import CookieBanner from '../components/CookieBanner.astro';
 import type { HomeMessages } from '../types/home';
 
 interface Props {
@@ -61,5 +62,6 @@ const year = new Date().getFullYear();
 			<slot />
 		</main>
 		<SiteFooter locale={locale} home={home} year={year} />
+		<CookieBanner locale={locale} />
 	</body>
 </html>
