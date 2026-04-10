@@ -3,6 +3,7 @@ import type { Locale } from './config';
 import de from './messages/home/de.json';
 import en from './messages/home/en.json';
 import hr from './messages/home/hr.json';
+import mk from './messages/home/mk.json';
 import srCyrl from './messages/home/sr-cyrl.json';
 import srLatn from './messages/home/sr-latn.json';
 
@@ -10,6 +11,7 @@ const byLocale: Record<Locale, HomeMessages> = {
 	en: en as HomeMessages,
 	de: de as HomeMessages,
 	hr: hr as HomeMessages,
+	mk: mk as HomeMessages,
 	'sr-latn': srLatn as HomeMessages,
 	'sr-cyrl': srCyrl as HomeMessages,
 };

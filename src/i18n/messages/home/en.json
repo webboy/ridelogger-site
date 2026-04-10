@@ -127,6 +127,9 @@
 		"body": "Use the web app on the device you already have—no install required to begin.",
 		"button": "Open web app"
 	},
+	"landing": {
+		"heroLine": "Fuel. Services. Expenses."
+	},
 	"footer": {
 		"tagline": "Vehicle maintenance logbook for people who drive for real.",
 		"note": "Product names and availability may evolve; the web app remains the primary entry point."

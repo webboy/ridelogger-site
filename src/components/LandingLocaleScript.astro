@@ -1,31 +1,18 @@
 ---
 import type { HomeMessages } from '../types/home';
 import type { Locale } from '../i18n/config';
-import { LOCALE_HREFLANG } from '../i18n/config';
 
 interface Props {
 	homes: Record<Locale, HomeMessages>;
 	defaultLocale: Locale;
-	countryPath: string;
-	publicAppBase: string;
-	/** ISO country for PWA `?country=`; null to omit */
-	appCountryCode: string | null;
 }
 
-const { homes, defaultLocale, countryPath, publicAppBase, appCountryCode } = Astro.props;
-
-const hrefLangMap: Record<string, string> = {};
-for (const k of Object.keys(homes) as Locale[]) {
-	hrefLangMap[k] = LOCALE_HREFLANG[k];
-}
+const { homes, defaultLocale } = Astro.props;
 ---
 
-<script
-	is:inline
-	define:vars={{ homes, defaultLocale, countryPath, publicAppBase, hrefLangMap, appCountryCode }}
->
+<script is:inline define:vars={{ homes, defaultLocale }}>
 	(function () {
-		var STORAGE_KEY = 'marketing_ui_locale';
+		var STORAGE_KEY = 'marketing_ui_locale_landing';
 
 		function brandLabel(loc) {
 			return loc === 'sr-latn' || loc === 'sr-cyrl' || loc === 'hr' || loc === 'mk'
@@ -41,20 +28,6 @@ for (const k of Object.keys(homes) as Locale[]) {
 			}, obj);
 		}
 
-		function appHref(loc) {
-			try {
-				var u = new URL(publicAppBase);
-				var tag = hrefLangMap[loc] || 'en';
-				u.searchParams.set('lang', tag);
-				if (appCountryCode && appCountryCode.length === 2) {
-					u.searchParams.set('country', String(appCountryCode).toUpperCase());
-				}
-				return u.href;
-			} catch (e) {
-				return publicAppBase;
-			}
-		}
-
 		function apply(loc) {
 			var m = homes[loc];
 			if (!m) return;
@@ -66,33 +39,17 @@ for (const k of Object.keys(homes) as Locale[]) {
 				if (typeof v === 'string') el.textContent = v;
 			});
 
-			document.querySelectorAll('[data-hk-alt]').forEach(function (el) {
-				var key = el.getAttribute('data-hk-alt');
-				if (!key) return;
-				var v = getPath(m, key);
-				if (typeof v === 'string') el.setAttribute('alt', v);
-			});
-
-			document.querySelectorAll('[data-app-link]').forEach(function (el) {
-				el.setAttribute('href', appHref(loc));
-			});
-
 			document.querySelectorAll('[data-brand-text]').forEach(function (el) {
 				el.textContent = brandLabel(loc);
-			});
-
-			document.querySelectorAll('[data-brand-line]').forEach(function (el) {
-				var desc = getPath(m, 'meta.description');
-				if (typeof desc === 'string') el.textContent = brandLabel(loc) + ' — ' + desc;
 			});
 
 			if (m.meta && typeof m.meta.title === 'string') {
 				document.title = m.meta.title;
 			}
 
-		try {
-			localStorage.setItem(STORAGE_KEY + '_' + countryPath, loc);
-		} catch (e) {}
+			try {
+				localStorage.setItem(STORAGE_KEY, loc);
+			} catch (e) {}
 
 			document.documentElement.lang =
 				loc === 'sr-latn' ? 'sr-Latn' : loc === 'sr-cyrl' ? 'sr-Cyrl' : loc;
@@ -109,7 +66,7 @@ for (const k of Object.keys(homes) as Locale[]) {
 
 		var loc = defaultLocale;
 		try {
-			var s = localStorage.getItem(STORAGE_KEY + '_' + countryPath);
+			var s = localStorage.getItem(STORAGE_KEY);
 			if (s && homes[s]) loc = s;
 		} catch (e) {}
 

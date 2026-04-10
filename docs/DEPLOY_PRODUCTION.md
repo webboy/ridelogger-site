@@ -11,6 +11,10 @@ Javni marketing sajt (Astro, statički build). Postoje **dva** produkciona profi
 
 Host: `159.89.22.200` (SSH kao `root`, rsync + `chown www-data`).
 
+### Šta znači „deploy“
+
+Bez dodatnog kvalifikatora, **deploy ovog sajta na produkciju** = **oba** profila (**balkan** i **global**): poseban Astro build po instanci i poseban `rsync` na odgovarajući docroot. Izuzetak: eksplicitno *„samo balkan“* ili *„samo global“*. Isto pravilo važi i za PWA u `ridelogger-pwa` — vidi workspace pravilo `deploy-balkan-and-global.mdc` u `~/sk/.cursor/rules/`.
+
 ---
 
 ## 1. Balkan (`servisna-knjizica.com`)

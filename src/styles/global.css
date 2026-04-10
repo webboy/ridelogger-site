@@ -756,6 +756,21 @@ img {
 	min-width: 220px;
 }
 
+/* Open above trigger (footer / bottom of viewport) — default panel is top:100% (below). */
+.lang-switcher--panel-up .lang-switcher__panel {
+	top: auto;
+	bottom: 100%;
+	margin-top: 0;
+	margin-bottom: 0.35rem;
+}
+
+/* Horizontally center panel on the trigger (narrow footer control). */
+.lang-switcher--panel-up.lang-switcher--panel-center .lang-switcher__panel {
+	right: auto;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
 .lang-switcher__panel a {
 	display: flex;
 	align-items: center;

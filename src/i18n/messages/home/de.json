@@ -127,6 +127,9 @@
 		"body": "Nutze die Web-App auf dem Gerät, das du ohnehin hast – kein Installationszwang zum Start.",
 		"button": "Web-App öffnen"
 	},
+	"landing": {
+		"heroLine": "Kraftstoff. Service. Kosten."
+	},
 	"footer": {
 		"tagline": "Serviceheft für Menschen, die wirklich fahren.",
 		"note": "Produktnamen und Verfügbarkeit können sich ändern; die Web-App bleibt der Haupteinstieg."

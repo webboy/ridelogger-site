@@ -3,12 +3,22 @@ import { LOCALES, LOCALE_LABELS, LOCALE_SHORT, LOCALE_FLAG, type Locale } from '
 
 interface Props {
 	locale: Locale;
+	/** Dropdown opens above the summary (e.g. footer — avoids clipping below the viewport). */
+	panelUp?: boolean;
+	/** With `panelUp`, center the panel on the trigger. */
+	panelCenter?: boolean;
 }
 
-const { locale } = Astro.props;
+const { locale, panelUp = false, panelCenter = false } = Astro.props;
 ---
 
-<details class="lang-switcher">
+<details
+	class:list={[
+		'lang-switcher',
+		panelUp && 'lang-switcher--panel-up',
+		panelUp && panelCenter && 'lang-switcher--panel-center',
+	]}
+>
 	<summary aria-label={LOCALE_LABELS[locale]}>
 		<span class="lang-switcher__summary-inner">
 			<img

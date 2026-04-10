@@ -62,6 +62,10 @@ export interface HomeMessages {
 		body: string;
 		button: string;
 	};
+	/** Root landing page (`/`) — hero line under logo */
+	landing: {
+		heroLine: string;
+	};
 	footer: {
 		tagline: string;
 		note: string;

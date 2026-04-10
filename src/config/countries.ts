@@ -12,6 +12,7 @@ export type CountryPageConfig = {
 	names: {
 		'sr-latn': string;
 		hr: string;
+		mk: string;
 		en: string;
 		de: string;
 	};
@@ -23,42 +24,42 @@ export const COUNTRY_PAGES: CountryPageConfig[] = [
 		flagCode: 'rs',
 		instance: 'balkan',
 		defaultLocale: 'sr-latn',
-		names: { 'sr-latn': 'Srbija', hr: 'Srbija', en: 'Serbia', de: 'Serbien' },
+		names: { 'sr-latn': 'Srbija', hr: 'Srbija', mk: 'Србија', en: 'Serbia', de: 'Serbien' },
 	},
 	{
 		path: 'hr',
 		flagCode: 'hr',
 		instance: 'balkan',
 		defaultLocale: 'hr',
-		names: { 'sr-latn': 'Hrvatska', hr: 'Hrvatska', en: 'Croatia', de: 'Kroatien' },
+		names: { 'sr-latn': 'Hrvatska', hr: 'Hrvatska', mk: 'Хрватска', en: 'Croatia', de: 'Kroatien' },
 	},
 	{
 		path: 'ba',
 		flagCode: 'ba',
 		instance: 'balkan',
 		defaultLocale: 'sr-latn',
-		names: { 'sr-latn': 'BiH', hr: 'BiH', en: 'Bosnia and Herzegovina', de: 'Bosnien und Herzegowina' },
+		names: { 'sr-latn': 'BiH', hr: 'BiH', mk: 'Босна и Херцеговина', en: 'Bosnia and Herzegovina', de: 'Bosnien und Herzegowina' },
 	},
 	{
 		path: 'me',
 		flagCode: 'me',
 		instance: 'balkan',
 		defaultLocale: 'sr-latn',
-		names: { 'sr-latn': 'Crna Gora', hr: 'Crna Gora', en: 'Montenegro', de: 'Montenegro' },
+		names: { 'sr-latn': 'Crna Gora', hr: 'Crna Gora', mk: 'Црна Гора', en: 'Montenegro', de: 'Montenegro' },
 	},
 	{
 		path: 'mk',
 		flagCode: 'mk',
 		instance: 'balkan',
-		defaultLocale: 'sr-latn',
-		names: { 'sr-latn': 'S. Makedonija', hr: 'Sjeverna Makedonija', en: 'North Macedonia', de: 'Nordmazedonien' },
+		defaultLocale: 'mk',
+		names: { 'sr-latn': 'S. Makedonija', hr: 'Sjeverna Makedonija', mk: 'С. Македонија', en: 'North Macedonia', de: 'Nordmazedonien' },
 	},
 	{
 		path: 'de',
 		flagCode: 'de',
 		instance: 'global',
 		defaultLocale: 'de',
-		names: { 'sr-latn': 'Nemačka', hr: 'Njemačka', en: 'Germany', de: 'Deutschland' },
+		names: { 'sr-latn': 'Nemačka', hr: 'Njemačka', mk: 'Германија', en: 'Germany', de: 'Deutschland' },
 	},
 ];
 
