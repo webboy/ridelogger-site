@@ -1,6 +1,6 @@
 # ridelogger-site
 
-Public marketing site (Astro, static): multilingual homepage, privacy and cookie policy pages.
+Public marketing site (Astro, static): country-based routes, homepage picker, privacy and cookie pages.
 
 ## Commands
 
@@ -15,12 +15,16 @@ npm run preview
 
 ### Docker (unified stack under `~/sk`)
 
-Service **`sk-site`** on port **8086** is defined in `~/sk/docker/docker-compose.yml`:
+| Service | Port | Instance |
+|---------|------|----------|
+| **`sk-site`** | 8086 | `PUBLIC_INSTANCE=balkan` → Servisna knjižica |
+| **`sk-site-global`** | 8087 | `PUBLIC_INSTANCE=global` → RideLogger (default **DE** in UI) |
 
 ```bash
 cd ~/sk
-docker compose -f docker/docker-compose.yml --project-directory ~/sk up -d sk-site
-# http://localhost:8086  (dev server with HMR)
+docker compose -f docker/docker-compose.yml --project-directory ~/sk up -d sk-site sk-site-global
+# http://localhost:8086 — balkan
+# http://localhost:8087 — global (ridelogger.com profile)
 ```
 
 Run commands inside the container:
@@ -29,22 +33,23 @@ Run commands inside the container:
 docker exec sk-site npm run build
 ```
 
-Compose sets `PUBLIC_APP_URL=http://localhost:8081` (PWA `sk-app`). Override in `docker-compose.yml` if needed.
+Compose sets `PUBLIC_APP_URL` for local PWA (`sk-app`). Override in `docker-compose.yml` if needed.
 
 ## Configuration
 
-- **`astro.config.mjs`**: `site` base URL for canonical and `hreflang` links (default: `https://www.servisna-knjizica.com`).
-- **`.env`**: copy `.env.example`. `PUBLIC_APP_URL` is used for primary “Open app” CTAs.
+- **`astro.config.mjs`**: `site` base URL from `PUBLIC_SITE_URL` at build time.
+- **`.env`**: copy `.env.example`. Use **balkan** or **global** env block; `PUBLIC_APP_URL` drives “Open app” CTAs.
 
 ## Production deploy
 
-See **`docs/DEPLOY_PRODUCTION.md`** (build, rsync, Apache docroot on `159.89.22.200`).
+Two production targets — see **`docs/DEPLOY_PRODUCTION.md`**:
 
-## Locales
+- **Balkan**: docroot `/var/www/ridelogger-site`
+- **Global** (`www.ridelogger.com`): docroot `/var/www/ridelogger-site-global`, Apache samples in **`deploy/apache-www.ridelogger.com*.conf`**
 
-Routes: `/sr-latn/`, `/sr-cyrl/`, `/hr/`, `/de/`, `/en/` (trailing slash). Root `/` redirects to `/sr-latn/`.
+## Locales / routes
 
-Marketing brand name: **Servisna Knjižica** (Balkan locales) vs **RideLogger** (English/German), via `src/i18n/config.ts`. Legal copy is imported from legacy translations in `src/data/legal/*.json`.
+Routes are under `/[country]/` (e.g. `/de/`, `/sr/`). Root `/` is the country picker; branding and default copy depend on **`PUBLIC_INSTANCE`** (`balkan` vs `global`).
 
 ## Media workflow
 

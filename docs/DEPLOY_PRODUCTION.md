@@ -1,42 +1,36 @@
 # Deploy (ridelogger-site) — produkcija
 
-Javni marketing sajt (Astro, statički build). Namena domena u kodu: **`https://www.servisna-knjizica.com`** (`astro.config.mjs`). Aplikacija (PWA): **`PUBLIC_APP_URL`** (npr. `https://app.servisna-knjizica.com`) mora biti postavljen **u trenutku builda**.
+Javni marketing sajt (Astro, statički build). Postoje **dva** produkciona profila:
 
-## Server
+| Instanca | Domen | Podrazumevani jezik u UI | Docroot na serveru |
+|----------|--------|---------------------------|---------------------|
+| **balkan** | `www.servisna-knjizica.com` | sr (picker / stranice po zemlji) | `/var/www/ridelogger-site` |
+| **global** | `www.ridelogger.com` | **DE** (picker, RideLogger brend) | `/var/www/ridelogger-site-global` |
+
+`PUBLIC_SITE_URL` i `PUBLIC_APP_URL` moraju odgovarati instanci **u trenutku builda**.
+
+Host: `159.89.22.200` (SSH kao `root`, rsync + `chown www-data`).
+
+---
+
+## 1. Balkan (`servisna-knjizica.com`)
 
 | | |
 |---|---|
-| Host | `159.89.22.200` |
 | Docroot | `/var/www/ridelogger-site` |
-| Apache | `sites-available/servisna-knjizica.com.conf` (HTTP) i `servisna-knjizica.com-le-ssl.conf` (HTTPS): `DocumentRoot` i `<Directory>` za `www` / SSL vhost usmereni na `/var/www/ridelogger-site` |
+| Apache | `sites-available/servisna-knjizica.com.conf` i `servisna-knjizica.com-le-ssl.conf` |
 
-TLS: postojeći Let’s Encrypt set (`/etc/letsencrypt/live/servisna-knjizica.com/`) — bez promene osim obnove sertifikata.
+### Build (Docker)
 
-## Pre deploya
-
-1. Backup Apache vhost fajlova pre prve migracije sa legacy `DocumentRoot`-a:
-   ```bash
-   cp -a /etc/apache2/sites-available/servisna-knjizica.com.conf \
-     /etc/apache2/sites-available/servisna-knjizica.com.conf.bak.$(date +%Y%m%d%H%M)
-   cp -a /etc/apache2/sites-available/servisna-knjizica.com-le-ssl.conf \
-     /etc/apache2/sites-available/servisna-knjizica.com-le-ssl.conf.bak.$(date +%Y%m%d%H%M)
-   ```
-
-2. **`DirectoryIndex`**: za statički sajt dovoljno je `index.html` (bez PHP prioriteta).
-
-## Build (Docker)
-
-Iz `~/sk` sa pokrenutim kontejnerom **`sk-site`**:
+Kontejner **`sk-site`** (port 8086):
 
 ```bash
-docker exec -e PUBLIC_APP_URL=https://app.servisna-knjizica.com sk-site sh -c 'cd /app && npm run build'
+docker exec sk-site sh -c 'cd /app && PUBLIC_INSTANCE=balkan PUBLIC_SITE_URL=https://www.servisna-knjizica.com PUBLIC_APP_URL=https://app.servisna-knjizica.com npm run build'
 ```
 
-Izlaz: `ridelogger-site/dist/` (na hostu, volume `./ridelogger-site`).
+Izlaz: `ridelogger-site/dist/` na hostu (volume).
 
-## Rsync na server
-
-Sa radne mašine (prilagodi putanju do repoa):
+### Rsync
 
 ```bash
 rsync -avz --delete \
@@ -45,32 +39,87 @@ rsync -avz --delete \
   root@159.89.22.200:/var/www/ridelogger-site/
 ```
 
-Zatim na serveru vlasništvo za čitanje od strane Apacheja:
-
 ```bash
-ssh root@159.89.22.200 "chown -R www-data:www-data /var/www/ridelogger-site"
+ssh -i ~/.ssh/id_openclaw -o StrictHostKeyChecking=no root@159.89.22.200 \
+  "chown -R www-data:www-data /var/www/ridelogger-site"
 ```
 
-## Apache posle promene vhosta
+---
+
+## 2. Global (`www.ridelogger.com`) — RideLogger, default DE
+
+Statika se generiše sa `PUBLIC_INSTANCE=global`: koren `/` je country picker na nemačkom, jezici uključuju **de** (podrazumevano za ovaj sajt).
+
+| | |
+|---|---|
+| Docroot | **`/var/www/ridelogger-site-global`** (direktno fajlovi iz `dist/`, **bez** podfoldera `dist` na serveru) |
+| Apache (primeri u repou) | `deploy/apache-ridelogger.com.conf`, `deploy/apache-ridelogger.com-le-ssl.conf` |
+
+### Prvo na serveru: direktorijum i vhost
+
+```bash
+ssh root@159.89.22.200 "mkdir -p /var/www/ridelogger-site-global"
+```
+
+1. Kopiraj `deploy/apache-ridelogger.com.conf` i `deploy/apache-ridelogger.com-le-ssl.conf` u `/etc/apache2/sites-available/` (na serveru često kao `ridelogger.com.conf` / `ridelogger.com-le-ssl.conf`).
+2. TLS (jednom): `certbot --apache -d www.ridelogger.com -d ridelogger.com` — posle toga proveri da li su `SSLCertificateFile` / `SSLCertificateKeyFile` u `*-le-ssl.conf` ispravni (Certbot ponekad koristi drugačije ime foldera u `live/`).
+3. `a2ensite …`, `apache2ctl configtest`, `systemctl reload apache2`.
+
+### Build (Docker)
+
+Kontejner **`sk-site-global`** (port 8087) ili isti repo u `sk-site` sa env:
+
+```bash
+docker exec sk-site-global sh -c 'cd /app && PUBLIC_INSTANCE=global PUBLIC_SITE_URL=https://www.ridelogger.com PUBLIC_APP_URL=https://app.ridelogger.com npm run build'
+```
+
+### Rsync
+
+```bash
+rsync -avz --delete \
+  -e "ssh -i ~/.ssh/id_openclaw -o StrictHostKeyChecking=no" \
+  /home/nemanja/sk/ridelogger-site/dist/ \
+  root@159.89.22.200:/var/www/ridelogger-site-global/
+```
+
+```bash
+ssh -i ~/.ssh/id_openclaw -o StrictHostKeyChecking=no root@159.89.22.200 \
+  "chown -R www-data:www-data /var/www/ridelogger-site-global"
+```
+
+### Provera
+
+```bash
+curl -fsSI https://www.ridelogger.com/
+curl -fsSI https://www.ridelogger.com/de/
+```
+
+Očekivano: `200`, HTML.
+
+---
+
+## Zajedničko
+
+### Pre deploya (balkan vhost)
+
+Backup vhost fajlova pre većih izmena:
+
+```bash
+cp -a /etc/apache2/sites-available/servisna-knjizica.com.conf \
+  /etc/apache2/sites-available/servisna-knjizica.com.conf.bak.$(date +%Y%m%d%H%M)
+```
+
+### Apache posle izmene vhosta
 
 ```bash
 apache2ctl configtest && systemctl reload apache2
 ```
 
-## Provera
+### Napomena o legacy-ju (balkan)
 
-```bash
-curl -fsSI https://www.servisna-knjizica.com/sr-latn/
-```
+Ranije je `www.servisna-knjizica.com` koristio **`/var/www/ridelogger-legacy/public`**. Astro statika je u `/var/www/ridelogger-site`.
 
-Očekivano: `200`, HTML. Koren `/` servira Astro `index.html` (redirekcija ka podrazumevanom jeziku).
+### Apache — održavanje servera
 
-## Napomena o legacy-ju
-
-Ranije je `www.servisna-knjizica.com` koristio **`/var/www/ridelogger-legacy/public`**. Posle prebacivanja na Astro, **admin** ostaje na `admin.servisna-knjizica.com`, **API** na `api.*`, **PWA** na `app.*`; javni landing je isključivo statički sadržaj u `/var/www/ridelogger-site`.
-
-## Apache — održavanje servera
-
-- U **`sites-enabled`** ne ostavljati `*.bak` fajlove (Apache ih čita kao konfiguraciju). Backuppove držati u `sites-available` ili van `sites-*`.
-- **Biznis** poddomeni (`biznis.*`, `biznis-api.*`): ako docroot na disku ne postoji, `apache2ctl configtest` prijavljuje upozorenja; odgovarajuće vhostove isključiti (`a2dissite …`) dok se ponovo ne deployuje aplikacija.
-- Globalno **`ServerName`** u `/etc/apache2/apache2.conf` uklanja upozorenje `Could not reliably determine the server's fully qualified domain name`.
+- U **`sites-enabled`** ne ostavljati `*.bak` fajlove (Apache ih čita kao konfiguraciju).
+- Globalno **`ServerName`** u `/etc/apache2/apache2.conf` uklanja upozorenje o FQDN.
