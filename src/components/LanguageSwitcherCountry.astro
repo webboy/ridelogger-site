@@ -6,18 +6,6 @@ interface Props {
 }
 
 const { locale } = Astro.props;
-
-const pathname = Astro.url.pathname.replace(/\/+$/, '');
-const segments = pathname.split('/').filter(Boolean);
-const maybeLocale = segments[0];
-const rest = (LOCALES as readonly string[]).includes(maybeLocale ?? '')
-	? segments.slice(1).join('/')
-	: segments.join('/');
-
-function hrefFor(loc: Locale): string {
-	const tail = rest ? `${rest}/` : '';
-	return `/${loc}/${tail}`;
-}
 ---
 
 <details class="lang-switcher">
@@ -39,7 +27,12 @@ function hrefFor(loc: Locale): string {
 	<div class="lang-switcher__panel" role="navigation" aria-label="Language">
 		{
 			LOCALES.map((loc) => (
-				<a href={hrefFor(loc)} hreflang={loc} aria-current={loc === locale ? 'page' : undefined}>
+				<button
+					type="button"
+					class:list={['lang-switcher__btn', loc === locale && 'is-active']}
+					data-locale-pick={loc}
+					aria-current={loc === locale ? 'true' : undefined}
+				>
 					<img
 						class="lang-switcher__flag"
 						src={`/flags/${LOCALE_FLAG[loc]}.svg`}
@@ -51,7 +44,7 @@ function hrefFor(loc: Locale): string {
 					/>
 					<span class="lang-switcher__label lang-switcher__label--full">{LOCALE_LABELS[loc]}</span>
 					<span class="lang-switcher__label lang-switcher__label--short" aria-hidden="true">{LOCALE_SHORT[loc]}</span>
-				</a>
+				</button>
 			))
 		}
 	</div>
@@ -68,3 +61,25 @@ function hrefFor(loc: Locale): string {
 		});
 	});
 </script>
+
+<style>
+	.lang-switcher__btn {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		width: 100%;
+		padding: 0.5rem 0.75rem;
+		border: 0;
+		background: transparent;
+		font: inherit;
+		cursor: pointer;
+		text-align: left;
+		color: inherit;
+	}
+	.lang-switcher__btn:hover {
+		background: rgba(0, 0, 0, 0.05);
+	}
+	.lang-switcher__btn.is-active {
+		font-weight: 600;
+	}
+</style>

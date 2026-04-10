@@ -3,29 +3,34 @@ import type { HomeMessages } from '../types/home';
 import type { Locale } from '../i18n/config';
 import { brandName } from '../i18n/config';
 import { getAppUrl } from '../config/public';
-import LanguageSwitcher from './LanguageSwitcher.astro';
+import { appCountryCodeFromPath } from '../config/countries';
+import LanguageSwitcherCountry from './LanguageSwitcherCountry.astro';
 
 interface Props {
+	countryPath: string;
 	locale: Locale;
 	home: HomeMessages;
 }
 
-const { locale, home } = Astro.props;
+const { countryPath, locale, home } = Astro.props;
 const brand = brandName(locale);
+const appCountry = appCountryCodeFromPath(countryPath);
 ---
 
 <header class="site-header">
 	<a class="skip-link" href="#main">Skip to content</a>
 	<div class="shell site-header__inner">
-		<a class="brand" href={`/${locale}/`}>
+		<a class="brand" href={`/${countryPath}/`}>
 			<img src="/brand/caloboo.png" width="40" height="40" alt="" />
-			<span class="brand__name">{brand}</span>
+			<span class="brand__name" data-brand-text>{brand}</span>
 		</a>
 		<div class="site-header__cta">
-			<a class="btn btn--primary" href={getAppUrl(locale)} rel="noopener">{home.nav.openApp}</a>
+			<a class="btn btn--primary" data-app-link href={getAppUrl(locale, appCountry)} rel="noopener">
+				<span data-hk="nav.openApp">{home.nav.openApp}</span>
+			</a>
 		</div>
 		<div class="site-header__tools">
-			<LanguageSwitcher locale={locale} />
+			<LanguageSwitcherCountry locale={locale} />
 		</div>
 	</div>
 </header>

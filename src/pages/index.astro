@@ -1,20 +1,299 @@
 ---
-import { DEFAULT_LOCALE } from '../i18n/config';
+import '../styles/global.css';
+import {
+	COUNTRY_PAGES,
+	peerMarketingOrigin,
+	type CountryPageConfig,
+	type DeployInstance,
+} from '../config/countries';
 
-const target = `/${DEFAULT_LOCALE}/`;
-const canonical = new URL(target, Astro.site).href;
+const site = Astro.site;
+if (!site) {
+	throw new Error('Configure `site` in astro.config.mjs');
+}
+const selfOrigin = site.origin;
+const peerOrigin = peerMarketingOrigin(selfOrigin);
+const publicInstance = import.meta.env.PUBLIC_INSTANCE;
+const selfIsBalkan =
+	publicInstance === 'global'
+		? false
+		: publicInstance === 'balkan'
+			? true
+			: !selfOrigin.includes('ridelogger');
+const uiLang = selfIsBalkan ? 'sr' : 'de';
+
+const metaTitle = selfIsBalkan ? 'Servisna Knjižica' : 'RideLogger';
+const metaDescription = selfIsBalkan
+	? 'Izaberite zemlju za nastavak na servisnu knjižicu.'
+	: 'Wählen Sie Ihr Land für RideLogger.';
+
+function targetUrl(c: CountryPageConfig): string {
+	const onSelf =
+		(c.instance === 'balkan' && selfIsBalkan) || (c.instance === 'global' && !selfIsBalkan);
+	const origin = onSelf ? selfOrigin : peerOrigin;
+	return `${origin}/${c.path}/`;
+}
+
+function labelFor(c: CountryPageConfig): string {
+	return selfIsBalkan ? c.names['sr-latn'] : c.names.de;
+}
+
+const sortLocale = selfIsBalkan ? 'sr-Latn' : 'de';
+function sortByLabel(list: CountryPageConfig[]): CountryPageConfig[] {
+	return [...list].sort((a, b) =>
+		labelFor(a).localeCompare(labelFor(b), sortLocale, { sensitivity: 'base' }),
+	);
+}
+
+function countriesInInstance(instance: DeployInstance): CountryPageConfig[] {
+	return sortByLabel(COUNTRY_PAGES.filter((c) => c.instance === instance));
+}
+
+const europeCountries = countriesInInstance('global');
+const balkanCountries = countriesInInstance('balkan');
+
+const groupLabels = selfIsBalkan
+	? { europe: 'Evropa', balkan: 'Balkan' }
+	: { europe: 'Europa', balkan: 'Balkan' };
+
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={uiLang === 'sr' ? 'sr-Latn' : 'de'}>
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Redirecting…</title>
-		<meta http-equiv="refresh" content={`0;url=${target}`} />
-		<link rel="canonical" href={canonical} />
+		<title>{metaTitle}</title>
+		<meta name="description" content={metaDescription} />
+		<link rel="canonical" href={new URL('/', site).href} />
 	</head>
-	<body>
-		<p><a href={target}>Continue to the site</a></p>
+	<body class="picker-page">
+		<header class="picker-header">
+			<div class="picker-header__brand">
+				<img src="/brand/caloboo.png" width="44" height="44" alt="" />
+				<span>{selfIsBalkan ? 'Servisna Knjižica' : 'RideLogger'}</span>
+			</div>
+		</header>
+
+		<main class="picker-main">
+			<div class="picker-list-panel">
+				<div class="picker-groups">
+					<section class="picker-group" aria-labelledby="picker-grp-europe">
+						<h2 id="picker-grp-europe" class="picker-group-title">
+							{groupLabels.europe}
+						</h2>
+						<ul class="picker-cards">
+							{
+								europeCountries.map((c) => (
+									<li>
+										<a class="picker-card" href={targetUrl(c)} data-path={c.path}>
+											<img
+												src={`/flags/${c.flagCode}.svg`}
+												width="20"
+												height="15"
+												alt=""
+											/>
+											<span>{labelFor(c)}</span>
+										</a>
+									</li>
+								))
+							}
+						</ul>
+					</section>
+					<section class="picker-group" aria-labelledby="picker-grp-balkan">
+						<h2 id="picker-grp-balkan" class="picker-group-title">
+							{groupLabels.balkan}
+						</h2>
+						<ul class="picker-cards">
+							{
+								balkanCountries.map((c) => (
+									<li>
+										<a class="picker-card" href={targetUrl(c)} data-path={c.path}>
+											<img
+												src={`/flags/${c.flagCode}.svg`}
+												width="20"
+												height="15"
+												alt=""
+											/>
+											<span>{labelFor(c)}</span>
+										</a>
+									</li>
+								))
+							}
+						</ul>
+					</section>
+				</div>
+			</div>
+		</main>
+
+		<script is:inline define:vars={{ storageKey: 'sk_marketing_last_country' }}>
+			(function () {
+				var KEY = storageKey;
+				var saved = null;
+				try {
+					saved = localStorage.getItem(KEY);
+				} catch (e) {}
+
+				function highlight(path) {
+					document.querySelectorAll('.picker-card').forEach(function (el) {
+						var p = el.getAttribute('data-path');
+						el.classList.toggle('is-selected', p === path);
+					});
+				}
+
+				if (saved) highlight(saved);
+
+				document.querySelectorAll('.picker-card').forEach(function (el) {
+					var path = el.getAttribute('data-path');
+					el.addEventListener('click', function () {
+						try {
+							localStorage.setItem(KEY, path);
+						} catch (err) {}
+					});
+				});
+			})();
+		</script>
+
+		<style>
+			.picker-page {
+				min-height: 100vh;
+				margin: 0;
+				display: flex;
+				flex-direction: column;
+				font-family:
+					system-ui,
+					Segoe UI,
+					Roboto,
+					Helvetica,
+					Arial,
+					sans-serif;
+				background: #f5f7fa;
+				color: #1a2b3c;
+			}
+			.picker-header {
+				flex-shrink: 0;
+				padding: 1rem 1.25rem;
+			}
+			.picker-header__brand {
+				display: flex;
+				align-items: center;
+				gap: 0.75rem;
+				font-weight: 700;
+				font-size: 1.05rem;
+			}
+			.picker-main {
+				flex: 1;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				padding: 0.75rem 1.25rem 2rem;
+				box-sizing: border-box;
+				width: 100%;
+			}
+			.picker-list-panel {
+				position: relative;
+				width: 100%;
+				max-width: min(920px, calc(100vw - 2rem));
+				min-height: clamp(360px, 52vh, 580px);
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				padding: 2rem 1.75rem 2.25rem;
+				border-radius: 16px;
+				overflow: hidden;
+				box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+				background-color: #dce6f0;
+				background-image: url('/images/europe-map.jpg');
+				background-size: cover;
+				background-position: center 35%;
+				isolation: isolate;
+			}
+			.picker-list-panel::before {
+				content: '';
+				position: absolute;
+				inset: 0;
+				background: rgba(245, 247, 250, 0.36);
+				z-index: 0;
+			}
+			.picker-list-panel > * {
+				position: relative;
+				z-index: 1;
+			}
+			.picker-groups {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 1.35rem;
+				width: 100%;
+				max-width: 26rem;
+			}
+			.picker-group {
+				width: 100%;
+			}
+			.picker-group-title {
+				margin: 0 0 0.4rem;
+				font-size: 0.62rem;
+				font-weight: 700;
+				letter-spacing: 0.12em;
+				text-transform: uppercase;
+				color: #5a6b7c;
+				text-align: center;
+			}
+			.picker-cards {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				display: grid;
+				grid-template-columns: repeat(2, minmax(0, 11rem));
+				gap: 0.35rem 0.55rem;
+				justify-content: center;
+			}
+			@media (max-width: 380px) {
+				.picker-cards {
+					grid-template-columns: 1fr;
+				}
+			}
+			.picker-card {
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
+				gap: 0.35rem;
+				padding: 0.28rem 0.45rem;
+				min-height: 0;
+				background: rgba(255, 255, 255, 0.38);
+				border: 1px solid rgba(255, 255, 255, 0.55);
+				border-radius: 8px;
+				text-decoration: none;
+				color: #1a2b3c;
+				font-weight: 600;
+				font-size: 0.72rem;
+				line-height: 1.2;
+				transition:
+					background 0.15s ease,
+					border-color 0.15s ease,
+					box-shadow 0.15s ease;
+				backdrop-filter: blur(6px);
+				-webkit-backdrop-filter: blur(6px);
+				box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+			}
+			.picker-card:hover {
+				background: rgba(255, 255, 255, 0.52);
+				border-color: rgba(11, 79, 138, 0.28);
+			}
+			.picker-card.is-selected {
+				background: rgba(11, 79, 138, 0.18);
+				border-color: rgba(11, 79, 138, 0.45);
+				box-shadow: 0 0 0 2px rgba(11, 79, 138, 0.2);
+			}
+			.picker-card img {
+				flex-shrink: 0;
+				width: 20px;
+				height: 15px;
+				object-fit: cover;
+				border-radius: 2px;
+				box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+			}
+		</style>
 	</body>
 </html>

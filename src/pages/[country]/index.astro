@@ -1,0 +1,34 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import HomePage from '../../components/home/HomePage.astro';
+import { countryPagesForInstance, getCountryByPath, type DeployInstance } from '../../config/countries';
+import { getHomeMessages, getAllHomeMessages } from '../../i18n/loadHome';
+
+export function getStaticPaths() {
+	const inst = (import.meta.env.PUBLIC_INSTANCE || 'balkan') as DeployInstance;
+	return countryPagesForInstance(inst).map((c) => ({ params: { country: c.path } }));
+}
+
+const param = Astro.params.country;
+const cfg = getCountryByPath(param ?? '');
+if (!cfg) {
+	throw new Error(`Unknown country: ${param}`);
+}
+
+const locale = cfg.defaultLocale;
+const home = getHomeMessages(locale);
+const homes = getAllHomeMessages();
+const title = home.meta.title;
+const description = home.meta.description;
+---
+
+<SiteLayout
+	countryPath={cfg.path}
+	locale={locale}
+	title={title}
+	description={description}
+	home={home}
+	homes={homes}
+>
+	<HomePage locale={locale} home={home} countryPath={cfg.path} />
+</SiteLayout>

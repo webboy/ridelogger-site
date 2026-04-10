@@ -22,9 +22,15 @@ const icons = [
 					<span class="how-step__icon" set:html={icons[i % icons.length]} />
 					<span class="how-step__n">{i + 1}</span>
 				</div>
-				<h3 class="how-step__title">{s.title}</h3>
-				<p class="how-step__body">{s.body}</p>
-				<p class="how-step__tip">{s.tip}</p>
+				<h3 class="how-step__title" data-hk={`how.steps.${i}.title`}>
+					{s.title}
+				</h3>
+				<p class="how-step__body" data-hk={`how.steps.${i}.body`}>
+					{s.body}
+				</p>
+				<p class="how-step__tip" data-hk={`how.steps.${i}.tip`}>
+					{s.tip}
+				</p>
 			</div>
 		))
 	}

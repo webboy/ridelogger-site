@@ -1,20 +1,30 @@
 ---
 import '../styles/global.css';
-import { DEFAULT_LOCALE, LOCALES, LOCALE_HREFLANG, type Locale } from '../i18n/config';
+import { type Locale } from '../i18n/config';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import CookieBanner from '../components/CookieBanner.astro';
+import HomeLocaleScript from '../components/HomeLocaleScript.astro';
 import type { HomeMessages } from '../types/home';
+import { appCountryCodeFromPath } from '../config/countries';
 
 interface Props {
+	countryPath: string;
 	locale: Locale;
 	title: string;
 	description: string;
 	home: HomeMessages;
 	pathSuffix?: '' | 'privacy' | 'cookies';
+	/** When set, enables client-side home copy switching + JSON for all locales. */
+	homes?: Record<Locale, HomeMessages>;
 }
 
-const { locale, title, description, home, pathSuffix = '' } = Astro.props;
+const { countryPath, locale, title, description, home, pathSuffix = '', homes } = Astro.props;
+
+const publicAppBase =
+	typeof import.meta.env.PUBLIC_APP_URL === 'string' && import.meta.env.PUBLIC_APP_URL.length > 0
+		? import.meta.env.PUBLIC_APP_URL
+		: 'https://app.servisna-knjizica.com';
 
 function documentLang(loc: Locale): string {
 	if (loc === 'sr-latn') return 'sr-Latn';
@@ -27,13 +37,15 @@ if (!base) {
 	throw new Error('Missing `site` in astro.config (needed for canonical/hreflang).');
 }
 
-function pageUrl(loc: Locale): string {
-	const tail = pathSuffix ? `${pathSuffix}/` : '';
-	return new URL(`/${loc}/${tail}`, base).href;
+function pageUrl(tail: string): string {
+	return new URL(tail, base).href;
 }
 
-const canonical = pageUrl(locale);
+const pathTail =
+	pathSuffix === '' ? `${countryPath}/` : `${countryPath}/${pathSuffix}/`;
+const canonical = pageUrl(pathTail);
 const year = new Date().getFullYear();
+const appCountryCode = appCountryCodeFromPath(countryPath);
 ---
 
 <!doctype html>
@@ -44,12 +56,6 @@ const year = new Date().getFullYear();
 		<title>{title}</title>
 		<meta name="description" content={description} />
 		<link rel="canonical" href={canonical} />
-		{
-			LOCALES.map((loc) => (
-				<link rel="alternate" hreflang={LOCALE_HREFLANG[loc]} href={pageUrl(loc)} />
-			))
-		}
-		<link rel="alternate" hreflang="x-default" href={pageUrl(DEFAULT_LOCALE)} />
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
 		<meta property="og:type" content="website" />
@@ -57,11 +63,22 @@ const year = new Date().getFullYear();
 		<meta name="twitter:card" content="summary_large_image" />
 	</head>
 	<body>
-		<SiteHeader locale={locale} home={home} />
+		<SiteHeader countryPath={countryPath} locale={locale} home={home} />
 		<main id="main">
 			<slot />
 		</main>
-		<SiteFooter locale={locale} home={home} year={year} />
-		<CookieBanner locale={locale} />
+		<SiteFooter countryPath={countryPath} locale={locale} home={home} year={year} />
+		<CookieBanner countryPath={countryPath} locale={locale} />
+		{
+			homes && (
+				<HomeLocaleScript
+					homes={homes}
+					defaultLocale={locale}
+					countryPath={countryPath}
+					publicAppBase={publicAppBase}
+					appCountryCode={appCountryCode}
+				/>
+			)
+		}
 	</body>
 </html>

@@ -4,29 +4,30 @@ import type { Locale } from '../i18n/config';
 import { brandName } from '../i18n/config';
 
 interface Props {
+	countryPath: string;
 	locale: Locale;
 	home: HomeMessages;
 	year: number;
 }
 
-const { locale, home, year } = Astro.props;
+const { countryPath, locale, home, year } = Astro.props;
 ---
 
 <footer class="site-footer">
 	<div class="shell site-footer__grid">
 		<div>
-			<strong>{brandName(locale)}</strong>
-			<p class="muted">{home.footer.tagline}</p>
-			<p class="muted" style="font-size: 0.95rem">{home.footer.note}</p>
+			<strong data-brand-text>{brandName(locale)}</strong>
+			<p class="muted" data-hk="footer.tagline">{home.footer.tagline}</p>
+			<p class="muted" style="font-size: 0.95rem" data-hk="footer.note">{home.footer.note}</p>
 		</div>
 		<div>
 			<p class="muted" style="margin: 0 0 0.5rem">
-				<a href={`/${locale}/privacy/`}>{home.nav.privacy}</a>
+				<a href={`/${countryPath}/privacy/`} data-hk="nav.privacy">{home.nav.privacy}</a>
 				{' · '}
-				<a href={`/${locale}/cookies/`}>{home.nav.cookies}</a>
+				<a href={`/${countryPath}/cookies/`} data-hk="nav.cookies">{home.nav.cookies}</a>
 			</p>
 			<p class="muted" style="margin: 0; font-size: 0.95rem">
-				© {year} {brandName(locale)}
+				© {year} <span data-brand-text>{brandName(locale)}</span>
 			</p>
 		</div>
 	</div>

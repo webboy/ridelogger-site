@@ -17,3 +17,7 @@ const byLocale: Record<Locale, HomeMessages> = {
 export function getHomeMessages(locale: Locale): HomeMessages {
 	return byLocale[locale];
 }
+
+export function getAllHomeMessages(): Record<Locale, HomeMessages> {
+	return { ...byLocale };
+}

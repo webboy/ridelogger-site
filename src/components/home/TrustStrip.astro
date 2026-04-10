@@ -22,8 +22,12 @@ const icons = [
 			<div class={`trust__item trust__item--accent-${i % 4}`}>
 				<span class="trust__icon" set:html={icons[i % icons.length]} />
 				<div class="trust__text">
-					<span class="trust__headline">{item.title}</span>
-					<span class="trust__detail">{item.detail}</span>
+					<span class="trust__headline" data-hk={`trust.items.${i}.title`}>
+						{item.title}
+					</span>
+					<span class="trust__detail" data-hk={`trust.items.${i}.detail`}>
+						{item.detail}
+					</span>
 				</div>
 			</div>
 		))

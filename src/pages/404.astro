@@ -1,0 +1,25 @@
+---
+import '../styles/global.css';
+
+const site = Astro.site;
+const home = site ? new URL('/', site).href : '/';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>404 — Page not found</title>
+		<meta http-equiv="refresh" content={`0;url=${home}`} />
+		<link rel="canonical" href={home} />
+	</head>
+	<body
+		style="font-family:system-ui,sans-serif;padding:2rem;max-width:40rem;margin:0 auto;line-height:1.5"
+	>
+		<h1>404</h1>
+		<p>
+			This page is not available. <a href={home}>Back to country picker</a>
+		</p>
+	</body>
+</html>

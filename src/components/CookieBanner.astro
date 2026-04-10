@@ -3,10 +3,11 @@ import type { Locale } from '../i18n/config';
 import { getLegal } from '../i18n/loadLegal';
 
 interface Props {
+	countryPath: string;
 	locale: Locale;
 }
 
-const { locale } = Astro.props;
+const { countryPath, locale } = Astro.props;
 const legal = getLegal(locale);
 const cb = legal.cookie_banner;
 ---
@@ -15,7 +16,7 @@ const cb = legal.cookie_banner;
 	<div class="cookie-banner__inner shell">
 		<p class="cookie-banner__text">
 			{cb.message}
-			<a href={`/${locale}/cookies/`} class="cookie-banner__link">{cb.learn_more}</a>
+			<a href={`/${countryPath}/cookies/`} class="cookie-banner__link">{cb.learn_more}</a>
 		</p>
 		<div class="cookie-banner__actions">
 			<button id="cookie-consent-reject" class="btn btn--ghost cookie-banner__btn" type="button">
