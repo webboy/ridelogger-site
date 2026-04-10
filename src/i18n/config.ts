@@ -1,4 +1,4 @@
-export const LOCALES = ['sr-latn', 'sr-cyrl', 'hr', 'de', 'en', 'mk', 'fr', 'it', 'sl'] as const;
+export const LOCALES = ['sr-latn', 'sr-cyrl', 'hr', 'de', 'en', 'mk', 'fr', 'it', 'sl', 'tr', 'uk', 'pl'] as const;
 
 export type Locale = (typeof LOCALES)[number];
 
@@ -15,6 +15,9 @@ export const LOCALE_LABELS: Record<Locale, string> = {
 	fr: 'Français',
 	it: 'Italiano',
 	sl: 'Slovenščina',
+	tr: 'Türkçe',
+	uk: 'Українська',
+	pl: 'Polski',
 };
 
 /** Kratke oznake za uski ekran (header / language picker). */
@@ -28,6 +31,9 @@ export const LOCALE_SHORT: Record<Locale, string> = {
 	fr: 'FR',
 	it: 'IT',
 	sl: 'SL',
+	tr: 'TR',
+	uk: 'UK',
+	pl: 'PL',
 };
 
 /** Ime fajla u `public/flags/*.svg` (isti skup kao u ridelogger-pwa). */
@@ -41,6 +47,9 @@ export const LOCALE_FLAG: Record<Locale, string> = {
 	fr: 'fr',
 	it: 'it',
 	sl: 'si',
+	tr: 'tr',
+	uk: 'ua',
+	pl: 'pl',
 };
 
 /** BCP 47 tags for hreflang. */
@@ -54,6 +63,9 @@ export const LOCALE_HREFLANG: Record<Locale, string> = {
 	fr: 'fr',
 	it: 'it',
 	sl: 'sl',
+	tr: 'tr',
+	uk: 'uk',
+	pl: 'pl',
 };
 
 export function isBalkanLocale(locale: Locale): boolean {

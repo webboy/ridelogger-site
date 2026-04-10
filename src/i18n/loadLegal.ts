@@ -5,9 +5,12 @@ import fr from '../data/legal/fr.json';
 import hr from '../data/legal/hr.json';
 import it from '../data/legal/it.json';
 import mk from '../data/legal/mk.json';
+import pl from '../data/legal/pl.json';
 import sl from '../data/legal/sl.json';
 import srCyrl from '../data/legal/sr-cyrl.json';
 import srLatn from '../data/legal/sr-latn.json';
+import tr from '../data/legal/tr.json';
+import uk from '../data/legal/uk.json';
 
 export type LegalBundle = typeof en;
 
@@ -19,6 +22,9 @@ const byLocale: Record<Locale, LegalBundle> = {
 	it: it as LegalBundle,
 	mk: mk as LegalBundle,
 	sl: sl as LegalBundle,
+	tr: tr as LegalBundle,
+	uk: uk as LegalBundle,
+	pl: pl as LegalBundle,
 	'sr-latn': srLatn as LegalBundle,
 	'sr-cyrl': srCyrl as LegalBundle,
 };

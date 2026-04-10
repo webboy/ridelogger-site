@@ -1,0 +1,137 @@
+{
+	"meta": {
+		"title": "Cyfrowy dziennik konserwacji pojazdu",
+		"description": "Śledź paliwo, usługi, przypomnienia i wydatki w jednym miejscu. Stworzony dla kierowców, którzy chcą przejrzystości bez arkuszy kalkulacyjnych."
+	},
+	"nav": {
+		"home": "Dom",
+		"openApp": "Otwórz aplikację",
+		"privacy": "Prywatność",
+		"cookies": "Ciastka"
+	},
+	"hero": {
+		"eyebrow": "Konserwacja i koszty",
+		"headline": "Historia Twojego pojazdu wreszcie w jednym miejscu.",
+		"sub": "Rejestruj usługi, paliwo i wydatki dzięki przypomnieniom, które pomogą Ci uniknąć kosztownych niespodzianek.",
+		"primaryCta": "Otwórz aplikację internetową",
+		"secondaryCta": "Jak to działa",
+		"placeholderTitle": "Wizualizacja bohatera",
+		"placeholderBody": "Oczekujący zasób: dodaj wygenerowany bohater strony głównej do multimediów/wygenerowanych/ (obieg obrazu zadania 0021), a następnie zintegruj go tutaj.",
+		"imageAlt": "Ilustracja produktu: pulpit nawigacyjny i aplikacja na telefon wyświetlająca przypomnienia o pojazdach, wydatkach i konserwacji."
+	},
+	"trust": {
+		"title": "Zaprojektowane z myślą o przejrzystości",
+		"items": [
+			{
+				"title": "Obsługa wielu pojazdów",
+				"detail": "Codzienny kierowca, weekendowy projekt lub kilka samochodów w rodzinie – każdy z nich opowiada własną historię."
+			},
+			{
+				"title": "Przypomnienia, które naprawdę pomagają",
+				"detail": "Serwis, rejestracja, ubezpieczenie – delikatne podpowiedzi przed terminem stają się kosztowną niespodzianką."
+			},
+			{
+				"title": "Paliwo i koszty w jednym rytmie",
+				"detail": "Uzupełnienia i wydatki tworzą jasny obraz bez akrobacji w arkuszach kalkulacyjnych."
+			},
+			{
+				"title": "Twoje dane, Twoje zasady",
+				"detail": "Narzędzie, które Cię szanuje: jasne wybory dotyczące prywatności i zasady napisane dla ludzi."
+			}
+		]
+	},
+	"problem": {
+		"title": "Od rozproszonych notatek po wyraźny zapis",
+		"problemTitle": "Problem",
+		"problemBody": "Paragony, notatniki i arkusze kalkulacyjne nie są zsynchronizowane. Sprzedając samochód lub po prostu zapominając, co zostało zrobione, tracisz historię.",
+		"solutionTitle": "Rozwiązanie",
+		"solutionBody": "Uporządkowany dziennik usług, który pozostaje na Twoim koncie: dodawaj zdarzenia w ciągu kilku sekund, dołącz kontekst i otrzymuj przypomnienia, zanim upłyną terminy.",
+		"imageAlt": "Ilustracja: niechlujne paragony i notatki a zorganizowana aplikacja mobilna z historią serwisową i kosztami paliwa."
+	},
+	"how": {
+		"title": "Jak to działa",
+		"lead": "Trzy proste kroki — odbierz telefon po zakończeniu przeglądu lub uzupełnieniu paliwa i po chwili gotowe.",
+		"steps": [
+			{
+				"title": "Utwórz swój profil",
+				"body": "Zarejestruj się i dodaj jeden lub więcej pojazdów z podstawami, które już znasz — marką, modelem, tablicą rejestracyjną, licznikiem kilometrów i czymkolwiek, co pomoże Ci zachować orientację.",
+				"tip": "Zawsze możesz edytować szczegóły później; zacznij od prostych rzeczy, aby nawyk pozostał."
+			},
+			{
+				"title": "Rejestruj to, co ważne",
+				"body": "Rejestruj paliwo, konserwację, naprawy, opłaty drogowe, ubezpieczenie — koszty i przebieg na bieżąco, na komputerze lub telefonie.",
+				"tip": "Szybkie wpisy zaraz po warsztacie czy stacji benzynowej za każdym razem biją „Zrobię to dziś wieczorem”."
+			},
+			{
+				"title": "Bądź o krok przed nami",
+				"body": "Włącz przypomnienia o mniejszych i większych usługach, rejestracjach, winietach, casco – czymkolwiek, czego nie chcesz gonić w ostatniej chwili.",
+				"tip": "Szturchnięcia mają pomóc, a nie przeszkadzać — dbamy o to, aby były praktyczne i łatwe w regulacji."
+			}
+		]
+	},
+	"features": {
+		"title": "Co możesz zrobić",
+		"items": [
+			{
+				"title": "Historia serwisu",
+				"body": "Prowadź harmonogram konserwacji i napraw, korzystając z notatek i plików, gdy ich potrzebujesz."
+			},
+			{
+				"title": "Paliwo i zużycie",
+				"body": "Śledź wypełnienia i trendy, aby wcześnie wykryć zmiany."
+			},
+			{
+				"title": "Koszty w jednym widoku",
+				"body": "Przeglądaj wydatki w różnych kategoriach, zamiast przeglądać wiadomości i pliki PDF."
+			},
+			{
+				"title": "Przyjazny dla przekazania",
+				"body": "Kiedy sprzedajesz, Twoja dokumentacja może podróżować razem z pojazdem – czysta i kompletna."
+			}
+		]
+	},
+	"showcase": {
+		"title": "Wewnątrz aplikacji",
+		"body": "Obecne środowisko internetowe jest zoptymalizowane pod kątem szybkiego wprowadzania informacji na komputerze i telefonie — to samo konto, spójne dane.",
+		"wideAlt": "Panel aplikacji internetowej RideLogger na szerokim ekranie",
+		"narrowAlt": "Aplikacja internetowa RideLogger w wąskiej rzutni mobilnej"
+	},
+	"security": {
+		"title": "Twoje dane, Twoja własność",
+		"body": "Ostrożnie podchodzimy do danych konta i pojazdu: nowoczesne bezpieczeństwo transportu, kontrola dostępu i jasne zasady. Przeczytaj Politykę prywatności, aby poznać szczegółowe informacje na temat kategorii, celów i Twoich praw.",
+		"imageAlt": "Ilustracja: dokumenty i dane użytkownika chronione tarczą i kłódką, z subtelnymi wskazówkami dotyczącymi chmury i sieci."
+	},
+	"testimonials": {
+		"title": "Co mówią kierowcy",
+		"items": [
+			{
+				"quote": "Notatki papierowe i pliki Excel nie nadążały za moim tempem pracy. Teraz wszystko jest w jednym miejscu i zawsze pod ręką.",
+				"author": "Miloš, menadżer HR"
+			},
+			{
+				"quote": "Przypomnienia zmieniły wszystko – mała usługa, duża usługa, winieta, casco. Aplikacja szturcha mnie, zanim przegapię randkę.",
+				"author": "Tijana, inżynier IT"
+			},
+			{
+				"quote": "Hobbystycznie traktuję projekt renowacji. O wiele łatwiej jest przejrzeć koszty i wykonaną dotychczas pracę.",
+				"author": "Momčilo, projektant"
+			},
+			{
+				"quote": "Prosto, przejrzyście i pasuje do tego, jak lubię zachować porządek – przynajmniej jeśli chodzi o samochód.",
+				"author": "Jovana, kierownik sprzedaży"
+			}
+		]
+	},
+	"cta": {
+		"title": "Zacznij za kilka minut",
+		"body": "Skorzystaj z aplikacji internetowej na urządzeniu, które już posiadasz — aby rozpocząć, nie jest wymagana żadna instalacja.",
+		"button": "Otwórz aplikację internetową"
+	},
+	"landing": {
+		"heroLine": "Paliwo. Usługi. Wydatki."
+	},
+	"footer": {
+		"tagline": "Dziennik konserwacji pojazdów dla osób, które jeżdżą naprawdę.",
+		"note": "Nazwy produktów i ich dostępność mogą ulegać zmianom; aplikacja internetowa pozostaje głównym punktem wejścia."
+	}
+}

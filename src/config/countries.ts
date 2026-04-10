@@ -18,6 +18,9 @@ export type CountryPageConfig = {
 		fr: string;
 		it: string;
 		sl: string;
+		tr: string;
+		uk: string;
+		pl: string;
 	};
 };
 
@@ -36,6 +39,9 @@ export const COUNTRY_PAGES: CountryPageConfig[] = [
 			fr: 'Serbie',
 			it: 'Serbia',
 			sl: 'Srbija',
+			tr: 'Sırbistan',
+			uk: 'Сербія',
+			pl: 'Serbia',
 		},
 	},
 	{
@@ -52,6 +58,9 @@ export const COUNTRY_PAGES: CountryPageConfig[] = [
 			fr: 'Croatie',
 			it: 'Croazia',
 			sl: 'Hrvaška',
+			tr: 'Hırvatistan',
+			uk: 'Хорватія',
+			pl: 'Chorwacja',
 		},
 	},
 	{
@@ -68,6 +77,9 @@ export const COUNTRY_PAGES: CountryPageConfig[] = [
 			fr: 'Bosnie-Herzégovine',
 			it: 'Bosnia ed Erzegovina',
 			sl: 'Bosna in Hercegovina',
+			tr: 'Bosna Hersek',
+			uk: 'Боснія і Герцеговина',
+			pl: 'Bośnia i Hercegowina',
 		},
 	},
 	{
@@ -84,6 +96,9 @@ export const COUNTRY_PAGES: CountryPageConfig[] = [
 			fr: 'Monténégro',
 			it: 'Montenegro',
 			sl: 'Črna gora',
+			tr: 'Karadağ',
+			uk: 'Чорногорія',
+			pl: 'Czarnogóra',
 		},
 	},
 	{
@@ -100,6 +115,9 @@ export const COUNTRY_PAGES: CountryPageConfig[] = [
 			fr: 'Macédoine du Nord',
 			it: 'Macedonia del Nord',
 			sl: 'Severna Makedonija',
+			tr: 'Kuzey Makedonya',
+			uk: 'Північна Македонія',
+			pl: 'Macedonia Północna',
 		},
 	},
 	{
@@ -116,6 +134,9 @@ export const COUNTRY_PAGES: CountryPageConfig[] = [
 			fr: 'Allemagne',
 			it: 'Germania',
 			sl: 'Nemčija',
+			tr: 'Almanya',
+			uk: 'Німеччина',
+			pl: 'Niemcy',
 		},
 	},
 	{
@@ -132,6 +153,9 @@ export const COUNTRY_PAGES: CountryPageConfig[] = [
 			fr: 'France',
 			it: 'Francia',
 			sl: 'Francija',
+			tr: 'Fransa',
+			uk: 'Франція',
+			pl: 'Francja',
 		},
 	},
 	{
@@ -148,6 +172,9 @@ export const COUNTRY_PAGES: CountryPageConfig[] = [
 			fr: 'Italie',
 			it: 'Italia',
 			sl: 'Italija',
+			tr: 'İtalya',
+			uk: 'Італія',
+			pl: 'Włochy',
 		},
 	},
 	{
@@ -164,6 +191,9 @@ export const COUNTRY_PAGES: CountryPageConfig[] = [
 			fr: 'Suisse',
 			it: 'Svizzera',
 			sl: 'Švica',
+			tr: 'İsviçre',
+			uk: 'Швейцарія',
+			pl: 'Szwajcaria',
 		},
 	},
 	{
@@ -180,6 +210,9 @@ export const COUNTRY_PAGES: CountryPageConfig[] = [
 			fr: 'Autriche',
 			it: 'Austria',
 			sl: 'Avstrija',
+			tr: 'Avusturya',
+			uk: 'Австрія',
+			pl: 'Austria',
 		},
 	},
 	{
@@ -196,6 +229,9 @@ export const COUNTRY_PAGES: CountryPageConfig[] = [
 			fr: 'Slovénie',
 			it: 'Slovenia',
 			sl: 'Slovenija',
+			tr: 'Slovenya',
+			uk: 'Словенія',
+			pl: 'Słowenia',
 		},
 	},
 ];
