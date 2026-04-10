@@ -42,7 +42,7 @@ function targetUrl(c: CountryPageConfig): string {
 }
 
 function labelFor(c: CountryPageConfig): string {
-	return selfIsBalkan ? c.names['sr-latn'] : c.names.de;
+	return selfIsBalkan ? c.names['sr-latn'] : c.names[c.defaultLocale] ?? c.names.en;
 }
 
 const sortLocale = selfIsBalkan ? 'sr-Latn' : 'de';

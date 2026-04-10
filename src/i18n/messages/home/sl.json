@@ -1,0 +1,137 @@
+{
+	"meta": {
+		"title": "Digitalni dnevnik vzdrzevanja vozila",
+		"description": "Spremljajte gorivo, servise, opomnike in stroske na enem mestu. Ustvarjeno za voznike, ki zelijo jasnost brez preglednic."
+	},
+	"nav": {
+		"home": "Domov",
+		"openApp": "Odpri aplikacijo",
+		"privacy": "Zasebnost",
+		"cookies": "Piskotki"
+	},
+	"hero": {
+		"eyebrow": "Vzdrzevanje in stroski",
+		"headline": "Zgodovina vasega vozila, koncno na enem mestu.",
+		"sub": "Belezite servise, gorivo in stroske z opomniki, ki vam pomagajo prepreciti draga presenecenja.",
+		"primaryCta": "Odpri spletno aplikacijo",
+		"secondaryCta": "Kako deluje",
+		"placeholderTitle": "Glavni vizual",
+		"placeholderBody": "Cakajoca vsebina: dodajte ustvarjeno naslovno ilustracijo v media/generated/ (slikovni workflow naloge 0021), nato jo vkljucite tukaj.",
+		"imageAlt": "Ilustracija izdelka: namizna nadzorna plosca in mobilna aplikacija za vozila, stroske in opomnike za vzdrzevanje."
+	},
+	"trust": {
+		"title": "Zasnovano za jasnost",
+		"items": [
+			{
+				"title": "Podpora za vec vozil",
+				"detail": "Dnevni avto, vikend projekt ali vec vozil v druzini: vsako ohrani svojo zgodbo pregledno in urejeno."
+			},
+			{
+				"title": "Opomniki, ki dejansko pomagajo",
+				"detail": "Servis, registracija, zavarovanje: nezen opomnik preden rok postane drago presenecenje."
+			},
+			{
+				"title": "Gorivo in stroski v istem ritmu",
+				"detail": "Tocenja in stroski ustvarijo jasno sliko brez akrobacij s preglednicami."
+			},
+			{
+				"title": "Vasi podatki, vasa pravila",
+				"detail": "Orodje, ki vas spostuje: jasne izbire zasebnosti in pravilniki, napisani za ljudi."
+			}
+		]
+	},
+	"problem": {
+		"title": "Od raztresenih zapiskov do jasnega zapisa",
+		"problemTitle": "Tezava",
+		"problemBody": "Racuni, zvezki in preglednice hitro izgubijo ritem. Zgodovino izgubite, ko vozilo prodate, ali pa preprosto pozabite, kaj je bilo narejeno.",
+		"solutionTitle": "Resitev",
+		"solutionBody": "Strukturiran servisni dnevnik, ki ostane vezan na vas racun: dogodek dodate v nekaj sekundah, ohranite kontekst in dobite opomnik, preden vam rok uide.",
+		"imageAlt": "Ilustracija: razmetani racuni in zapiski v primerjavi z urejeno mobilno aplikacijo z zgodovino servisov in stroski goriva."
+	},
+	"how": {
+		"title": "Kako deluje",
+		"lead": "Trije preprosti koraki: po servisu ali tocenju vzamete telefon in v nekaj trenutkih je vse zabelezeno.",
+		"steps": [
+			{
+				"title": "Ustvarite svoj profil",
+				"body": "Prijavite se in dodajte eno ali vec vozil z osnovnimi podatki, ki jih ze poznate: znamka, model, registrska stevilka, kilometri, karkoli vam pomaga ostati orientirani.",
+				"tip": "Podrobnosti lahko vedno uredite pozneje; zacnite preprosto, da se navada lazje prime."
+			},
+			{
+				"title": "Belezite, kar je pomembno",
+				"body": "Gorivo, vzdrzevanje, popravila, cestnine, zavarovanje: belezenje stroskov in kilometrov takrat, ko se zgodijo, z namizja ali telefona.",
+				"tip": "Hiter vnos takoj po delavnici ali bencinski crpalki skoraj vedno premaga klasicni \"to bom naredil zvecer\"."
+			},
+			{
+				"title": "Ostanite korak pred tem",
+				"body": "Vklopite opomnike za manjse in vecje servise, registracijo, vinjeto, kasko in vse drugo, cesar ne zelite loviti zadnji hip.",
+				"tip": "Opomniki so tu zato, da pomagajo, ne da tezijo: ostajajo prakticni in jih je lahko prilagoditi."
+			}
+		]
+	},
+	"features": {
+		"title": "Kaj lahko naredite",
+		"items": [
+			{
+				"title": "Zgodovina servisov",
+				"body": "Ohranite casovnico vzdrzevanja in popravil z opombami in datotekami, ko jih potrebujete."
+			},
+			{
+				"title": "Gorivo in poraba",
+				"body": "Spremljajte tocenja in trende, da spremembe opazite dovolj zgodaj."
+			},
+			{
+				"title": "Vsi stroski na enem mestu",
+				"body": "Poglejte stroske po kategorijah, namesto da jih iscete po sporocilih in PDF-jih."
+			},
+			{
+				"title": "Prijazno za predajo naprej",
+				"body": "Ko vozilo prodate, lahko zapis potuje z njim naprej, cist in popoln."
+			}
+		]
+	},
+	"showcase": {
+		"title": "V notranjosti aplikacije",
+		"body": "Trenutna spletna izkusnja je optimizirana za hiter vnos na namizju in telefonu: isti racun, dosledni podatki.",
+		"wideAlt": "Nadzorna plosca RideLogger na sirokem zaslonu",
+		"narrowAlt": "Spletna aplikacija RideLogger na ozkem mobilnem prikazu"
+	},
+	"security": {
+		"title": "Vasi podatki ostanejo vasi",
+		"body": "S podatki racuna in vozila ravnamo skrbno: sodobna varnost prenosa, nadzor dostopa in jasni pravilniki. V pravilniku o zasebnosti preberite podrobnosti o kategorijah, namenih in svojih pravicah.",
+		"imageAlt": "Ilustracija: dokumenti in uporabniski podatki, zasciteni s scitom in kljucavnico, s subtilnimi namigi na oblak in omrezje."
+	},
+	"testimonials": {
+		"title": "Kaj pravijo vozniki",
+		"items": [
+			{
+				"quote": "Papirnati zapiski in Excel datoteke niso vec dohajali mojega tempa dela. Zdaj je vse na enem mestu in vedno dosegljivo.",
+				"author": "Milos, vodja kadrov"
+			},
+			{
+				"quote": "Opomniki so spremenili vse: mali servis, veliki servis, vinjeta, kasko. Aplikacija me opozori, preden zamudim datum.",
+				"author": "Tijana, IT inzenirka"
+			},
+			{
+				"quote": "Projekt obnove spremljam kot hobi. Zdaj je precej lazje pogledati stroske in dosedanje delo.",
+				"author": "Momcilo, oblikovalec"
+			},
+			{
+				"quote": "Preprosto, pregledno in v skladu z nacinom, kako rada ostajam organizirana, vsaj ko gre za avto.",
+				"author": "Jovana, vodja prodaje"
+			}
+		]
+	},
+	"cta": {
+		"title": "Zacnite v nekaj minutah",
+		"body": "Uporabite spletno aplikacijo na napravi, ki jo ze imate: za zacetek ni potrebna namestitev.",
+		"button": "Odpri spletno aplikacijo"
+	},
+	"landing": {
+		"heroLine": "Gorivo. Servisi. Stroski."
+	},
+	"footer": {
+		"tagline": "Dnevnik vzdrzevanja vozila za ljudi, ki res vozijo.",
+		"note": "Imena izdelkov in razpolozljivost se lahko spreminjajo; spletna aplikacija ostaja glavno vstopno mesto."
+	}
+}
