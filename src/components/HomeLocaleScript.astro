@@ -30,7 +30,12 @@ const init = {
 };
 ---
 
-<script define:vars={{ init }}>
+{/* define:vars + import must not be bundled into one non-module IIFE (breaks `import`). */}
+<script is:inline define:vars={{ init }}>
+	globalThis.__MARKETING_LOCALE_INIT__ = init;
+</script>
+<script>
 	import { initMarketingLocale } from '../scripts/marketingLocale';
-	initMarketingLocale(init);
+
+	initMarketingLocale(globalThis.__MARKETING_LOCALE_INIT__);
 </script>

@@ -34,7 +34,7 @@ function resolveLocale(init: MarketingLocaleInit): Locale {
 		const s = localStorage.getItem(storageKey(init.countryPath));
 		if (s && homeKeys.includes(s as Locale)) {
 			const loc = s as Locale;
-			if (!legalKeys || init.legals![loc]) return loc;
+			if (!init.legals || init.legals[loc]) return loc;
 		}
 	} catch {
 		/* ignore */
