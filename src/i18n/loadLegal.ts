@@ -32,3 +32,7 @@ const byLocale: Record<Locale, LegalBundle> = {
 export function getLegal(locale: Locale): LegalBundle {
 	return byLocale[locale];
 }
+
+export function getAllLegal(): Record<Locale, LegalBundle> {
+	return { ...byLocale };
+}

@@ -2,8 +2,8 @@
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import CookieArticle from '../../components/legal/CookieArticle.astro';
 import { countryPagesForInstance, getCountryByPath, type DeployInstance } from '../../config/countries';
-import { getHomeMessages } from '../../i18n/loadHome';
-import { getLegal } from '../../i18n/loadLegal';
+import { getAllHomeMessages, getHomeMessages } from '../../i18n/loadHome';
+import { getAllLegal, getLegal } from '../../i18n/loadLegal';
 
 export function getStaticPaths() {
 	const inst = (import.meta.env.PUBLIC_INSTANCE || 'balkan') as DeployInstance;
@@ -19,6 +19,8 @@ if (!cfg) {
 const locale = cfg.defaultLocale;
 const legal = getLegal(locale);
 const home = getHomeMessages(locale);
+const homes = getAllHomeMessages();
+const legals = getAllLegal();
 
 const title = legal.cookie_policy.meta_title;
 const description = legal.cookie_policy.meta_description;
@@ -36,6 +38,10 @@ const privacyUrl = new URL(`/${cfg.path}/privacy/`, site).href;
 	title={title}
 	description={description}
 	home={home}
+	homes={homes}
+	legals={legals}
+	legalPage="cookies"
+	privacyUrl={privacyUrl}
 	pathSuffix="cookies"
 >
 	<div class="legal shell">

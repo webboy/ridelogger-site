@@ -8,77 +8,22 @@ interface Props {
 }
 
 const { homes, defaultLocale } = Astro.props;
+
+const publicAppBase =
+	typeof import.meta.env.PUBLIC_APP_URL === 'string' && import.meta.env.PUBLIC_APP_URL.length > 0
+		? import.meta.env.PUBLIC_APP_URL
+		: 'https://app.servisna-knjizica.com';
+
+const init = {
+	homes,
+	defaultLocale,
+	countryPath: null,
+	publicAppBase,
+	appCountryCode: null,
+};
 ---
 
-<script is:inline define:vars={{ homes, defaultLocale }}>
-	(function () {
-		var STORAGE_KEY = 'marketing_ui_locale_landing';
-
-		function brandLabel(loc) {
-			return loc === 'sr-latn' || loc === 'sr-cyrl' || loc === 'hr' || loc === 'mk'
-				? 'Servisna Knjižica'
-				: 'RideLogger';
-		}
-
-		function getPath(obj, path) {
-			return path.split('.').reduce(function (o, k) {
-				if (o == null) return o;
-				var n = Number(k);
-				return Number.isNaN(n) ? o[k] : o[n];
-			}, obj);
-		}
-
-		function apply(loc) {
-			var m = homes[loc];
-			if (!m) return;
-
-			document.querySelectorAll('[data-hk]').forEach(function (el) {
-				var key = el.getAttribute('data-hk');
-				if (!key) return;
-				var v = getPath(m, key);
-				if (typeof v === 'string') el.textContent = v;
-			});
-
-			document.querySelectorAll('[data-brand-text]').forEach(function (el) {
-				el.textContent = brandLabel(loc);
-			});
-
-			if (m.meta && typeof m.meta.title === 'string') {
-				document.title = m.meta.title;
-			}
-
-			try {
-				localStorage.setItem(STORAGE_KEY, loc);
-			} catch (e) {}
-
-			document.documentElement.lang =
-				loc === 'sr-latn' ? 'sr-Latn' : loc === 'sr-cyrl' ? 'sr-Cyrl' : loc;
-		}
-
-		function bindLocalePicks() {
-			document.querySelectorAll('[data-locale-pick]').forEach(function (btn) {
-				btn.addEventListener('click', function () {
-					var v = btn.getAttribute('data-locale-pick');
-					if (v && homes[v]) apply(v);
-				});
-			});
-		}
-
-		var loc = defaultLocale;
-		try {
-			var s = localStorage.getItem(STORAGE_KEY);
-			if (s && homes[s]) loc = s;
-		} catch (e) {}
-
-		function go() {
-			apply(loc);
-			bindLocalePicks();
-		}
-
-		if (document.readyState === 'loading') {
-			document.addEventListener('DOMContentLoaded', go);
-		} else {
-			go();
-		}
-	})();
+<script define:vars={{ init }}>
+	import { initMarketingLocale } from '../scripts/marketingLocale';
+	initMarketingLocale(init);
 </script>

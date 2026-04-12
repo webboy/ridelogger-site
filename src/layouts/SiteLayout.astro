@@ -6,6 +6,7 @@ import SiteFooter from '../components/SiteFooter.astro';
 import CookieBanner from '../components/CookieBanner.astro';
 import HomeLocaleScript from '../components/HomeLocaleScript.astro';
 import type { HomeMessages } from '../types/home';
+import type { LegalBundle } from '../i18n/loadLegal';
 import { appCountryCodeFromPath } from '../config/countries';
 
 interface Props {
@@ -17,9 +18,24 @@ interface Props {
 	pathSuffix?: '' | 'privacy' | 'cookies';
 	/** When set, enables client-side home copy switching + JSON for all locales. */
 	homes?: Record<Locale, HomeMessages>;
+	legalPage?: 'privacy' | 'cookies';
+	legals?: Record<Locale, LegalBundle>;
+	/** Canonical privacy URL (cookie policy body links). */
+	privacyUrl?: string;
 }
 
-const { countryPath, locale, title, description, home, pathSuffix = '', homes } = Astro.props;
+const {
+	countryPath,
+	locale,
+	title,
+	description,
+	home,
+	pathSuffix = '',
+	homes,
+	legalPage,
+	legals,
+	privacyUrl,
+} = Astro.props;
 
 const publicAppBase =
 	typeof import.meta.env.PUBLIC_APP_URL === 'string' && import.meta.env.PUBLIC_APP_URL.length > 0
@@ -77,6 +93,9 @@ const appCountryCode = appCountryCodeFromPath(countryPath);
 					countryPath={countryPath}
 					publicAppBase={publicAppBase}
 					appCountryCode={appCountryCode}
+					legalPage={legalPage}
+					legals={legals}
+					privacyUrl={privacyUrl}
 				/>
 			)
 		}

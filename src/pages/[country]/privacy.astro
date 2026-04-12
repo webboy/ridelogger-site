@@ -2,8 +2,8 @@
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import PrivacyArticle from '../../components/legal/PrivacyArticle.astro';
 import { countryPagesForInstance, getCountryByPath, type DeployInstance } from '../../config/countries';
-import { getHomeMessages } from '../../i18n/loadHome';
-import { getLegal } from '../../i18n/loadLegal';
+import { getAllHomeMessages, getHomeMessages } from '../../i18n/loadHome';
+import { getAllLegal, getLegal } from '../../i18n/loadLegal';
 
 export function getStaticPaths() {
 	const inst = (import.meta.env.PUBLIC_INSTANCE || 'balkan') as DeployInstance;
@@ -19,6 +19,8 @@ if (!cfg) {
 const locale = cfg.defaultLocale;
 const legal = getLegal(locale);
 const home = getHomeMessages(locale);
+const homes = getAllHomeMessages();
+const legals = getAllLegal();
 
 const title = legal.privacy_v2.meta_title;
 const description = legal.privacy_v2.meta_description;
@@ -30,6 +32,9 @@ const description = legal.privacy_v2.meta_description;
 	title={title}
 	description={description}
 	home={home}
+	homes={homes}
+	legals={legals}
+	legalPage="privacy"
 	pathSuffix="privacy"
 >
 	<div class="legal shell">
