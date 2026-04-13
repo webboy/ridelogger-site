@@ -10,6 +10,12 @@ interface Props {
 const { countryPath, locale } = Astro.props;
 const legal = getLegal(locale);
 const cb = legal.cookie_banner;
+
+const instance = (import.meta.env.PUBLIC_INSTANCE || 'balkan') as 'balkan' | 'global';
+const gaFromEnv = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
+const gaId =
+	(gaFromEnv && String(gaFromEnv).trim()) ||
+	(instance === 'global' ? 'G-23VF66S9X3' : 'G-E5YJE5RD06');
 ---
 
 <div id="cookie-consent-banner" class="cookie-banner" style="display:none" role="dialog" aria-label={cb.message}>
@@ -29,7 +35,7 @@ const cb = legal.cookie_banner;
 	</div>
 </div>
 
-<script is:inline define:vars={{ gaId: 'G-E5YJE5RD06', fbPixelId: '26188160887543627' }}>
+<script is:inline define:vars={{ gaId, fbPixelId: '26188160887543627' }}>
 (function () {
 	var STORAGE_KEY = 'sk_cookie_consent_v1';
 
