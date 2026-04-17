@@ -68,6 +68,7 @@ export function renderPrivacyArticleHtml(legal: LegalBundle): string {
 			<ul>
 				<li>${esc(p.s4_p1_a)}</li>
 				<li>${esc(p.s4_p1_b)}</li>
+				<li>${esc(p.s4_p1_c)}</li>
 			</ul>
 		</li>
 		<li>
@@ -85,6 +86,7 @@ export function renderPrivacyArticleHtml(legal: LegalBundle): string {
 			<ul>
 				<li>${esc(p.s4_p4_a)}</li>
 				<li>${esc(p.s4_p4_b)}</li>
+				<li>${esc(p.s4_p4_c)}</li>
 			</ul>
 		</li>
 	</ol>
