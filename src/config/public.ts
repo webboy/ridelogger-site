@@ -18,3 +18,13 @@ export function getAppUrl(locale: Locale, countryCode?: string | null): string {
 	if (cc) url.searchParams.set('country', cc);
 	return url.href;
 }
+
+/** Partner PWA (workshops / service providers). */
+export function getPartnerAppUrl(): string {
+	const v = import.meta.env.PUBLIC_PARTNER_APP_URL;
+	if (typeof v === 'string' && v.length > 0) {
+		return v.replace(/\/+$/, '');
+	}
+	const inst = import.meta.env.PUBLIC_INSTANCE || 'balkan';
+	return inst === 'global' ? 'https://partner.ridelogger.com' : 'https://partner.servisna-knjizica.com';
+}

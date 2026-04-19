@@ -6,6 +6,7 @@ export interface HomeMessages {
 	nav: {
 		home: string;
 		openApp: string;
+		partner: string;
 		privacy: string;
 		cookies: string;
 	};

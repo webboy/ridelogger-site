@@ -1,137 +1,138 @@
 {
-	"meta": {
-		"title": "Registro digitale della manutenzione del veicolo",
-		"description": "Tieni traccia di carburante, manutenzione, promemoria e spese in un unico posto. Pensato per chi vuole chiarezza senza fogli di calcolo."
-	},
-	"nav": {
-		"home": "Home",
-		"openApp": "Apri app",
-		"privacy": "Privacy",
-		"cookies": "Cookie"
-	},
-	"hero": {
-		"eyebrow": "Manutenzione e costi",
-		"headline": "La storia del tuo veicolo, finalmente tutta in un unico posto.",
-		"sub": "Registra manutenzione, carburante e spese con promemoria che ti aiutano a evitare sorprese costose.",
-		"primaryCta": "Apri la web app",
-		"secondaryCta": "Come funziona",
-		"placeholderTitle": "Visual hero",
-		"placeholderBody": "Risorsa in sospeso: aggiungi un'immagine hero generata per la home in media/generated/ (workflow immagini task 0021), poi integrala qui.",
-		"imageAlt": "Illustrazione prodotto: dashboard desktop e app mobile per veicoli, spese e promemoria di manutenzione."
-	},
-	"trust": {
-		"title": "Pensato per la chiarezza",
-		"items": [
-			{
-				"title": "Supporto multi-veicolo",
-				"detail": "Auto di tutti i giorni, progetto del weekend o piu veicoli in famiglia: ognuno mantiene una storia chiara e ordinata."
-			},
-			{
-				"title": "Promemoria che aiutano davvero",
-				"detail": "Tagliando, revisione, assicurazione: promemoria discreti prima che una scadenza diventi una sorpresa costosa."
-			},
-			{
-				"title": "Carburante e costi nello stesso ritmo",
-				"detail": "Rifornimenti e spese costruiscono un quadro chiaro, senza acrobazie da foglio di calcolo."
-			},
-			{
-				"title": "I tuoi dati, le tue regole",
-				"detail": "Uno strumento che ti rispetta: scelte privacy chiare e policy scritte per persone reali."
-			}
-		]
-	},
-	"problem": {
-		"title": "Da note sparse a uno storico chiaro",
-		"problemTitle": "Il problema",
-		"problemBody": "Ricevute, taccuini e fogli di calcolo si disallineano facilmente. Perdi lo storico quando vendi l'auto, o semplicemente quando dimentichi cosa e stato fatto.",
-		"solutionTitle": "La soluzione",
-		"solutionBody": "Un registro manutenzione strutturato che resta legato al tuo account: aggiungi eventi in pochi secondi, conserva il contesto e ricevi promemoria prima che una scadenza ti sfugga.",
-		"imageAlt": "Illustrazione: ricevute e note sparse a confronto con un'app mobile ordinata con storico manutenzione e costi carburante."
-	},
-	"how": {
-		"title": "Come funziona",
-		"lead": "Tre passaggi semplici: prendi il telefono dopo l'officina o dopo il rifornimento, e hai finito in un attimo.",
-		"steps": [
-			{
-				"title": "Crea il tuo profilo",
-				"body": "Registrati e aggiungi uno o piu veicoli con quello che gia sai: marca, modello, targa, chilometraggio, tutto cio che ti aiuta a restare orientato.",
-				"tip": "Potrai sempre completare i dettagli in seguito; inizia in modo semplice cosi l'abitudine prende forma."
-			},
-			{
-				"title": "Registra cio che conta",
-				"body": "Carburante, manutenzione, riparazioni, pedaggi, assicurazione: registra costi e chilometraggio mentre succedono, da desktop o telefono.",
-				"tip": "Un inserimento rapido subito dopo officina o distributore batte quasi sempre il classico \"lo faccio stasera\"."
-			},
-			{
-				"title": "Resta in anticipo",
-				"body": "Attiva promemoria per tagliandi piccoli e grandi, revisione, vignetta, casco, tutto cio che non vuoi inseguire all'ultimo momento.",
-				"tip": "I promemoria servono ad aiutare, non a stressare: li manteniamo pratici e facili da regolare."
-			}
-		]
-	},
-	"features": {
-		"title": "Cosa puoi fare",
-		"items": [
-			{
-				"title": "Storico manutenzione",
-				"body": "Conserva una cronologia di manutenzioni e riparazioni, con note e file quando ti servono."
-			},
-			{
-				"title": "Carburante e consumi",
-				"body": "Segui rifornimenti e tendenze per notare presto eventuali cambiamenti."
-			},
-			{
-				"title": "Tutti i costi in una vista",
-				"body": "Visualizza le spese per categoria invece di cercarle tra messaggi e PDF."
-			},
-			{
-				"title": "Pronto per il passaggio di mano",
-				"body": "Quando vendi, lo storico puo seguire il veicolo in modo ordinato e completo."
-			}
-		]
-	},
-	"showcase": {
-		"title": "Dentro l'app",
-		"body": "L'esperienza web attuale e ottimizzata per inserimenti rapidi da desktop e telefono: stesso account, dati coerenti.",
-		"wideAlt": "Dashboard RideLogger su schermo ampio",
-		"narrowAlt": "Web app RideLogger su viewport mobile stretto"
-	},
-	"security": {
-		"title": "I tuoi dati restano tuoi",
-		"body": "Trattiamo i dati dell'account e del veicolo con attenzione: sicurezza moderna nel trasporto dei dati, controlli di accesso e policy chiare. Leggi l'informativa privacy per i dettagli su categorie, finalita e diritti.",
-		"imageAlt": "Illustrazione: documenti e dati utente protetti da scudo e lucchetto, con richiami discreti a cloud e rete."
-	},
-	"testimonials": {
-		"title": "Cosa dicono i guidatori",
-		"items": [
-			{
-				"quote": "Note cartacee e file Excel non riuscivano piu a stare dietro al mio ritmo di lavoro. Ora e tutto in un solo posto e sempre disponibile.",
-				"author": "Milos, HR manager"
-			},
-			{
-				"quote": "I promemoria hanno cambiato tutto: tagliando piccolo, tagliando grande, vignetta, casco. L'app mi avvisa prima che mi sfugga una data.",
-				"author": "Tijana, ingegnera IT"
-			},
-			{
-				"quote": "Seguo un progetto di restauro come hobby. E molto piu facile rivedere costi e lavori fatti finora.",
-				"author": "Momcilo, designer"
-			},
-			{
-				"quote": "Semplice, trasparente e in linea con il mio modo di restare organizzata, almeno quando si parla dell'auto.",
-				"author": "Jovana, responsabile vendite"
-			}
-		]
-	},
-	"cta": {
-		"title": "Inizia in pochi minuti",
-		"body": "Usa la web app sul dispositivo che hai gia: nessuna installazione obbligatoria per partire.",
-		"button": "Apri la web app"
-	},
-	"landing": {
-		"heroLine": "Carburante. Manutenzione. Spese."
-	},
-	"footer": {
-		"tagline": "Registro di manutenzione del veicolo per chi guida davvero.",
-		"note": "Nomi prodotto e disponibilita possono evolvere; la web app resta il punto di ingresso principale."
-	}
+  "meta": {
+    "title": "Registro digitale della manutenzione del veicolo",
+    "description": "Tieni traccia di carburante, manutenzione, promemoria e spese in un unico posto. Pensato per chi vuole chiarezza senza fogli di calcolo."
+  },
+  "nav": {
+    "home": "Home",
+    "openApp": "Apri app",
+    "privacy": "Privacy",
+    "cookies": "Cookie",
+    "partner": "Partner (businesses)"
+  },
+  "hero": {
+    "eyebrow": "Manutenzione e costi",
+    "headline": "La storia del tuo veicolo, finalmente tutta in un unico posto.",
+    "sub": "Registra manutenzione, carburante e spese con promemoria che ti aiutano a evitare sorprese costose.",
+    "primaryCta": "Apri la web app",
+    "secondaryCta": "Come funziona",
+    "placeholderTitle": "Visual hero",
+    "placeholderBody": "Risorsa in sospeso: aggiungi un'immagine hero generata per la home in media/generated/ (workflow immagini task 0021), poi integrala qui.",
+    "imageAlt": "Illustrazione prodotto: dashboard desktop e app mobile per veicoli, spese e promemoria di manutenzione."
+  },
+  "trust": {
+    "title": "Pensato per la chiarezza",
+    "items": [
+      {
+        "title": "Supporto multi-veicolo",
+        "detail": "Auto di tutti i giorni, progetto del weekend o piu veicoli in famiglia: ognuno mantiene una storia chiara e ordinata."
+      },
+      {
+        "title": "Promemoria che aiutano davvero",
+        "detail": "Tagliando, revisione, assicurazione: promemoria discreti prima che una scadenza diventi una sorpresa costosa."
+      },
+      {
+        "title": "Carburante e costi nello stesso ritmo",
+        "detail": "Rifornimenti e spese costruiscono un quadro chiaro, senza acrobazie da foglio di calcolo."
+      },
+      {
+        "title": "I tuoi dati, le tue regole",
+        "detail": "Uno strumento che ti rispetta: scelte privacy chiare e policy scritte per persone reali."
+      }
+    ]
+  },
+  "problem": {
+    "title": "Da note sparse a uno storico chiaro",
+    "problemTitle": "Il problema",
+    "problemBody": "Ricevute, taccuini e fogli di calcolo si disallineano facilmente. Perdi lo storico quando vendi l'auto, o semplicemente quando dimentichi cosa e stato fatto.",
+    "solutionTitle": "La soluzione",
+    "solutionBody": "Un registro manutenzione strutturato che resta legato al tuo account: aggiungi eventi in pochi secondi, conserva il contesto e ricevi promemoria prima che una scadenza ti sfugga.",
+    "imageAlt": "Illustrazione: ricevute e note sparse a confronto con un'app mobile ordinata con storico manutenzione e costi carburante."
+  },
+  "how": {
+    "title": "Come funziona",
+    "lead": "Tre passaggi semplici: prendi il telefono dopo l'officina o dopo il rifornimento, e hai finito in un attimo.",
+    "steps": [
+      {
+        "title": "Crea il tuo profilo",
+        "body": "Registrati e aggiungi uno o piu veicoli con quello che gia sai: marca, modello, targa, chilometraggio, tutto cio che ti aiuta a restare orientato.",
+        "tip": "Potrai sempre completare i dettagli in seguito; inizia in modo semplice cosi l'abitudine prende forma."
+      },
+      {
+        "title": "Registra cio che conta",
+        "body": "Carburante, manutenzione, riparazioni, pedaggi, assicurazione: registra costi e chilometraggio mentre succedono, da desktop o telefono.",
+        "tip": "Un inserimento rapido subito dopo officina o distributore batte quasi sempre il classico \"lo faccio stasera\"."
+      },
+      {
+        "title": "Resta in anticipo",
+        "body": "Attiva promemoria per tagliandi piccoli e grandi, revisione, vignetta, casco, tutto cio che non vuoi inseguire all'ultimo momento.",
+        "tip": "I promemoria servono ad aiutare, non a stressare: li manteniamo pratici e facili da regolare."
+      }
+    ]
+  },
+  "features": {
+    "title": "Cosa puoi fare",
+    "items": [
+      {
+        "title": "Storico manutenzione",
+        "body": "Conserva una cronologia di manutenzioni e riparazioni, con note e file quando ti servono."
+      },
+      {
+        "title": "Carburante e consumi",
+        "body": "Segui rifornimenti e tendenze per notare presto eventuali cambiamenti."
+      },
+      {
+        "title": "Tutti i costi in una vista",
+        "body": "Visualizza le spese per categoria invece di cercarle tra messaggi e PDF."
+      },
+      {
+        "title": "Pronto per il passaggio di mano",
+        "body": "Quando vendi, lo storico puo seguire il veicolo in modo ordinato e completo."
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Dentro l'app",
+    "body": "L'esperienza web attuale e ottimizzata per inserimenti rapidi da desktop e telefono: stesso account, dati coerenti.",
+    "wideAlt": "Dashboard RideLogger su schermo ampio",
+    "narrowAlt": "Web app RideLogger su viewport mobile stretto"
+  },
+  "security": {
+    "title": "I tuoi dati restano tuoi",
+    "body": "Trattiamo i dati dell'account e del veicolo con attenzione: sicurezza moderna nel trasporto dei dati, controlli di accesso e policy chiare. Leggi l'informativa privacy per i dettagli su categorie, finalita e diritti.",
+    "imageAlt": "Illustrazione: documenti e dati utente protetti da scudo e lucchetto, con richiami discreti a cloud e rete."
+  },
+  "testimonials": {
+    "title": "Cosa dicono i guidatori",
+    "items": [
+      {
+        "quote": "Note cartacee e file Excel non riuscivano piu a stare dietro al mio ritmo di lavoro. Ora e tutto in un solo posto e sempre disponibile.",
+        "author": "Milos, HR manager"
+      },
+      {
+        "quote": "I promemoria hanno cambiato tutto: tagliando piccolo, tagliando grande, vignetta, casco. L'app mi avvisa prima che mi sfugga una data.",
+        "author": "Tijana, ingegnera IT"
+      },
+      {
+        "quote": "Seguo un progetto di restauro come hobby. E molto piu facile rivedere costi e lavori fatti finora.",
+        "author": "Momcilo, designer"
+      },
+      {
+        "quote": "Semplice, trasparente e in linea con il mio modo di restare organizzata, almeno quando si parla dell'auto.",
+        "author": "Jovana, responsabile vendite"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Inizia in pochi minuti",
+    "body": "Usa la web app sul dispositivo che hai gia: nessuna installazione obbligatoria per partire.",
+    "button": "Apri la web app"
+  },
+  "landing": {
+    "heroLine": "Carburante. Manutenzione. Spese."
+  },
+  "footer": {
+    "tagline": "Registro di manutenzione del veicolo per chi guida davvero.",
+    "note": "Nomi prodotto e disponibilita possono evolvere; la web app resta il punto di ingresso principale."
+  }
 }

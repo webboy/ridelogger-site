@@ -1,137 +1,138 @@
 {
-	"meta": {
-		"title": "Digital vehicle maintenance logbook",
-		"description": "Track fuel, services, reminders and expenses in one place. Built for drivers who want clarity without spreadsheets."
-	},
-	"nav": {
-		"home": "Home",
-		"openApp": "Open app",
-		"privacy": "Privacy",
-		"cookies": "Cookies"
-	},
-	"hero": {
-		"eyebrow": "Maintenance & costs",
-		"headline": "Your vehicle history, finally in one place.",
-		"sub": "Record services, fuel and expenses with reminders that help you avoid costly surprises.",
-		"primaryCta": "Open web app",
-		"secondaryCta": "How it works",
-		"placeholderTitle": "Hero visual",
-		"placeholderBody": "Pending asset: add a generated homepage hero to media/generated/ (task 0021 image workflow), then integrate it here.",
-		"imageAlt": "Product illustration: desktop dashboard and phone app for vehicles, expenses, and maintenance reminders."
-	},
-	"trust": {
-		"title": "Designed for clarity",
-		"items": [
-			{
-				"title": "Multi-vehicle support",
-				"detail": "Daily driver, weekend project, or a few cars in the family — each one keeps its own story straight."
-			},
-			{
-				"title": "Reminders that actually help",
-				"detail": "Service, registration, insurance — gentle nudges before a deadline becomes an expensive surprise."
-			},
-			{
-				"title": "Fuel & costs in one rhythm",
-				"detail": "Fill-ups and expenses build a clear picture without spreadsheet acrobatics."
-			},
-			{
-				"title": "Your data, your rules",
-				"detail": "A tool that respects you: clear privacy choices and policies written for humans."
-			}
-		]
-	},
-	"problem": {
-		"title": "From scattered notes to a clear record",
-		"problemTitle": "The problem",
-		"problemBody": "Receipts, notebooks and spreadsheets fall out of sync. You lose history when you sell the car—or when you simply forget what was done.",
-		"solutionTitle": "The solution",
-		"solutionBody": "A structured service log that stays with your account: add events in seconds, attach context, and get reminders before deadlines slip.",
-		"imageAlt": "Illustration: messy receipts and notes versus an organized mobile app with service history and fuel costs."
-	},
-	"how": {
-		"title": "How it works",
-		"lead": "Three straightforward steps—pick up your phone after a service stop or fill-up, and you’re done in a moment.",
-		"steps": [
-			{
-				"title": "Create your profile",
-				"body": "Sign up and add one or more vehicles with the basics you already know—brand, model, plate, odometer, whatever helps you stay oriented.",
-				"tip": "You can always edit details later; start simple so the habit sticks."
-			},
-			{
-				"title": "Log what matters",
-				"body": "Record fuel, maintenance, repairs, tolls, insurance—costs and mileage as life happens, from desktop or phone.",
-				"tip": "Quick entries right after the workshop or gas station beat “I’ll do it tonight” every time."
-			},
-			{
-				"title": "Stay ahead",
-				"body": "Turn on reminders for minor and major services, registration, vignette, casco—whatever you don’t want to chase at the last minute.",
-				"tip": "Nudges are there to help, not nag—we keep them practical and easy to adjust."
-			}
-		]
-	},
-	"features": {
-		"title": "What you can do",
-		"items": [
-			{
-				"title": "Service history",
-				"body": "Keep a timeline of maintenance and repairs with notes and files when you need them."
-			},
-			{
-				"title": "Fuel & consumption",
-				"body": "Track fills and trends so you can spot changes early."
-			},
-			{
-				"title": "Costs in one view",
-				"body": "See expenses across categories instead of hunting through messages and PDFs."
-			},
-			{
-				"title": "Handoff-friendly",
-				"body": "When you sell, your record can travel with the vehicle—clean and complete."
-			}
-		]
-	},
-	"showcase": {
-		"title": "Inside the app",
-		"body": "The current web experience is optimized for fast entry on desktop and phone—same account, consistent data.",
-		"wideAlt": "RideLogger web app dashboard on a wide screen",
-		"narrowAlt": "RideLogger web app on a narrow mobile viewport"
-	},
-	"security": {
-		"title": "Your data, your ownership",
-		"body": "We treat account and vehicle data with care: modern transport security, access controls, and clear policies. Read the Privacy Policy for details on categories, purposes and your rights.",
-		"imageAlt": "Illustration: documents and user data protected by a shield and padlock, with subtle cloud and network cues."
-	},
-	"testimonials": {
-		"title": "What drivers say",
-		"items": [
-			{
-				"quote": "Paper notes and Excel files couldn’t keep up with my work pace. Now everything is in one place and always available.",
-				"author": "Miloš, HR manager"
-			},
-			{
-				"quote": "Reminders changed everything—small service, big service, vignette, casco. The app nudges me before I miss a date.",
-				"author": "Tijana, IT engineer"
-			},
-			{
-				"quote": "I track a restoration project as a hobby. It’s much easier to review costs and work done so far.",
-				"author": "Momčilo, designer"
-			},
-			{
-				"quote": "Simple, transparent, and it fits how I like to stay organized—at least when it comes to the car.",
-				"author": "Jovana, sales manager"
-			}
-		]
-	},
-	"cta": {
-		"title": "Start in minutes",
-		"body": "Use the web app on the device you already have—no install required to begin.",
-		"button": "Open web app"
-	},
-	"landing": {
-		"heroLine": "Fuel. Services. Expenses."
-	},
-	"footer": {
-		"tagline": "Vehicle maintenance logbook for people who drive for real.",
-		"note": "Product names and availability may evolve; the web app remains the primary entry point."
-	}
+  "meta": {
+    "title": "Digital vehicle maintenance logbook",
+    "description": "Track fuel, services, reminders and expenses in one place. Built for drivers who want clarity without spreadsheets."
+  },
+  "nav": {
+    "home": "Home",
+    "openApp": "Open app",
+    "privacy": "Privacy",
+    "cookies": "Cookies",
+    "partner": "Partner (businesses)"
+  },
+  "hero": {
+    "eyebrow": "Maintenance & costs",
+    "headline": "Your vehicle history, finally in one place.",
+    "sub": "Record services, fuel and expenses with reminders that help you avoid costly surprises.",
+    "primaryCta": "Open web app",
+    "secondaryCta": "How it works",
+    "placeholderTitle": "Hero visual",
+    "placeholderBody": "Pending asset: add a generated homepage hero to media/generated/ (task 0021 image workflow), then integrate it here.",
+    "imageAlt": "Product illustration: desktop dashboard and phone app for vehicles, expenses, and maintenance reminders."
+  },
+  "trust": {
+    "title": "Designed for clarity",
+    "items": [
+      {
+        "title": "Multi-vehicle support",
+        "detail": "Daily driver, weekend project, or a few cars in the family — each one keeps its own story straight."
+      },
+      {
+        "title": "Reminders that actually help",
+        "detail": "Service, registration, insurance — gentle nudges before a deadline becomes an expensive surprise."
+      },
+      {
+        "title": "Fuel & costs in one rhythm",
+        "detail": "Fill-ups and expenses build a clear picture without spreadsheet acrobatics."
+      },
+      {
+        "title": "Your data, your rules",
+        "detail": "A tool that respects you: clear privacy choices and policies written for humans."
+      }
+    ]
+  },
+  "problem": {
+    "title": "From scattered notes to a clear record",
+    "problemTitle": "The problem",
+    "problemBody": "Receipts, notebooks and spreadsheets fall out of sync. You lose history when you sell the car—or when you simply forget what was done.",
+    "solutionTitle": "The solution",
+    "solutionBody": "A structured service log that stays with your account: add events in seconds, attach context, and get reminders before deadlines slip.",
+    "imageAlt": "Illustration: messy receipts and notes versus an organized mobile app with service history and fuel costs."
+  },
+  "how": {
+    "title": "How it works",
+    "lead": "Three straightforward steps—pick up your phone after a service stop or fill-up, and you’re done in a moment.",
+    "steps": [
+      {
+        "title": "Create your profile",
+        "body": "Sign up and add one or more vehicles with the basics you already know—brand, model, plate, odometer, whatever helps you stay oriented.",
+        "tip": "You can always edit details later; start simple so the habit sticks."
+      },
+      {
+        "title": "Log what matters",
+        "body": "Record fuel, maintenance, repairs, tolls, insurance—costs and mileage as life happens, from desktop or phone.",
+        "tip": "Quick entries right after the workshop or gas station beat “I’ll do it tonight” every time."
+      },
+      {
+        "title": "Stay ahead",
+        "body": "Turn on reminders for minor and major services, registration, vignette, casco—whatever you don’t want to chase at the last minute.",
+        "tip": "Nudges are there to help, not nag—we keep them practical and easy to adjust."
+      }
+    ]
+  },
+  "features": {
+    "title": "What you can do",
+    "items": [
+      {
+        "title": "Service history",
+        "body": "Keep a timeline of maintenance and repairs with notes and files when you need them."
+      },
+      {
+        "title": "Fuel & consumption",
+        "body": "Track fills and trends so you can spot changes early."
+      },
+      {
+        "title": "Costs in one view",
+        "body": "See expenses across categories instead of hunting through messages and PDFs."
+      },
+      {
+        "title": "Handoff-friendly",
+        "body": "When you sell, your record can travel with the vehicle—clean and complete."
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Inside the app",
+    "body": "The current web experience is optimized for fast entry on desktop and phone—same account, consistent data.",
+    "wideAlt": "RideLogger web app dashboard on a wide screen",
+    "narrowAlt": "RideLogger web app on a narrow mobile viewport"
+  },
+  "security": {
+    "title": "Your data, your ownership",
+    "body": "We treat account and vehicle data with care: modern transport security, access controls, and clear policies. Read the Privacy Policy for details on categories, purposes and your rights.",
+    "imageAlt": "Illustration: documents and user data protected by a shield and padlock, with subtle cloud and network cues."
+  },
+  "testimonials": {
+    "title": "What drivers say",
+    "items": [
+      {
+        "quote": "Paper notes and Excel files couldn’t keep up with my work pace. Now everything is in one place and always available.",
+        "author": "Miloš, HR manager"
+      },
+      {
+        "quote": "Reminders changed everything—small service, big service, vignette, casco. The app nudges me before I miss a date.",
+        "author": "Tijana, IT engineer"
+      },
+      {
+        "quote": "I track a restoration project as a hobby. It’s much easier to review costs and work done so far.",
+        "author": "Momčilo, designer"
+      },
+      {
+        "quote": "Simple, transparent, and it fits how I like to stay organized—at least when it comes to the car.",
+        "author": "Jovana, sales manager"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Start in minutes",
+    "body": "Use the web app on the device you already have—no install required to begin.",
+    "button": "Open web app"
+  },
+  "landing": {
+    "heroLine": "Fuel. Services. Expenses."
+  },
+  "footer": {
+    "tagline": "Vehicle maintenance logbook for people who drive for real.",
+    "note": "Product names and availability may evolve; the web app remains the primary entry point."
+  }
 }

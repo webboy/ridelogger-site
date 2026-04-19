@@ -2,7 +2,7 @@
 import type { HomeMessages } from '../types/home';
 import type { Locale } from '../i18n/config';
 import { brandName } from '../i18n/config';
-import { getAppUrl } from '../config/public';
+import { getAppUrl, getPartnerAppUrl } from '../config/public';
 import { appCountryCodeFromPath } from '../config/countries';
 import LanguageSwitcherCountry from './LanguageSwitcherCountry.astro';
 
@@ -15,6 +15,7 @@ interface Props {
 const { countryPath, locale, home } = Astro.props;
 const brand = brandName(locale);
 const appCountry = appCountryCodeFromPath(countryPath);
+const partnerUrl = getPartnerAppUrl();
 ---
 
 <header class="site-header">
@@ -25,6 +26,9 @@ const appCountry = appCountryCodeFromPath(countryPath);
 			<span class="brand__name" data-brand-text>{brand}</span>
 		</a>
 		<div class="site-header__cta">
+			<a class="btn btn--ghost" href={partnerUrl} rel="noopener noreferrer">
+				<span data-hk="nav.partner">{home.nav.partner}</span>
+			</a>
 			<a class="btn btn--primary" data-app-link href={getAppUrl(locale, appCountry)} rel="noopener">
 				<span data-hk="nav.openApp">{home.nav.openApp}</span>
 			</a>

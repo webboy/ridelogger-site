@@ -1,137 +1,138 @@
 {
-	"meta": {
-		"title": "Carnet d'entretien numerique pour votre vehicule",
-		"description": "Suivez carburant, entretiens, rappels et depenses au meme endroit. Concu pour les conducteurs qui veulent de la clarte sans tableurs."
-	},
-	"nav": {
-		"home": "Accueil",
-		"openApp": "Ouvrir l'application",
-		"privacy": "Confidentialite",
-		"cookies": "Cookies"
-	},
-	"hero": {
-		"eyebrow": "Entretien et couts",
-		"headline": "L'historique de votre vehicule, enfin au meme endroit.",
-		"sub": "Enregistrez entretiens, carburant et depenses avec des rappels qui vous aident a eviter les mauvaises surprises couteuses.",
-		"primaryCta": "Ouvrir l'application web",
-		"secondaryCta": "Comment ca marche",
-		"placeholderTitle": "Visuel principal",
-		"placeholderBody": "Ressource en attente : ajoutez un visuel d'accueil genere dans media/generated/ (workflow image de la tache 0021), puis integrez-le ici.",
-		"imageAlt": "Illustration produit : tableau de bord desktop et application mobile pour vehicules, depenses et rappels d'entretien."
-	},
-	"trust": {
-		"title": "Pense pour la clarte",
-		"items": [
-			{
-				"title": "Plusieurs vehicules, sans confusion",
-				"detail": "Voiture du quotidien, projet du week-end ou plusieurs vehicules dans la famille : chacun garde son historique bien ordonne."
-			},
-			{
-				"title": "Des rappels vraiment utiles",
-				"detail": "Entretien, immatriculation, assurance : de petits rappels avant qu'une echeance ne se transforme en surprise couteuse."
-			},
-			{
-				"title": "Carburant et couts dans un meme rythme",
-				"detail": "Pleins et depenses dessinent une image claire, sans gymnastique sur tableur."
-			},
-			{
-				"title": "Vos donnees, vos regles",
-				"detail": "Un outil qui vous respecte : des choix de confidentialite clairs et des politiques ecrites pour des humains."
-			}
-		]
-	},
-	"problem": {
-		"title": "Des notes eparses a un historique clair",
-		"problemTitle": "Le probleme",
-		"problemBody": "Recus, carnets et feuilles de calcul se desynchronisent vite. Vous perdez l'historique quand vous vendez le vehicule, ou simplement quand vous oubliez ce qui a ete fait.",
-		"solutionTitle": "La solution",
-		"solutionBody": "Un carnet d'entretien structure qui reste rattache a votre compte : ajoutez un evenement en quelques secondes, conservez le contexte et recevez des rappels avant qu'une echeance ne vous echappe.",
-		"imageAlt": "Illustration : recus et notes eparpilles face a une application mobile organisee avec historique d'entretien et couts carburant."
-	},
-	"how": {
-		"title": "Comment ca marche",
-		"lead": "Trois etapes simples : vous sortez votre telephone apres un passage a l'atelier ou un plein, et c'est regle en un instant.",
-		"steps": [
-			{
-				"title": "Creez votre profil",
-				"body": "Inscrivez-vous et ajoutez un ou plusieurs vehicules avec les informations que vous connaissez deja : marque, modele, plaque, kilometrage, tout ce qui vous aide a garder le cap.",
-				"tip": "Vous pourrez toujours completer les details plus tard ; commencez simplement pour que l'habitude s'installe."
-			},
-			{
-				"title": "Enregistrez l'essentiel",
-				"body": "Carburant, entretien, reparations, peages, assurance : saisissez couts et kilometrage au fil de la vraie vie, depuis un ordinateur ou un telephone.",
-				"tip": "Une saisie rapide juste apres l'atelier ou la station-service bat presque toujours le classique \"je le ferai ce soir\"."
-			},
-			{
-				"title": "Gardez une longueur d'avance",
-				"body": "Activez des rappels pour petit entretien, gros entretien, immatriculation, vignette, casco, tout ce que vous ne voulez pas traiter a la derniere minute.",
-				"tip": "Les rappels sont la pour aider, pas pour agacer : nous les gardons pratiques et faciles a ajuster."
-			}
-		]
-	},
-	"features": {
-		"title": "Ce que vous pouvez faire",
-		"items": [
-			{
-				"title": "Historique d'entretien",
-				"body": "Conservez une chronologie des entretiens et reparations, avec notes et fichiers quand vous en avez besoin."
-			},
-			{
-				"title": "Carburant et consommation",
-				"body": "Suivez pleins et tendances pour reperer les changements suffisamment tot."
-			},
-			{
-				"title": "Tous vos couts en un coup d'oeil",
-				"body": "Visualisez les depenses par categorie au lieu de fouiller des messages et des PDF."
-			},
-			{
-				"title": "Facile a transmettre",
-				"body": "Quand vous vendez, l'historique peut suivre le vehicule, propre, clair et complet."
-			}
-		]
-	},
-	"showcase": {
-		"title": "Dans l'application",
-		"body": "L'experience web actuelle est optimisee pour une saisie rapide sur ordinateur et telephone : meme compte, memes donnees coherentes.",
-		"wideAlt": "Tableau de bord RideLogger sur grand ecran",
-		"narrowAlt": "Application web RideLogger sur un ecran mobile etroit"
-	},
-	"security": {
-		"title": "Vos donnees vous appartiennent",
-		"body": "Nous traitons les donnees du compte et du vehicule avec soin : securite de transport moderne, controles d'acces et politiques claires. Consultez la politique de confidentialite pour les details sur les categories, finalites et vos droits.",
-		"imageAlt": "Illustration : documents et donnees utilisateur proteges par un bouclier et un cadenas, avec de subtils indices de cloud et de reseau."
-	},
-	"testimonials": {
-		"title": "Ce que disent les conducteurs",
-		"items": [
-			{
-				"quote": "Les notes papier et les fichiers Excel ne suivaient plus mon rythme de travail. Maintenant, tout est au meme endroit et toujours accessible.",
-				"author": "Milos, responsable RH"
-			},
-			{
-				"quote": "Les rappels ont tout change : petit entretien, gros entretien, vignette, casco. L'application me relance avant que j'oublie une date.",
-				"author": "Tijana, ingenieure IT"
-			},
-			{
-				"quote": "Je suis un projet de restauration comme loisir. C'est beaucoup plus simple de revoir les couts et le travail deja fait.",
-				"author": "Momcilo, designer"
-			},
-			{
-				"quote": "Simple, transparent, et ca colle a ma facon de rester organise, au moins pour la voiture.",
-				"author": "Jovana, responsable commerciale"
-			}
-		]
-	},
-	"cta": {
-		"title": "Commencez en quelques minutes",
-		"body": "Utilisez l'application web sur l'appareil que vous avez deja : aucune installation n'est necessaire pour commencer.",
-		"button": "Ouvrir l'application web"
-	},
-	"landing": {
-		"heroLine": "Carburant. Entretien. Depenses."
-	},
-	"footer": {
-		"tagline": "Carnet d'entretien pour les personnes qui conduisent vraiment.",
-		"note": "Les noms de produit et la disponibilite peuvent evoluer ; l'application web reste le point d'entree principal."
-	}
+  "meta": {
+    "title": "Carnet d'entretien numerique pour votre vehicule",
+    "description": "Suivez carburant, entretiens, rappels et depenses au meme endroit. Concu pour les conducteurs qui veulent de la clarte sans tableurs."
+  },
+  "nav": {
+    "home": "Accueil",
+    "openApp": "Ouvrir l'application",
+    "privacy": "Confidentialite",
+    "cookies": "Cookies",
+    "partner": "Partner (businesses)"
+  },
+  "hero": {
+    "eyebrow": "Entretien et couts",
+    "headline": "L'historique de votre vehicule, enfin au meme endroit.",
+    "sub": "Enregistrez entretiens, carburant et depenses avec des rappels qui vous aident a eviter les mauvaises surprises couteuses.",
+    "primaryCta": "Ouvrir l'application web",
+    "secondaryCta": "Comment ca marche",
+    "placeholderTitle": "Visuel principal",
+    "placeholderBody": "Ressource en attente : ajoutez un visuel d'accueil genere dans media/generated/ (workflow image de la tache 0021), puis integrez-le ici.",
+    "imageAlt": "Illustration produit : tableau de bord desktop et application mobile pour vehicules, depenses et rappels d'entretien."
+  },
+  "trust": {
+    "title": "Pense pour la clarte",
+    "items": [
+      {
+        "title": "Plusieurs vehicules, sans confusion",
+        "detail": "Voiture du quotidien, projet du week-end ou plusieurs vehicules dans la famille : chacun garde son historique bien ordonne."
+      },
+      {
+        "title": "Des rappels vraiment utiles",
+        "detail": "Entretien, immatriculation, assurance : de petits rappels avant qu'une echeance ne se transforme en surprise couteuse."
+      },
+      {
+        "title": "Carburant et couts dans un meme rythme",
+        "detail": "Pleins et depenses dessinent une image claire, sans gymnastique sur tableur."
+      },
+      {
+        "title": "Vos donnees, vos regles",
+        "detail": "Un outil qui vous respecte : des choix de confidentialite clairs et des politiques ecrites pour des humains."
+      }
+    ]
+  },
+  "problem": {
+    "title": "Des notes eparses a un historique clair",
+    "problemTitle": "Le probleme",
+    "problemBody": "Recus, carnets et feuilles de calcul se desynchronisent vite. Vous perdez l'historique quand vous vendez le vehicule, ou simplement quand vous oubliez ce qui a ete fait.",
+    "solutionTitle": "La solution",
+    "solutionBody": "Un carnet d'entretien structure qui reste rattache a votre compte : ajoutez un evenement en quelques secondes, conservez le contexte et recevez des rappels avant qu'une echeance ne vous echappe.",
+    "imageAlt": "Illustration : recus et notes eparpilles face a une application mobile organisee avec historique d'entretien et couts carburant."
+  },
+  "how": {
+    "title": "Comment ca marche",
+    "lead": "Trois etapes simples : vous sortez votre telephone apres un passage a l'atelier ou un plein, et c'est regle en un instant.",
+    "steps": [
+      {
+        "title": "Creez votre profil",
+        "body": "Inscrivez-vous et ajoutez un ou plusieurs vehicules avec les informations que vous connaissez deja : marque, modele, plaque, kilometrage, tout ce qui vous aide a garder le cap.",
+        "tip": "Vous pourrez toujours completer les details plus tard ; commencez simplement pour que l'habitude s'installe."
+      },
+      {
+        "title": "Enregistrez l'essentiel",
+        "body": "Carburant, entretien, reparations, peages, assurance : saisissez couts et kilometrage au fil de la vraie vie, depuis un ordinateur ou un telephone.",
+        "tip": "Une saisie rapide juste apres l'atelier ou la station-service bat presque toujours le classique \"je le ferai ce soir\"."
+      },
+      {
+        "title": "Gardez une longueur d'avance",
+        "body": "Activez des rappels pour petit entretien, gros entretien, immatriculation, vignette, casco, tout ce que vous ne voulez pas traiter a la derniere minute.",
+        "tip": "Les rappels sont la pour aider, pas pour agacer : nous les gardons pratiques et faciles a ajuster."
+      }
+    ]
+  },
+  "features": {
+    "title": "Ce que vous pouvez faire",
+    "items": [
+      {
+        "title": "Historique d'entretien",
+        "body": "Conservez une chronologie des entretiens et reparations, avec notes et fichiers quand vous en avez besoin."
+      },
+      {
+        "title": "Carburant et consommation",
+        "body": "Suivez pleins et tendances pour reperer les changements suffisamment tot."
+      },
+      {
+        "title": "Tous vos couts en un coup d'oeil",
+        "body": "Visualisez les depenses par categorie au lieu de fouiller des messages et des PDF."
+      },
+      {
+        "title": "Facile a transmettre",
+        "body": "Quand vous vendez, l'historique peut suivre le vehicule, propre, clair et complet."
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Dans l'application",
+    "body": "L'experience web actuelle est optimisee pour une saisie rapide sur ordinateur et telephone : meme compte, memes donnees coherentes.",
+    "wideAlt": "Tableau de bord RideLogger sur grand ecran",
+    "narrowAlt": "Application web RideLogger sur un ecran mobile etroit"
+  },
+  "security": {
+    "title": "Vos donnees vous appartiennent",
+    "body": "Nous traitons les donnees du compte et du vehicule avec soin : securite de transport moderne, controles d'acces et politiques claires. Consultez la politique de confidentialite pour les details sur les categories, finalites et vos droits.",
+    "imageAlt": "Illustration : documents et donnees utilisateur proteges par un bouclier et un cadenas, avec de subtils indices de cloud et de reseau."
+  },
+  "testimonials": {
+    "title": "Ce que disent les conducteurs",
+    "items": [
+      {
+        "quote": "Les notes papier et les fichiers Excel ne suivaient plus mon rythme de travail. Maintenant, tout est au meme endroit et toujours accessible.",
+        "author": "Milos, responsable RH"
+      },
+      {
+        "quote": "Les rappels ont tout change : petit entretien, gros entretien, vignette, casco. L'application me relance avant que j'oublie une date.",
+        "author": "Tijana, ingenieure IT"
+      },
+      {
+        "quote": "Je suis un projet de restauration comme loisir. C'est beaucoup plus simple de revoir les couts et le travail deja fait.",
+        "author": "Momcilo, designer"
+      },
+      {
+        "quote": "Simple, transparent, et ca colle a ma facon de rester organise, au moins pour la voiture.",
+        "author": "Jovana, responsable commerciale"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Commencez en quelques minutes",
+    "body": "Utilisez l'application web sur l'appareil que vous avez deja : aucune installation n'est necessaire pour commencer.",
+    "button": "Ouvrir l'application web"
+  },
+  "landing": {
+    "heroLine": "Carburant. Entretien. Depenses."
+  },
+  "footer": {
+    "tagline": "Carnet d'entretien pour les personnes qui conduisent vraiment.",
+    "note": "Les noms de produit et la disponibilite peuvent evoluer ; l'application web reste le point d'entree principal."
+  }
 }

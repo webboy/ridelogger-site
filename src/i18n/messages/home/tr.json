@@ -1,137 +1,138 @@
 {
-	"meta": {
-		"title": "Dijital araç bakım kayıt defteri",
-		"description": "Yakıtı, hizmetleri, hatırlatıcıları ve harcamaları tek bir yerden takip edin. Elektronik tablolar olmadan netlik isteyen sürücüler için tasarlandı."
-	},
-	"nav": {
-		"home": "Ev",
-		"openApp": "Uygulamayı aç",
-		"privacy": "Mahremiyet",
-		"cookies": "Çerezler"
-	},
-	"hero": {
-		"eyebrow": "Bakım ve maliyetler",
-		"headline": "Araç geçmişiniz nihayet tek bir yerde.",
-		"sub": "Pahalı sürprizlerden kaçınmanıza yardımcı olacak hatırlatıcılarla hizmetleri, yakıtı ve harcamaları kaydedin.",
-		"primaryCta": "Web uygulamasını aç",
-		"secondaryCta": "Nasıl çalışır?",
-		"placeholderTitle": "Kahraman görseli",
-		"placeholderBody": "Bekleyen varlık: oluşturulan bir ana sayfa kahramanını medya/oluşturulan/ (görev 0021 görüntü iş akışı) dosyasına ekleyin ve ardından buraya entegre edin.",
-		"imageAlt": "Ürün illüstrasyonu: araçlar, giderler ve bakım hatırlatıcıları için masaüstü kontrol paneli ve telefon uygulaması."
-	},
-	"trust": {
-		"title": "Netlik için tasarlandı",
-		"items": [
-			{
-				"title": "Çoklu araç desteği",
-				"detail": "Günlük sürücü, hafta sonu projesi veya ailedeki birkaç araba; her biri kendi hikayesini doğru tutuyor."
-			},
-			{
-				"title": "Gerçekten yardımcı olan hatırlatıcılar",
-				"detail": "Hizmet, kayıt, sigorta; son teslim tarihinden önce yapılan hafif dokunuşlar pahalı bir sürprize dönüşüyor."
-			},
-			{
-				"title": "Yakıt ve maliyetler tek ritimde",
-				"detail": "Doldurmalar ve harcamalar, elektronik tablo akrobasi olmadan net bir resim oluşturur."
-			},
-			{
-				"title": "Sizin verileriniz, sizin kurallarınız",
-				"detail": "Size saygı duyan bir araç: net gizlilik seçenekleri ve insanlar için yazılmış politikalar."
-			}
-		]
-	},
-	"problem": {
-		"title": "Dağınık notlardan net bir kayda",
-		"problemTitle": "Sorun",
-		"problemBody": "Makbuzlar, not defterleri ve elektronik tablolar senkronize olmuyor. Arabayı sattığınızda ya da ne yapıldığını unuttuğunuzda geçmişi kaybedersiniz.",
-		"solutionTitle": "Çözüm",
-		"solutionBody": "Hesabınızda kalan yapılandırılmış bir hizmet günlüğü: saniyeler içinde etkinlik ekleyin, bağlam ekleyin ve son tarihler kaymadan önce hatırlatıcılar alın.",
-		"imageAlt": "Örnek: Dağınık faturalar ve notlar ile servis geçmişi ve yakıt maliyetlerini içeren düzenli bir mobil uygulama."
-	},
-	"how": {
-		"title": "Nasıl çalışır?",
-		"lead": "Üç basit adım: Servis durduktan veya yakıt dolduktan sonra telefonunuzu elinize alın ve bir anda işiniz bitsin.",
-		"steps": [
-			{
-				"title": "Profilinizi oluşturun",
-				"body": "Kaydolun ve marka, model, plaka, kilometre sayacı gibi zaten bildiğiniz temel bilgileri içeren bir veya daha fazla araç ekleyin.",
-				"tip": "Ayrıntıları daha sonra istediğiniz zaman düzenleyebilirsiniz; Alışkanlığın kalıcı olması için basit başlayın."
-			},
-			{
-				"title": "Önemli olanı günlüğe kaydedin",
-				"body": "Yakıt, bakım, onarım, geçiş ücretleri, sigorta maliyetleri ve yaşam ilerledikçe kat edilen mesafeyi masaüstü bilgisayardan veya telefondan kaydedin.",
-				"tip": "Atölye veya benzin istasyonundan hemen sonraki hızlı girişler her seferinde \"Bunu bu gece yapacağım\" ifadesini geride bırakır."
-			},
-			{
-				"title": "Önde kalın",
-				"body": "Küçük ve büyük hizmetler, kayıt, vinyet, kasko gibi son dakikada takip etmek istemediğiniz her şey için hatırlatıcıları açın.",
-				"tip": "Dürtüler, dırdır etmek için değil, yardımcı olmak için vardır; onları pratik ve kolay ayarlanabilir hale getiriyoruz."
-			}
-		]
-	},
-	"features": {
-		"title": "Ne yapabilirsin",
-		"items": [
-			{
-				"title": "Servis geçmişi",
-				"body": "İhtiyacınız olduğunda notlar ve dosyalar ile bakım ve onarımların zaman çizelgesini tutun."
-			},
-			{
-				"title": "Yakıt ve tüketim",
-				"body": "Değişiklikleri erken fark edebilmek için dolguları ve trendleri takip edin."
-			},
-			{
-				"title": "Tek görünümde maliyetler",
-				"body": "Mesajlar ve PDF'ler arasında gezinmek yerine, harcamaları kategorilere göre görün."
-			},
-			{
-				"title": "Aktarım dostu",
-				"body": "Sattığınızda, plaketiniz araçla birlikte temiz ve eksiksiz olarak seyahat edebilir."
-			}
-		]
-	},
-	"showcase": {
-		"title": "Uygulamanın içinde",
-		"body": "Mevcut web deneyimi, masaüstünde ve telefonda hızlı giriş için optimize edilmiştir; aynı hesap, tutarlı veriler.",
-		"wideAlt": "Geniş ekranda RideLogger web uygulaması kontrol paneli",
-		"narrowAlt": "Dar bir mobil görünüm alanında RideLogger web uygulaması"
-	},
-	"security": {
-		"title": "Verileriniz, mülkiyetiniz",
-		"body": "Hesap ve araç verilerine özenle davranırız: modern ulaşım güvenliği, erişim kontrolleri ve açık politikalar. Kategoriler, amaçlar ve haklarınızla ilgili ayrıntılar için Gizlilik Politikasını okuyun.",
-		"imageAlt": "İllüstrasyon: bulut ve ağ ipuçlarıyla birlikte bir kalkan ve asma kilitle korunan belgeler ve kullanıcı verileri."
-	},
-	"testimonials": {
-		"title": "Sürücüler ne diyor",
-		"items": [
-			{
-				"quote": "Kağıt notlar ve Excel dosyaları iş tempoma ayak uyduramadı. Artık her şey tek bir yerde ve her zaman ulaşılabilir durumda.",
-				"author": "Miloš, İK yöneticisi"
-			},
-			{
-				"quote": "Hatırlatmalar her şeyi değiştirdi; küçük hizmet, büyük hizmet, vinyet, kasko. Bir randevuyu kaçırmadan önce uygulama beni dürtüyor.",
-				"author": "Tijana, BT mühendisi"
-			},
-			{
-				"quote": "Hobi olarak restorasyon projelerini takip ediyorum. Maliyetleri ve şu ana kadar yapılan işleri gözden geçirmek çok daha kolaydır.",
-				"author": "Momčilo, tasarımcı"
-			},
-			{
-				"quote": "Basit, şeffaf ve benim düzenli kalma tarzıma uyuyor; en azından konu araba olduğunda.",
-				"author": "Jovana, satış müdürü"
-			}
-		]
-	},
-	"cta": {
-		"title": "Dakikalar içinde başlayın",
-		"body": "Web uygulamasını halihazırda sahip olduğunuz cihazda kullanın; başlamak için kurulum gerekmez.",
-		"button": "Web uygulamasını aç"
-	},
-	"landing": {
-		"heroLine": "Yakıt. Hizmetler. Giderler."
-	},
-	"footer": {
-		"tagline": "Gerçek anlamda araç kullanan kişiler için araç bakım kayıt defteri.",
-		"note": "Ürün adları ve stok durumu değişebilir; web uygulaması birincil giriş noktası olmaya devam ediyor."
-	}
+  "meta": {
+    "title": "Dijital araç bakım kayıt defteri",
+    "description": "Yakıtı, hizmetleri, hatırlatıcıları ve harcamaları tek bir yerden takip edin. Elektronik tablolar olmadan netlik isteyen sürücüler için tasarlandı."
+  },
+  "nav": {
+    "home": "Ev",
+    "openApp": "Uygulamayı aç",
+    "privacy": "Mahremiyet",
+    "cookies": "Çerezler",
+    "partner": "Partner (businesses)"
+  },
+  "hero": {
+    "eyebrow": "Bakım ve maliyetler",
+    "headline": "Araç geçmişiniz nihayet tek bir yerde.",
+    "sub": "Pahalı sürprizlerden kaçınmanıza yardımcı olacak hatırlatıcılarla hizmetleri, yakıtı ve harcamaları kaydedin.",
+    "primaryCta": "Web uygulamasını aç",
+    "secondaryCta": "Nasıl çalışır?",
+    "placeholderTitle": "Kahraman görseli",
+    "placeholderBody": "Bekleyen varlık: oluşturulan bir ana sayfa kahramanını medya/oluşturulan/ (görev 0021 görüntü iş akışı) dosyasına ekleyin ve ardından buraya entegre edin.",
+    "imageAlt": "Ürün illüstrasyonu: araçlar, giderler ve bakım hatırlatıcıları için masaüstü kontrol paneli ve telefon uygulaması."
+  },
+  "trust": {
+    "title": "Netlik için tasarlandı",
+    "items": [
+      {
+        "title": "Çoklu araç desteği",
+        "detail": "Günlük sürücü, hafta sonu projesi veya ailedeki birkaç araba; her biri kendi hikayesini doğru tutuyor."
+      },
+      {
+        "title": "Gerçekten yardımcı olan hatırlatıcılar",
+        "detail": "Hizmet, kayıt, sigorta; son teslim tarihinden önce yapılan hafif dokunuşlar pahalı bir sürprize dönüşüyor."
+      },
+      {
+        "title": "Yakıt ve maliyetler tek ritimde",
+        "detail": "Doldurmalar ve harcamalar, elektronik tablo akrobasi olmadan net bir resim oluşturur."
+      },
+      {
+        "title": "Sizin verileriniz, sizin kurallarınız",
+        "detail": "Size saygı duyan bir araç: net gizlilik seçenekleri ve insanlar için yazılmış politikalar."
+      }
+    ]
+  },
+  "problem": {
+    "title": "Dağınık notlardan net bir kayda",
+    "problemTitle": "Sorun",
+    "problemBody": "Makbuzlar, not defterleri ve elektronik tablolar senkronize olmuyor. Arabayı sattığınızda ya da ne yapıldığını unuttuğunuzda geçmişi kaybedersiniz.",
+    "solutionTitle": "Çözüm",
+    "solutionBody": "Hesabınızda kalan yapılandırılmış bir hizmet günlüğü: saniyeler içinde etkinlik ekleyin, bağlam ekleyin ve son tarihler kaymadan önce hatırlatıcılar alın.",
+    "imageAlt": "Örnek: Dağınık faturalar ve notlar ile servis geçmişi ve yakıt maliyetlerini içeren düzenli bir mobil uygulama."
+  },
+  "how": {
+    "title": "Nasıl çalışır?",
+    "lead": "Üç basit adım: Servis durduktan veya yakıt dolduktan sonra telefonunuzu elinize alın ve bir anda işiniz bitsin.",
+    "steps": [
+      {
+        "title": "Profilinizi oluşturun",
+        "body": "Kaydolun ve marka, model, plaka, kilometre sayacı gibi zaten bildiğiniz temel bilgileri içeren bir veya daha fazla araç ekleyin.",
+        "tip": "Ayrıntıları daha sonra istediğiniz zaman düzenleyebilirsiniz; Alışkanlığın kalıcı olması için basit başlayın."
+      },
+      {
+        "title": "Önemli olanı günlüğe kaydedin",
+        "body": "Yakıt, bakım, onarım, geçiş ücretleri, sigorta maliyetleri ve yaşam ilerledikçe kat edilen mesafeyi masaüstü bilgisayardan veya telefondan kaydedin.",
+        "tip": "Atölye veya benzin istasyonundan hemen sonraki hızlı girişler her seferinde \"Bunu bu gece yapacağım\" ifadesini geride bırakır."
+      },
+      {
+        "title": "Önde kalın",
+        "body": "Küçük ve büyük hizmetler, kayıt, vinyet, kasko gibi son dakikada takip etmek istemediğiniz her şey için hatırlatıcıları açın.",
+        "tip": "Dürtüler, dırdır etmek için değil, yardımcı olmak için vardır; onları pratik ve kolay ayarlanabilir hale getiriyoruz."
+      }
+    ]
+  },
+  "features": {
+    "title": "Ne yapabilirsin",
+    "items": [
+      {
+        "title": "Servis geçmişi",
+        "body": "İhtiyacınız olduğunda notlar ve dosyalar ile bakım ve onarımların zaman çizelgesini tutun."
+      },
+      {
+        "title": "Yakıt ve tüketim",
+        "body": "Değişiklikleri erken fark edebilmek için dolguları ve trendleri takip edin."
+      },
+      {
+        "title": "Tek görünümde maliyetler",
+        "body": "Mesajlar ve PDF'ler arasında gezinmek yerine, harcamaları kategorilere göre görün."
+      },
+      {
+        "title": "Aktarım dostu",
+        "body": "Sattığınızda, plaketiniz araçla birlikte temiz ve eksiksiz olarak seyahat edebilir."
+      }
+    ]
+  },
+  "showcase": {
+    "title": "Uygulamanın içinde",
+    "body": "Mevcut web deneyimi, masaüstünde ve telefonda hızlı giriş için optimize edilmiştir; aynı hesap, tutarlı veriler.",
+    "wideAlt": "Geniş ekranda RideLogger web uygulaması kontrol paneli",
+    "narrowAlt": "Dar bir mobil görünüm alanında RideLogger web uygulaması"
+  },
+  "security": {
+    "title": "Verileriniz, mülkiyetiniz",
+    "body": "Hesap ve araç verilerine özenle davranırız: modern ulaşım güvenliği, erişim kontrolleri ve açık politikalar. Kategoriler, amaçlar ve haklarınızla ilgili ayrıntılar için Gizlilik Politikasını okuyun.",
+    "imageAlt": "İllüstrasyon: bulut ve ağ ipuçlarıyla birlikte bir kalkan ve asma kilitle korunan belgeler ve kullanıcı verileri."
+  },
+  "testimonials": {
+    "title": "Sürücüler ne diyor",
+    "items": [
+      {
+        "quote": "Kağıt notlar ve Excel dosyaları iş tempoma ayak uyduramadı. Artık her şey tek bir yerde ve her zaman ulaşılabilir durumda.",
+        "author": "Miloš, İK yöneticisi"
+      },
+      {
+        "quote": "Hatırlatmalar her şeyi değiştirdi; küçük hizmet, büyük hizmet, vinyet, kasko. Bir randevuyu kaçırmadan önce uygulama beni dürtüyor.",
+        "author": "Tijana, BT mühendisi"
+      },
+      {
+        "quote": "Hobi olarak restorasyon projelerini takip ediyorum. Maliyetleri ve şu ana kadar yapılan işleri gözden geçirmek çok daha kolaydır.",
+        "author": "Momčilo, tasarımcı"
+      },
+      {
+        "quote": "Basit, şeffaf ve benim düzenli kalma tarzıma uyuyor; en azından konu araba olduğunda.",
+        "author": "Jovana, satış müdürü"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Dakikalar içinde başlayın",
+    "body": "Web uygulamasını halihazırda sahip olduğunuz cihazda kullanın; başlamak için kurulum gerekmez.",
+    "button": "Web uygulamasını aç"
+  },
+  "landing": {
+    "heroLine": "Yakıt. Hizmetler. Giderler."
+  },
+  "footer": {
+    "tagline": "Gerçek anlamda araç kullanan kişiler için araç bakım kayıt defteri.",
+    "note": "Ürün adları ve stok durumu değişebilir; web uygulaması birincil giriş noktası olmaya devam ediyor."
+  }
 }
