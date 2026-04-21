@@ -12,7 +12,7 @@
     "privacy_v2": {
         "meta_title": "Politika privatnosti",
         "meta_description": "Politika privatnosti za Servisna Knjižica: rukovalac Green Line Trading LTD, kategorije podataka, pravni osnovi, prava korisnika i kontakt.",
-        "updated_line": "Poslednje ažuriranje: 2026-04-17 · Verzija 2.2",
+        "updated_line": "Poslednje ažuriranje: 2026-04-21 · Verzija 2.3",
         "h1": "Politika privatnosti",
         "s1_title": "1) Ko je rukovalac podacima",
         "s1_intro": "Rukovalac podataka i vlasnik projekta Servisna Knjižica je:",
@@ -52,7 +52,7 @@
         "s4_p3_text": "postupanje po važećim propisima i zakonitim zahtevima nadležnih organa",
         "s4_p4_title": "Pristanak",
         "s4_p4_a": "analitički i marketinški kolačići\/trackeri (npr. Google Analytics, Meta\/Facebook Pixel), tamo gde je pristanak potreban",
-        "s4_p4_b": "slanje marketinških poruka, kada je primenljivo",
+        "s4_p4_b": "slanje marketinških poruka, kada je primenljivo (uključujući e-mail kampanje za ponovnu aktivaciju). U takvim porukama možemo koristiti nevidljivi tracking pixel (1×1 slika) za merenje otvorenosti poruke i UTM parametre u linkovima za merenje klikova — isključivo radi poboljšanja relevantnosti sadržaja. Od marketing poruka se možete odjaviti u svakom trenutku preko linka „Otkaži“ u podnožju svake poruke ili iz podešavanja naloga.",
         "s4_p4_c": "korišćenje lokacije — kada korisnik eksplicitno odobri pristup u aplikaciji, za podržane funkcije",
         "s4_consent_note": "Kada je obrada zasnovana na pristanku, korisnik može pristanak povući u svakom trenutku, bez uticaja na zakonitost obrade pre povlačenja.",
         "s5_title": "5) Kolačići i srodne tehnologije",

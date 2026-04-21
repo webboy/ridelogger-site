@@ -12,7 +12,7 @@
     "privacy_v2": {
         "meta_title": "Privacy Policy",
         "meta_description": "Privacy policy for Servisna Knjižica: controller Green Line Trading LTD, data categories, legal bases, user rights and contact.",
-        "updated_line": "Last updated: 2026-04-17 · Version 2.2",
+        "updated_line": "Last updated: 2026-04-21 · Version 2.3",
         "h1": "Privacy Policy",
         "s1_title": "1) Data controller",
         "s1_intro": "The data controller and owner of the Servisna Knjižica project is:",
@@ -52,7 +52,7 @@
         "s4_p3_text": "compliance with applicable laws and lawful requests from authorities",
         "s4_p4_title": "Consent",
         "s4_p4_a": "analytics and marketing cookies\/trackers (e.g. Google Analytics, Meta\/Facebook Pixel) where consent is required",
-        "s4_p4_b": "sending marketing messages, where applicable",
+        "s4_p4_b": "sending marketing messages, where applicable (including reactivation e-mail campaigns). Such messages may include a small invisible tracking pixel (1×1 image) to measure open rate, and UTM parameters in links to measure clicks — solely to improve content relevance. You can unsubscribe at any time via the \"Unsubscribe\" link in the footer of each message or from your account settings.",
         "s4_p4_c": "use of location — when you explicitly grant permission in the app, for supported features",
         "s4_consent_note": "Where processing is based on consent, you may withdraw consent at any time, without affecting the lawfulness of processing before withdrawal.",
         "s5_title": "5) Cookies and similar technologies",

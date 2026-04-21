@@ -12,7 +12,7 @@
     "privacy_v2": {
         "meta_title": "Datenschutzerklärung",
         "meta_description": "Datenschutzerklärung für Servisna Knjižica: Verantwortlicher Green Line Trading LTD, Datenkategorien, Rechtsgrundlagen, Betroffenenrechte und Kontakt.",
-        "updated_line": "Zuletzt aktualisiert: 2026-04-17 · Version 2.2",
+        "updated_line": "Zuletzt aktualisiert: 2026-04-21 · Version 2.3",
         "h1": "Datenschutzerklärung",
         "s1_title": "1) Verantwortlicher",
         "s1_intro": "Verantwortlicher für die Datenverarbeitung und Inhaber des Projekts Servisna Knjižica ist:",
@@ -52,7 +52,7 @@
         "s4_p3_text": "Einhaltung geltender Gesetze und rechtmäßiger Anfragen von Behörden",
         "s4_p4_title": "Einwilligung",
         "s4_p4_a": "Analyse- und Marketing-Cookies\/Tracker (z. B. Google Analytics, Meta\/Facebook Pixel), soweit Einwilligung erforderlich ist",
-        "s4_p4_b": "Versand von Marketingnachrichten, soweit anwendbar",
+        "s4_p4_b": "Versand von Marketingnachrichten, soweit anwendbar (einschließlich Reaktivierungs-E-Mail-Kampagnen). Solche Nachrichten können einen kleinen unsichtbaren Tracking-Pixel (1×1-Bild) zur Messung der Öffnungsrate sowie UTM-Parameter in Links zur Messung von Klicks enthalten — ausschließlich zur Verbesserung der Inhaltsrelevanz. Sie können sich jederzeit über den \"Abbestellen\"-Link in der Fußzeile jeder Nachricht oder in den Kontoeinstellungen abmelden.",
         "s4_p4_c": "Standortnutzung — wenn Sie ausdrücklich die Erlaubnis in der App erteilen, für unterstützte Funktionen",
         "s4_consent_note": "Beruht die Verarbeitung auf Einwilligung, können Sie diese jederzeit widerrufen, ohne die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung zu berühren.",
         "s5_title": "5) Cookies und ähnliche Technologien",
