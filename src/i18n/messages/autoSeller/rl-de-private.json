@@ -1,49 +1,49 @@
 {
 	"meta": {
-		"title": "Auto verkaufen mit klarerer Servicehistorie | RideLogger",
-		"description": "Zeig Käufer:innen vor dem ersten Termin eine übersichtlichere digitale Servicehistorie. Erstelle kostenlos einen RideLogger-Account und bereite dein Auto auf den Verkauf vor.",
-		"heroImageAlt": "Fahrzeughalter bereitet eine klarere Servicehistorie für Käufer:innen vor"
+		"title": "Auto verkaufen mit nachvollziehbarer Servicehistorie | RideLogger",
+		"description": "Zeige Kaufinteressenten vor dem ersten Termin transparent, was am Fahrzeug dokumentiert ist. Kostenloser RideLogger-Account – Auto auf den Verkauf vorbereiten.",
+		"heroImageAlt": "Privatverkäufer bereitet die Servicehistorie für Interessenten auf"
 	},
 	"hero": {
-		"eyebrow": "Für Menschen, die ihr Auto verkaufen",
-		"headline": "Verkaufe dein Auto mit klarerer Servicehistorie.",
-		"sub": "Zeig Käufer:innen auf übersichtliche Weise, was am Fahrzeug gemacht wurde. Eine klare digitale Servicehistorie kann dein Auto vor dem ersten Besichtigungstermin vertrauenswürdiger wirken lassen.",
+		"eyebrow": "Für private Verkäufer",
+		"headline": "Verkaufe dein Auto mit einer nachvollziehbaren Servicehistorie.",
+		"sub": "Zeige Kaufinteressenten auf einen Blick, welche Wartungen, Reparaturen und Services durchgeführt wurden. So wirkt dein Fahrzeug transparenter, besser gepflegt und vertrauenswürdiger – schon vor der ersten Besichtigung.",
 		"primaryCta": "Kostenloses Konto erstellen",
 		"secondaryCta": "Auto auf den Verkauf vorbereiten",
 		"secondaryHref": "#how"
 	},
 	"trustStrip": [
-		"Übersichtlichere Wartungshistorie",
-		"Mehr Vertrauen bei Käufer:innen",
-		"Einfacher zeigen, was gemacht wurde"
+		"Historie auf einen Blick",
+		"Vertrauen schon vor der Besichtigung",
+		"Wartung & Service nachvollziehbar"
 	],
 	"intro": {
-		"headline": "Wenn Käufer:innen nach der Servicehistorie fragen, zählt Klarheit.",
-		"body": "Sind Rechnungen, Belege und Notizen verstreut, zieht sich jedes Gespräch. Ein übersichtlicher digitaler Nachweis hilft dir, das Auto seriöser und strukturierter zu präsentieren."
+		"headline": "Wenn Interessenten nach der Fahrzeughistorie fragen, zählt Übersicht.",
+		"body": "Sind Rechnungen, Belege und Notizen verstreut, wird jedes Verkaufsgespräch mühsam. Eine geordnete digitale Servicehistorie hilft dir, dein Fahrzeug professionell und transparent zu präsentieren."
 	},
 	"benefits": {
 		"headline": "Warum dir das beim Autoverkauf hilft",
 		"items": [
 			{
-				"title": "Das Auto wirkt vertrauenswürdiger",
-				"body": "Käufer:innen fühlen sich wohler, wenn die Wartungshistorie klar statt zerstückelt wirkt."
+				"title": "Transparenz statt Bauchgefühl",
+				"body": "Interessierte sehen auf einen Blick, was dokumentiert ist – statt losen Zetteln und vager Erklärungen."
 			},
 			{
-				"title": "Fragen leichter beantworten",
-				"body": "Statt alles aus dem Gedächtnis zu erklären, hast du einen klareren Überblick über Was und Wann."
+				"title": "Fragen zur Historie souverän beantworten",
+				"body": "Statt alles aus dem Gedächtnis zu erklären, kannst du genau zeigen, was wann gemacht wurde. So reagierst du auf Rückfragen schnell und sicher."
 			},
 			{
-				"title": "Besseren ersten Eindruck vorbereiten",
-				"body": "Eine geordnete Servicehistorie unterstützt eine seriösere Präsentation vor Probefahrt oder Besichtigung."
+				"title": "Schon vor der Besichtigung einen besseren Eindruck machen",
+				"body": "Mit einer gepflegten Servicehistorie präsentierst du dein Fahrzeug überzeugender – noch bevor es zur Probefahrt oder zum Termin geht."
 			}
 		]
 	},
 	"beforeAfter": {
-		"headline": "Weniger Papierchaos. Mehr Ruhe.",
+		"headline": "Weniger Papierchaos. Mehr Ruhe im Gespräch.",
 		"beforeLabel": "Vorher",
-		"beforeBody": "Belege im Handschuhfach, Screenshots auf dem Handy, Servicetermine, die du nur noch halb weißt.",
+		"beforeBody": "Belege im Handschuhfach, Screenshots auf dem Handy, Termine, an die du dich nur noch bruchstückhaft erinnerst.",
 		"afterLabel": "Nachher",
-		"afterBody": "Eine klarere digitale Servicehistorie, mit der du das Fahrzeug strukturierter zeigen kannst."
+		"afterBody": "Eine digitale Servicehistorie, mit der du Wartungen, Services und Belege für Interessierte übersichtlich zusammenfasst."
 	},
 	"inventoryAngle": null,
 	"howItWorks": {
@@ -51,42 +51,42 @@
 		"steps": [
 			{
 				"title": "Konto erstellen",
-				"body": "Starte mit einem kostenlosen Konto und füge das Fahrzeug hinzu, das du auf den Verkauf vorbereitest."
+				"body": "Starte mit einem kostenlosen Konto und füge das Fahrzeug hinzu, das du verkaufen möchtest."
 			},
 			{
-				"title": "Wartungshistorie eintragen",
-				"body": "Fasse Servicedaten, Rechnungen und Wartungsnotizen zusammen, die du schon hast."
+				"title": "Service und Belege bündeln",
+				"body": "Trage ein, was du hast: Rechnungen, Serviceeinträge, Notizen – alles, das zur Historie gehört."
 			},
 			{
-				"title": "Das Auto klarer präsentieren",
-				"body": "Nutze die geordnete Servicehistorie für Gespräche mit Käufer:innen und mehr Vertrauen."
+				"title": "Überzeugend präsentieren",
+				"body": "Nutze die gebündelte Servicehistorie in Gesprächen mit Kaufinteressenten – transparent und nachvollziehbar."
 			}
 		]
 	},
 	"objection": {
-		"headline": "Du brauchst keine perfekten Unterlagen zum Start",
-		"body": "Auch wenn du nur einen Teil der Dokumentation hast: ein klarerer Überblick ist besser als verstreute Zettel und lückenhafte Erklärungen."
+		"headline": "Du brauchst keine perfekte Akte zum Start",
+		"body": "Auch mit unvollständigen Unterlagen gewinnst du an Übersicht. Wichtig ist der Schritt weg vom reinen Papierstapel – den Rest kannst du nach und nach ergänzen."
 	},
 	"offer": null,
 	"faq": {
 		"items": [
 			{
 				"q": "Ist das nur sinnvoll, wenn ich beruflich Autos verkaufe?",
-				"a": "Nein. Diese Seite richtet sich an Privatverkäufer:innen, die vor dem Verkauf eines Fahrzeugs die Servicehistorie klarer darstellen wollen."
+				"a": "Nein. Die Seite richtet sich an Privatverkäufer, die ein Fahrzeug verkaufen und die Servicehistorie professioneller darstellen möchten."
 			},
 			{
 				"q": "Brauche ich jede einzelne Rechnung?",
-				"a": "Nein. Du kannst mit dem starten, was du hast, und die Historie von dort aus ordnen."
+				"a": "Nein. Starte einfach mit den Unterlagen, die dir schon vorliegen, und arbeite die Historie von dort aus weiter."
 			},
 			{
 				"q": "Garantiert das einen schnelleren Verkauf?",
-				"a": "Das kann kein Tool garantieren. Der Wert liegt darin, das Fahrzeug klarer zu präsentieren und Käufer:innen mehr Sicherheit zu geben."
+				"a": "Das kann kein Tool garantieren. Es geht darum, dein Fahrzeug transparenter und überzeugender zu präsentieren – und Interessenten mehr Sicherheit zu geben."
 			}
 		]
 	},
 	"closing": {
-		"headline": "Bereite deinen Autoverkauf mit klarerer Wartungshistorie vor.",
-		"body": "Erstelle kostenlos dein Konto und ordne die Servicehistorie, die Käufer:innen interessiert.",
+		"headline": "Mach deinen Privatverkauf mit einer starken Servicehistorie.",
+		"body": "Erstelle kostenlos dein Konto und bündle die Historie, nach der Kaufinteressenten in der Regel zuerst fragen.",
 		"cta": "Kostenloses Konto erstellen"
 	},
 	"sectionLabels": {
