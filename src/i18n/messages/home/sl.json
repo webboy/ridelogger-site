@@ -133,6 +133,9 @@
   },
   "footer": {
     "tagline": "Dnevnik vzdrzevanja vozila za ljudi, ki res vozijo.",
-    "note": "Imena izdelkov in razpolozljivost se lahko spreminjajo; spletna aplikacija ostaja glavno vstopno mesto."
+    "note": "Imena izdelkov in razpolozljivost se lahko spreminjajo; spletna aplikacija ostaja glavno vstopno mesto.",
+    "sellingCarsTitle": "Prodajate vozilo?",
+    "sellingPrivateLabel": "Zasebna prodaja",
+    "sellingDealersLabel": "Trgovci in plac"
   }
 }

@@ -1,0 +1,96 @@
+{
+	"meta": {
+		"title": "Vendez votre voiture avec un carnet d'entretien plus clair | RideLogger",
+		"description": "Montrez aux acheteurs un historique d'entretien numérique plus lisible avant la première visite. Créez un compte RideLogger gratuit et préparez votre voiture à la vente.",
+		"heroImageAlt": "Propriétaire prépare un historique d'entretien plus clair pour les acheteurs"
+	},
+	"hero": {
+		"eyebrow": "Pour les particuliers qui vendent leur voiture",
+		"headline": "Vendez votre voiture avec un carnet d'entretien plus clair.",
+		"sub": "Montrez ce qui a été fait sur le véhicule de façon plus structurée. Un historique d'entretien numérique clair peut rendre votre voiture plus rassurante avant la première visite.",
+		"primaryCta": "Créer un compte gratuit",
+		"secondaryCta": "Préparer la voiture à la vente",
+		"secondaryHref": "#how"
+	},
+	"trustStrip": [
+		"Vue d'entretien plus claire",
+		"Plus de confiance côté acheteur",
+		"Plus simple pour montrer ce qui a été fait"
+	],
+	"intro": {
+		"headline": "Quand on vous parle de carnet d'entretien, la clarté compte.",
+		"body": "Si factures, notes et documents sont éparpillés, chaque conversation prend plus de temps. Un dossier numérique mieux structuré aide à présenter la voiture plus sérieusement."
+	},
+	"benefits": {
+		"headline": "Pourquoi cela aide quand vous vendez votre voiture",
+		"items": [
+			{
+				"title": "Une voiture qui inspire plus confiance",
+				"body": "Les acheteurs se sentent plus à l'aise lorsque l'historique d'entretien est lisible plutôt que fragmenté."
+			},
+			{
+				"title": "Répondre plus facilement aux questions",
+				"body": "Au lieu de tout expliquer de mémoire, vous avez une vision plus claire de ce qui a été fait et quand."
+			},
+			{
+				"title": "Une meilleure première impression",
+				"body": "Un carnet d'entretien organisé soutient une présentation plus sérieuse avant l'essai ou la visite."
+			}
+		]
+	},
+	"beforeAfter": {
+		"headline": "Moins de paperasse. Plus de sérénité.",
+		"beforeLabel": "Avant",
+		"beforeBody": "Factures dans la boîte à gants, captures sur le téléphone, dates d'entretien qu'on retient à moitié.",
+		"afterLabel": "Après",
+		"afterBody": "Un historique d'entretien numérique plus clair pour présenter le véhicule de façon plus structurée."
+	},
+	"inventoryAngle": null,
+	"howItWorks": {
+		"headline": "Comment ça marche",
+		"steps": [
+			{
+				"title": "Créer un compte",
+				"body": "Commencez gratuitement et ajoutez le véhicule que vous préparez à vendre."
+			},
+			{
+				"title": "Ajouter votre historique",
+				"body": "Rassemblez les interventions, factures et notes d'entretien que vous avez déjà."
+			},
+			{
+				"title": "Présenter la voiture plus clairement",
+				"body": "Utilisez le carnet structuré pour les échanges avec les acheteurs et renforcer la confiance."
+			}
+		]
+	},
+	"objection": {
+		"headline": "Vous n'avez pas besoin d'un dossier parfait pour commencer",
+		"body": "Même avec une partie seulement des documents, une vue plus claire vaut mieux que des papiers éparpillés et des explications incomplètes."
+	},
+	"offer": null,
+	"faq": {
+		"items": [
+			{
+				"q": "Est-ce seulement pour les professionnels de l'automobile ?",
+				"a": "Non. Cette page s'adresse aux particuliers qui vendent un véhicule et veulent présenter l'entretien plus clairement."
+			},
+			{
+				"q": "Faut-il toutes les factures ?",
+				"a": "Non. Vous pouvez commencer avec ce que vous avez et structurer l'historique à partir de là."
+			},
+			{
+				"q": "Est-ce que cela garantit une vente plus rapide ?",
+				"a": "Aucun outil ne peut le garantir. L'intérêt est de présenter le véhicule plus clairement et de rassurer les acheteurs."
+			}
+		]
+	},
+	"closing": {
+		"headline": "Préparez votre vente avec un carnet d'entretien plus clair.",
+		"body": "Créez votre compte gratuit et commencez à structurer l'historique qui compte pour les acheteurs.",
+		"cta": "Créer un compte gratuit"
+	},
+	"sectionLabels": {
+		"trustStripHeading": "En bref",
+		"faqHeading": "Questions fréquentes"
+	}
+}

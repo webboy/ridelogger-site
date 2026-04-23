@@ -1,0 +1,96 @@
+{
+	"meta": {
+		"title": "Urednija servisna istorija za auto placeve | Servisna Knjižica",
+		"description": "Standardizuj prikaz održavanja kroz više vozila. Servisna knjižica za trgovce i placeve.",
+		"heroImageAlt": "Auto plac sa više vozila u profesionalnom prikazu"
+	},
+	"hero": {
+		"eyebrow": "Za auto placeve i trgovce",
+		"headline": "Urednija servisna istorija za vozila koja prodajete.",
+		"sub": "Standardizujte prikaz održavanja kroz više automobila i nastupite ozbiljnije prema kupcima. Kada istorija vozila izgleda jasnije, i ceo plac deluje profesionalnije.",
+		"primaryCta": "Otvorite nalog",
+		"secondaryCta": "Aktivirajte premium i javite nam se za dealers bonus",
+		"secondaryHref": "#dealer-offer"
+	},
+	"trustStrip": [
+		"Uredniji prikaz za više vozila",
+		"Ozbiljniji nastup prema kupcima",
+		"Veći smisao premium-a za placeve"
+	],
+	"intro": {
+		"headline": "Kada prodajete više vozila, važan je i utisak sistema.",
+		"body": "Ako svako vozilo ima drugačiju priču, druge papire i drugačiji način objašnjavanja, prodaja postaje haotičnija. Urednija digitalna servisna istorija pomaže da nastup prema kupcima bude jasniji i ujednačeniji."
+	},
+	"benefits": {
+		"headline": "Zašto ovo ima smisla za auto placeve",
+		"items": [
+			{
+				"title": "Ujednačeniji prikaz kroz više vozila",
+				"body": "Kupcima je lakše da razumeju istoriju održavanja kada postoji uredniji i sličniji način prikaza."
+			},
+			{
+				"title": "Manje usmenog ponavljanja",
+				"body": "Kada je istorija vozila jasnija, manje vremena odlazi na stalno isto objašnjavanje."
+			},
+			{
+				"title": "Premium ima više smisla kada radite sa više automobila",
+				"body": "Što je više vozila u pitanju, to je vredniji ozbiljniji sistem prikaza i evidencije."
+			}
+		]
+	},
+	"beforeAfter": null,
+	"inventoryAngle": {
+		"headline": "Više vozila traži više reda.",
+		"body": "Privatni prodavac može jednom da improvizuje. Auto plac ne bi trebalo. Kada prodajete više automobila, uredniji sistem postaje deo ozbiljnijeg nastupa."
+	},
+	"howItWorks": {
+		"headline": "Kako funkcioniše za placeve i trgovce",
+		"steps": [
+			{
+				"title": "Otvorite nalog",
+				"body": "Krenite od naloga u glavnoj aplikaciji i dodajte vozila koja želite da vodite ozbiljnije."
+			},
+			{
+				"title": "Aktivirajte premium",
+				"body": "Premium dobija pravi smisao kada želite uredniji pristup kroz više automobila."
+			},
+			{
+				"title": "Javite nam se za dealers bonus",
+				"body": "Kada aktivirate premium, pošaljite nam upit kroz kontakt formu i proverićemo mogućnost dodatnog bonus perioda."
+			}
+		]
+	},
+	"objection": null,
+	"offer": {
+		"eyebrow": "Ponuda za auto placeve",
+		"headline": "Aktivirajte premium i javite nam se za dealers onboarding bonus.",
+		"body": "Ako vozila prodajete profesionalno, želimo da nagradimo ozbiljno korišćenje sistema. Nakon aktivacije premium-a i kratke provere, možete dobiti dodatni bonus period za dealers korišćenje.",
+		"cta": "Javite nam se za dealers bonus",
+		"footnote": "Bonus se odobrava nakon kratke provere i namenjen je stvarnim placevima i trgovcima."
+	},
+	"faq": {
+		"items": [
+			{
+				"q": "Da li je ovo samo za velike auto placeve?",
+				"a": "Ne. Namenjeno je i manjim placevima i trgovcima koji prodaju više vozila i žele uredniji nastup prema kupcima."
+			},
+			{
+				"q": "Zašto premium ima smisla za mene?",
+				"a": "Zato što se vrednost jasnije vidi kada radite sa više vozila nego kada je u pitanju samo jedan auto."
+			},
+			{
+				"q": "Kako funkcioniše dealers bonus?",
+				"a": "Prvo aktivirate premium, zatim nam se javite kroz kontakt formu. Posle kratke provere, kvalifikovani placevi i trgovci mogu dobiti dodatni bonus period."
+			}
+		]
+	},
+	"closing": {
+		"headline": "Uvedite više reda u vozila koja prodajete.",
+		"body": "Otvorite nalog, aktivirajte premium ako odgovara vašem modelu rada i javite nam se za dealers bonus.",
+		"cta": "Otvorite nalog"
+	},
+	"sectionLabels": {
+		"trustStripHeading": "Ukratko",
+		"faqHeading": "Često postavljana pitanja"
+	}
+}

@@ -1,0 +1,96 @@
+{
+	"meta": {
+		"title": "Urednija servisna povijest za auto placeve | Servisna knjižica",
+		"description": "Standardizirajte prikaz održavanja kroz više vozila. Servisna knjižica za trgovce i placeve.",
+		"heroImageAlt": "Auto plac s više vozila u profesionalnom prikazu"
+	},
+	"hero": {
+		"eyebrow": "Za auto placeve i trgovce",
+		"headline": "Urednija servisna povijest za vozila koja prodajete.",
+		"sub": "Standardizirajte prikaz održavanja kroz više automobila i nastupite ozbiljnije prema kupcima. Kad povijest vozila izgleda jasnije, i cijeli plac djeluje profesionalnije.",
+		"primaryCta": "Otvorite račun",
+		"secondaryCta": "Aktivirajte premium i javite nam se za dealerski bonus",
+		"secondaryHref": "#dealer-offer"
+	},
+	"trustStrip": [
+		"Uredniji prikaz za više vozila",
+		"Ozbiljniji nastup prema kupcima",
+		"Veći smisao premiuma za placeve"
+	],
+	"intro": {
+		"headline": "Kad prodajete više vozila, važan je i dojam sustava.",
+		"body": "Ako svako vozilo ima drugačiju priču, druge papire i drugačiji način objašnjavanja, prodaja postaje kaotičnija. Urednija digitalna servisna povijest pomaže da nastup prema kupcima bude jasniji i ujednačeniji."
+	},
+	"benefits": {
+		"headline": "Zašto ovo ima smisla za auto placeve",
+		"items": [
+			{
+				"title": "Ujednačeniji prikaz kroz više vozila",
+				"body": "Kupcima je lakše razumjeti povijest održavanja kad postoji uredniji i sličniji način prikaza."
+			},
+			{
+				"title": "Manje usmenog ponavljanja",
+				"body": "Kad je povijest vozila jasnija, manje vremena odlazi na stalno isto objašnjavanje."
+			},
+			{
+				"title": "Premium ima više smisla kad radite s više automobila",
+				"body": "Što je više vozila u pitanju, to je vrijedniji ozbiljniji sustav prikaza i evidencije."
+			}
+		]
+	},
+	"beforeAfter": null,
+	"inventoryAngle": {
+		"headline": "Više vozila traži više reda.",
+		"body": "Privatni prodavatelj može jednom improvizirati. Auto plac ne bi trebao. Kad prodajete više automobila, uredniji sustav postaje dio ozbiljnijeg nastupa."
+	},
+	"howItWorks": {
+		"headline": "Kako funkcionira za placeve i trgovce",
+		"steps": [
+			{
+				"title": "Otvorite račun",
+				"body": "Krenite od računa u glavnoj aplikaciji i dodajte vozila koja želite ozbiljnije voditi."
+			},
+			{
+				"title": "Aktivirajte premium",
+				"body": "Premium dobiva pravi smisao kad želite uredniji pristup kroz više automobila."
+			},
+			{
+				"title": "Javite nam se za dealerski bonus",
+				"body": "Kad aktivirate premium, pošaljite nam upit putem kontakt obrasca i provjerit ćemo mogućnost dodatnog bonus razdoblja."
+			}
+		]
+	},
+	"objection": null,
+	"offer": {
+		"eyebrow": "Ponuda za auto placeve",
+		"headline": "Aktivirajte premium i javite nam se za dealerski onboarding bonus.",
+		"body": "Ako vozila prodajete profesionalno, želimo nagraditi ozbiljno korištenje sustava. Nakon aktivacije premiuma i kratke provjere, možete dobiti dodatno bonus razdoblje za dealersko korištenje.",
+		"cta": "Javite nam se za dealerski bonus",
+		"footnote": "Bonus se odobrava nakon kratke provjere i namijenjen je stvarnim placevima i trgovcima."
+	},
+	"faq": {
+		"items": [
+			{
+				"q": "Je li ovo samo za velike auto placeve?",
+				"a": "Ne. Namijenjeno je i manjim placevima i trgovcima koji prodaju više vozila i žele uredniji nastup prema kupcima."
+			},
+			{
+				"q": "Zašto premium ima smisla za mene?",
+				"a": "Zato što se vrijednost jasnije vidi kad radite s više vozila nego kad je u pitanju samo jedan auto."
+			},
+			{
+				"q": "Kako funkcionira dealerski bonus?",
+				"a": "Prvo aktivirate premium, zatim nam se javite putem kontakt obrasca. Nakon kratke provjere, kvalificirani placevi i trgovci mogu dobiti dodatno bonus razdoblje."
+			}
+		]
+	},
+	"closing": {
+		"headline": "Uvedite više reda u vozila koja prodajete.",
+		"body": "Otvorite račun, aktivirajte premium ako odgovara vašem modelu rada i javite nam se za dealerski bonus.",
+		"cta": "Otvorite račun"
+	},
+	"sectionLabels": {
+		"trustStripHeading": "Ukratko",
+		"faqHeading": "Često postavljana pitanja"
+	}
+}

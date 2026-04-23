@@ -15,13 +15,20 @@ interface Props {
 	title: string;
 	description: string;
 	home: HomeMessages;
-	pathSuffix?: '' | 'privacy' | 'cookies';
+	/** URL tail after country: `privacy`, `cookies`, or campaign slugs e.g. `private-sellers`. */
+	pathSuffix?: string;
 	/** When set, enables client-side home copy switching + JSON for all locales. */
 	homes?: Record<Locale, HomeMessages>;
 	legalPage?: 'privacy' | 'cookies';
 	legals?: Record<Locale, LegalBundle>;
 	/** Canonical privacy URL (cookie policy body links). */
 	privacyUrl?: string;
+	/** Campaign landings: hide Partner link only; language switcher stays (like index). */
+	headerVariant?: 'default' | 'campaign';
+	/** Override primary app CTA href (e.g. UTM passthrough). */
+	headerAppHref?: string;
+	/** When `homes` is set for campaign pages, keep document title/description from SSR. */
+	lockMarketingSeo?: boolean;
 }
 
 const {
@@ -35,6 +42,9 @@ const {
 	legalPage,
 	legals,
 	privacyUrl,
+	headerVariant = 'default',
+	headerAppHref,
+	lockMarketingSeo = false,
 } = Astro.props;
 
 const publicAppBase =
@@ -79,7 +89,13 @@ const appCountryCode = appCountryCodeFromPath(countryPath);
 		<meta name="twitter:card" content="summary_large_image" />
 	</head>
 	<body>
-		<SiteHeader countryPath={countryPath} locale={locale} home={home} />
+		<SiteHeader
+			countryPath={countryPath}
+			locale={locale}
+			home={home}
+			variant={headerVariant}
+			appHref={headerAppHref}
+		/>
 		<main id="main">
 			<slot />
 		</main>
@@ -93,6 +109,7 @@ const appCountryCode = appCountryCodeFromPath(countryPath);
 					countryPath={countryPath}
 					publicAppBase={publicAppBase}
 					appCountryCode={appCountryCode}
+					lockDocumentSeo={lockMarketingSeo}
 					legalPage={legalPage}
 					legals={legals}
 					privacyUrl={privacyUrl}

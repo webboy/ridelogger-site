@@ -1,0 +1,96 @@
+{
+	"meta": {
+		"title": "Prodaj auto uz jasniju digitalnu servisnu istoriju | Servisna Knjižica",
+		"description": "Pokaži kupcu uredniji pregled održavanja pre prodaje. Besplatan nalog u Servisnoj knjižici.",
+		"heroImageAlt": "Vlasnik vozila priprema jasniju servisnu istoriju za kupca"
+	},
+	"hero": {
+		"eyebrow": "Za privatne prodavce",
+		"headline": "Prodaj auto uz jasniju digitalnu servisnu istoriju.",
+		"sub": "Pokaži kupcu šta je rađeno na vozilu na uredniji i pregledniji način. Kada istorija održavanja izgleda jasnije, i auto ostavlja ozbiljniji utisak.",
+		"primaryCta": "Otvori besplatan nalog",
+		"secondaryCta": "Pripremi auto za prodaju",
+		"secondaryHref": "#how"
+	},
+	"trustStrip": [
+		"Uredniji prikaz održavanja",
+		"Više poverenja kod kupca",
+		"Lakše objašnjavanje istorije auta"
+	],
+	"intro": {
+		"headline": "Kada kupac pita šta je sve rađeno na autu, važno je da odgovor izgleda jasno.",
+		"body": "Ako su računi, beleške i servisni papiri razbacani, svaki razgovor je teži. Urednija digitalna servisna istorija pomaže da vozilo predstaviš ozbiljnije i sigurnije."
+	},
+	"benefits": {
+		"headline": "Zašto ovo znači kada prodaješ auto",
+		"items": [
+			{
+				"title": "Auto deluje ozbiljnije",
+				"body": "Kupcu je lakše da stekne poverenje kada vidi jasniji pregled održavanja."
+			},
+			{
+				"title": "Manje objašnjavanja napamet",
+				"body": "Umesto da se prisećaš iz glave, imaš uredniji pregled šta je rađeno i kada."
+			},
+			{
+				"title": "Bolji utisak pre razgledanja",
+				"body": "Pre nego što kupac dođe da vidi auto, važno je da istorija održavanja ne deluje haotično."
+			}
+		]
+	},
+	"beforeAfter": {
+		"headline": "Manje haosa. Više poverenja.",
+		"beforeLabel": "Pre",
+		"beforeBody": "Računi po fiokama, papiri u autu, ponešto u telefonu, a ostatak se pamti napamet.",
+		"afterLabel": "Posle",
+		"afterBody": "Jasnija digitalna servisna istorija koja pomaže da kupcu pokažeš auto na uredniji način."
+	},
+	"inventoryAngle": null,
+	"howItWorks": {
+		"headline": "Kako funkcioniše",
+		"steps": [
+			{
+				"title": "Otvori nalog",
+				"body": "Kreni besplatno i dodaj vozilo koje pripremaš za prodaju."
+			},
+			{
+				"title": "Unesi ono što već imaš",
+				"body": "Dodaj servisne stavke, račune i beleške koje već poseduješ."
+			},
+			{
+				"title": "Predstavi auto jasnije",
+				"body": "Iskoristi uredniju istoriju održavanja da kupcu lakše pokažeš šta je sve rađeno."
+			}
+		]
+	},
+	"objection": {
+		"headline": "Ne moraš imati savršenu dokumentaciju da bi krenuo.",
+		"body": "I ako imaš samo deo računa i servisnih podataka, uredniji pregled je i dalje bolji od razbacanih papira i usmenog objašnjavanja."
+	},
+	"offer": null,
+	"faq": {
+		"items": [
+			{
+				"q": "Da li je ovo samo za ljude koji prodaju više auta?",
+				"a": "Ne. Ova stranica je namenjena privatnim vlasnicima koji prodaju jedno vozilo i žele da ga predstave ozbiljnije."
+			},
+			{
+				"q": "Da li moram imati sve račune?",
+				"a": "Ne moraš. Dovoljno je da kreneš od onoga što već imaš i napraviš uredniji pregled."
+			},
+			{
+				"q": "Da li ovo garantuje da ću prodati auto brže?",
+				"a": "Ne postoji garancija za to. Poenta je da auto i njegova istorija održavanja deluju jasnije i pouzdanije pred kupcem."
+			}
+		]
+	},
+	"closing": {
+		"headline": "Pripremi auto za prodaju uz uredniju servisnu istoriju.",
+		"body": "Otvori besplatan nalog i počni da sređuješ pregled održavanja koji kupcu znači.",
+		"cta": "Otvori besplatan nalog"
+	},
+	"sectionLabels": {
+		"trustStripHeading": "Ukratko",
+		"faqHeading": "Često postavljana pitanja"
+	}
+}

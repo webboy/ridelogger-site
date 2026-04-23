@@ -1,0 +1,96 @@
+{
+	"meta": {
+		"title": "Historique d'entretien plus clair pour votre parc | RideLogger",
+		"description": "Présentez l'entretien de façon plus cohérente sur plusieurs véhicules. Outil numérique pour concessionnaires et professionnels.",
+		"heroImageAlt": "Parc automobile avec véhicules présentés professionnellement"
+	},
+	"hero": {
+		"eyebrow": "Pour concessionnaires et professionnels",
+		"headline": "Donnez à chaque véhicule une histoire d'entretien plus claire.",
+		"sub": "Harmonisez la présentation de l'entretien sur votre stock et facilitez les échanges avec les acheteurs. Un carnet mieux structuré rend vos véhicules plus professionnels.",
+		"primaryCta": "Créer un compte pro",
+		"secondaryCta": "Activer Premium et demander le bonus revendeur",
+		"secondaryHref": "#dealer-offer"
+	},
+	"trustStrip": [
+		"Présentation véhicule plus claire",
+		"Échanges acheteurs plus cohérents",
+		"Mieux adapté aux parcs multi-véhicules"
+	],
+	"intro": {
+		"headline": "Quand vous vendez plusieurs véhicules, la qualité de présentation compte.",
+		"body": "Si chaque voiture a son histoire, ses papiers et son mode d'explication, le processus devient difficile à standardiser. Un historique d'entretien numérique plus clair donne à votre stock une image plus cohérente."
+	},
+	"benefits": {
+		"headline": "Pourquoi c'est utile pour les pros",
+		"items": [
+			{
+				"title": "Une présentation commerciale plus homogène",
+				"body": "Offrez aux acheteurs une vision plus claire de l'entretien sur différents véhicules en stock."
+			},
+			{
+				"title": "Moins d'explications répétées",
+				"body": "Un récit d'entretien mieux structuré facilite les mêmes questions de confiance, encore et encore."
+			},
+			{
+				"title": "Premium plus pertinent sur plusieurs voitures",
+				"body": "Si vous vendez plusieurs véhicules, une meilleure structure autour de l'entretien apporte plus de valeur que pour un seul usage."
+			}
+		]
+	},
+	"beforeAfter": null,
+	"inventoryAngle": {
+		"headline": "Plus de véhicules exigent plus de structure.",
+		"body": "Un particulier peut improviser une fois. Pas un professionnel. Avec plusieurs voitures, la cohérence fait partie du sérieux de votre activité."
+	},
+	"howItWorks": {
+		"headline": "Comment ça marche pour les pros",
+		"steps": [
+			{
+				"title": "Créer un compte",
+				"body": "Ouvrez votre compte et ajoutez les véhicules que vous souhaitez suivre plus sérieusement."
+			},
+			{
+				"title": "Premium pour plusieurs véhicules",
+				"body": "Premium devient plus pertinent lorsque vous avez besoin d'un meilleur système sur plus d'une voiture."
+			},
+			{
+				"title": "Demander le bonus onboarding revendeur",
+				"body": "Après activation de Premium, contactez-nous via le formulaire ; nous examinons votre dossier pour un bonus d'onboarding."
+			}
+		]
+	},
+	"objection": null,
+	"offer": {
+		"eyebrow": "Offre revendeurs",
+		"headline": "Activez Premium et contactez-nous pour un bonus onboarding revendeur.",
+		"body": "Si vous vendez des véhicules professionnellement, nous pouvons récompenser un usage sérieux par une période bonus après un court contrôle. Objectif : bien démarrer si vous utilisez l'outil sur plusieurs véhicules.",
+		"cta": "Demander le bonus revendeur",
+		"footnote": "L'attribution du bonus est manuelle et destinée à un usage revendeur réel."
+	},
+	"faq": {
+		"items": [
+			{
+				"q": "Est-ce réservé aux grands concessionnaires ?",
+				"a": "Non. C'est aussi pertinent pour les parcs plus petits et les indépendants qui vendent plusieurs véhicules et veulent une présentation plus structurée."
+			},
+			{
+				"q": "Pourquoi Premium aurait-il du sens pour moi ?",
+				"a": "Parce que la valeur se justifie plus facilement lorsque vous travaillez sur plusieurs voitures plutôt qu'une seule."
+			},
+			{
+				"q": "Comment fonctionne le bonus revendeur ?",
+				"a": "Activez d'abord Premium, puis contactez-nous via le formulaire revendeur. Après vérification, les dossiers éligibles peuvent recevoir une période bonus d'onboarding."
+			}
+		]
+	},
+	"closing": {
+		"headline": "Renforcez la présentation professionnelle de vos véhicules.",
+		"body": "Créez votre compte, activez Premium si cela correspond à votre activité, et contactez-nous pour le bonus onboarding revendeur.",
+		"cta": "Créer un compte pro"
+	},
+	"sectionLabels": {
+		"trustStripHeading": "En bref",
+		"faqHeading": "Questions fréquentes"
+	}
+}

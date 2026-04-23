@@ -790,3 +790,126 @@ img {
 	background: rgba(11, 79, 138, 0.1);
 	font-weight: 800;
 }
+
+.trust__detail:empty {
+	display: none;
+}
+
+.landing-before-after {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem;
+	margin-top: 0.5rem;
+}
+
+@media (max-width: 700px) {
+	.landing-before-after {
+		grid-template-columns: 1fr;
+	}
+}
+
+.landing-ba-card {
+	background: var(--surface);
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+	padding: 1.25rem;
+	box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+}
+
+.landing-ba-label {
+	font-size: 0.75rem;
+	font-weight: 800;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	color: var(--muted);
+	margin: 0 0 0.5rem;
+}
+
+.landing-ba-card--after {
+	border-left: 3px solid var(--accent);
+}
+
+.landing-benefits {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 1rem;
+	margin-top: 0.75rem;
+}
+
+@media (max-width: 900px) {
+	.landing-benefits {
+		grid-template-columns: 1fr;
+	}
+}
+
+.landing-offer {
+	background: linear-gradient(145deg, rgba(14, 165, 233, 0.08) 0%, var(--surface) 45%);
+	border: 1px solid var(--border);
+	border-radius: calc(var(--radius) + 4px);
+	padding: clamp(1.25rem, 3vw, 2rem);
+	box-shadow: var(--shadow);
+	border-left: 4px solid var(--brand-600);
+}
+
+.landing-offer__eyebrow {
+	display: inline-block;
+	font-size: 0.8rem;
+	font-weight: 800;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	color: var(--brand-600);
+	margin-bottom: 0.5rem;
+}
+
+.landing-faq {
+	display: grid;
+	gap: 0.65rem;
+	margin-top: 0.75rem;
+}
+
+.landing-faq details {
+	background: var(--surface);
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+	padding: 0.85rem 1rem;
+	box-shadow: 0 6px 18px rgba(15, 23, 42, 0.05);
+}
+
+.landing-faq summary {
+	cursor: pointer;
+	font-weight: 700;
+	list-style: none;
+}
+
+.landing-faq summary::-webkit-details-marker {
+	display: none;
+}
+
+.landing-faq details[open] summary {
+	margin-bottom: 0.5rem;
+}
+
+.landing-faq p {
+	margin: 0;
+	color: var(--muted);
+	font-size: 0.95rem;
+	line-height: 1.55;
+}
+
+.landing-closing {
+	background: linear-gradient(180deg, rgba(11, 79, 138, 0.06), transparent);
+	border-top: 1px solid var(--border);
+	padding: clamp(2.5rem, 5vw, 3.5rem) 0;
+	margin-top: 1rem;
+}
+
+.landing-closing h2 {
+	max-width: 40ch;
+}
+
+.landing-cta-row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+	margin-top: 1rem;
+}

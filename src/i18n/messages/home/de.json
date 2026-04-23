@@ -133,6 +133,9 @@
   },
   "footer": {
     "tagline": "Serviceheft für Menschen, die wirklich fahren.",
-    "note": "Produktnamen und Verfügbarkeit können sich ändern; die Web-App bleibt der Haupteinstieg."
+    "note": "Produktnamen und Verfügbarkeit können sich ändern; die Web-App bleibt der Haupteinstieg.",
+    "sellingCarsTitle": "Fahrzeug verkaufen?",
+    "sellingPrivateLabel": "Privatverkauf",
+    "sellingDealersLabel": "Händler & Plätze"
   }
 }

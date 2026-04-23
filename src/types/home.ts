@@ -70,5 +70,9 @@ export interface HomeMessages {
 	footer: {
 		tagline: string;
 		note: string;
+		/** Footer discovery links to campaign landings (only set in locales used on DE/SR home). */
+		sellingCarsTitle?: string;
+		sellingPrivateLabel?: string;
+		sellingDealersLabel?: string;
 	};
 }

@@ -1,0 +1,96 @@
+{
+	"meta": {
+		"title": "Prodajte avto z jasnejšo servisno zgodovino | RideLogger",
+		"description": "Kupcem pred prvim ogledom pokažite bolj urejen digitalni pregled servisa. Brezplačen RideLogger račun in priprava avta na prodajo.",
+		"heroImageAlt": "Lastnik vozila pripravlja jasnejšo servisno zgodovino za kupca"
+	},
+	"hero": {
+		"eyebrow": "Za zasebne prodajalce",
+		"headline": "Prodajte avto z jasnejšo servisno zgodovino.",
+		"sub": "Pokažite, kaj je bilo na vozilu narejeno, na bolj urejen način. Jasna digitalna servisna zgodovina lahko pred prvim ogledom vozilo naredi bolj zaupanja vredno.",
+		"primaryCta": "Ustvari brezplačen račun",
+		"secondaryCta": "Pripravi avto na prodajo",
+		"secondaryHref": "#how"
+	},
+	"trustStrip": [
+		"Bolj jasen prikaz servisa",
+		"Več zaupanja pri kupcu",
+		"Laže pokazati, kaj je bilo narejeno"
+	],
+	"intro": {
+		"headline": "Ko kupca zanima servisna zgodovina, šteje jasnost.",
+		"body": "Če so računi, zapiski in dokumenti raztreseni, vsak pogovor traja dlje. Bolj urejen digitalni pregled pomaga vozilo predstaviti bolj resno in strukturirano."
+	},
+	"benefits": {
+		"headline": "Zakaj to pomaga pri prodaji avta",
+		"items": [
+			{
+				"title": "Vozilo deluje bolj zanesljivo",
+				"body": "Kupcu je laže zaupati, ko je pregled servisa jasen in ne razdrobljen."
+			},
+			{
+				"title": "Lažji odgovori na vprašanja",
+				"body": "Namesto razlaganja na pamet imate bolj jasen pregled, kaj je bilo narejeno in kdaj."
+			},
+			{
+				"title": "Boljši prvi vtis",
+				"body": "Urejena servisna zgodovina podpira bolj resno predstavitev pred testno vožnjo ali ogledom."
+			}
+		]
+	},
+	"beforeAfter": {
+		"headline": "Manj papirnatega kaosa. Več miru.",
+		"beforeLabel": "Prej",
+		"beforeBody": "Računi v predalu, posnetki v telefonu, datumi servisov, ki si jih le deloma zapomnite.",
+		"afterLabel": "Potem",
+		"afterBody": "Jasnejša digitalna servisna zgodovina, s katero vozilo pokažete bolj strukturirano."
+	},
+	"inventoryAngle": null,
+	"howItWorks": {
+		"headline": "Kako deluje",
+		"steps": [
+			{
+				"title": "Ustvarite račun",
+				"body": "Začnite brezplačno in dodajte vozilo, ki ga pripravljate na prodajo."
+			},
+			{
+				"title": "Vnesite servisne podatke",
+				"body": "Združite podatke o servisih, računih in zapiskih, ki jih že imate."
+			},
+			{
+				"title": "Jasneje predstavite vozilo",
+				"body": "Uporabite urejen pregled za pogovore s kupci in več zaupanja."
+			}
+		]
+	},
+	"objection": {
+		"headline": "Za začetek ne potrebujete popolne dokumentacije",
+		"body": "Tudi če imate le del dokumentov, je bolj urejen pregled boljši od raztresenih listov in nepopolnih razlag."
+	},
+	"offer": null,
+	"faq": {
+		"items": [
+			{
+				"q": "Je to samo za ljudi, ki profesionalno prodajajo avte?",
+				"a": "Ne. Stran je namenjena zasebnim lastnikom, ki prodajajo eno vozilo in želijo jasneje pokazati servisno zgodovino."
+			},
+			{
+				"q": "Ali potrebujem vsak račun?",
+				"a": "Ne. Začnete lahko s tem, kar imate, in zgodovino uredite od tam."
+			},
+			{
+				"q": "Ali to garantira hitrejšo prodajo?",
+				"a": "Nobeno orodje tega ne more garantirati. Vrednost je v tem, da vozilo jasneje predstavite in kupcem date več sigurnosti."
+			}
+		]
+	},
+	"closing": {
+		"headline": "Pripravite prodajo z bolj urejeno servisno zgodovino.",
+		"body": "Ustvarite brezplačen račun in začnite urejati pregled, ki ga kupci zanimajo.",
+		"cta": "Ustvari brezplačen račun"
+	},
+	"sectionLabels": {
+		"trustStripHeading": "Na kratko",
+		"faqHeading": "Pogosta vprašanja"
+	}
+}

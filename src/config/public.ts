@@ -19,6 +19,35 @@ export function getAppUrl(locale: Locale, countryCode?: string | null): string {
 	return url.href;
 }
 
+/** Append utm_* / gclid / fbclid from a request onto an absolute URL without clobbering existing keys. */
+export function mergeMarketingParams(targetHref: string, source: URLSearchParams): string {
+	const u = new URL(targetHref);
+	for (const [key, value] of source.entries()) {
+		if (!value) continue;
+		if (key.startsWith('utm_') || key === 'gclid' || key === 'fbclid') {
+			if (!u.searchParams.has(key)) u.searchParams.set(key, value);
+		}
+	}
+	return u.href;
+}
+
+export function getAppUrlWithMarketing(
+	locale: Locale,
+	countryCode: string | null | undefined,
+	source: URLSearchParams,
+): string {
+	return mergeMarketingParams(getAppUrl(locale, countryCode), source);
+}
+
+/**
+ * Dealer onboarding bonus inquiry (mailto or https form). Optional; offer CTAs disable when unset.
+ */
+export function getDealerBonusInquiryUrl(): string | null {
+	const v = import.meta.env.PUBLIC_DEALER_BONUS_INQUIRY_URL;
+	if (typeof v === 'string' && v.trim().length > 0) return v.trim();
+	return null;
+}
+
 /** Partner PWA (workshops / service providers). */
 export function getPartnerAppUrl(): string {
 	const v = import.meta.env.PUBLIC_PARTNER_APP_URL;

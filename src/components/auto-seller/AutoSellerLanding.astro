@@ -1,0 +1,346 @@
+---
+import type { AutoSellerLandingContent } from '../../types/autoSellerLanding';
+
+interface Props {
+	content: AutoSellerLandingContent;
+	appUrl: string;
+	dealerInquiryUrl: string | null;
+	analyticsBrand: 'rl' | 'sk';
+	analyticsSegment: 'private' | 'dealer';
+	pagePath: string;
+	heroImageSrc?: string;
+}
+
+const {
+	content: c,
+	appUrl,
+	dealerInquiryUrl,
+	analyticsBrand,
+	analyticsSegment,
+	pagePath,
+	heroImageSrc = '/images/home-hero.jpg',
+} = Astro.props;
+
+const trustIcons = [
+	'<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>',
+	'<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/><path d="M12 2v4"/></svg>',
+	'<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>',
+	'<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>',
+];
+
+const howIcons = [
+	'<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
+	'<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>',
+	'<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/><path d="M12 2v4"/></svg>',
+];
+
+const trustStripHeading = c.sectionLabels?.trustStripHeading ?? 'Highlights';
+const faqHeading = c.sectionLabels?.faqHeading ?? 'FAQ';
+---
+
+<section class="hero">
+	<div class="shell hero__grid">
+		<div>
+			<div class="hero__eyebrow">{c.hero.eyebrow}</div>
+			<h1>{c.hero.headline}</h1>
+			<p class="lead">{c.hero.sub}</p>
+			<div class="hero__actions">
+				<a
+					class="btn btn--primary"
+					href={appUrl}
+					rel="noopener"
+					data-app-link
+					data-landing-cta="hero_primary"
+				>
+					{c.hero.primaryCta}
+				</a>
+				{
+					c.hero.secondaryHref.startsWith('#') ? (
+						<a class="btn btn--ghost" href={c.hero.secondaryHref} data-landing-cta="hero_secondary_scroll">
+							{c.hero.secondaryCta}
+						</a>
+					) : (
+						<a class="btn btn--ghost" href={c.hero.secondaryHref} data-landing-cta="hero_secondary">
+							{c.hero.secondaryCta}
+						</a>
+					)
+				}
+			</div>
+		</div>
+		<div class="hero__art hero__art--image">
+			<img
+				src={heroImageSrc}
+				width="1024"
+				height="682"
+				alt={c.meta.heroImageAlt}
+				loading="eager"
+				fetchpriority="high"
+				decoding="async"
+			/>
+		</div>
+	</div>
+</section>
+
+<section class="section section--trust" aria-labelledby="landing-trust-title">
+	<div class="shell">
+		<h2 id="landing-trust-title" class="visually-hidden">{trustStripHeading}</h2>
+		<div class="trust">
+			{
+				c.trustStrip.map((text, i) => (
+					<div class={`trust__item trust__item--accent-${i % 4}`}>
+						<span class="trust__icon" set:html={trustIcons[i % trustIcons.length]} />
+						<div class="trust__text">
+							<span class="trust__headline">{text}</span>
+							<span class="trust__detail" />
+						</div>
+					</div>
+				))
+			}
+		</div>
+	</div>
+</section>
+
+<section class="section" aria-labelledby="landing-intro-title">
+	<div class="shell">
+		<h2 id="landing-intro-title">{c.intro.headline}</h2>
+		<p class="muted" style="max-width: 52rem; font-size: 1.05rem; line-height: 1.55">{c.intro.body}</p>
+	</div>
+</section>
+
+<section class="section" aria-labelledby="landing-benefits-title">
+	<div class="shell">
+		<h2 id="landing-benefits-title">{c.benefits.headline}</h2>
+		<div class="landing-benefits">
+			{
+				c.benefits.items.map((item) => (
+					<div class="card">
+						<h3 style="margin: 0 0 0.5rem; font-size: 1.05rem">{item.title}</h3>
+						<p class="muted" style="margin: 0; font-size: 0.95rem; line-height: 1.52">
+							{item.body}
+						</p>
+					</div>
+				))
+			}
+		</div>
+	</div>
+</section>
+
+{
+	c.beforeAfter && (
+		<section class="section" aria-labelledby="landing-ba-title">
+			<div class="shell">
+				<h2 id="landing-ba-title">{c.beforeAfter.headline}</h2>
+				<div class="landing-before-after">
+					<div class="landing-ba-card">
+						<p class="landing-ba-label">{c.beforeAfter.beforeLabel}</p>
+						<p class="muted" style="margin: 0; line-height: 1.55">
+							{c.beforeAfter.beforeBody}
+						</p>
+					</div>
+					<div class="landing-ba-card landing-ba-card--after">
+						<p class="landing-ba-label">{c.beforeAfter.afterLabel}</p>
+						<p class="muted" style="margin: 0; line-height: 1.55">
+							{c.beforeAfter.afterBody}
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	)
+}
+
+{
+	c.inventoryAngle && (
+		<section class="section" aria-labelledby="landing-inv-title">
+			<div class="shell">
+				<h2 id="landing-inv-title">{c.inventoryAngle.headline}</h2>
+				<p class="muted" style="max-width: 52rem; font-size: 1.05rem; line-height: 1.55">
+					{c.inventoryAngle.body}
+				</p>
+			</div>
+		</section>
+	)
+}
+
+<section class="section section--how" id="how" aria-labelledby="landing-how-title">
+	<div class="shell">
+		<h2 id="landing-how-title">{c.howItWorks.headline}</h2>
+		<div class="how-track">
+			{
+				c.howItWorks.steps.map((s, i) => (
+					<div class={`how-step how-step--accent-${i % 3}`}>
+						<div class="how-step__head">
+							<span class="how-step__icon" set:html={howIcons[i % howIcons.length]} />
+							<span class="how-step__n">{i + 1}</span>
+						</div>
+						<h3 class="how-step__title">{s.title}</h3>
+						<p class="how-step__body">{s.body}</p>
+					</div>
+				))
+			}
+		</div>
+	</div>
+</section>
+
+{
+	c.objection && (
+		<section class="section" aria-labelledby="landing-obj-title">
+			<div class="shell">
+				<div class="card" style="max-width: 52rem">
+					<h2 id="landing-obj-title" style="margin-top: 0">
+						{c.objection.headline}
+					</h2>
+					<p class="muted" style="margin: 0; line-height: 1.55">
+						{c.objection.body}
+					</p>
+				</div>
+			</div>
+		</section>
+	)
+}
+
+{
+	c.offer && (
+		<section class="section" id="dealer-offer" aria-labelledby="landing-offer-title">
+			<div class="shell">
+				<div class="landing-offer">
+					<span class="landing-offer__eyebrow">{c.offer.eyebrow}</span>
+					<h2 id="landing-offer-title" style="margin: 0 0 0.75rem">
+						{c.offer.headline}
+					</h2>
+					<p class="muted" style="margin: 0 0 1rem; max-width: 52rem; line-height: 1.55">
+						{c.offer.body}
+					</p>
+					<div class="landing-cta-row">
+						{
+							dealerInquiryUrl ? (
+								<a
+									class="btn btn--primary"
+									href={dealerInquiryUrl}
+									rel="noopener noreferrer"
+									data-landing-cta="dealer_inquiry"
+								>
+									{c.offer.cta}
+								</a>
+							) : (
+								<span
+									class="btn btn--primary"
+									style="opacity: 0.55; cursor: not-allowed; pointer-events: none"
+									title="Configure PUBLIC_DEALER_BONUS_INQUIRY_URL"
+									aria-disabled="true"
+								>
+									{c.offer.cta}
+								</span>
+							)
+						}
+						<a class="btn btn--ghost" href={appUrl} rel="noopener" data-app-link data-landing-cta="offer_app">
+							{c.closing.cta}
+						</a>
+					</div>
+					<p class="muted" style="margin: 1rem 0 0; font-size: 0.88rem; max-width: 48rem">
+						{c.offer.footnote}
+					</p>
+				</div>
+			</div>
+		</section>
+	)
+}
+
+<section class="section" aria-labelledby="landing-faq-title">
+	<div class="shell">
+		<h2 id="landing-faq-title">{faqHeading}</h2>
+		<div class="landing-faq">
+			{
+				c.faq.items.map((item) => (
+					<details>
+						<summary>{item.q}</summary>
+						<p>{item.a}</p>
+					</details>
+				))
+			}
+		</div>
+	</div>
+</section>
+
+<section class="landing-closing" aria-labelledby="landing-close-title">
+	<div class="shell">
+		<h2 id="landing-close-title">{c.closing.headline}</h2>
+		<p class="muted" style="max-width: 48rem; font-size: 1.05rem; line-height: 1.55">{c.closing.body}</p>
+		<div class="landing-cta-row">
+			<a class="btn btn--primary" href={appUrl} rel="noopener" data-app-link data-landing-cta="closing_primary">
+				{c.closing.cta}
+			</a>
+		</div>
+	</div>
+</section>
+
+<script is:inline>
+	document.addEventListener('DOMContentLoaded', function () {
+		var params = new URLSearchParams(window.location.search);
+		document.querySelectorAll('a[data-app-link]').forEach(function (a) {
+			var href = a.getAttribute('href');
+			if (!href) return;
+			try {
+				var u = new URL(href);
+				params.forEach(function (value, key) {
+					if (!value) return;
+					if (key.startsWith('utm_') || key === 'gclid' || key === 'fbclid') {
+						if (!u.searchParams.has(key)) u.searchParams.set(key, value);
+					}
+				});
+				a.setAttribute('href', u.href);
+			} catch (e) {}
+		});
+	});
+</script>
+
+<script is:inline define:vars={{ analyticsBrand, analyticsSegment, pagePath }}>
+	var attempts = 0;
+	function emitLandingPageView() {
+		attempts++;
+		if (typeof window.gtag === 'function') {
+			window.gtag('event', 'landing_page_view', {
+				brand: analyticsBrand,
+				segment: analyticsSegment,
+				page_path: pagePath,
+			});
+			return;
+		}
+		if (attempts < 20) setTimeout(emitLandingPageView, 300);
+	}
+	emitLandingPageView();
+
+	document.addEventListener('click', function (e) {
+		var t = e.target;
+		if (!(t instanceof Element)) return;
+		var el = t.closest('a[data-landing-cta]');
+		if (!el) return;
+		var ctaId = el.getAttribute('data-landing-cta');
+		if (!ctaId) return;
+		if (typeof window.gtag === 'function') {
+			window.gtag('event', 'landing_cta_click', {
+				brand: analyticsBrand,
+				segment: analyticsSegment,
+				cta_id: ctaId,
+				page_path: pagePath,
+			});
+		}
+		if (ctaId === 'dealer_inquiry' && typeof window.fbq === 'function') {
+			window.fbq('track', 'Contact');
+		}
+	});
+</script>
+
+<style>
+	.visually-hidden {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+		border: 0;
+	}
+</style>

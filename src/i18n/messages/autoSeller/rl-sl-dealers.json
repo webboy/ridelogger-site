@@ -1,0 +1,96 @@
+{
+	"meta": {
+		"title": "Jasnejša servisna zgodovina za vaš vozni park | RideLogger",
+		"description": "Enoten prikaz servisa čez več vozil. Digitalno orodje za trgovce in prodajalce rabljenih avtomobilov.",
+		"heroImageAlt": "Avtomobilski plac z vozili v profesionalni predstavitvi"
+	},
+	"hero": {
+		"eyebrow": "Za trgovce in profesionalce",
+		"headline": "Vsakemu vozilu na placu dajte jasnejšo servisno zgodovino.",
+		"sub": "Uskladite prikaz servisa čez zalogo in poenostavite pogovore s kupci. Bolj urejen servisni zapis naredi vozila bolj profesionalna.",
+		"primaryCta": "Ustvarite trgovski račun",
+		"secondaryCta": "Aktivirajte Premium in povprašajte po trgovskem bonusu",
+		"secondaryHref": "#dealer-offer"
+	},
+	"trustStrip": [
+		"Bolj jasna predstavitev vozil",
+		"Enoten dialog s kupci",
+		"Primerno za več vozil"
+	],
+	"intro": {
+		"headline": "Pri prodaji več vozil šteje profesionalna predstavitev.",
+		"body": "Če ima vsak avto svojo zgodbo, dokumente in način razlage, je prodajni proces težko standardizirati. Jasnejša digitalna servisna zgodovina da zalogi bolj skladen vtis."
+	},
+	"benefits": {
+		"headline": "Zakaj je to smiselno za trgovce",
+		"items": [
+			{
+				"title": "Bolj skladna prodajna predstavitev",
+				"body": "Kupcem ponudite jasnejši pregled servisa pri različnih vozilih na zalogi."
+			},
+			{
+				"title": "Manj ponavljanja razlag",
+				"body": "Bolj strukturirana servisna zgodovina olajša odgovore na ista vprašanja zaupanja."
+			},
+			{
+				"title": "Premium pri več vozilih",
+				"body": "Če prodajate več avtov, ima boljša struktura okoli servisa večjo vrednost kot pri enem vozilu."
+			}
+		]
+	},
+	"beforeAfter": null,
+	"inventoryAngle": {
+		"headline": "Več vozil zahteva več strukture.",
+		"body": "Zasebni prodajalec lahko enkrat improvizira. Trgovec ne. Pri več avtih je skladnost del profesionalnosti vašega placa."
+	},
+	"howItWorks": {
+		"headline": "Kako deluje za trgovce",
+		"steps": [
+			{
+				"title": "Ustvarite račun",
+				"body": "Odprite račun in dodajte vozila, ki jih želite bolj resno voditi."
+			},
+			{
+				"title": "Premium za več vozil",
+				"body": "Premium postane bolj smiseln, ko potrebujete boljši sistem čez več kot eno vozilo."
+			},
+			{
+				"title": "Povprašajte po onboarding bonusu",
+				"body": "Po aktivaciji Premiuma nas kontaktirajte prek obrazca; preverimo vašo nastavitev za onboarding bonus."
+			}
+		]
+	},
+	"objection": null,
+	"offer": {
+		"eyebrow": "Ponudba za trgovce",
+		"headline": "Aktivirajte Premium in nas kontaktirajte za trgovski onboarding bonus.",
+		"body": "Če vozila prodajate poklicno, lahko po kratkem pregledu resno uporabo nagradimo z dodatnim bonus obdobjem. Cilj: dober začetek, če sistem uporabljate čez več vozil.",
+		"cta": "Povprašajte po trgovskem bonusu",
+		"footnote": "Odobritev bonusa je ročna in je namenjena dejanski trgovski rabi."
+	},
+	"faq": {
+		"items": [
+			{
+				"q": "Je to samo za velike salone?",
+				"a": "Ne. Smiselno je tudi za manjše place in samostojne trgovce, ki prodajajo več vozil in želijo bolj urejeno predstavitev."
+			},
+			{
+				"q": "Zakaj bi imel Premium smisel zame?",
+				"a": "Ker se vrednost laže utemelji, ko delate z več avti kot z enim samim."
+			},
+			{
+				"q": "Kako deluje trgovski bonus?",
+				"a": "Najprej aktivirate Premium, nato nas kontaktirate prek trgovskega obrazca. Po pregledu lahko kvalificirane nastavitve dobijo onboarding bonus obdobje."
+			}
+		]
+	},
+	"closing": {
+		"headline": "Začnite z bolj profesionalno predstavitvijo vozil.",
+		"body": "Ustvarite račun, aktivirajte Premium, če ustreza vašemu načinu dela, in nas kontaktirajte za trgovski onboarding bonus.",
+		"cta": "Ustvarite trgovski račun"
+	},
+	"sectionLabels": {
+		"trustStripHeading": "Na kratko",
+		"faqHeading": "Pogosta vprašanja"
+	}
+}

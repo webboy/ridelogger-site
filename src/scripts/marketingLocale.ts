@@ -1,7 +1,14 @@
-import { LOCALE_HREFLANG, LOCALE_LABELS, type Locale } from '../i18n/config';
+import {
+	LOCALE_FLAG,
+	LOCALE_HREFLANG,
+	LOCALE_LABELS,
+	LOCALE_SHORT,
+	type Locale,
+} from '../i18n/config';
 import { localeFromLangQueryParam } from '../i18n/langFromQuery';
 import type { HomeMessages } from '../types/home';
 import type { LegalBundle } from '../i18n/loadLegal';
+import type { DeployInstance } from '../config/countries';
 import { renderCookieArticleHtml } from '../utils/renderCookieArticleHtml';
 import { renderPrivacyArticleHtml } from '../utils/renderPrivacyArticleHtml';
 
@@ -12,13 +19,18 @@ export type MarketingLocaleInit = {
 	countryPath: string | null;
 	publicAppBase: string;
 	appCountryCode: string | null;
+	/** Isolates localStorage prefs per deploy (balkan vs global). */
+	storageInstance: DeployInstance;
+	/** When true, do not overwrite document title / meta description from home messages (e.g. campaign landings). */
+	lockDocumentSeo?: boolean;
 	legalPage?: 'privacy' | 'cookies';
 	legals?: Record<Locale, LegalBundle>;
 	privacyUrl?: string;
 };
 
-function storageKey(countryPath: string | null): string {
-	return countryPath ? `marketing_ui_locale_${countryPath}` : 'marketing_ui_locale_landing';
+function storageKey(countryPath: string | null, instance: DeployInstance): string {
+	const suffix = `__${instance}`;
+	return countryPath ? `marketing_ui_locale_${countryPath}${suffix}` : `marketing_ui_locale_landing${suffix}`;
 }
 
 function resolveLocale(init: MarketingLocaleInit): Locale {
@@ -31,7 +43,7 @@ function resolveLocale(init: MarketingLocaleInit): Locale {
 	}
 
 	try {
-		const s = localStorage.getItem(storageKey(init.countryPath));
+		const s = localStorage.getItem(storageKey(init.countryPath, init.storageInstance));
 		if (s && homeKeys.includes(s as Locale)) {
 			const loc = s as Locale;
 			if (!init.legals || init.legals[loc]) return loc;
@@ -55,8 +67,18 @@ function setMetaDescription(content: string) {
 }
 
 function syncLangSwitcher(loc: Locale) {
-	document.querySelectorAll('details.lang-switcher summary').forEach((summary) => {
+	document.querySelectorAll('details.lang-switcher').forEach((details) => {
+		const summary = details.querySelector('summary');
+		if (!summary) return;
 		summary.setAttribute('aria-label', LOCALE_LABELS[loc]);
+		const img = summary.querySelector('.lang-switcher__flag');
+		if (img instanceof HTMLImageElement) {
+			img.src = `/flags/${LOCALE_FLAG[loc]}.svg`;
+		}
+		const full = summary.querySelector('.lang-switcher__label--full');
+		const short = summary.querySelector('.lang-switcher__label--short');
+		if (full) full.textContent = LOCALE_LABELS[loc];
+		if (short) short.textContent = LOCALE_SHORT[loc];
 	});
 	document.querySelectorAll('[data-locale-pick]').forEach((btn) => {
 		const v = btn.getAttribute('data-locale-pick');
@@ -155,13 +177,13 @@ export function initMarketingLocale(init: MarketingLocaleInit): void {
 					setMetaDescription(leg.cookie_policy.meta_description);
 				}
 			}
-		} else if (m.meta && typeof m.meta.title === 'string') {
+		} else if (!init.lockDocumentSeo && m.meta && typeof m.meta.title === 'string') {
 			document.title = m.meta.title;
 			if (typeof m.meta.description === 'string') setMetaDescription(m.meta.description);
 		}
 
 		try {
-			localStorage.setItem(storageKey(init.countryPath), loc);
+			localStorage.setItem(storageKey(init.countryPath, init.storageInstance), loc);
 		} catch {
 			/* ignore */
 		}

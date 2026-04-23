@@ -2,6 +2,7 @@
 import type { HomeMessages } from '../types/home';
 import type { Locale } from '../i18n/config';
 import { brandName } from '../i18n/config';
+import { countryPagesForInstance } from '../config/countries';
 
 interface Props {
 	countryPath: string;
@@ -11,6 +12,19 @@ interface Props {
 }
 
 const { countryPath, locale, home, year } = Astro.props;
+
+const inst = (import.meta.env.PUBLIC_INSTANCE || 'balkan') as 'balkan' | 'global';
+const countryPathsThisInstance = countryPagesForInstance(inst).map((c) => c.path);
+const selling =
+	home.footer.sellingCarsTitle &&
+	home.footer.sellingPrivateLabel &&
+	home.footer.sellingDealersLabel &&
+	countryPathsThisInstance.includes(countryPath);
+
+const sellingPrivateHref =
+	inst === 'global' ? `/${countryPath}/private-sellers/` : `/${countryPath}/prodaja-auta/`;
+const sellingDealersHref =
+	inst === 'global' ? `/${countryPath}/auto-dealers/` : `/${countryPath}/auto-placevi/`;
 ---
 
 <footer class="site-footer">
@@ -19,6 +33,21 @@ const { countryPath, locale, home, year } = Astro.props;
 			<strong data-brand-text>{brandName(locale)}</strong>
 			<p class="muted" data-hk="footer.tagline">{home.footer.tagline}</p>
 			<p class="muted" style="font-size: 0.95rem" data-hk="footer.note">{home.footer.note}</p>
+			{
+				selling && (
+					<p class="muted site-footer__selling" style="margin-top: 1rem; font-size: 0.95rem">
+						<strong data-hk="footer.sellingCarsTitle">{home.footer.sellingCarsTitle}</strong>
+						<br />
+						<a href={sellingPrivateHref} data-hk="footer.sellingPrivateLabel">
+							{home.footer.sellingPrivateLabel}
+						</a>
+						{' · '}
+						<a href={sellingDealersHref} data-hk="footer.sellingDealersLabel">
+							{home.footer.sellingDealersLabel}
+						</a>
+					</p>
+				)
+			}
 		</div>
 		<div>
 			<p class="muted" style="margin: 0 0 0.5rem">

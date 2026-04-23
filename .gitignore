@@ -23,6 +23,10 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 
+# Playwright
+test-results/
+playwright-report/
+
 # local media scratchpad (generated assets / prompts)
 /media/*
 !/media/.gitkeep

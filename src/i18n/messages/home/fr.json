@@ -133,6 +133,9 @@
   },
   "footer": {
     "tagline": "Carnet d'entretien pour les personnes qui conduisent vraiment.",
-    "note": "Les noms de produit et la disponibilite peuvent evoluer ; l'application web reste le point d'entree principal."
+    "note": "Les noms de produit et la disponibilite peuvent evoluer ; l'application web reste le point d'entree principal.",
+    "sellingCarsTitle": "Vous vendez un vehicule ?",
+    "sellingPrivateLabel": "Vente entre particuliers",
+    "sellingDealersLabel": "Professionnels"
   }
 }

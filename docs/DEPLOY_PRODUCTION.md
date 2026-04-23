@@ -9,6 +9,8 @@ Javni marketing sajt (Astro, statički build). Postoje **dva** produkciona profi
 
 `PUBLIC_SITE_URL` i `PUBLIC_APP_URL` moraju odgovarati instanci **u trenutku builda**.
 
+**Dealer onboarding bonus** (CTA na `/…/auto-dealers/` i `/…/auto-placevi/`): podesi **`PUBLIC_DEALER_BONUS_INQUIRY_URL`** u istom build koraku (`mailto:…` ili HTTPS forma). Bez toga je dugme na tim stranicama onemogućeno. Koristi **operativni kontakt po brendu** (`online@servisna-knjizica.com` za balkan, `online@ridelogger.com` za global) — **ne** DPO / privacy adresu iz politika. Po želji drugačiji `subject` radi filtriranja (npr. `(RL)` vs `(SK)`).
+
 Host: `159.89.22.200` (SSH kao `root`, rsync + `chown www-data`).
 
 ### Šta znači „deploy“
@@ -29,7 +31,7 @@ Bez dodatnog kvalifikatora, **deploy ovog sajta na produkciju** = **oba** profil
 Kontejner **`sk-site`** (port 8086):
 
 ```bash
-docker exec sk-site sh -c 'cd /app && PUBLIC_INSTANCE=balkan PUBLIC_SITE_URL=https://www.servisna-knjizica.com PUBLIC_APP_URL=https://app.servisna-knjizica.com npm run build'
+docker exec sk-site sh -c 'cd /app && PUBLIC_INSTANCE=balkan PUBLIC_SITE_URL=https://www.servisna-knjizica.com PUBLIC_APP_URL=https://app.servisna-knjizica.com PUBLIC_DEALER_BONUS_INQUIRY_URL="mailto:online@servisna-knjizica.com?subject=Dealer%20onboarding%20bonus%20%28SK%29" npm run build'
 ```
 
 Izlaz: `ridelogger-site/dist/` na hostu (volume).
@@ -74,7 +76,7 @@ ssh root@159.89.22.200 "mkdir -p /var/www/ridelogger-site-global"
 Kontejner **`sk-site-global`** (port 8087) ili isti repo u `sk-site` sa env:
 
 ```bash
-docker exec sk-site-global sh -c 'cd /app && PUBLIC_INSTANCE=global PUBLIC_SITE_URL=https://www.ridelogger.com PUBLIC_APP_URL=https://app.ridelogger.com npm run build'
+docker exec sk-site-global sh -c 'cd /app && PUBLIC_INSTANCE=global PUBLIC_SITE_URL=https://www.ridelogger.com PUBLIC_APP_URL=https://app.ridelogger.com PUBLIC_DEALER_BONUS_INQUIRY_URL="mailto:online@ridelogger.com?subject=Dealer%20onboarding%20bonus%20%28RL%29" npm run build'
 ```
 
 ### Rsync

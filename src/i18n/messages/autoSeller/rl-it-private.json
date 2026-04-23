@@ -1,0 +1,96 @@
+{
+	"meta": {
+		"title": "Vendi l'auto con una storia di manutenzione più chiara | RideLogger",
+		"description": "Mostra agli acquirenti una cronologia digitale più ordinata prima del primo appuntamento. Crea un account RideLogger gratuito e prepara l'auto alla vendita.",
+		"heroImageAlt": "Proprietario prepara una storia di manutenzione più chiara per gli acquirenti"
+	},
+	"hero": {
+		"eyebrow": "Per chi vende la propria auto",
+		"headline": "Vendi la tua auto con una storia di manutenzione più chiara.",
+		"sub": "Mostra cosa è stato fatto sul veicolo in modo più ordinato. Una cronologia digitale chiara può far percepire l'auto come più affidabile prima della prima visita.",
+		"primaryCta": "Crea account gratuito",
+		"secondaryCta": "Prepara l'auto alla vendita",
+		"secondaryHref": "#how"
+	},
+	"trustStrip": [
+		"Manutenzione più leggibile",
+		"Più fiducia da parte dell'acquirente",
+		"Più facile mostrare cosa è stato fatto"
+	],
+	"intro": {
+		"headline": "Quando chiedono la storia di manutenzione, conta la chiarezza.",
+		"body": "Se fatture, appunti e documenti sono sparsi, ogni conversazione si allunga. Un registro digitale più ordinato aiuta a presentare l'auto in modo più serio."
+	},
+	"benefits": {
+		"headline": "Perché aiuta quando vendi l'auto",
+		"items": [
+			{
+				"title": "Un'auto che ispira più fiducia",
+				"body": "Gli acquirenti si sentono più tranquilli quando la manutenzione è chiara e non frammentata."
+			},
+			{
+				"title": "Rispondi più facilmente alle domande",
+				"body": "Invece di spiegare tutto a memoria, hai una visione più chiara di cosa è stato fatto e quando."
+			},
+			{
+				"title": "Una prima impressione migliore",
+				"body": "Una storia di manutenzione ordinata sostiene una presentazione più seria prima del test o della visita."
+			}
+		]
+	},
+	"beforeAfter": {
+		"headline": "Meno caos di carte. Più sicurezza.",
+		"beforeLabel": "Prima",
+		"beforeBody": "Scontrini nel vano, screenshot sul telefono, date di tagliando che ricordi a metà.",
+		"afterLabel": "Dopo",
+		"afterBody": "Una cronologia digitale più chiara per mostrare il veicolo in modo più ordinato."
+	},
+	"inventoryAngle": null,
+	"howItWorks": {
+		"headline": "Come funziona",
+		"steps": [
+			{
+				"title": "Crea un account",
+				"body": "Inizia gratis e aggiungi il veicolo che stai preparando alla vendita."
+			},
+			{
+				"title": "Aggiungi la manutenzione",
+				"body": "Raccogli interventi, fatture e note che hai già."
+			},
+			{
+				"title": "Presenta l'auto più chiaramente",
+				"body": "Usa il registro ordinato nei colloqui con gli acquirenti e rafforza la fiducia."
+			}
+		]
+	},
+	"objection": {
+		"headline": "Non serve un archivio perfetto per iniziare",
+		"body": "Anche con solo una parte dei documenti, una vista più chiara batte fogli sparsi e spiegazioni incomplete."
+	},
+	"offer": null,
+	"faq": {
+		"items": [
+			{
+				"q": "È solo per chi vende auto di mestiere?",
+				"a": "No. La pagina è per i privati che vendono un veicolo e vogliono mostrare la manutenzione in modo più chiaro."
+			},
+			{
+				"q": "Mi servono tutte le fatture?",
+				"a": "No. Puoi partire da ciò che hai e ordinare la cronologia da lì."
+			},
+			{
+				"q": "Garantisce una vendita più veloce?",
+				"a": "Nessuno strumento può garantirlo. Il valore è presentare il veicolo più chiaramente e dare sicurezza agli acquirenti."
+			}
+		]
+	},
+	"closing": {
+		"headline": "Prepara la vendita con una manutenzione più chiara.",
+		"body": "Crea il tuo account gratuito e inizia a ordinare la storia che conta per gli acquirenti.",
+		"cta": "Crea account gratuito"
+	},
+	"sectionLabels": {
+		"trustStripHeading": "In sintesi",
+		"faqHeading": "Domande frequenti"
+	}
+}

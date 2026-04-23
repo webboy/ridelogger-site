@@ -133,6 +133,9 @@
   },
   "footer": {
     "tagline": "Registro di manutenzione del veicolo per chi guida davvero.",
-    "note": "Nomi prodotto e disponibilita possono evolvere; la web app resta il punto di ingresso principale."
+    "note": "Nomi prodotto e disponibilita possono evolvere; la web app resta il punto di ingresso principale.",
+    "sellingCarsTitle": "Stai vendendo un veicolo?",
+    "sellingPrivateLabel": "Privati",
+    "sellingDealersLabel": "Dealer e professionisti"
   }
 }

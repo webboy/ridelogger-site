@@ -133,6 +133,9 @@
   },
   "footer": {
     "tagline": "Servisna knjižica za ljude koji stvarno voze.",
-    "note": "Nazivi proizvoda i dostupnost se mogu mijenjati; web aplikacija ostaje glavni ulaz."
+    "note": "Nazivi proizvoda i dostupnost se mogu mijenjati; web aplikacija ostaje glavni ulaz.",
+    "sellingCarsTitle": "Prodajete vozilo?",
+    "sellingPrivateLabel": "Privatna prodaja",
+    "sellingDealersLabel": "Placevi i trgovci"
   }
 }

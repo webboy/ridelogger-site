@@ -1,17 +1,23 @@
 {
   "name": "ridelogger-site",
   "type": "module",
-  "version": "0.6.0",
+  "version": "1.0.3",
   "engines": {
     "node": ">=22.12.0"
   },
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
+    "build:global": "PUBLIC_INSTANCE=global PUBLIC_SITE_URL=https://www.ridelogger.com PUBLIC_APP_URL=https://app.ridelogger.com astro build",
+    "build:balkan": "PUBLIC_INSTANCE=balkan PUBLIC_SITE_URL=https://www.servisna-knjizica.com PUBLIC_APP_URL=https://app.servisna-knjizica.com astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "test:e2e": "playwright test -c playwright.config.ts && playwright test -c playwright.balkan.config.ts"
   },
   "dependencies": {
     "astro": "^6.1.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.52.0"
   }
 }

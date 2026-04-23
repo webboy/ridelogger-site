@@ -1,0 +1,96 @@
+{
+	"meta": {
+		"title": "Auto verkaufen mit klarerer Servicehistorie | RideLogger",
+		"description": "Zeig Käufer:innen vor dem ersten Termin eine übersichtlichere digitale Servicehistorie. Erstelle kostenlos einen RideLogger-Account und bereite dein Auto auf den Verkauf vor.",
+		"heroImageAlt": "Fahrzeughalter bereitet eine klarere Servicehistorie für Käufer:innen vor"
+	},
+	"hero": {
+		"eyebrow": "Für Menschen, die ihr Auto verkaufen",
+		"headline": "Verkaufe dein Auto mit klarerer Servicehistorie.",
+		"sub": "Zeig Käufer:innen auf übersichtliche Weise, was am Fahrzeug gemacht wurde. Eine klare digitale Servicehistorie kann dein Auto vor dem ersten Besichtigungstermin vertrauenswürdiger wirken lassen.",
+		"primaryCta": "Kostenloses Konto erstellen",
+		"secondaryCta": "Auto auf den Verkauf vorbereiten",
+		"secondaryHref": "#how"
+	},
+	"trustStrip": [
+		"Übersichtlichere Wartungshistorie",
+		"Mehr Vertrauen bei Käufer:innen",
+		"Einfacher zeigen, was gemacht wurde"
+	],
+	"intro": {
+		"headline": "Wenn Käufer:innen nach der Servicehistorie fragen, zählt Klarheit.",
+		"body": "Sind Rechnungen, Belege und Notizen verstreut, zieht sich jedes Gespräch. Ein übersichtlicher digitaler Nachweis hilft dir, das Auto seriöser und strukturierter zu präsentieren."
+	},
+	"benefits": {
+		"headline": "Warum dir das beim Autoverkauf hilft",
+		"items": [
+			{
+				"title": "Das Auto wirkt vertrauenswürdiger",
+				"body": "Käufer:innen fühlen sich wohler, wenn die Wartungshistorie klar statt zerstückelt wirkt."
+			},
+			{
+				"title": "Fragen leichter beantworten",
+				"body": "Statt alles aus dem Gedächtnis zu erklären, hast du einen klareren Überblick über Was und Wann."
+			},
+			{
+				"title": "Besseren ersten Eindruck vorbereiten",
+				"body": "Eine geordnete Servicehistorie unterstützt eine seriösere Präsentation vor Probefahrt oder Besichtigung."
+			}
+		]
+	},
+	"beforeAfter": {
+		"headline": "Weniger Papierchaos. Mehr Ruhe.",
+		"beforeLabel": "Vorher",
+		"beforeBody": "Belege im Handschuhfach, Screenshots auf dem Handy, Servicetermine, die du nur noch halb weißt.",
+		"afterLabel": "Nachher",
+		"afterBody": "Eine klarere digitale Servicehistorie, mit der du das Fahrzeug strukturierter zeigen kannst."
+	},
+	"inventoryAngle": null,
+	"howItWorks": {
+		"headline": "So funktioniert’s",
+		"steps": [
+			{
+				"title": "Konto erstellen",
+				"body": "Starte mit einem kostenlosen Konto und füge das Fahrzeug hinzu, das du auf den Verkauf vorbereitest."
+			},
+			{
+				"title": "Wartungshistorie eintragen",
+				"body": "Fasse Servicedaten, Rechnungen und Wartungsnotizen zusammen, die du schon hast."
+			},
+			{
+				"title": "Das Auto klarer präsentieren",
+				"body": "Nutze die geordnete Servicehistorie für Gespräche mit Käufer:innen und mehr Vertrauen."
+			}
+		]
+	},
+	"objection": {
+		"headline": "Du brauchst keine perfekten Unterlagen zum Start",
+		"body": "Auch wenn du nur einen Teil der Dokumentation hast: ein klarerer Überblick ist besser als verstreute Zettel und lückenhafte Erklärungen."
+	},
+	"offer": null,
+	"faq": {
+		"items": [
+			{
+				"q": "Ist das nur sinnvoll, wenn ich beruflich Autos verkaufe?",
+				"a": "Nein. Diese Seite richtet sich an Privatverkäufer:innen, die vor dem Verkauf eines Fahrzeugs die Servicehistorie klarer darstellen wollen."
+			},
+			{
+				"q": "Brauche ich jede einzelne Rechnung?",
+				"a": "Nein. Du kannst mit dem starten, was du hast, und die Historie von dort aus ordnen."
+			},
+			{
+				"q": "Garantiert das einen schnelleren Verkauf?",
+				"a": "Das kann kein Tool garantieren. Der Wert liegt darin, das Fahrzeug klarer zu präsentieren und Käufer:innen mehr Sicherheit zu geben."
+			}
+		]
+	},
+	"closing": {
+		"headline": "Bereite deinen Autoverkauf mit klarerer Wartungshistorie vor.",
+		"body": "Erstelle kostenlos dein Konto und ordne die Servicehistorie, die Käufer:innen interessiert.",
+		"cta": "Kostenloses Konto erstellen"
+	},
+	"sectionLabels": {
+		"trustStripHeading": "Auf einen Blick",
+		"faqHeading": "Häufige Fragen"
+	}
+}

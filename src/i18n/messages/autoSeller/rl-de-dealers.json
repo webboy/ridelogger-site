@@ -1,0 +1,96 @@
+{
+	"meta": {
+		"title": "Klarere Wartungshistorie für Ihren Bestand | RideLogger",
+		"description": "Präsentieren Sie die Servicehistorie über Fahrzeuge hinweg konsistenter. Digitale Unterlagen für Händler und Gebrauchtwagenhändler.",
+		"heroImageAlt": "Händlerplatz mit professionell präsentierten Fahrzeugen"
+	},
+	"hero": {
+		"eyebrow": "Für Händler und Gebrauchtwagenprofis",
+		"headline": "Geben Sie jedem Fahrzeug auf dem Platz eine klarere Wartungsgeschichte.",
+		"sub": "Präsentieren Sie die Servicehistorie konsistenter über Ihren Bestand und erleichtern Sie Gespräche mit Käufer:innen. Ein geordneter Wartungsnachweis lässt Ihre Fahrzeuge professioneller wirken.",
+		"primaryCta": "Händlerkonto erstellen",
+		"secondaryCta": "Premium aktivieren und Händler-Bonus anfragen",
+		"secondaryHref": "#dealer-offer"
+	},
+	"trustStrip": [
+		"Klarere Fahrzeugpräsentation",
+		"Einheitlichere Kommunikation mit Käufer:innen",
+		"Besser für mehrere Fahrzeuge"
+	],
+	"intro": {
+		"headline": "Professionelle Präsentation zählt, wenn Sie mehrere Fahrzeuge verkaufen.",
+		"body": "Hat jedes Auto eine andere Geschichte, andere Papiere und andere Erklärungen, wird Ihr Verkaufsprozess schwerer standardisierbar. Eine klarere digitale Servicehistorie gibt Ihrem Bestand eine konsistentere Darstellung."
+	},
+	"benefits": {
+		"headline": "Warum das für Händler sinnvoll ist",
+		"items": [
+			{
+				"title": "Einheitlichere Verkaufspräsentation",
+				"body": "Geben Sie Käufer:innen einen klareren Überblick über die Wartungshistorie verschiedener Fahrzeuge auf Lager."
+			},
+			{
+				"title": "Weniger wiederholte Erklärungen",
+				"body": "Eine strukturiertere Wartungsgeschichte erleichtert es, dieselben Vertrauensfragen immer wieder zu beantworten."
+			},
+			{
+				"title": "Premium für mehrere Fahrzeuge nutzen",
+				"body": "Wenn Sie mehrere Autos verkaufen, kann eine bessere Struktur rund um die Servicehistorie mehr Nutzen bringen als bei nur einem Fahrzeug."
+			}
+		]
+	},
+	"beforeAfter": null,
+	"inventoryAngle": {
+		"headline": "Mehr Fahrzeuge brauchen mehr Struktur.",
+		"body": "Privatverkäufer:innen können einmal improvisieren. Händler nicht. Wenn Sie mit mehreren Autos arbeiten, wird Einheitlichkeit Teil davon, wie professionell Ihr Platz wirkt."
+	},
+	"howItWorks": {
+		"headline": "So funktioniert es für Händler",
+		"steps": [
+			{
+				"title": "Konto erstellen",
+				"body": "Eröffnen Sie Ihr Konto und legen Sie die Fahrzeuge an, die Sie ernsthafter verwalten möchten."
+			},
+			{
+				"title": "Premium für Mehrfach-Nutzung",
+				"body": "Premium wird relevanter, wenn Sie ein besseres System über mehr als ein Fahrzeug brauchen."
+			},
+			{
+				"title": "Händler-Onboarding-Bonus beantragen",
+				"body": "Nach der Premium-Aktivierung kontaktieren Sie uns über das Formular; wir prüfen Ihr Setup für einen Onboarding-Bonus."
+			}
+		]
+	},
+	"objection": null,
+	"offer": {
+		"eyebrow": "Händler-Angebot",
+		"headline": "Premium aktivieren und uns für einen Händler-Onboarding-Bonus kontaktieren.",
+		"body": "Wenn Sie beruflich Fahrzeuge verkaufen, können wir seriösen Händler-Einsatz nach kurzer Prüfung mit einer zusätzlichen Bonusphase belohnen. Ziel: Sie sollen gut starten, wenn Sie das System über mehrere Fahrzeuge nutzen möchten.",
+		"cta": "Händler-Bonus beantragen",
+		"footnote": "Die Bewilligung des Bonus erfolgt manuell und ist für echten Händler- bzw. Händlerinnen-Einsatz gedacht."
+	},
+	"faq": {
+		"items": [
+			{
+				"q": "Ist das nur für große Autohäuser?",
+				"a": "Nein. Es ist auch relevant für kleinere Plätze und freie Händler:innen, die mehrere Fahrzeuge verkaufen und eine geordnetere Präsentation wollen."
+			},
+			{
+				"q": "Warum sollte Premium für mich passen?",
+				"a": "Weil sich der Nutzen leichter rechtfertigen lässt, wenn Sie über mehrere Autos arbeiten statt nur über eines."
+			},
+			{
+				"q": "Wie funktioniert der Händler-Bonus?",
+				"a": "Aktivieren Sie zuerst Premium, kontaktieren Sie uns dann über das Händler-Formular. Nach kurzer Prüfung können qualifizierte Händler-Setups eine Onboarding-Bonusphase erhalten."
+			}
+		]
+	},
+	"closing": {
+		"headline": "Starten Sie mit einer professionelleren Fahrzeugpräsentation.",
+		"body": "Erstellen Sie Ihr Konto, aktivieren Sie Premium, wenn es zu Ihrem Setup passt, und kontaktieren Sie uns für den Händler-Onboarding-Bonus.",
+		"cta": "Händlerkonto erstellen"
+	},
+	"sectionLabels": {
+		"trustStripHeading": "Auf einen Blick",
+		"faqHeading": "Häufige Fragen"
+	}
+}

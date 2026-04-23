@@ -14,12 +14,16 @@ const publicAppBase =
 		? import.meta.env.PUBLIC_APP_URL
 		: 'https://app.servisna-knjizica.com';
 
+const storageInstance = (import.meta.env.PUBLIC_INSTANCE || 'balkan') as 'balkan' | 'global';
+
 const init = {
 	homes,
 	defaultLocale,
 	countryPath: null,
 	publicAppBase,
 	appCountryCode: null,
+	storageInstance,
+	lockDocumentSeo: false,
 };
 ---
 

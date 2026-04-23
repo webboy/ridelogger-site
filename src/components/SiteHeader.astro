@@ -10,12 +10,17 @@ interface Props {
 	countryPath: string;
 	locale: Locale;
 	home: HomeMessages;
+	variant?: 'default' | 'campaign';
+	/** Full URL for primary app CTA when set (e.g. with marketing query params). */
+	appHref?: string;
 }
 
-const { countryPath, locale, home } = Astro.props;
+const { countryPath, locale, home, variant = 'default', appHref } = Astro.props;
 const brand = brandName(locale);
 const appCountry = appCountryCodeFromPath(countryPath);
 const partnerUrl = getPartnerAppUrl();
+const primaryAppHref = appHref ?? getAppUrl(locale, appCountry);
+const isCampaign = variant === 'campaign';
 ---
 
 <header class="site-header">
@@ -26,10 +31,14 @@ const partnerUrl = getPartnerAppUrl();
 			<span class="brand__name" data-brand-text>{brand}</span>
 		</a>
 		<div class="site-header__cta">
-			<a class="btn btn--ghost" href={partnerUrl} rel="noopener noreferrer">
-				<span data-hk="nav.partner">{home.nav.partner}</span>
-			</a>
-			<a class="btn btn--primary" data-app-link href={getAppUrl(locale, appCountry)} rel="noopener">
+			{
+				!isCampaign && (
+					<a class="btn btn--ghost" href={partnerUrl} rel="noopener noreferrer">
+						<span data-hk="nav.partner">{home.nav.partner}</span>
+					</a>
+				)
+			}
+			<a class="btn btn--primary" data-app-link href={primaryAppHref} rel="noopener">
 				<span data-hk="nav.openApp">{home.nav.openApp}</span>
 			</a>
 		</div>

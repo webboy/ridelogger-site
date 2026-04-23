@@ -2,7 +2,9 @@ export const LOCALES = ['sr-latn', 'sr-cyrl', 'hr', 'de', 'en', 'mk', 'fr', 'it'
 
 export type Locale = (typeof LOCALES)[number];
 
-/** Default entry locale for `/` redirect (deterministic, SEO-safe). */
+/**
+ * Legacy constant (unused for routing). Balkan picker defaults to sr-Latn; global (`PUBLIC_INSTANCE=global`) uses German in `index.astro` and `/de/` homes.
+ */
 export const DEFAULT_LOCALE: Locale = 'sr-latn';
 
 export const LOCALE_LABELS: Record<Locale, string> = {

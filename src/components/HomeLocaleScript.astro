@@ -10,13 +10,26 @@ interface Props {
 	publicAppBase: string;
 	/** ISO country for PWA `?country=`; null to omit */
 	appCountryCode: string | null;
+	/** Campaign landings: keep SSR title/description from landing JSON. */
+	lockDocumentSeo?: boolean;
 	legalPage?: 'privacy' | 'cookies';
 	legals?: Record<Locale, LegalBundle>;
 	privacyUrl?: string;
 }
 
-const { homes, defaultLocale, countryPath, publicAppBase, appCountryCode, legalPage, legals, privacyUrl } =
-	Astro.props;
+const {
+	homes,
+	defaultLocale,
+	countryPath,
+	publicAppBase,
+	appCountryCode,
+	lockDocumentSeo = false,
+	legalPage,
+	legals,
+	privacyUrl,
+} = Astro.props;
+
+const storageInstance = (import.meta.env.PUBLIC_INSTANCE || 'balkan') as 'balkan' | 'global';
 
 const init = {
 	homes,
@@ -24,6 +37,8 @@ const init = {
 	countryPath,
 	publicAppBase,
 	appCountryCode,
+	storageInstance,
+	lockDocumentSeo,
 	legalPage,
 	legals,
 	privacyUrl,
