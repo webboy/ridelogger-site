@@ -16,6 +16,12 @@ const gaFromEnv = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
 const gaId =
 	(gaFromEnv && String(gaFromEnv).trim()) ||
 	(instance === 'global' ? 'G-23VF66S9X3' : 'G-E5YJE5RD06');
+
+/** Meta Pixel (dataset) ID: SK (balkan) vs RL (global). Override with PUBLIC_FB_PIXEL_ID if needed. */
+const fbFromEnv = import.meta.env.PUBLIC_FB_PIXEL_ID;
+const fbPixelId =
+	(fbFromEnv && String(fbFromEnv).trim()) ||
+	(instance === 'global' ? '1641497756898384' : '26188160887543627');
 ---
 
 <div id="cookie-consent-banner" class="cookie-banner" style="display:none" role="dialog" aria-label={cb.message}>
@@ -35,7 +41,7 @@ const gaId =
 	</div>
 </div>
 
-<script is:inline define:vars={{ gaId, fbPixelId: '26188160887543627' }}>
+<script is:inline define:vars={{ gaId, fbPixelId }}>
 (function () {
 	var STORAGE_KEY = 'sk_cookie_consent_v1';
 
