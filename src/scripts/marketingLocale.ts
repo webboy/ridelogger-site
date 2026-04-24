@@ -11,6 +11,7 @@ import type { LegalBundle } from '../i18n/loadLegal';
 import type { DeployInstance } from '../config/countries';
 import { renderCookieArticleHtml } from '../utils/renderCookieArticleHtml';
 import { renderPrivacyArticleHtml } from '../utils/renderPrivacyArticleHtml';
+import { renderTosArticleHtml } from '../utils/renderTosArticleHtml';
 
 export type MarketingLocaleInit = {
 	homes: Record<Locale, HomeMessages>;
@@ -23,7 +24,7 @@ export type MarketingLocaleInit = {
 	storageInstance: DeployInstance;
 	/** When true, do not overwrite document title / meta description from home messages (e.g. campaign landings). */
 	lockDocumentSeo?: boolean;
-	legalPage?: 'privacy' | 'cookies';
+	legalPage?: 'privacy' | 'cookies' | 'tos';
 	legals?: Record<Locale, LegalBundle>;
 	privacyUrl?: string;
 };
@@ -99,6 +100,9 @@ function replaceLegalArticle(init: MarketingLocaleInit, loc: Locale) {
 
 	if (init.legalPage === 'privacy') {
 		article.outerHTML = renderPrivacyArticleHtml(bundle);
+	} else if (init.legalPage === 'tos') {
+		const privacyUrl = init.privacyUrl ?? '';
+		article.outerHTML = renderTosArticleHtml(bundle, privacyUrl);
 	} else {
 		const privacyUrl = init.privacyUrl ?? '';
 		article.outerHTML = renderCookieArticleHtml(bundle, privacyUrl);
@@ -172,6 +176,9 @@ export function initMarketingLocale(init: MarketingLocaleInit): void {
 				if (init.legalPage === 'privacy') {
 					document.title = leg.privacy_v2.meta_title;
 					setMetaDescription(leg.privacy_v2.meta_description);
+				} else if (init.legalPage === 'tos') {
+					document.title = leg.tos.meta_title;
+					setMetaDescription(leg.tos.meta_description);
 				} else {
 					document.title = leg.cookie_policy.meta_title;
 					setMetaDescription(leg.cookie_policy.meta_description);

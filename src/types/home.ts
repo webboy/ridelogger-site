@@ -9,6 +9,7 @@ export interface HomeMessages {
 		partner: string;
 		privacy: string;
 		cookies: string;
+		terms: string;
 	};
 	hero: {
 		eyebrow: string;

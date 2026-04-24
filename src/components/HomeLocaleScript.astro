@@ -12,7 +12,7 @@ interface Props {
 	appCountryCode: string | null;
 	/** Campaign landings: keep SSR title/description from landing JSON. */
 	lockDocumentSeo?: boolean;
-	legalPage?: 'privacy' | 'cookies';
+	legalPage?: 'privacy' | 'cookies' | 'tos';
 	legals?: Record<Locale, LegalBundle>;
 	privacyUrl?: string;
 }

@@ -1,0 +1,13 @@
+---
+import type { LegalBundle } from '../../i18n/loadLegal';
+import { renderTosArticleHtml } from '../../utils/renderTosArticleHtml';
+
+interface Props {
+	legal: LegalBundle;
+	privacyUrl: string;
+}
+
+const { legal, privacyUrl } = Astro.props;
+---
+
+<div set:html={renderTosArticleHtml(legal, privacyUrl)} />

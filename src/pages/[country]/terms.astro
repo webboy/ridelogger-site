@@ -1,0 +1,50 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import TosArticle from '../../components/legal/TosArticle.astro';
+import { countryPagesForInstance, getCountryByPath, type DeployInstance } from '../../config/countries';
+import { getAllHomeMessages, getHomeMessages } from '../../i18n/loadHome';
+import { getAllLegal, getLegal } from '../../i18n/loadLegal';
+
+export function getStaticPaths() {
+	const inst = (import.meta.env.PUBLIC_INSTANCE || 'balkan') as DeployInstance;
+	return countryPagesForInstance(inst).map((c) => ({ params: { country: c.path } }));
+}
+
+const param = Astro.params.country;
+const cfg = getCountryByPath(param ?? '');
+if (!cfg) {
+	throw new Error(`Unknown country: ${param}`);
+}
+
+const locale = cfg.defaultLocale;
+const legal = getLegal(locale);
+const home = getHomeMessages(locale);
+const homes = getAllHomeMessages();
+const legals = getAllLegal();
+
+const title = legal.tos.meta_title;
+const description = legal.tos.meta_description;
+
+const site = Astro.site;
+if (!site) {
+	throw new Error('Missing `site` in astro.config');
+}
+const privacyUrl = new URL(`/${cfg.path}/privacy/`, site).href;
+---
+
+<SiteLayout
+	countryPath={cfg.path}
+	locale={locale}
+	title={title}
+	description={description}
+	home={home}
+	homes={homes}
+	legals={legals}
+	legalPage="tos"
+	privacyUrl={privacyUrl}
+	pathSuffix="terms"
+>
+	<div class="legal shell">
+		<TosArticle legal={legal} privacyUrl={privacyUrl} />
+	</div>
+</SiteLayout>

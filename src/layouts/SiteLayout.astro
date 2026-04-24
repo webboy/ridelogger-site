@@ -19,9 +19,9 @@ interface Props {
 	pathSuffix?: string;
 	/** When set, enables client-side home copy switching + JSON for all locales. */
 	homes?: Record<Locale, HomeMessages>;
-	legalPage?: 'privacy' | 'cookies';
+	legalPage?: 'privacy' | 'cookies' | 'tos';
 	legals?: Record<Locale, LegalBundle>;
-	/** Canonical privacy URL (cookie policy body links). */
+	/** Canonical privacy URL (cookie policy + ToS body links). */
 	privacyUrl?: string;
 	/** Campaign landings: hide Partner link only; language switcher stays (like index). */
 	headerVariant?: 'default' | 'campaign';

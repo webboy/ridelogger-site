@@ -1,141 +1,142 @@
 {
-  "meta": {
-    "title": "Digitales Serviceheft fürs Fahrzeug",
-    "description": "Tanken, Werkstatt, Erinnerungen und Kosten an einem Ort. Für Fahrerinnen und Fahrer, die Ordnung ohne Tabellen wollen."
-  },
-  "nav": {
-    "home": "Start",
-    "openApp": "App öffnen",
-    "privacy": "Datenschutz",
-    "cookies": "Cookies",
-    "partner": "Partner (businesses)"
-  },
-  "hero": {
-    "eyebrow": "Wartung & Kosten",
-    "headline": "Deine Fahrzeughistorie – endlich gebündelt.",
-    "sub": "Erfasse Service, Kraftstoff und Ausgaben mit Erinnerungen, die teure Überraschungen vermeiden helfen.",
-    "primaryCta": "Web-App öffnen",
-    "secondaryCta": "So funktioniert’s",
-    "placeholderTitle": "Hero-Grafik",
-    "placeholderBody": "Noch kein finales Bild: Hero-Konzept nach media/generated/ legen (Task 0021 Bild-Workflow), danach hier einbinden.",
-    "imageAlt": "Produktillustration: Desktop-Dashboard und Smartphone-App für Fahrzeuge, Kosten und Wartungserinnerungen."
-  },
-  "trust": {
-    "title": "Klarheit statt Chaos",
-    "items": [
-      {
-        "title": "Mehrere Fahrzeuge",
-        "detail": "Alltagsauto, Projekt auf Rädern oder Familienparkplatz — jedes Fahrzeug bleibt für sich übersichtlich."
-      },
-      {
-        "title": "Erinnerungen, die helfen",
-        "detail": "Service, Zulassung, Versicherung — freundliche Hinweise, bevor ein Datum teuer wird."
-      },
-      {
-        "title": "Kraftstoff & Kosten im Fluss",
-        "detail": "Tankungen und Ausgaben ergeben ein klares Bild — ohne Excel-Marathon."
-      },
-      {
-        "title": "Deine Daten, deine Entscheidung",
-        "detail": "Transparente Privatsphäre-Optionen und Richtlinien in verständlicher Sprache."
-      }
-    ]
-  },
-  "problem": {
-    "title": "Von Zettelwirtschaft zu einem sauberen Protokoll",
-    "problemTitle": "Das Problem",
-    "problemBody": "Belege, Notizen und Tabellen geraten leicht aus dem Takt. Historie geht beim Verkauf verloren – oder einfach im Alltag unter.",
-    "solutionTitle": "Die Lösung",
-    "solutionBody": "Ein strukturiertes Service-Log mit deinem Konto: Einträge in Sekunden, Kontext dazu, Erinnerungen bevor Fristen verstreichen.",
-    "imageAlt": "Illustration: unübersichtliche Belege und Notizen versus eine geordnete Mobile-App mit Service-Historie und Kraftstoffkosten."
-  },
-  "how": {
-    "title": "So funktioniert’s",
-    "lead": "Drei klare Schritte — nach der Werkstatt oder am Tankeingriff kurz eintragen, und der Überblick bleibt erhalten.",
-    "steps": [
-      {
-        "title": "Profil anlegen",
-        "body": "Registrieren und ein oder mehrere Fahrzeuge mit dem anlegen, was du ohnehin weißt — Marke, Modell, Kennzeichen, Kilometerstand, was dir hilft.",
-        "tip": "Details kannst du später verfeinern; wichtig ist ein einfacher Einstieg, damit die Routine bleibt."
-      },
-      {
-        "title": "Relevantes erfassen",
-        "body": "Tanken, Wartung, Reparatur, Maut, Versicherung — Kosten und Kilometer festhalten, vom Rechner oder vom Handy.",
-        "tip": "Direkt nach Werkstatt oder Tankstelle eintragen schlägt „mache ich heute Abend“ fast immer."
-      },
-      {
-        "title": "Vorausplanen",
-        "body": "Erinnerungen für kleine und große Inspektion, Zulassung, Vignette, Kasko — was du nicht in letzter Minute jagen willst.",
-        "tip": "Hinweise sollen helfen, nicht nerven — du behältst die Kontrolle und kannst sie anpassen."
-      }
-    ]
-  },
-  "features": {
-    "title": "Was du kannst",
-    "items": [
-      {
-        "title": "Service-Historie",
-        "body": "Zeitleiste aus Wartung und Reparatur – mit Notizen und Dateien, wenn du sie brauchst."
-      },
-      {
-        "title": "Kraftstoff & Verbrauch",
-        "body": "Tankungen und Trends tracken, um Veränderungen früh zu sehen."
-      },
-      {
-        "title": "Kosten im Überblick",
-        "body": "Ausgaben über Kategorien statt Suche in Chats und PDFs."
-      },
-      {
-        "title": "Übergabe beim Verkauf",
-        "body": "Die Historie kann mit dem Fahrzeug weitergehen – vollständig und ordentlich."
-      }
-    ]
-  },
-  "showcase": {
-    "title": "Blick in die App",
-    "body": "Die aktuelle Web-Erfahrung ist für schnelle Eingaben auf Desktop und Handy optimiert – ein Konto, konsistente Daten.",
-    "wideAlt": "RideLogger Web-App Dashboard auf breitem Bildschirm",
-    "narrowAlt": "RideLogger Web-App auf schmalem Mobil-Viewport"
-  },
-  "security": {
-    "title": "Deine Daten gehören dir",
-    "body": "Wir behandeln Konten- und Fahrzeugdaten sorgfältig: moderne Transport-Sicherheit, Zugriffskontrollen und klare Richtlinien. Details in der Datenschutzerklärung.",
-    "imageAlt": "Illustration: Dokumente und Nutzerdaten geschützt durch Schild und Schloss, mit dezenten Cloud- und Netzwerk-Andeutungen."
-  },
-  "testimonials": {
-    "title": "Stimmen von Fahrerinnen und Fahrern",
-    "items": [
-      {
-        "quote": "Zettel und Excel kamen mit meinem Tempo nicht mit. Jetzt ist alles an einem Ort und immer verfügbar.",
-        "author": "Miloš, HR-Manager"
-      },
-      {
-        "quote": "Erinnerungen waren der Gamechanger – kleiner Service, großer Service, Vignette, Kasko. Die App erinnert mich rechtzeitig.",
-        "author": "Tijana, IT-Ingenieurin"
-      },
-      {
-        "quote": "Ich begleite eine Restauration als Hobby. Kosten und Arbeiten sind viel leichter nachvollziehbar.",
-        "author": "Momčilo, Designer"
-      },
-      {
-        "quote": "Einfach, transparent – passt zu meinem Bedarf, organisiert zu bleiben, zumindest beim Auto.",
-        "author": "Jovana, Vertrieb"
-      }
-    ]
-  },
-  "cta": {
-    "title": "In Minuten starten",
-    "body": "Nutze die Web-App auf dem Gerät, das du ohnehin hast – kein Installationszwang zum Start.",
-    "button": "Web-App öffnen"
-  },
-  "landing": {
-    "heroLine": "Kraftstoff. Service. Kosten."
-  },
-  "footer": {
-    "tagline": "Serviceheft für Menschen, die wirklich fahren.",
-    "note": "Produktnamen und Verfügbarkeit können sich ändern; die Web-App bleibt der Haupteinstieg.",
-    "sellingCarsTitle": "Fahrzeug verkaufen?",
-    "sellingPrivateLabel": "Privatverkauf",
-    "sellingDealersLabel": "Händler & Plätze"
-  }
+    "meta": {
+        "title": "Digitales Serviceheft fürs Fahrzeug",
+        "description": "Tanken, Werkstatt, Erinnerungen und Kosten an einem Ort. Für Fahrerinnen und Fahrer, die Ordnung ohne Tabellen wollen."
+    },
+    "nav": {
+        "home": "Start",
+        "openApp": "App öffnen",
+        "privacy": "Datenschutz",
+        "cookies": "Cookies",
+        "terms": "Nutzungsbedingungen",
+        "partner": "Partner (businesses)"
+    },
+    "hero": {
+        "eyebrow": "Wartung & Kosten",
+        "headline": "Deine Fahrzeughistorie – endlich gebündelt.",
+        "sub": "Erfasse Service, Kraftstoff und Ausgaben mit Erinnerungen, die teure Überraschungen vermeiden helfen.",
+        "primaryCta": "Web-App öffnen",
+        "secondaryCta": "So funktioniert’s",
+        "placeholderTitle": "Hero-Grafik",
+        "placeholderBody": "Noch kein finales Bild: Hero-Konzept nach media/generated/ legen (Task 0021 Bild-Workflow), danach hier einbinden.",
+        "imageAlt": "Produktillustration: Desktop-Dashboard und Smartphone-App für Fahrzeuge, Kosten und Wartungserinnerungen."
+    },
+    "trust": {
+        "title": "Klarheit statt Chaos",
+        "items": [
+            {
+                "title": "Mehrere Fahrzeuge",
+                "detail": "Alltagsauto, Projekt auf Rädern oder Familienparkplatz — jedes Fahrzeug bleibt für sich übersichtlich."
+            },
+            {
+                "title": "Erinnerungen, die helfen",
+                "detail": "Service, Zulassung, Versicherung — freundliche Hinweise, bevor ein Datum teuer wird."
+            },
+            {
+                "title": "Kraftstoff & Kosten im Fluss",
+                "detail": "Tankungen und Ausgaben ergeben ein klares Bild — ohne Excel-Marathon."
+            },
+            {
+                "title": "Deine Daten, deine Entscheidung",
+                "detail": "Transparente Privatsphäre-Optionen und Richtlinien in verständlicher Sprache."
+            }
+        ]
+    },
+    "problem": {
+        "title": "Von Zettelwirtschaft zu einem sauberen Protokoll",
+        "problemTitle": "Das Problem",
+        "problemBody": "Belege, Notizen und Tabellen geraten leicht aus dem Takt. Historie geht beim Verkauf verloren – oder einfach im Alltag unter.",
+        "solutionTitle": "Die Lösung",
+        "solutionBody": "Ein strukturiertes Service-Log mit deinem Konto: Einträge in Sekunden, Kontext dazu, Erinnerungen bevor Fristen verstreichen.",
+        "imageAlt": "Illustration: unübersichtliche Belege und Notizen versus eine geordnete Mobile-App mit Service-Historie und Kraftstoffkosten."
+    },
+    "how": {
+        "title": "So funktioniert’s",
+        "lead": "Drei klare Schritte — nach der Werkstatt oder am Tankeingriff kurz eintragen, und der Überblick bleibt erhalten.",
+        "steps": [
+            {
+                "title": "Profil anlegen",
+                "body": "Registrieren und ein oder mehrere Fahrzeuge mit dem anlegen, was du ohnehin weißt — Marke, Modell, Kennzeichen, Kilometerstand, was dir hilft.",
+                "tip": "Details kannst du später verfeinern; wichtig ist ein einfacher Einstieg, damit die Routine bleibt."
+            },
+            {
+                "title": "Relevantes erfassen",
+                "body": "Tanken, Wartung, Reparatur, Maut, Versicherung — Kosten und Kilometer festhalten, vom Rechner oder vom Handy.",
+                "tip": "Direkt nach Werkstatt oder Tankstelle eintragen schlägt „mache ich heute Abend“ fast immer."
+            },
+            {
+                "title": "Vorausplanen",
+                "body": "Erinnerungen für kleine und große Inspektion, Zulassung, Vignette, Kasko — was du nicht in letzter Minute jagen willst.",
+                "tip": "Hinweise sollen helfen, nicht nerven — du behältst die Kontrolle und kannst sie anpassen."
+            }
+        ]
+    },
+    "features": {
+        "title": "Was du kannst",
+        "items": [
+            {
+                "title": "Service-Historie",
+                "body": "Zeitleiste aus Wartung und Reparatur – mit Notizen und Dateien, wenn du sie brauchst."
+            },
+            {
+                "title": "Kraftstoff & Verbrauch",
+                "body": "Tankungen und Trends tracken, um Veränderungen früh zu sehen."
+            },
+            {
+                "title": "Kosten im Überblick",
+                "body": "Ausgaben über Kategorien statt Suche in Chats und PDFs."
+            },
+            {
+                "title": "Übergabe beim Verkauf",
+                "body": "Die Historie kann mit dem Fahrzeug weitergehen – vollständig und ordentlich."
+            }
+        ]
+    },
+    "showcase": {
+        "title": "Blick in die App",
+        "body": "Die aktuelle Web-Erfahrung ist für schnelle Eingaben auf Desktop und Handy optimiert – ein Konto, konsistente Daten.",
+        "wideAlt": "RideLogger Web-App Dashboard auf breitem Bildschirm",
+        "narrowAlt": "RideLogger Web-App auf schmalem Mobil-Viewport"
+    },
+    "security": {
+        "title": "Deine Daten gehören dir",
+        "body": "Wir behandeln Konten- und Fahrzeugdaten sorgfältig: moderne Transport-Sicherheit, Zugriffskontrollen und klare Richtlinien. Details in der Datenschutzerklärung.",
+        "imageAlt": "Illustration: Dokumente und Nutzerdaten geschützt durch Schild und Schloss, mit dezenten Cloud- und Netzwerk-Andeutungen."
+    },
+    "testimonials": {
+        "title": "Stimmen von Fahrerinnen und Fahrern",
+        "items": [
+            {
+                "quote": "Zettel und Excel kamen mit meinem Tempo nicht mit. Jetzt ist alles an einem Ort und immer verfügbar.",
+                "author": "Miloš, HR-Manager"
+            },
+            {
+                "quote": "Erinnerungen waren der Gamechanger – kleiner Service, großer Service, Vignette, Kasko. Die App erinnert mich rechtzeitig.",
+                "author": "Tijana, IT-Ingenieurin"
+            },
+            {
+                "quote": "Ich begleite eine Restauration als Hobby. Kosten und Arbeiten sind viel leichter nachvollziehbar.",
+                "author": "Momčilo, Designer"
+            },
+            {
+                "quote": "Einfach, transparent – passt zu meinem Bedarf, organisiert zu bleiben, zumindest beim Auto.",
+                "author": "Jovana, Vertrieb"
+            }
+        ]
+    },
+    "cta": {
+        "title": "In Minuten starten",
+        "body": "Nutze die Web-App auf dem Gerät, das du ohnehin hast – kein Installationszwang zum Start.",
+        "button": "Web-App öffnen"
+    },
+    "landing": {
+        "heroLine": "Kraftstoff. Service. Kosten."
+    },
+    "footer": {
+        "tagline": "Serviceheft für Menschen, die wirklich fahren.",
+        "note": "Produktnamen und Verfügbarkeit können sich ändern; die Web-App bleibt der Haupteinstieg.",
+        "sellingCarsTitle": "Fahrzeug verkaufen?",
+        "sellingPrivateLabel": "Privatverkauf",
+        "sellingDealersLabel": "Händler & Plätze"
+    }
 }
