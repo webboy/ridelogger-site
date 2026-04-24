@@ -21,6 +21,8 @@ const appCountry = appCountryCodeFromPath(countryPath);
 const partnerUrl = getPartnerAppUrl();
 const primaryAppHref = appHref ?? getAppUrl(locale, appCountry);
 const isCampaign = variant === 'campaign';
+const instance = import.meta.env.PUBLIC_INSTANCE || 'balkan';
+const showPartnerLink = !isCampaign && instance !== 'global';
 ---
 
 <header class="site-header">
@@ -32,7 +34,7 @@ const isCampaign = variant === 'campaign';
 		</a>
 		<div class="site-header__cta">
 			{
-				!isCampaign && (
+				showPartnerLink && (
 					<a class="btn btn--ghost" href={partnerUrl} rel="noopener noreferrer">
 						<span data-hk="nav.partner">{home.nav.partner}</span>
 					</a>
