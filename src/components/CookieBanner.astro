@@ -49,6 +49,20 @@ const fbPixelId =
 <script is:inline define:vars={{ gaId, googleAdsId, fbPixelId }}>
 (function () {
 	var STORAGE_KEY = 'sk_cookie_consent_v1';
+	var gtagScriptLoaded = false;
+	var consentDefaultInitialized = false;
+	var CONSENT_DENIED = {
+		ad_storage: 'denied',
+		analytics_storage: 'denied',
+		ad_user_data: 'denied',
+		ad_personalization: 'denied'
+	};
+	var CONSENT_GRANTED = {
+		ad_storage: 'granted',
+		analytics_storage: 'granted',
+		ad_user_data: 'granted',
+		ad_personalization: 'granted'
+	};
 
 	function getConsent() {
 		try { return localStorage.getItem(STORAGE_KEY); } catch (e) { return null; }
@@ -57,20 +71,35 @@ const fbPixelId =
 		try { localStorage.setItem(STORAGE_KEY, v); } catch (e) {}
 	}
 
-	function loadGA() {
-		if (window.gtag) return;
+	function initGtagQueue() {
 		window.dataLayer = window.dataLayer || [];
 		function gtag() { dataLayer.push(arguments); }
 		window.gtag = gtag;
+		if (!consentDefaultInitialized) {
+			gtag('consent', 'default', Object.assign({}, CONSENT_DENIED, { wait_for_update: 500 }));
+			consentDefaultInitialized = true;
+		}
+	}
+
+	function updateGoogleConsentMode(consent) {
+		initGtagQueue();
+		window.gtag('consent', 'update', consent === 'all' ? CONSENT_GRANTED : CONSENT_DENIED);
+	}
+
+	function loadGA() {
+		initGtagQueue();
+		updateGoogleConsentMode('all');
+		if (gtagScriptLoaded) return;
+		gtagScriptLoaded = true;
 		var s = document.createElement('script');
 		s.async = true;
 		s.src = 'https://www.googletagmanager.com/gtag/js?id=' + gaId;
 		document.head.appendChild(s);
 		s.onload = function () {
-			gtag('js', new Date());
-			gtag('config', gaId);
+			window.gtag('js', new Date());
+			window.gtag('config', gaId);
 			if (googleAdsId) {
-				gtag('config', googleAdsId);
+				window.gtag('config', googleAdsId);
 			}
 		};
 	}
@@ -102,9 +131,10 @@ const fbPixelId =
 	}
 
 	function init() {
+		initGtagQueue();
 		var consent = getConsent();
 		if (consent === 'all') { loadNonEssential(); hideBanner(); return; }
-		if (consent === 'essential') { hideBanner(); return; }
+		if (consent === 'essential') { updateGoogleConsentMode('essential'); hideBanner(); return; }
 
 		showBanner();
 		var accept = document.getElementById('cookie-consent-accept');
@@ -119,6 +149,7 @@ const fbPixelId =
 		if (reject) {
 			reject.addEventListener('click', function () {
 				setConsent('essential');
+				updateGoogleConsentMode('essential');
 				hideBanner();
 			});
 		}
