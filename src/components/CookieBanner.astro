@@ -17,6 +17,11 @@ const gaId =
 	(gaFromEnv && String(gaFromEnv).trim()) ||
 	(instance === 'global' ? 'G-23VF66S9X3' : 'G-E5YJE5RD06');
 
+const googleAdsFromEnv = import.meta.env.PUBLIC_GOOGLE_ADS_ID;
+const googleAdsId =
+	(googleAdsFromEnv && String(googleAdsFromEnv).trim()) ||
+	(instance === 'balkan' && !import.meta.env.DEV ? 'AW-18120993652' : '');
+
 /** Meta Pixel (dataset) ID: SK (balkan) vs RL (global). Override with PUBLIC_FB_PIXEL_ID if needed. */
 const fbFromEnv = import.meta.env.PUBLIC_FB_PIXEL_ID;
 const fbPixelId =
@@ -41,7 +46,7 @@ const fbPixelId =
 	</div>
 </div>
 
-<script is:inline define:vars={{ gaId, fbPixelId }}>
+<script is:inline define:vars={{ gaId, googleAdsId, fbPixelId }}>
 (function () {
 	var STORAGE_KEY = 'sk_cookie_consent_v1';
 
@@ -64,6 +69,9 @@ const fbPixelId =
 		s.onload = function () {
 			gtag('js', new Date());
 			gtag('config', gaId);
+			if (googleAdsId) {
+				gtag('config', googleAdsId);
+			}
 		};
 	}
 
