@@ -86,9 +86,8 @@ const fbPixelId =
 		window.gtag('consent', 'update', consent === 'all' ? CONSENT_GRANTED : CONSENT_DENIED);
 	}
 
-	function loadGA() {
+	function loadGoogleTag() {
 		initGtagQueue();
-		updateGoogleConsentMode('all');
 		if (gtagScriptLoaded) return;
 		gtagScriptLoaded = true;
 		var s = document.createElement('script');
@@ -102,6 +101,11 @@ const fbPixelId =
 				window.gtag('config', googleAdsId);
 			}
 		};
+	}
+
+	function loadGA() {
+		updateGoogleConsentMode('all');
+		loadGoogleTag();
 	}
 
 	function loadFBPixel() {
@@ -132,6 +136,7 @@ const fbPixelId =
 
 	function init() {
 		initGtagQueue();
+		loadGoogleTag();
 		var consent = getConsent();
 		if (consent === 'all') { loadNonEssential(); hideBanner(); return; }
 		if (consent === 'essential') { updateGoogleConsentMode('essential'); hideBanner(); return; }

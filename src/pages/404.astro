@@ -1,8 +1,12 @@
 ---
 import '../styles/global.css';
+import CookieBanner from '../components/CookieBanner.astro';
 
 const site = Astro.site;
 const home = site ? new URL('/', site).href : '/';
+const instance = (import.meta.env.PUBLIC_INSTANCE || 'balkan') as 'balkan' | 'global';
+const countryPath = instance === 'global' ? 'de' : 'sr';
+const locale = instance === 'global' ? 'de' : 'sr-latn';
 ---
 
 <!doctype html>
@@ -21,5 +25,6 @@ const home = site ? new URL('/', site).href : '/';
 		<p>
 			This page is not available. <a href={home}>Back to country picker</a>
 		</p>
+		<CookieBanner countryPath={countryPath} locale={locale} />
 	</body>
 </html>
