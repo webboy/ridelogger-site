@@ -1,0 +1,55 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import McpPage from '../../components/mcp/McpPage.astro';
+import { countryPagesForInstance, getCountryByPath, type DeployInstance } from '../../config/countries';
+import { appCountryCodeFromPath } from '../../config/countries';
+import { getAppUrl } from '../../config/public';
+import { getAllHomeMessages, getHomeMessages } from '../../i18n/loadHome';
+import { getAllMcpPageMessages, getMcpPageMessages } from '../../i18n/mcpPage';
+
+export function getStaticPaths() {
+	const inst = (import.meta.env.PUBLIC_INSTANCE || 'balkan') as DeployInstance;
+	return countryPagesForInstance(inst).map((c) => ({ params: { country: c.path } }));
+}
+
+const param = Astro.params.country;
+const cfg = getCountryByPath(param ?? '');
+if (!cfg) {
+	throw new Error(`Unknown country: ${param}`);
+}
+
+const locale = cfg.defaultLocale;
+const home = getHomeMessages(locale);
+const homes = getAllHomeMessages();
+const content = getMcpPageMessages(locale);
+const allContent = getAllMcpPageMessages();
+const appCountry = appCountryCodeFromPath(param ?? '');
+const appUrl = getAppUrl(locale, appCountry);
+
+const site = Astro.site;
+if (!site) {
+	throw new Error('Missing `site` in astro.config');
+}
+const privacyUrl = new URL(`/${cfg.path}/privacy/`, site).href;
+---
+
+<SiteLayout
+	countryPath={cfg.path}
+	locale={locale}
+	title={content.meta.title}
+	description={content.meta.description}
+	home={home}
+	homes={homes}
+	pathSuffix="mcp"
+	headerAppHref={appUrl}
+	lockMarketingSeo={true}
+>
+	<McpPage
+		locale={locale}
+		countryPath={cfg.path}
+		content={content}
+		allContent={allContent}
+		appUrl={appUrl}
+		privacyUrl={privacyUrl}
+	/>
+</SiteLayout>

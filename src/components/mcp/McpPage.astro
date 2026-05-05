@@ -1,0 +1,325 @@
+---
+import type { Locale } from '../../i18n/config';
+import type { McpPageMessages } from '../../types/mcpPage';
+
+interface Props {
+	locale: Locale;
+	countryPath: string;
+	content: McpPageMessages;
+	allContent: Record<Locale, McpPageMessages>;
+	appUrl: string;
+	privacyUrl: string;
+}
+
+const { locale, countryPath, content, allContent, appUrl, privacyUrl } = Astro.props;
+const mcpEndpoint = 'https://mcp.ridelogger.com/mcp';
+const storageInstance = (import.meta.env.PUBLIC_INSTANCE || 'balkan') as string;
+---
+
+<section class="mcp-hero">
+	<div class="shell mcp-hero__grid">
+		<div>
+			<p class="hero__eyebrow" data-mcp-key="hero.eyebrow">{content.hero.eyebrow}</p>
+			<h1 data-mcp-key="hero.title">{content.hero.title}</h1>
+			<p class="lead" data-mcp-key="hero.lead">{content.hero.lead}</p>
+			<div class="hero__actions">
+				<a class="btn btn--primary" data-app-link href={appUrl} rel="noopener" data-mcp-key="hero.primaryCta">
+					{content.hero.primaryCta}
+				</a>
+				<a class="btn btn--ghost" href={privacyUrl} data-mcp-key="hero.secondaryCta">
+					{content.hero.secondaryCta}
+				</a>
+			</div>
+		</div>
+		<aside class="mcp-card mcp-connection" aria-labelledby="mcp-connection-title">
+			<h2 id="mcp-connection-title" data-mcp-key="connection.title">{content.connection.title}</h2>
+			<p class="muted" data-mcp-key="connection.body">{content.connection.body}</p>
+			<dl>
+				<div>
+					<dt data-mcp-key="connection.endpointLabel">{content.connection.endpointLabel}</dt>
+					<dd><code>{mcpEndpoint}</code></dd>
+				</div>
+				<div>
+					<dt data-mcp-key="connection.transportLabel">{content.connection.transportLabel}</dt>
+					<dd data-mcp-key="connection.transportValue">{content.connection.transportValue}</dd>
+				</div>
+				<div>
+					<dt data-mcp-key="connection.authLabel">{content.connection.authLabel}</dt>
+					<dd data-mcp-key="connection.authValue">{content.connection.authValue}</dd>
+				</div>
+			</dl>
+		</aside>
+	</div>
+</section>
+
+<section class="section">
+	<div class="shell">
+		<div class="section__head">
+			<h2 data-mcp-key="tools.title">{content.tools.title}</h2>
+			<p class="muted" data-mcp-key="tools.intro">{content.tools.intro}</p>
+		</div>
+		<div class="mcp-tool-grid">
+			{
+				content.tools.groups.map((group, groupIndex) => (
+					<article class="mcp-card mcp-tool-card">
+						<h3 data-mcp-key={`tools.groups.${groupIndex}.title`}>{group.title}</h3>
+						<p class="muted" data-mcp-key={`tools.groups.${groupIndex}.body`}>{group.body}</p>
+						<ul>
+							{group.tools.map((tool) => (
+								<li><code>{tool}</code></li>
+							))}
+						</ul>
+					</article>
+				))
+			}
+		</div>
+	</div>
+</section>
+
+<section class="section section--tint">
+	<div class="shell mcp-two-col">
+		<article class="mcp-card">
+			<h2 data-mcp-key="safety.title">{content.safety.title}</h2>
+			<ul class="mcp-check-list">
+				{
+					content.safety.items.map((item, index) => (
+						<li data-mcp-key={`safety.items.${index}`}>{item}</li>
+					))
+				}
+			</ul>
+		</article>
+		<article class="mcp-card">
+			<h2 data-mcp-key="examples.title">{content.examples.title}</h2>
+			<div class="mcp-examples">
+				{
+					content.examples.items.map((example, index) => (
+						<div class="mcp-example">
+							<h3 data-mcp-key={`examples.items.${index}.title`}>{example.title}</h3>
+							<p data-mcp-key={`examples.items.${index}.prompt`}>“{example.prompt}”</p>
+						</div>
+					))
+				}
+			</div>
+		</article>
+	</div>
+</section>
+
+<script
+	type="application/json"
+	id="mcp-page-messages"
+	data-default-locale={locale}
+	data-country-path={countryPath}
+	data-storage-instance={storageInstance}
+	set:html={JSON.stringify(allContent)}
+/>
+
+<script is:inline>
+	(function () {
+		function getPath(obj, path) {
+			return path.split('.').reduce(function (o, k) {
+				if (o == null) return o;
+				var n = Number(k);
+				return Number.isNaN(n) ? o[k] : o[n];
+			}, obj);
+		}
+
+		function setMetaDescription(value) {
+			var el = document.querySelector('meta[name="description"]');
+			if (el && typeof value === 'string') el.setAttribute('content', value);
+		}
+
+		var raw = document.getElementById('mcp-page-messages');
+		if (!raw || !raw.textContent) return;
+		var messages = {};
+		try {
+			messages = JSON.parse(raw.textContent);
+		} catch (e) {
+			return;
+		}
+
+		function normalizeLocale(value) {
+			if (!value) return null;
+			var v = String(value).trim();
+			var lower = v.toLowerCase().replace('_', '-');
+			if (lower === 'sr-latn' || lower === 'sr') return 'sr-latn';
+			if (lower === 'sr-cyrl') return 'sr-cyrl';
+			if (lower.indexOf('-') > 0) lower = lower.split('-')[0];
+			return messages[lower] ? lower : null;
+		}
+
+		function storageKey() {
+			var country = raw.getAttribute('data-country-path') || '';
+			var instance = raw.getAttribute('data-storage-instance') || 'balkan';
+			return 'marketing_ui_locale_' + country + '__' + instance;
+		}
+
+		function initialLocale() {
+			var query = new URLSearchParams(window.location.search).get('lang');
+			var fromQuery = normalizeLocale(query);
+			if (fromQuery) return fromQuery;
+			try {
+				var fromStorage = normalizeLocale(localStorage.getItem(storageKey()));
+				if (fromStorage) return fromStorage;
+			} catch (e) {
+				/* ignore */
+			}
+			return raw.getAttribute('data-default-locale');
+		}
+
+		function apply(locale) {
+			var m = messages[locale];
+			if (!m) return;
+			document.querySelectorAll('[data-mcp-key]').forEach(function (el) {
+				var key = el.getAttribute('data-mcp-key');
+				var value = key ? getPath(m, key) : undefined;
+				if (typeof value === 'string') el.textContent = value;
+			});
+			if (m.meta) {
+				if (typeof m.meta.title === 'string') document.title = m.meta.title;
+				if (typeof m.meta.description === 'string') setMetaDescription(m.meta.description);
+			}
+		}
+
+		document.querySelectorAll('[data-locale-pick]').forEach(function (btn) {
+			btn.addEventListener('click', function () {
+				var locale = btn.getAttribute('data-locale-pick');
+				if (locale) apply(locale);
+			});
+		});
+
+		var initial = initialLocale();
+		if (initial && initial !== raw.getAttribute('data-default-locale')) apply(initial);
+	})();
+</script>
+
+<style>
+	.mcp-hero {
+		padding: clamp(2.5rem, 5vw, 4.5rem) 0 2rem;
+		background: radial-gradient(1100px 480px at 10% -10%, rgba(14, 165, 233, 0.18), transparent 60%),
+			radial-gradient(900px 420px at 92% 0%, rgba(13, 148, 136, 0.14), transparent 55%);
+		border-bottom: 1px solid var(--border);
+	}
+
+	.mcp-hero__grid {
+		display: grid;
+		grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+		gap: clamp(1.5rem, 3vw, 2.5rem);
+		align-items: center;
+	}
+
+	.mcp-hero h1 {
+		font-size: clamp(2rem, 4vw, 3.1rem);
+		line-height: 1.1;
+		margin: 0.75rem 0;
+		letter-spacing: -0.03em;
+	}
+
+	.mcp-hero .lead {
+		margin: 0 0 1.25rem;
+		color: var(--muted);
+		font-size: 1.1rem;
+		max-width: 62ch;
+	}
+
+	.mcp-card {
+		border: 1px solid var(--border);
+		border-radius: var(--radius);
+		background: var(--surface);
+		box-shadow: var(--shadow);
+		padding: clamp(1.1rem, 2vw, 1.5rem);
+	}
+
+	.mcp-connection dl {
+		display: grid;
+		gap: 0.85rem;
+		margin: 1.25rem 0 0;
+	}
+
+	.mcp-connection dl > div {
+		padding-top: 0.85rem;
+		border-top: 1px solid var(--border);
+	}
+
+	.mcp-connection dt {
+		color: var(--muted);
+		font-size: 0.9rem;
+		font-weight: 700;
+	}
+
+	.mcp-connection dd {
+		margin: 0.15rem 0 0;
+		font-weight: 700;
+		word-break: break-word;
+	}
+
+	.mcp-tool-grid {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 1rem;
+	}
+
+	.mcp-tool-card ul {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		list-style: none;
+		padding: 0;
+		margin: 1rem 0 0;
+	}
+
+	.mcp-tool-card li {
+		border: 1px solid var(--border);
+		border-radius: 999px;
+		padding: 0.25rem 0.55rem;
+		background: #f8fafc;
+		font-size: 0.9rem;
+	}
+
+	.section--tint {
+		background: #eef6fb;
+		border-top: 1px solid var(--border);
+	}
+
+	.mcp-two-col {
+		display: grid;
+		grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+		gap: 1rem;
+	}
+
+	.mcp-check-list {
+		padding-left: 1.25rem;
+		margin: 0;
+	}
+
+	.mcp-check-list li + li {
+		margin-top: 0.65rem;
+	}
+
+	.mcp-examples {
+		display: grid;
+		gap: 0.85rem;
+	}
+
+	.mcp-example {
+		border-left: 3px solid var(--brand-500);
+		padding-left: 0.85rem;
+	}
+
+	.mcp-example h3 {
+		margin: 0 0 0.2rem;
+		font-size: 1rem;
+	}
+
+	.mcp-example p {
+		margin: 0;
+		color: var(--muted);
+	}
+
+	@media (max-width: 840px) {
+		.mcp-hero__grid,
+		.mcp-tool-grid,
+		.mcp-two-col {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

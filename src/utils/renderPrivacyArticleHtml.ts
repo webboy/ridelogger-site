@@ -14,6 +14,18 @@ function esc(s: string): string {
 		.replace(/"/g, '&quot;');
 }
 
+function optionalAiConnectorSection(p: LegalBundle['privacy_v2']): string {
+	if (!('s6_ai_title' in p) || !p.s6_ai_title) return '';
+	return `
+	<h2>${esc(p.s6_ai_title)}</h2>
+	<p>${esc(p.s6_ai_body)}</p>
+	<ul>
+		<li>${esc(p.s6_ai_li1)}</li>
+		<li>${esc(p.s6_ai_li2)}</li>
+		<li>${esc(p.s6_ai_li3)}</li>
+	</ul>`;
+}
+
 /** Server + client: HTML for privacy policy (matches `PrivacyArticle.astro`). */
 export function renderPrivacyArticleHtml(legal: LegalBundle): string {
 	const p = legal.privacy_v2;
@@ -111,6 +123,7 @@ export function renderPrivacyArticleHtml(legal: LegalBundle): string {
 		<li>${esc(p.s6_li5)}</li>
 	</ul>
 	<p>${esc(p.s6_outro)}</p>
+	${optionalAiConnectorSection(p)}
 
 	<h2>${esc(p.s7_title)}</h2>
 	<p>${esc(p.s7_body)}</p>
