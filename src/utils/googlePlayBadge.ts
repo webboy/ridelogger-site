@@ -26,9 +26,3 @@ export function googlePlayBadgeImageSrc(locale: Locale): string {
 	const stem = LOCALE_BADGE_STEM[locale];
 	return `/badges/google-play/${stem}.png`;
 }
-
-/** Optional vector badge (same basename). Browser uses PNG if SVG is missing. */
-export function googlePlayBadgeVectorSrc(locale: Locale): string {
-	const stem = LOCALE_BADGE_STEM[locale];
-	return `/badges/google-play/${stem}.svg`;
-}
