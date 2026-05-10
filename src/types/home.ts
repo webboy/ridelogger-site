@@ -10,6 +10,8 @@ export interface HomeMessages {
 		privacy: string;
 		cookies: string;
 		terms: string;
+		/** Header promo line next to Google Play badge (balkan instance only). */
+		googlePlayPromo: string;
 	};
 	hero: {
 		eyebrow: string;

@@ -5,6 +5,7 @@ import { brandName } from '../i18n/config';
 import { getAppUrl, getPartnerAppUrl } from '../config/public';
 import { appCountryCodeFromPath } from '../config/countries';
 import LanguageSwitcherCountry from './LanguageSwitcherCountry.astro';
+import { GOOGLE_PLAY_APP_HREF, googlePlayBadgeImageSrc } from '../utils/googlePlayBadge';
 
 interface Props {
 	countryPath: string;
@@ -23,6 +24,9 @@ const primaryAppHref = appHref ?? getAppUrl(locale, appCountry);
 const isCampaign = variant === 'campaign';
 const instance = import.meta.env.PUBLIC_INSTANCE || 'balkan';
 const showPartnerLink = !isCampaign && instance !== 'global';
+const showAndroidPromo = instance === 'balkan';
+const playBadgeSrc = googlePlayBadgeImageSrc(locale);
+const playBadgeAlt = home.footer.googlePlayBadgeAlt;
 ---
 
 <header class="site-header">
@@ -48,4 +52,32 @@ const showPartnerLink = !isCampaign && instance !== 'global';
 			<LanguageSwitcherCountry locale={locale} />
 		</div>
 	</div>
+	{
+		showAndroidPromo && (
+			<div class="site-header__android-promo">
+				<div class="shell site-header__android-promo-inner">
+					<p class="site-header__android-promo-text muted" data-hk="nav.googlePlayPromo">
+						{home.nav.googlePlayPromo}
+					</p>
+					<a
+						class="site-header__android-promo-link"
+						href={GOOGLE_PLAY_APP_HREF}
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<img
+							class="site-header__android-promo-badge"
+							data-play-badge-src
+							data-hk-alt="footer.googlePlayBadgeAlt"
+							src={playBadgeSrc}
+							alt={playBadgeAlt}
+							width="646"
+							height="250"
+							decoding="async"
+						/>
+					</a>
+				</div>
+			</div>
+		)
+	}
 </header>

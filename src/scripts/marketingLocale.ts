@@ -12,6 +12,7 @@ import type { DeployInstance } from '../config/countries';
 import { renderCookieArticleHtml } from '../utils/renderCookieArticleHtml';
 import { renderPrivacyArticleHtml } from '../utils/renderPrivacyArticleHtml';
 import { renderTosArticleHtml } from '../utils/renderTosArticleHtml';
+import { googlePlayBadgeImageSrc } from '../utils/googlePlayBadge';
 
 export type MarketingLocaleInit = {
 	homes: Record<Locale, HomeMessages>;
@@ -155,6 +156,12 @@ export function initMarketingLocale(init: MarketingLocaleInit): void {
 			if (!key) return;
 			const v = getPath(m, key);
 			if (typeof v === 'string') el.setAttribute('alt', v);
+		});
+
+		document.querySelectorAll('[data-play-badge-src]').forEach((el) => {
+			if (el instanceof HTMLImageElement) {
+				el.src = googlePlayBadgeImageSrc(loc);
+			}
 		});
 
 		document.querySelectorAll('[data-app-link]').forEach((el) => {
