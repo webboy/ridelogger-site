@@ -134,6 +134,7 @@
     },
     "footer": {
         "tagline": "Gerçek anlamda araç kullanan kişiler için araç bakım kayıt defteri.",
-        "note": "Ürün adları ve stok durumu değişebilir; web uygulaması birincil giriş noktası olmaya devam ediyor."
+        "note": "Ürün adları ve stok durumu değişebilir; web uygulaması birincil giriş noktası olmaya devam ediyor.",
+        "googlePlayBadgeAlt": "Google Play'den edinin"
     }
 }

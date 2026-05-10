@@ -71,6 +71,8 @@ export interface HomeMessages {
 	footer: {
 		tagline: string;
 		note: string;
+		/** Accessible label for the Google Play badge link (balkan instance). */
+		googlePlayBadgeAlt: string;
 		/** Footer discovery links to campaign landings (only set in locales used on DE/SR home). */
 		sellingCarsTitle?: string;
 		sellingPrivateLabel?: string;

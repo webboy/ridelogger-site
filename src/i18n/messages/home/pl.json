@@ -134,6 +134,7 @@
     },
     "footer": {
         "tagline": "Dziennik konserwacji pojazdów dla osób, które jeżdżą naprawdę.",
-        "note": "Nazwy produktów i ich dostępność mogą ulegać zmianom; aplikacja internetowa pozostaje głównym punktem wejścia."
+        "note": "Nazwy produktów i ich dostępność mogą ulegać zmianom; aplikacja internetowa pozostaje głównym punktem wejścia.",
+        "googlePlayBadgeAlt": "Pobierz aplikację z Google Play"
     }
 }

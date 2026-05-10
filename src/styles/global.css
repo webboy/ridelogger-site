@@ -614,6 +614,24 @@ img {
 	gap: 1.25rem;
 }
 
+.site-footer__play-wrap {
+	margin: 0.85rem 0 0;
+}
+
+.site-footer__play-link {
+	display: inline-block;
+	line-height: 0;
+	text-decoration: none;
+	vertical-align: top;
+}
+
+.site-footer__play-badge {
+	height: 46px;
+	width: auto;
+	max-width: min(100%, 220px);
+	display: block;
+}
+
 @media (max-width: 900px) {
 	.site-footer__grid {
 		grid-template-columns: 1fr;
