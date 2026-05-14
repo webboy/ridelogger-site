@@ -35,6 +35,14 @@ export type AutoSellerLandingContent = {
 	} | null;
 	faq: { items: { q: string; a: string }[] };
 	closing: { headline: string; body: string; cta: string };
+	/** Optional cross-link (e.g. managed vehicle setup vs DIY premium flow). */
+	relatedOffer?: {
+		headline: string;
+		body: string;
+		cta: string;
+		/** Relative path works per country, e.g. `managed/` under `auto-placevi/` / `auto-dealers/`. */
+		href: string;
+	};
 	/** Section headings not tied to CMS blocks (a11y / visible). */
 	sectionLabels?: {
 		trustStripHeading: string;

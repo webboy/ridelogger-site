@@ -1,0 +1,90 @@
+{
+	"meta": {
+		"title": "Urejena digitalizacija vozil za trgovce | RideLogger",
+		"description": "Vnesemo servisno zgodovino, fotografije in dokumente — javni profil s QR kodo in predaja kupcu. Od približno €10 na vozilo.",
+		"heroImageAlt": "Digitalna servisna zgodovina in dokumentacija vozila za prodajo"
+	},
+	"hero": {
+		"eyebrow": "Managed storitev za trgovce",
+		"headline": "Digitaliziramo vsako vozilo namesto vas.",
+		"sub": "Vnesemo celotno servisno zgodovino, dokumente in fotografije, pripravimo javni profil vozila s QR kodo (lahko tudi vaš logotip), po prodaji pa vse predamo kupcu z opomniki — brez dodatne obremenitve ekipe.",
+		"primaryCta": "Povprašajte po managed ponudbi",
+		"secondaryCta": "Želim aplikacijo uporabljati sam",
+		"secondaryHref": "../"
+	},
+	"trustStrip": [
+		"Javni profil + QR koda",
+		"Zameglitev osebnih podatkov",
+		"Predaja kupcu po e-pošti",
+		"Od približno €10 na vozilo"
+	],
+	"intro": {
+		"headline": "Za trgovce brez časa za ročni vnos.",
+		"body": "Želite urejeno digitalno servisno zgodovino za zalogo, a ne želite, da zaposleni ure tipkajo dokumentacijo? To naredimo kot paket na vozilo: vse, kar nam dostavite, obdelamo in vnesemo v RideLogger v imenu vašega trgovskega računa."
+	},
+	"problem": {
+		"headline": "Zakaj ima smisel",
+		"body": "Dobra dokumentacija vzdrževanja zmanjšuje dvome kupca in pomaga ohraniti vrednost tudi pri nadaljnji prodaji. Ozko grlo je operativa: skeniranje, datumi, priloge, javni prikaz brez razkritja občutljivih podatkov — to rutino prevzamemo mi."
+	},
+	"beforeSale": {
+		"headline": "Pred prodajo (vključeno)",
+		"items": [
+			"Vnos fotografij vozila.",
+			"Vnos vseh servisnih zapisov v digitalno servisno knjižico.",
+			"Vnos servisne dokumentacije.",
+			"Aktivacija javnega profila s QR kodo — možen vaš logotip.",
+			"Pregled skenov v javnem profilu (premium dokumentacija za kupca).",
+			"Prilagoditev javnega profila vaši blagovni znamki.",
+			"Zbiranje in vnos ustreznih servisnih/navodil za model."
+		]
+	},
+	"afterSale": {
+		"headline": "Po prodaji (vključeno)",
+		"items": [
+			"Vnos podatkov o registraciji.",
+			"Vnos kupoprodajne in spremne dokumentacije (financiranje/zavarovanje, če dostavite).",
+			"Nastavitev opomnikov za kupca (servisi, pnevmatike, tehnični pregled/TÜV, registracija ipd.).",
+			"Predaja kupcu po e-pošti — dostop za nadaljevanje knjižice."
+		]
+	},
+	"pricing": {
+		"headline": "Cena in začetek",
+		"priceLine": "Orientacijsko približno €10 na vozilo",
+		"body": "Končna ponudba je odvisna od obsega dokumentacije in števila fotografij. Pilot prvih 10 vozil je pogosto najboljši začetek. Pišite nam za oceno in roke.",
+		"footnote": "Za javno objavo dokumentov (zameglitev podatkov prejšnjih lastnikov) je potrebna dogovorjena oblika sodelovanja s trgovcem."
+	},
+	"privacy": {
+		"headline": "Zasebnost in dokumenti",
+		"body": "Servisni dokumenti pogosto vsebujejo osebne podatke. Pred javnim profilom izvedemo zameglitev po dogovoru z vami. Za točnost in celovitost posredovanih informacij odgovarjate vi; mi poskrbimo za tehnično pripravo po vaših navodilih."
+	},
+	"faq": {
+		"items": [
+			{
+				"q": "Je to isto kot Premium naročnina?",
+				"a": "Ne. Premium je letno naročilo za trgovski račun, ko podatke vnašate sami. Managed je storitev na vozilo, ko vnašamo mi."
+			},
+			{
+				"q": "Kako pošljemo dokumente?",
+				"a": "Po kontaktu dogovorimo najpreprostejši kanal (e-pošta, oblak ali fizična pošiljka). Bolj ko je gradivo celovito, boljši je vtis na kupca."
+			},
+			{
+				"q": "Kaj če nimamo vseh papirjev?",
+				"a": "Delamo z obstoječim; dopolnjevanje je možno kasneje — a popolnejši začetek bolje prepriča."
+			},
+			{
+				"q": "Kako hitro je javni profil?",
+				"a": "Odvisno od obremenitve in obsega; za tipično vozilo pogosto okoli treh delovnih dni po popolni dostavi. Za pilote načrtujemo skupaj."
+			}
+		]
+	},
+	"closing": {
+		"headline": "Pilot na enem vozilu?",
+		"body": "Pošljite ime trgovine in model iz zaloge — odgovorimo z naslednjimi koraki in oceno.",
+		"diyCta": "Nazaj na DIY / Premium stran",
+		"diyHref": "../"
+	},
+	"sectionLabels": {
+		"trustStripHeading": "Na kratko",
+		"faqHeading": "Pogosta vprašanja"
+	}
+}

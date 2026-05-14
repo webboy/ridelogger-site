@@ -1,0 +1,50 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+import ManagedDealerLanding from '../../../components/managed-dealer/ManagedDealerLanding.astro';
+import { countryPagesForInstance, getCountryByPath, type DeployInstance } from '../../../config/countries';
+import { appCountryCodeFromPath } from '../../../config/countries';
+import { getAllHomeMessages, getHomeMessages } from '../../../i18n/loadHome';
+import { getAppUrl, getManagedDealerInquiryUrl } from '../../../config/public';
+import { rlManagedDealersCampaign } from '../../../i18n/managedDealerCampaigns';
+
+export function getStaticPaths() {
+	const inst = (import.meta.env.PUBLIC_INSTANCE || 'balkan') as DeployInstance;
+	if (inst !== 'global') return [];
+	return countryPagesForInstance('global').map((c) => ({ params: { country: c.path } }));
+}
+const param = Astro.params.country;
+const cfg = getCountryByPath(param ?? '');
+if (!cfg) {
+	throw new Error(`Unknown country: ${param}`);
+}
+
+const locale = cfg.defaultLocale;
+const content = rlManagedDealersCampaign(locale);
+const home = getHomeMessages(locale);
+const homes = getAllHomeMessages();
+const appCountry = appCountryCodeFromPath(param ?? '');
+const appUrl = getAppUrl(locale, appCountry);
+const title = content.meta.title;
+const description = content.meta.description;
+---
+
+<SiteLayout
+	countryPath={cfg.path}
+	locale={locale}
+	title={title}
+	description={description}
+	home={home}
+	homes={homes}
+	lockMarketingSeo={true}
+	pathSuffix="auto-dealers/managed"
+	headerVariant="campaign"
+	headerAppHref={appUrl}
+>
+	<ManagedDealerLanding
+		content={content}
+		managedInquiryUrl={getManagedDealerInquiryUrl()}
+		analyticsBrand="rl"
+		pagePath={`/${param}/auto-dealers/managed/`}
+		heroImageSrc="/images/problem-solution.jpg"
+	/>
+</SiteLayout>

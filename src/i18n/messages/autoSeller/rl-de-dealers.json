@@ -1,7 +1,7 @@
 {
 	"meta": {
 		"title": "Nachvollziehbare Servicehistorie für Ihren Bestand | RideLogger",
-		"description": "Präsentieren Sie jedes Fahrzeug in Ihrem Bestand mit einer einheitlichen, nachvollziehbaren Servicehistorie. Digitales Serviceheft für Autohändler und gewerbliche Fahrzeugverkäufer.",
+		"description": "DIY für Händler: Sie pflegen die digitale Servicehistorie selbst in RideLogger. Premium für mehrere Fahrzeuge; optional Onboarding-Bonus und managed Leistung pro Fahrzeug.",
 		"heroImageAlt": "Händlerplatz mit professionell präsentierten Gebrauchtfahrzeugen"
 	},
 	"hero": {
@@ -9,7 +9,7 @@
 		"headline": "Präsentieren Sie jedes Fahrzeug in Ihrem Bestand mit einer nachvollziehbaren Servicehistorie.",
 		"sub": "Schaffen Sie eine einheitliche, professionelle Darstellung von Wartungen, Reparaturen und Services – über Ihren gesamten Bestand hinweg. So wirken Ihre Fahrzeuge transparenter, besser dokumentiert und vertrauenswürdiger im Verkaufsgespräch.",
 		"primaryCta": "Händlerkonto erstellen",
-		"secondaryCta": "Premium aktivieren und Händler-Bonus anfragen",
+		"secondaryCta": "Premium und Händler-Bonus",
 		"secondaryHref": "#dealer-offer"
 	},
 	"trustStrip": [
@@ -19,7 +19,7 @@
 	],
 	"intro": {
 		"headline": "Wer mehrere Fahrzeuge verkauft, braucht Struktur.",
-		"body": "Wenn Unterlagen, Belege und Serviceangaben von Fahrzeug zu Fahrzeug unterschiedlich aufbereitet sind, kostet das im Verkauf Zeit und Vertrauen. Eine einheitlich dokumentierte Servicehistorie hilft Ihnen, Fahrzeuge professionell zu präsentieren und Käuferfragen effizient zu beantworten."
+		"body": "Diese Seite beschreibt den DIY-Pfad: Sie oder Ihr Team erfassen Daten direkt in der App. Wenn Unterlagen, Belege und Serviceangaben von Fahrzeug zu Fahrzeug unterschiedlich aufbereitet sind, kostet das im Verkauf Zeit und Vertrauen. Eine einheitlich dokumentierte Servicehistorie hilft Ihnen, Fahrzeuge professionell zu präsentieren und Käuferfragen effizient zu beantworten."
 	},
 	"benefits": {
 		"headline": "Ihr Vorteil als Händler",
@@ -56,17 +56,17 @@
 			},
 			{
 				"title": "Händler-Onboarding-Bonus anfragen",
-				"body": "Nach der Premium-Aktivierung kontaktieren Sie uns über das Händlerformular. Wir prüfen Ihr Setup und stellen einen Onboarding-Bonus bereit."
+				"body": "Nach der Premium-Aktivierung kontaktieren Sie uns kurz über das Händlerformular — bei Betrieben, die Premium aktiv im Bestand nutzen, können wir eine zusätzliche Bonusphase freischalten."
 			}
 		]
 	},
 	"objection": null,
 	"offer": {
 		"eyebrow": "Händler-Angebot",
-		"headline": "Premium aktivieren und Händler-Onboarding-Bonus anfragen.",
-		"body": "Wenn Sie gewerblich Fahrzeuge verkaufen, unterstützen wir einen seriösen Einstieg mit einer zusätzlichen Bonusphase. Ziel ist ein sauberer Start, wenn Sie das System über mehrere Fahrzeuge hinweg einsetzen möchten.",
+		"headline": "Premium aktivieren und Händler-Bonus beantragen.",
+		"body": "Für gewerbliche Händler, die Premium über mehrere Fahrzeuge hinweg nutzen, können wir nach Aktivierung eine zusätzliche Bonusphase gewähren. Schreiben Sie uns kurz mit Betriebsdaten — wir prüfen die Voraussetzungen und melden uns.",
 		"cta": "Händler-Bonus beantragen",
-		"footnote": "Der Bonus wird manuell geprüft und richtet sich an gewerbliche Fahrzeughändler."
+		"footnote": "Der Bonus wird manuell geprüft und richtet sich an gewerbliche Händler mit aktiver Premium-Nutzung. Premium ist Voraussetzung für den Bonus; Basisnutzung kann ohne Premium möglich sein."
 	},
 	"faq": {
 		"items": [
@@ -81,13 +81,23 @@
 			{
 				"q": "Wie funktioniert der Händler-Bonus?",
 				"a": "Aktivieren Sie zuerst Premium und kontaktieren Sie uns anschließend über das Händlerformular. Nach einer kurzen Prüfung erhalten qualifizierte Händlerbetriebe eine Onboarding-Bonusphase."
+			},
+			{
+				"q": "Was, wenn wir keine Zeit für die Dateneingabe haben?",
+				"a": "Es gibt eine managed Leistung pro Fahrzeug: Wir übernehmen Erfassung, Unterlagen und Fotos und richten das öffentliche Profil mit QR-Code ein. Details auf der Seite „managed Angebot“ (Link oben)."
 			}
 		]
 	},
 	"closing": {
 		"headline": "Starten Sie mit einer professionellen Fahrzeugpräsentation.",
-		"body": "Legen Sie Ihr Händlerkonto an, aktivieren Sie Premium passend zu Ihrem Bestand und fordern Sie den Händler-Onboarding-Bonus an.",
+		"body": "Legen Sie Ihr Händlerkonto an, aktivieren Sie Premium passend zu Ihrem Bestand und beantragen Sie den Händler-Bonus. Für komplette Datenübernahme durch uns siehe managed Angebot.",
 		"cta": "Händlerkonto erstellen"
+	},
+	"relatedOffer": {
+		"headline": "Keine Kapazität für Erfassung im Team?",
+		"body": "Statt dass Ihre Leute jedes Dokument selbst einpflegen, können wir die komplette Digitalisierung pro Fahrzeug übernehmen — Servicehistorie, Unterlagen, Fotos, öffentliches Profil mit QR-Code und Übergabe an den Käufer.",
+		"cta": "Managed-Angebot ansehen",
+		"href": "managed/"
 	},
 	"sectionLabels": {
 		"trustStripHeading": "Auf einen Blick",

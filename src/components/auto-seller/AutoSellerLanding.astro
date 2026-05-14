@@ -107,6 +107,26 @@ const faqHeading = c.sectionLabels?.faqHeading ?? 'FAQ';
 	</div>
 </section>
 
+{
+	c.relatedOffer && (
+		<section class="section" aria-labelledby="landing-related-title">
+			<div class="shell">
+				<div class="card" style="max-width: 52rem">
+					<h2 id="landing-related-title" style="margin-top: 0">
+						{c.relatedOffer.headline}
+					</h2>
+					<p class="muted" style="margin: 0 0 1rem; line-height: 1.55">
+						{c.relatedOffer.body}
+					</p>
+					<a class="btn btn--primary" href={c.relatedOffer.href} data-landing-cta="related_managed_offer">
+						{c.relatedOffer.cta}
+					</a>
+				</div>
+			</div>
+		</section>
+	)
+}
+
 <section class="section" aria-labelledby="landing-benefits-title">
 	<div class="shell">
 		<h2 id="landing-benefits-title">{c.benefits.headline}</h2>

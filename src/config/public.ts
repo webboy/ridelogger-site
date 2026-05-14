@@ -48,6 +48,16 @@ export function getDealerBonusInquiryUrl(): string | null {
 	return null;
 }
 
+/**
+ * Managed dealer vehicle setup inquiry (mailto or https form).
+ * Falls back to dealer bonus URL when unset so CTAs stay usable in dev.
+ */
+export function getManagedDealerInquiryUrl(): string | null {
+	const v = import.meta.env.PUBLIC_MANAGED_DEALER_INQUIRY_URL;
+	if (typeof v === 'string' && v.trim().length > 0) return v.trim();
+	return getDealerBonusInquiryUrl();
+}
+
 /** Partner PWA (workshops / service providers). */
 export function getPartnerAppUrl(): string {
 	const v = import.meta.env.PUBLIC_PARTNER_APP_URL;

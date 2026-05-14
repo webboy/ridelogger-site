@@ -1,0 +1,90 @@
+{
+	"meta": {
+		"title": "Managed Fahrzeugdigitalisierung für Autohändler | RideLogger",
+		"description": "Wir erfassen Servicehistorie, Fotos und Dokumente für Ihre Fahrzeuge — öffentliches Profil mit QR-Code und Übergabe an den Käufer. Ab ca. €10 pro Fahrzeug.",
+		"heroImageAlt": "Digitale Servicehistorie und Fahrzeugunterlagen für den Verkauf"
+	},
+	"hero": {
+		"eyebrow": "Managed Service für Händler",
+		"headline": "Wir digitalisieren jedes Fahrzeug für Sie.",
+		"sub": "Wir übernehmen die Erfassung von Servicehistorie, Unterlagen und Fotos, richten ein öffentliches Fahrzeugprofil mit QR-Code ein (mit Ihrem Logo möglich) und übergeben nach dem Verkauf alles an den Käufer inklusive Erinnerungen — ohne zusätzlichen Aufwand in Ihrem Team.",
+		"primaryCta": "Managed-Angebot anfragen",
+		"secondaryCta": "Ich möchte die App selbst nutzen",
+		"secondaryHref": "../"
+	},
+	"trustStrip": [
+		"Öffentliches Profil + QR-Code",
+		"Schwärzung personenbezogener Daten",
+		"Übergabe per E-Mail an den Käufer",
+		"Ab ca. €10 pro Fahrzeug"
+	],
+	"intro": {
+		"headline": "Wenn Sie keine Zeit für Dateneingabe haben.",
+		"body": "Sie wollen eine saubere digitale Servicehistorie für Ihren Bestand — aber nicht, dass Mitarbeitende stundenlang Dokumente abtippen? Wir liefern das als Paket pro Fahrzeug: Alles, was Sie bereitstellen, bereiten wir auf und pflegen es in RideLogger im Namen Ihres Händlerkontos."
+	},
+	"problem": {
+		"headline": "Warum sich das lohnt",
+		"body": "Nachvollziehbare Wartung und Belege reduzieren Käuferzweifel und unterstützen den Werterhalt — auch beim späteren Weiterverkauf. Der Engpass ist Operations: Scannen, Datumspflege, Anhänge, öffentliche Darstellung ohne Datenlecks bei früheren Haltern — diese Routine übernehmen wir."
+	},
+	"beforeSale": {
+		"headline": "Vor dem Verkauf (inklusive)",
+		"items": [
+			"Erfassung der Fahrzeugfotos.",
+			"Erfassung aller Serviceeinträge im digitalen Serviceheft.",
+			"Hochladen/Einpflegen der Serviceunterlagen.",
+			"Aktivierung eines öffentlichen Fahrzeugprofils mit QR-Code — Logo möglich.",
+			"Sichtbarkeit gescannter Serviceunterlagen im öffentlichen Profil (Premium-Dokumentenfunktion für Interessenten).",
+			"Individualisierung des öffentlichen Profils mit Ihrer Markenführung.",
+			"Einpflegen relevanter Hersteller-/Servicedokumentation zum Modell."
+		]
+	},
+	"afterSale": {
+		"headline": "Nach dem Verkauf (inklusive)",
+		"items": [
+			"Erfassung der Zulassungs-/Halterdaten nach Ihrer Vorlage.",
+			"Erfassung von Kaufvertrag und Begleitpapieren (inkl. Finanzierung/Versicherung, falls vorhanden und bereitgestellt).",
+			"Einrichten von Erinnerungen für den Käufer (Service, Reifen, HU/TÜV, Zulassung etc.).",
+			"Übergabe des Fahrzeugs an den Käufer per E-Mail — Zugriff auf das digitale Heft für die weitere Pflege."
+		]
+	},
+	"pricing": {
+		"headline": "Preis und Start",
+		"priceLine": "Orientierung: ca. €10 pro Fahrzeug",
+		"body": "Das konkrete Angebot hängt vom Umfang der Unterlagen und der Fotos ab. Ein Pilot mit den ersten 10 Fahrzeugen ist oft der einfachste Einstieg. Schreiben Sie uns für eine Schätzung und Lieferzeit.",
+		"footnote": "Für die Aufbereitung öffentlicher Dokumente (Schwärzung personenbezogener Daten früherer Halter) ist eine entsprechende vertragliche Einbindung mit dem Händler erforderlich."
+	},
+	"privacy": {
+		"headline": "Datenschutz und Dokumente",
+		"body": "Servicebelege enthalten häufig Daten früherer Halter oder Dritter. Vor Veröffentlichung des öffentlichen Profils erfolgt eine Schwärzung nach Absprache mit Ihnen. Für die Richtigkeit und Vollständigkeit der von Ihnen gelieferten Informationen bleiben Sie verantwortlich; wir liefern die technische Aufbereitung gemäß Ihrer Weisungen."
+	},
+	"faq": {
+		"items": [
+			{
+				"q": "Ist das dasselbe wie ein Premium-Abo?",
+				"a": "Nein. Premium ist das Jahresabo für Ihr Händlerkonto, wenn Sie selbst pflegen möchten. Managed ist eine Leistung pro Fahrzeug, wenn wir die Erfassung für Sie übernehmen."
+			},
+			{
+				"q": "Wie liefern wir Unterlagen?",
+				"a": "Nach Kontakt klären wir den einfachsten Kanal (E-Mail, Cloud oder physische Übergabe). Je vollständiger die Vorlage, desto besser die Darstellung für Käufer."
+			},
+			{
+				"q": "Was, wenn nicht alle Papiere vorliegen?",
+				"a": "Wir arbeiten mit dem, was vorhanden ist; Nachpflege ist möglich — aber je vollständiger der Start, desto überzeugender wirkt das Profil."
+			},
+			{
+				"q": "Wie schnell ist das öffentliche Profil live?",
+				"a": "Abhängig von Umfeld und Aufwand; für ein typisches Einzelfahrzeug ist oft mit etwa drei Werktagen nach kompletter Übergabe zu rechnen. Für Piloten oder Parallelprojekte vereinbaren wir Zeitpläne vorab."
+			}
+		]
+	},
+	"closing": {
+		"headline": "Pilot auf einem Fahrzeug?",
+		"body": "Schreiben Sie uns mit Händlername und einem Modell aus Ihrem Bestand — wir melden uns mit nächsten Schritten und einer Einschätzung.",
+		"diyCta": "Zur DIY-/Premium-Händlerseite",
+		"diyHref": "../"
+	},
+	"sectionLabels": {
+		"trustStripHeading": "Kurzüberblick",
+		"faqHeading": "Häufige Fragen"
+	}
+}

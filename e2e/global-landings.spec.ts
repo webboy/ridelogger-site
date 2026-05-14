@@ -20,6 +20,13 @@ test.describe('RL campaign landings (DE)', () => {
 		await expect(page.locator('.site-header__cta a[href*="partner"]')).toHaveCount(0);
 	});
 
+	test('auto-dealers/managed: title and managed inquiry CTA', async ({ page }) => {
+		await page.goto('/de/auto-dealers/managed/');
+		await expect(page).toHaveTitle(/RideLogger/);
+		const managed = page.locator('a[data-landing-cta="managed_inquiry_primary"]').first();
+		await expect(managed).toHaveAttribute('href', /^mailto:e2e-managed@example\.com/);
+	});
+
 	test('UTM params hydrate into app links', async ({ page }) => {
 		await page.goto('/de/private-sellers/?utm_source=e2e&utm_medium=test');
 		const app = page.locator('a[data-landing-cta="hero_primary"]').first();

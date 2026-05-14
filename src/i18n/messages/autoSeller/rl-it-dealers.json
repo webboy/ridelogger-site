@@ -1,7 +1,7 @@
 {
 	"meta": {
 		"title": "Manutenzione più chiara per il tuo parco veicoli | RideLogger",
-		"description": "Presenta la storia di manutenzione in modo più coerente su più veicoli. Strumento digitale per dealer e professionisti.",
+		"description": "Percorso fai-da-te per dealer: inserisci la cronologia manutenzioni in RideLogger. Premium per più veicoli; bonus dealer opzionale e servizio managed per veicolo.",
 		"heroImageAlt": "Piazzale con veicoli presentati in modo professionale"
 	},
 	"hero": {
@@ -9,7 +9,7 @@
 		"headline": "Dai a ogni auto in piazzale una storia di manutenzione più chiara.",
 		"sub": "Uniforma la presentazione della manutenzione sul parco e rendi più semplici i colloqui con gli acquirenti. Un registro ordinato fa percepire i veicoli come più professionali.",
 		"primaryCta": "Crea account dealer",
-		"secondaryCta": "Attiva Premium e richiedi il bonus dealer",
+		"secondaryCta": "Premium e bonus dealer",
 		"secondaryHref": "#dealer-offer"
 	},
 	"trustStrip": [
@@ -19,7 +19,7 @@
 	],
 	"intro": {
 		"headline": "Con più veicoli in vendita, la presentazione professionale conta.",
-		"body": "Se ogni auto ha una storia, documenti e spiegazioni diversi, il processo è difficile da standardizzare. Una cronologia digitale più chiara dà al parco un'immagine più coerente."
+		"body": "Questa pagina descrive il flusso fai-da-te: tu o il tuo team inserite i dati nell'app. Se ogni auto ha una storia, documenti e spiegazioni diversi, il processo è difficile da standardizzare. Una cronologia digitale più chiara dà al parco un'immagine più coerente."
 	},
 	"benefits": {
 		"headline": "Perché è utile per i dealer",
@@ -56,17 +56,17 @@
 			},
 			{
 				"title": "Richiedi il bonus onboarding dealer",
-				"body": "Dopo l'attivazione di Premium, contattaci dal modulo: verifichiamo la configurazione per un bonus onboarding."
+				"body": "Dopo Premium, contattaci dal modulo — per i dealer che usano davvero Premium sul parco possiamo abilitare una fase bonus aggiuntiva."
 			}
 		]
 	},
 	"objection": null,
 	"offer": {
 		"eyebrow": "Offerta dealer",
-		"headline": "Attiva Premium e contattaci per il bonus onboarding dealer.",
-		"body": "Se vendi veicoli in modo professionale, possiamo premiare un uso serio con un periodo bonus dopo un controllo rapido. Obiettivo: partire bene se usi il sistema su più veicoli.",
+		"headline": "Attiva Premium e richiedi il bonus dealer.",
+		"body": "Per i dealer che usano Premium su più veicoli possiamo concedere una fase bonus dopo l'attivazione. Scrivici con i dati aziendali — verifichiamo i requisiti e ti rispondiamo.",
 		"cta": "Richiedi bonus dealer",
-		"footnote": "L'approvazione del bonus è manuale ed è destinata a un uso dealer reale."
+		"footnote": "Approvazione manuale per dealer con uso Premium attivo sul parco. Premium è richiesto per il bonus; uso base può restare gratuito senza Premium."
 	},
 	"faq": {
 		"items": [
@@ -81,13 +81,23 @@
 			{
 				"q": "Come funziona il bonus dealer?",
 				"a": "Prima attiva Premium, poi contattaci dal modulo dealer. Dopo la verifica, le configurazioni idonee possono ricevere un periodo bonus onboarding."
+			},
+			{
+				"q": "E se non abbiamo tempo per inserire tutto?",
+				"a": "Esiste il servizio managed per veicolo: inseriamo cronologia, documenti e foto e prepariamo il profilo pubblico con QR code. Dettagli nella pagina «offerta managed» (link sopra)."
 			}
 		]
 	},
 	"closing": {
 		"headline": "Inizia con una presentazione veicoli più professionale.",
-		"body": "Crea il conto, attiva Premium se si adatta al tuo modello e contattaci per il bonus onboarding dealer.",
+		"body": "Crea il conto, attiva Premium se si adatta al tuo modello e contattaci per il bonus dealer. Per l'inserimento completamente gestito da noi vedi l'offerta managed.",
 		"cta": "Crea account dealer"
+	},
+	"relatedOffer": {
+		"headline": "Niente tempo per la digitazione interna?",
+		"body": "Possiamo digitalizzare ogni veicolo al posto tuo — storico interventi, documenti, foto, profilo pubblico con QR code e passaggio all'acquirente.",
+		"cta": "Vedi offerta managed",
+		"href": "managed/"
 	},
 	"sectionLabels": {
 		"trustStripHeading": "In sintesi",

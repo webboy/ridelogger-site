@@ -16,7 +16,7 @@ export default defineConfig({
 	},
 	webServer: {
 		command:
-			'PUBLIC_INSTANCE=global PUBLIC_SITE_URL=https://www.ridelogger.com PUBLIC_APP_URL=https://app.ridelogger.com astro build && astro preview --port 4173 --host 127.0.0.1',
+			'PUBLIC_INSTANCE=global PUBLIC_SITE_URL=https://www.ridelogger.com PUBLIC_APP_URL=https://app.ridelogger.com PUBLIC_DEALER_BONUS_INQUIRY_URL="mailto:e2e-dealer@example.com?subject=E2E-Bonus" PUBLIC_MANAGED_DEALER_INQUIRY_URL="mailto:e2e-managed@example.com?subject=E2E-Managed" astro build && astro preview --port 4173 --host 127.0.0.1',
 		url: 'http://127.0.0.1:4173',
 		reuseExistingServer: !process.env.CI,
 		timeout: 180_000,

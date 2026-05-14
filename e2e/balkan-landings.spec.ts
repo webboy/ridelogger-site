@@ -18,6 +18,13 @@ test.describe('SK campaign landings (SR)', () => {
 		await expect(app).toHaveAttribute('href', /lang=sr-Latn/);
 	});
 
+	test('auto-placevi/managed: title and managed inquiry CTA', async ({ page }) => {
+		await page.goto('/sr/auto-placevi/managed/');
+		await expect(page).toHaveTitle(/Servisna knjižica/i);
+		const managed = page.locator('a[data-landing-cta="managed_inquiry_primary"]').first();
+		await expect(managed).toHaveAttribute('href', /^mailto:e2e-managed@example\.com/);
+	});
+
 	test('UTM params hydrate into app links', async ({ page }) => {
 		await page.goto('/sr/prodaja-auta/?utm_campaign=balkan-e2e');
 		const app = page.locator('a[data-landing-cta="hero_primary"]').first();

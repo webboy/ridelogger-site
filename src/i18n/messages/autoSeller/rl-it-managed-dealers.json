@@ -1,0 +1,90 @@
+{
+	"meta": {
+		"title": "Digitalizzazione veicoli gestita per dealer | RideLogger",
+		"description": "Inseriamo storico manutenzioni, foto e documenti — profilo pubblico con QR code e passaggio all'acquirente. Da circa €10 per veicolo.",
+		"heroImageAlt": "Storico assistenza digitale e documentazione veicolo per la vendita"
+	},
+	"hero": {
+		"eyebrow": "Servizio managed per dealer",
+		"headline": "Digitalizziamo ogni veicolo al posto vostro.",
+		"sub": "Registriamo storico interventi, documenti e foto, attiviamo un profilo pubblico con QR code (anche con il vostro logo) e dopo la vendita consegniamo tutto all'acquirente con promemoria — senza carico extra sul team.",
+		"primaryCta": "Richiedi il servizio managed",
+		"secondaryCta": "Preferisco usare l'app da solo",
+		"secondaryHref": "../"
+	},
+	"trustStrip": [
+		"Profilo pubblico + QR code",
+		"Oscuramento dati personali",
+		"Passaggio all'acquirente via email",
+		"Da circa €10 per veicolo"
+	],
+	"intro": {
+		"headline": "Per chi non ha tempo da dedicare all'inserimento.",
+		"body": "Volete una manutenzione digitale ordinata sul parco, ma non volete che il personale passi ore a digitare? Lo facciamo come pacchetto per veicolo: tutto ciò che ci fornite viene elaborato e inserito in RideLogger per il vostro account dealer."
+	},
+	"problem": {
+		"headline": "Perché ha senso",
+		"body": "Una storia manutenzioni documentata riduce i dubbi dell'acquirente e sostiene il valore anche in caso di rivendita. Il collo di bottiglia è operativo: scansione, date, allegati, pubblicazione senza esporre dati sensibili — gestiamo noi questa routine."
+	},
+	"beforeSale": {
+		"headline": "Prima della vendita (incluso)",
+		"items": [
+			"Caricamento foto veicolo.",
+			"Inserimento di tutti gli interventi nel registro digitale.",
+			"Inserimento documentazione di officina.",
+			"Profilo pubblico con QR code — logo possibile.",
+			"Consultazione documenti scansionati nel profilo pubblico (funzione documenti premium per l'acquirente).",
+			"Personalizzazione profilo pubblico con il vostro brand.",
+			"Raccolta e inserimento documentazione tecnica utile al modello."
+		]
+	},
+	"afterSale": {
+		"headline": "Dopo la vendita (incluso)",
+		"items": [
+			"Inserimento dati di immatricolazione.",
+			"Inserimento contratto di vendita e allegati (finanziamento/assicurazione se forniti).",
+			"Configurazione promemoria per l'acquirente (tagliandi, gomme, revisione/TÜV, bollo, ecc.).",
+			"Passaggio all'acquirente via email — accesso al registro per continuare la cronologia."
+		]
+	},
+	"pricing": {
+		"headline": "Prezzo e avvio",
+		"priceLine": "Indicativo: circa €10 per veicolo",
+		"body": "L'offerta dipende da quantità di documenti e foto. Spesso un pilota sui primi 10 veicoli è il modo più sicuro per valutare il servizio. Scriveteci per una stima e tempi.",
+		"footnote": "Per la pubblicazione dei documenti (oscuramento dati di precedenti proprietari) serve un accordo con il punto vendita."
+	},
+	"privacy": {
+		"headline": "Privacy e documenti",
+		"body": "Le ricevute di officina spesso contengono dati personali. Prima del profilo pubblico applichiamo oscuramenti concordati. Voi rispondete di accuratezza e completezza delle informazioni fornite; noi curiamo l'aspetto tecnico e la pubblicazione secondo le vostre istruzioni."
+	},
+	"faq": {
+		"items": [
+			{
+				"q": "È la stessa cosa dell'abbonamento Premium?",
+				"a": "No. Premium è l'abbonamento annuale per il vostro account dealer quando inserite voi i dati. Managed è una prestazione per veicolo quando inseriamo noi."
+			},
+			{
+				"q": "Come vi inviamo i documenti?",
+				"a": "Dopo il contatto definiamo il canale più semplice (email, cloud o pacco fisico). Più il materiale è completo, migliore sarà il risultato per l'acquirente."
+			},
+			{
+				"q": "Se non abbiamo tutta la documentazione?",
+				"a": "Lavoriamo con ciò che c'è; si può integrare dopo — ma una base completa convince di più."
+			},
+			{
+				"q": "Tempi per avere il profilo pubblico?",
+				"a": "Dipende da carico e mole; spesso ~ tre giorni lavorativi dopo aver ricevuto tutto per un veicolo tipo. Per piloti o più unità pianifichiamo insieme."
+			}
+		]
+	},
+	"closing": {
+		"headline": "Un veicolo pilota?",
+		"body": "Indicate nome punto vendita e un modello — vi rispondiamo con i passi successivi e una stima.",
+		"diyCta": "Torna alla pagina DIY / Premium",
+		"diyHref": "../"
+	},
+	"sectionLabels": {
+		"trustStripHeading": "In sintesi",
+		"faqHeading": "Domande frequenti"
+	}
+}

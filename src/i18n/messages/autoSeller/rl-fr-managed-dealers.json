@@ -1,0 +1,90 @@
+{
+	"meta": {
+		"title": "Digitalisation véhicule « managed » pour pros | RideLogger",
+		"description": "Nous saisissons l'historique d'entretien, les photos et les documents — profil public avec QR code et remise à l'acheteur. À partir d'environ €10 par véhicule.",
+		"heroImageAlt": "Historique d'entretien numérique et dossier véhicule pour la vente"
+	},
+	"hero": {
+		"eyebrow": "Offre managed pour pros",
+		"headline": "Nous digitalisons chaque véhicule pour vous.",
+		"sub": "Nous saisissons l'historique d'entretien, les pièces et les photos, préparons un profil public avec QR code (votre logo possible), puis après la vente nous transférons le tout à l'acheteur avec les rappels — sans charge supplémentaire pour votre équipe.",
+		"primaryCta": "Demander l'offre managed",
+		"secondaryCta": "Je préfère utiliser l'application moi-même",
+		"secondaryHref": "../"
+	},
+	"trustStrip": [
+		"Profil public + QR code",
+		"Masquage des données personnelles",
+		"Remise à l'acheteur par e-mail",
+		"À partir d'environ €10 / véhicule"
+	],
+	"intro": {
+		"headline": "Pour les pros sans temps à consacrer à la saisie.",
+		"body": "Vous voulez une présentation claire de l'entretien sur votre parc, mais pas que vos équipes passent des heures à tout encoder ? Nous faisons le travail au forfait par véhicule : tout ce que vous fournissez est traité et intégré dans RideLogger pour votre compte pro."
+	},
+	"problem": {
+		"headline": "Pourquoi c'est pertinent",
+		"body": "Une traçabilité d'entretien solide réduit les doutes des acheteurs et soutient la valeur — y compris lors d'une revente ultérieure. Le goulot, c'est l'opérationnel : scan, dates, pièces jointes, diffusion publique sans fuite de données sensibles. Nous prenons cette routine en charge."
+	},
+	"beforeSale": {
+		"headline": "Avant la vente (inclus)",
+		"items": [
+			"Ajout des photos véhicule.",
+			"Saisie de tous les entrées d'entretien dans le carnet numérique.",
+			"Intégration des documents de service.",
+			"Activation du profil public avec QR code — logo possible.",
+			"Consultation des scans dans le profil public (fonction documents premium côté acheteur).",
+			"Personnalisation du profil public avec votre marque.",
+			"Collecte et ajout des notices / docs utiles au modèle."
+		]
+	},
+	"afterSale": {
+		"headline": "Après la vente (inclus)",
+		"items": [
+			"Saisie des informations d'immatriculation.",
+			"Saisie des documents de vente et annexes (financements / assurance si vous les fournissez).",
+			"Configuration des rappels pour l'acheteur (entretien, pneus, contrôle technique, carte grise, etc.).",
+			"Remise au nouvel acquéreur par e-mail — transfert d'accès pour poursuivre le carnet."
+		]
+	},
+	"pricing": {
+		"headline": "Tarif et démarrage",
+		"priceLine": "Indicatif : environ €10 par véhicule",
+		"body": "Le devis dépend du volume de pièces et de photos. Un pilote sur les 10 premiers véhicules permet souvent de valider l'intérêt sans engagement massif. Écrivez-nous pour une estimation et des délais.",
+		"footnote": "Le traitement des documents publics (masquage des données de précédents propriétaires) nécessite un cadre convenu avec votre entreprise."
+	},
+	"privacy": {
+		"headline": "Confidentialité et documents",
+		"body": "Les documents d'atelier contiennent souvent des données personnelles. Avant publication du profil public, un masquage est effectué selon vos instructions. Vous restez responsables de l'exactitude et de l'exhaustivité des informations fournies ; nous assurons la mise en forme technique."
+	},
+	"faq": {
+		"items": [
+			{
+				"q": "Est-ce la même chose que l'abonnement Premium ?",
+				"a": "Non. Premium est l'abonnement annuel pour votre compte pro lorsque vous saisissez vous-même. Managed est une prestation au véhicule lorsque nous faisons la saisie pour vous."
+			},
+			{
+				"q": "Comment transmettre les documents ?",
+				"a": "Après contact, nous définissons le canal le plus simple (email, cloud ou envoi physique). Plus les sources sont complètes, meilleure sera la présentation."
+			},
+			{
+				"q": "Et si nous n'avons pas tous les papiers ?",
+				"a": "Nous travaillons avec l'existant ; des compléments sont possibles plus tard — mais un dossier complet au départ rassure davantage l'acheteur."
+			},
+			{
+				"q": "Délai pour un profil public ?",
+				"a": "Variable selon charge et volumétrie ; pour un véhicule type, compter souvent ~ trois jours ouvrés après réception complète. Pour un pilote ou plusieurs véhicules, nous planifions ensemble."
+			}
+		]
+	},
+	"closing": {
+		"headline": "Un véhicule pilote ?",
+		"body": "Indiquez votre enseigne et un modèle du stock — nous revenons vers vous avec les étapes suivantes et une estimation.",
+		"diyCta": "Page DIY / Premium pour pros",
+		"diyHref": "../"
+	},
+	"sectionLabels": {
+		"trustStripHeading": "En bref",
+		"faqHeading": "Questions fréquentes"
+	}
+}

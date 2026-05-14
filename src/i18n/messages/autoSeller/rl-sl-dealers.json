@@ -1,7 +1,7 @@
 {
 	"meta": {
 		"title": "Jasnejša servisna zgodovina za vaš vozni park | RideLogger",
-		"description": "Enoten prikaz servisa čez več vozil. Digitalno orodje za trgovce in prodajalce rabljenih avtomobilov.",
+		"description": "DIY za trgovce: servisno zgodovino vnesete sami v RideLogger. Premium za več vozil; opcijski trgovski bonus in managed storitev na vozilo.",
 		"heroImageAlt": "Avtomobilski plac z vozili v profesionalni predstavitvi"
 	},
 	"hero": {
@@ -9,7 +9,7 @@
 		"headline": "Vsakemu vozilu na placu dajte jasnejšo servisno zgodovino.",
 		"sub": "Uskladite prikaz servisa čez zalogo in poenostavite pogovore s kupci. Bolj urejen servisni zapis naredi vozila bolj profesionalna.",
 		"primaryCta": "Ustvarite trgovski račun",
-		"secondaryCta": "Aktivirajte Premium in povprašajte po trgovskem bonusu",
+		"secondaryCta": "Premium in trgovski bonus",
 		"secondaryHref": "#dealer-offer"
 	},
 	"trustStrip": [
@@ -19,7 +19,7 @@
 	],
 	"intro": {
 		"headline": "Pri prodaji več vozil šteje profesionalna predstavitev.",
-		"body": "Če ima vsak avto svojo zgodbo, dokumente in način razlage, je prodajni proces težko standardizirati. Jasnejša digitalna servisna zgodovina da zalogi bolj skladen vtis."
+		"body": "Ta stran opisuje DIY tok: vi ali vaša ekipa podatke vnašate v aplikacijo. Če ima vsak avto svojo zgodbo, dokumente in način razlage, je prodajni proces težko standardizirati. Jasnejša digitalna servisna zgodovina da zalogi bolj skladen vtis."
 	},
 	"benefits": {
 		"headline": "Zakaj je to smiselno za trgovce",
@@ -56,17 +56,17 @@
 			},
 			{
 				"title": "Povprašajte po onboarding bonusu",
-				"body": "Po aktivaciji Premiuma nas kontaktirajte prek obrazca; preverimo vašo nastavitev za onboarding bonus."
+				"body": "Po aktivaciji Premiuma nas kontaktirajte prek obrazca — za trgovce, ki Premium res uporabljajo na zalogi, lahko omogočimo dodatno bonus obdobje."
 			}
 		]
 	},
 	"objection": null,
 	"offer": {
 		"eyebrow": "Ponudba za trgovce",
-		"headline": "Aktivirajte Premium in nas kontaktirajte za trgovski onboarding bonus.",
-		"body": "Če vozila prodajate poklicno, lahko po kratkem pregledu resno uporabo nagradimo z dodatnim bonus obdobjem. Cilj: dober začetek, če sistem uporabljate čez več vozil.",
+		"headline": "Aktivirajte Premium in povprašajte po trgovskem bonusu.",
+		"body": "Za trgovce, ki Premium uporabljajo na več vozilih, lahko po aktivaciji odobrimo dodatno bonus obdobje. Pišite nam s kratkim predstavitvijo podjetja — preverimo pogoje in se javimo.",
 		"cta": "Povprašajte po trgovskem bonusu",
-		"footnote": "Odobritev bonusa je ročna in je namenjena dejanski trgovski rabi."
+		"footnote": "Odobritev bonusa je ročna in namenjena trgovcem z aktivno uporabo Premiuma na zalogi. Premium je pogoj za bonus; osnovna uporaba lahko ostane brezplačna brez Premiuma."
 	},
 	"faq": {
 		"items": [
@@ -81,13 +81,23 @@
 			{
 				"q": "Kako deluje trgovski bonus?",
 				"a": "Najprej aktivirate Premium, nato nas kontaktirate prek trgovskega obrazca. Po pregledu lahko kvalificirane nastavitve dobijo onboarding bonus obdobje."
+			},
+			{
+				"q": "Kaj če nimamo časa za vnos podatkov?",
+				"a": "Na voljo je managed storitev na vozilo: vnesemo zgodovino, dokumente in fotografije ter pripravimo javni profil s QR kodo. Podrobnosti na strani »managed ponudba« (povezava zgoraj)."
 			}
 		]
 	},
 	"closing": {
 		"headline": "Začnite z bolj profesionalno predstavitvijo vozil.",
-		"body": "Ustvarite račun, aktivirajte Premium, če ustreza vašemu načinu dela, in nas kontaktirajte za trgovski onboarding bonus.",
+		"body": "Ustvarite račun, aktivirajte Premium, če ustreza vašemu načinu dela, in nas kontaktirajte za trgovski bonus. Za popolnoma outsourcan vnos glejte managed ponudbo.",
 		"cta": "Ustvarite trgovski račun"
+	},
+	"relatedOffer": {
+		"headline": "Ni časa za interni vnos?",
+		"body": "Vsako vozilo lahko digitaliziramo mi — servisna zgodovina, dokumenti, fotografije, javni profil s QR kodo in predaja kupcu.",
+		"cta": "Poglejte managed ponudbo",
+		"href": "managed/"
 	},
 	"sectionLabels": {
 		"trustStripHeading": "Na kratko",

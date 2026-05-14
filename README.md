@@ -59,12 +59,14 @@ Built only for the matching instance:
 |--------------|----------|----------------|
 | `/{country}/private-sellers/` | `global` | Per country default locale: `de` (de, ch, at), `fr`, `it`, `sl` (si) |
 | `/{country}/auto-dealers/` | `global` | Same locales as above |
+| `/{country}/auto-dealers/managed/` | `global` | Managed dealer vehicle setup (same locales) |
 | `/{country}/prodaja-auta/` | `balkan` | Per country: `sr-latn` (sr, ba, me), `hr`, `mk` |
 | `/{country}/auto-placevi/` | `balkan` | Same locales as above |
+| `/{country}/auto-placevi/managed/` | `balkan` | Managed dealer vehicle setup (same locales) |
 
 `{country}` is every path in `countryPagesForInstance` for that build (`de`, `fr`, `it`, `ch`, `at`, `si` vs `sr`, `hr`, `ba`, `me`, `mk`).
 
-These pages use a campaign header (no Partner PWA CTA; language switcher matches the main site). Primary CTAs open the main PWA (`PUBLIC_APP_URL`). Set **`PUBLIC_DEALER_BONUS_INQUIRY_URL`** at build time for production so the dealer bonus button works on dealer pages (see `docs/DEPLOY_PRODUCTION.md`).
+These pages use a campaign header (no Partner PWA CTA; language switcher matches the main site). Primary CTAs open the main PWA (`PUBLIC_APP_URL`). Set **`PUBLIC_DEALER_BONUS_INQUIRY_URL`** at build time for production so the dealer bonus button works on dealer pages; set **`PUBLIC_MANAGED_DEALER_INQUIRY_URL`** for managed dealer landing CTAs (falls back to dealer bonus URL if unset — see `docs/DEPLOY_PRODUCTION.md`).
 
 **Discovery from the homepage:** country footers include links to the matching campaign URLs for that country path.
 

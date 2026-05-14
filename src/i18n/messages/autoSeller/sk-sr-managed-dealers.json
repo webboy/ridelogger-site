@@ -1,0 +1,90 @@
+{
+	"meta": {
+		"title": "Managed digitalizacija vozila za auto placeve | Servisna Knjižica",
+		"description": "Mi unosimo servisnu istoriju, fotografije i dokumenta za vaša vozila — javni profil sa QR kodom i priprema za predaju kupcu. Od €10 po vozilu.",
+		"heroImageAlt": "Digitalna servisna istorija i dokumentacija vozila spremna za kupca"
+	},
+	"hero": {
+		"eyebrow": "Managed usluga za auto placeve",
+		"headline": "Mi digitalizujemo svako vozilo umesto vas.",
+		"sub": "Unosimo kompletnu servisnu istoriju, dokumente i fotografije, pripremamo javni profil vozila sa QR kodom (može vaš logo), pa posle prodaje predamo sve kupcu i podešavamo podsetnike — bez dodatnog angažmana vaše ekipe.",
+		"primaryCta": "Zatražite managed digitalizaciju",
+		"secondaryCta": "Želim sam da koristim aplikaciju",
+		"secondaryHref": "../"
+	},
+	"trustStrip": [
+		"Javni profil vozila + QR kod",
+		"Redigovanje privatnih podataka na dokumentima",
+		"Predaja profila kupcu putem emaila",
+		"Od €10 po vozilu"
+	],
+	"intro": {
+		"headline": "Za place koji nemaju vremena za unos podataka.",
+		"body": "Ako želite urednu digitalnu servisnu istoriju za inventar, ali ne želite da zaposleni sede i unose štuku za štuku — mi radimo to kao poseban paket po vozilu: sve što dostavite digitalno ili fizički obrađujemo i uvodimo u Servisnu knjižicu u ime vašeg plac-a."
+	},
+	"problem": {
+		"headline": "Zašto ovo ima smisla",
+		"body": "Dobar dokumentovan istoriju servisa smanjuje sumnju kupca i čuva vrednost vozila i kad jednog dana bude dalje prodato. Problem je operativa: skeniranje, poređanje datuma, prilog dokumenata, javni prikaz bez curenja privatnih podataka — mi tu rutinu radimo za vas."
+	},
+	"beforeSale": {
+		"headline": "Pre prodaje vozila (uključeno)",
+		"items": [
+			"Unos fotografija vozila u aplikaciju.",
+			"Unos svih servisnih zapisa u digitalnu servisnu knjižicu.",
+			"Unos servisnih dokumenata ka istoriji.",
+			"Aktiviranje javnog profila vozila sa QR kodom — QR može sadržati logo vaše firme.",
+			"Pregled skenirane servisne dokumentacije u javnom profilu (premium funkcionalnost dokumentacije za vidljivost kupcu).",
+			"Personalizacija javnog profila prema vašem brendu.",
+			"Prikupljanje i unos potrebnih servisnih uputstava za model vozila."
+		]
+	},
+	"afterSale": {
+		"headline": "Posle prodaje vozila (uključeno)",
+		"items": [
+			"Unos podataka o registraciji vozila.",
+			"Unos kupoprodajne i prateće dokumentacije (uključujući ugovor o finansiranju i dokumentaciju o osiguranju, ako ih dostavite).",
+			"Podešavanje podsetnika za kupca (servisi, gume, tehnički pregled / TÜV, registracija i slično).",
+			"Predaja vozila kupcu putem email adrese — prenos pristupa knjižici za nastavak vođenja evidencije."
+		]
+	},
+	"pricing": {
+		"headline": "Cena i kako krenuti",
+		"priceLine": "Orientaciono €10 po vozilu",
+		"body": "Konačna ponuda zavisi od obima dokumentacije i broja fotografija. Najčešće je cilj pilot od prvih 10 vozila — tako plac proceni efekat bez rizika. Kontaktirajte nas za konkretnu procenu i datum isporuke.",
+		"footnote": "Za pravnu obradu dokumenata (redakcija ličnih podataka prethodnih vlasnika na javnim materijalima) potrebna je saglasnost u okviru dogovora sa placem."
+	},
+	"privacy": {
+		"headline": "Privatnost i dokumenti",
+		"body": "Servisni dokumenti često sadrže podatke bivših vlasnika ili trećih lica. Pre javnog profila vršiće se redakcija takvih podataka u dogovoru sa vama. Plac odgovara za tačnost i kompletnost onoga što nam dostavi; mi vršimo tehničku pripremu i prikaz u skladu sa vašim uputstvima."
+	},
+	"faq": {
+		"items": [
+			{
+				"q": "Da li je ovo isto što premium nalog?",
+				"a": "Ne. Premium je godišnja pretplata na aplikaciju za vaš nalog plac-a kad želite sami da unosite podatke. Managed je placena usluga po vozilu kada želite da unos radimo mi umesto vas."
+			},
+			{
+				"q": "Kako dostavljamo dokumenta?",
+				"a": "Nakon što nas kontaktirate, dogovaramo najlakši kanal (email, oblak ili kurirovani skup štikeniranih dokumenata). Šta god dostavite, potrudimo se da se istorija i dokumentacija što bolje poklope."
+			},
+			{
+				"q": "Šta ako još nemamo sve papire?",
+				"a": "Radiće sa onim što imate; istoriju možete naknadno dopunjavati i kad radite managed paket — ali što kompletnije od početka, to bolji utisak na kupca."
+			},
+			{
+				"q": "Koliko brzo dobijemo javni profil?",
+				"a": "Zavisno od obima i sezone; ciljni okvir za prosečno vozilo je oko tri radna dana od kompletiranja dostave. Za pilot ili više vozila paralelno dogovaramo rokovnik unapred."
+			}
+		]
+	},
+	"closing": {
+		"headline": "Želite demo na jednom vozilu?",
+		"body": "Pišite nam model plac-a i koji automobil želite prvi da pokrijemo — odgovorićemo sa sledećim koracima i procenom.",
+		"diyCta": "Želim DIY Premium bez managed paketa",
+		"diyHref": "../"
+	},
+	"sectionLabels": {
+		"trustStripHeading": "Ukratko",
+		"faqHeading": "Često postavljana pitanja"
+	}
+}

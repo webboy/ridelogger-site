@@ -1,7 +1,7 @@
 {
 	"meta": {
 		"title": "Servisna istorija svakog vozila na placu, spremna za kupca | Servisna Knjižica",
-		"description": "Digitalna servisna istorija za sva vozila koja prodajete. Manje papira, jasniji nastup, ozbiljniji plac. Dealers bonus posle aktivacije premium-a.",
+		"description": "DIY tok za auto placeve: vi koristite aplikaciju da unesete digitalnu servisnu istoriju za inventar. Premium za više vozila; opciono dealers bonus i managed usluga po vozilu.",
 		"heroImageAlt": "Prodavac na auto placu pokazuje kupcu digitalnu servisnu istoriju vozila na telefonu"
 	},
 	"hero": {
@@ -9,18 +9,18 @@
 		"headline": "Servisna istorija svakog vozila — spremna za kupca na telefonu.",
 		"sub": "Kada kupac pita „Da li je redovno servisiran?”, umesto fascikle sa papirima pokažite urednu digitalnu istoriju iz aplikacije. Jedan isti standard za sva vozila na placu — bez zapinjanja, bez traženja računa.",
 		"primaryCta": "Otvorite nalog besplatno",
-		"secondaryCta": "Pogledajte dealers bonus",
+		"secondaryCta": "Premium i dealers bonus",
 		"secondaryHref": "#dealer-offer"
 	},
 	"trustStrip": [
 		"Jedan prikaz za sva vozila na placu",
 		"Kupcu jasna servisna istorija za 10 sekundi",
 		"Manje papira, manje usmenog ponavljanja",
-		"Dealers bonus uz aktivaciju premium-a"
+		"Premium nalog za ceo inventar"
 	],
 	"intro": {
 		"headline": "Svaki auto koji prodajete ima svoju priču — i svoj haos sa papirima.",
-		"body": "Neki dolaze sa fasciklom računa, drugi bez ikakvih papira, a kupac svakom vozilu postavlja isto pitanje: „Je li vođena servisna?”. Digitalna servisna istorija rešava to pitanje za ceo plac, na jednom mestu — na telefonu ili tabletu koji već nosite sa sobom."
+		"body": "Ova stranica je za DIY tok: vi ili vaš tim koristite aplikaciju da unesete istoriju i dokumente. Neki automobili dolaze sa fasciklom računa, drugi bez ikakvih papira, a kupac svakom vozilu postavlja isto pitanje: „Je li vođena servisna?”. Digitalna servisna istorija rešava to pitanje za ceo plac, na jednom mestu — na telefonu ili tabletu koji već nosite sa sobom."
 	},
 	"benefits": {
 		"headline": "Zašto ovo konkretno menja nastup prema kupcu",
@@ -63,20 +63,20 @@
 			},
 			{
 				"title": "Aktivirajte premium i javite nam se",
-				"body": "Premium otključava ozbiljan rad sa više vozila na placu. Kada ga aktivirate, pošaljite nam kratku poruku — kvalifikovani placevi dobijaju dodatni bonus period kao podsticaj za ozbiljno korišćenje."
+				"body": "Premium otključava ozbiljan rad sa više vozila na placu. Kada ga aktivirate, javite nam se kratkom porukom — za placeve koji ga zaista koriste na inventaru možemo odobriti dodatni bonus period."
 			}
 		]
 	},
 	"objection": {
 		"headline": "„Nemam vremena da unosim podatke za svaki auto.”",
-		"body": "Razumemo — zato ideja nije da pravite istoriju od nule. Unosite samo ono što već imate: račune za servise, zamene ulja, veće popravke. I što više vozila prolazi kroz plac, to se isplativost brže vidi — jednom savladan proces radi za sva vozila, a rutina pretvaranja papira u digitalni prikaz postaje stvar od par minuta po autu."
+		"body": "Razumemo — zato ideja nije da pravite istoriju od nule. Unosite samo ono što već imate: račune za servise, zamene ulja, veće popravke. I što više vozila prolazi kroz plac, to se isplativost brže vidi — jednom savladan proces radi za sva vozila, a rutina pretvaranja papira u digitalni prikaz postaje stvar od par minuta po autu. Ako želite da unos u potpunosti prepustite nama, koristite managed uslugu po vozilu (link iznad)."
 	},
 	"offer": {
 		"eyebrow": "Dealers onboarding bonus",
-		"headline": "Aktivirajte premium i pišite nam — možda vam sleduje bonus period.",
-		"body": "Placevima i trgovcima koji ozbiljno koriste servisnu knjižicu za vozila u prodaji, posle aktivacije premium-a odobravamo dodatni bonus period. Pošaljite nam kratku poruku sa podacima o placu, proverimo i javimo se — bez komplikovanih ugovora.",
+		"headline": "Aktivirajte premium i zatražite dealers bonus.",
+		"body": "Za auto placeve koji premium koriste na više vozila u prodaji, posle aktivacije možemo odobriti dodatni bonus period. Pišite nam kratku poruku sa nazivom placa i kontaktom — proverimo uslove i javimo se. Bez komplikovanih ugovora.",
 		"cta": "Javite nam se za dealers bonus",
-		"footnote": "Bonus se odobrava nakon kratke provere i namenjen je stvarnim auto placevima i trgovcima vozilima. Aktivacija premium-a nije obavezan uslov za korišćenje aplikacije — ali jeste uslov za dealers bonus."
+		"footnote": "Bonus namenjen je stvarnim auto placevima i trgovcima koji aktivno koriste aplikaciju. Aktivacija premium-a je uslov za dealers bonus; samo korišćenje aplikacije može ostati besplatno bez premium-a."
 	},
 	"faq": {
 		"items": [
@@ -103,13 +103,23 @@
 			{
 				"q": "Kako funkcioniše dealers bonus?",
 				"a": "Aktivirate premium, pošaljete nam kratku poruku kroz kontakt formu (naziv placa, koliko vozila otprilike držite, kontakt). Proverimo i javimo vam se — ako ispunjavate uslove, odobrimo bonus period za ozbiljno korišćenje."
+			},
+			{
+				"q": "Šta ako ne želite da unosite podatke za svako vozilo?",
+				"a": "Postoji managed usluga po vozilu: mi unosimo istoriju, dokumente i fotografije umesto vas i pripremamo javni profil sa QR kodom. Detalji su na posebnoj stranici „managed ponuda“ (link iznad)."
 			}
 		]
 	},
 	"closing": {
 		"headline": "Dajte svakom vozilu na placu jasnu digitalnu priču.",
-		"body": "Otvorite nalog, dodajte prvo vozilo i osetite razliku u razgovoru sa kupcem. Kada vidite da ima smisla za ceo plac, aktivirajte premium i javite nam se za dealers bonus.",
+		"body": "Otvorite nalog, dodajte prvo vozilo i osetite razliku u razgovoru sa kupcem. Kada vidite da ima smisla za ceo plac, aktivirajte premium i javite nam se za dealers bonus. Ako želite da unos radimo mi, pogledajte managed ponudu.",
 		"cta": "Otvorite nalog"
+	},
+	"relatedOffer": {
+		"headline": "Nemate vremena da unosite podatke?",
+		"body": "Umesto da zaposleni prebacuju papire u aplikaciju, mi možemo kompletan unos po vozilu — servisna istorija, dokumenti, fotografije, javni profil sa QR kodom i priprema za predaju kupcu.",
+		"cta": "Pogledajte managed ponudu",
+		"href": "managed/"
 	},
 	"sectionLabels": {
 		"trustStripHeading": "Ukratko",

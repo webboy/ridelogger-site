@@ -1,7 +1,7 @@
 {
 	"meta": {
 		"title": "Historique d'entretien plus clair pour votre parc | RideLogger",
-		"description": "Présentez l'entretien de façon plus cohérente sur plusieurs véhicules. Outil numérique pour concessionnaires et professionnels.",
+		"description": "Parcours DIY pour pros : vous saisissez l'historique d'entretien dans RideLogger. Premium pour plusieurs véhicules ; bonus revendeur optionnel et offre managed par véhicule.",
 		"heroImageAlt": "Parc automobile avec véhicules présentés professionnellement"
 	},
 	"hero": {
@@ -9,7 +9,7 @@
 		"headline": "Donnez à chaque véhicule une histoire d'entretien plus claire.",
 		"sub": "Harmonisez la présentation de l'entretien sur votre stock et facilitez les échanges avec les acheteurs. Un carnet mieux structuré rend vos véhicules plus professionnels.",
 		"primaryCta": "Créer un compte pro",
-		"secondaryCta": "Activer Premium et demander le bonus revendeur",
+		"secondaryCta": "Premium et bonus revendeur",
 		"secondaryHref": "#dealer-offer"
 	},
 	"trustStrip": [
@@ -19,7 +19,7 @@
 	],
 	"intro": {
 		"headline": "Quand vous vendez plusieurs véhicules, la qualité de présentation compte.",
-		"body": "Si chaque voiture a son histoire, ses papiers et son mode d'explication, le processus devient difficile à standardiser. Un historique d'entretien numérique plus clair donne à votre stock une image plus cohérente."
+		"body": "Cette page décrit le flux DIY : vous ou votre équipe saisissez les données dans l'application. Si chaque voiture a son histoire, ses papiers et son mode d'explication, le processus devient difficile à standardiser. Un historique d'entretien numérique plus clair donne à votre stock une image plus cohérente."
 	},
 	"benefits": {
 		"headline": "Pourquoi c'est utile pour les pros",
@@ -56,17 +56,17 @@
 			},
 			{
 				"title": "Demander le bonus onboarding revendeur",
-				"body": "Après activation de Premium, contactez-nous via le formulaire ; nous examinons votre dossier pour un bonus d'onboarding."
+				"body": "Après activation de Premium, écrivez-nous via le formulaire — pour les pros qui utilisent réellement Premium sur le stock, une phase bonus additionnelle peut être accordée."
 			}
 		]
 	},
 	"objection": null,
 	"offer": {
 		"eyebrow": "Offre revendeurs",
-		"headline": "Activez Premium et contactez-nous pour un bonus onboarding revendeur.",
-		"body": "Si vous vendez des véhicules professionnellement, nous pouvons récompenser un usage sérieux par une période bonus après un court contrôle. Objectif : bien démarrer si vous utilisez l'outil sur plusieurs véhicules.",
+		"headline": "Activez Premium et demandez le bonus revendeur.",
+		"body": "Pour les pros qui utilisent Premium sur plusieurs véhicules, nous pouvons accorder une phase bonus après activation. Envoyez un court message avec les infos société — nous vérifions les conditions et revenons vers vous.",
 		"cta": "Demander le bonus revendeur",
-		"footnote": "L'attribution du bonus est manuelle et destinée à un usage revendeur réel."
+		"footnote": "Attribution manuelle, réservée aux pros avec usage Premium actif sur le parc. Premium est requis pour le bonus ; un usage de base peut rester gratuit sans Premium."
 	},
 	"faq": {
 		"items": [
@@ -81,13 +81,23 @@
 			{
 				"q": "Comment fonctionne le bonus revendeur ?",
 				"a": "Activez d'abord Premium, puis contactez-nous via le formulaire revendeur. Après vérification, les dossiers éligibles peuvent recevoir une période bonus d'onboarding."
+			},
+			{
+				"q": "Et si nous n'avons pas le temps de tout saisir ?",
+				"a": "Une offre managed existe au forfait véhicule : nous saisissons historique, pièces et photos et préparons le profil public avec QR code. Détails sur la page « offre managed » (lien ci-dessus)."
 			}
 		]
 	},
 	"closing": {
 		"headline": "Renforcez la présentation professionnelle de vos véhicules.",
-		"body": "Créez votre compte, activez Premium si cela correspond à votre activité, et contactez-nous pour le bonus onboarding revendeur.",
+		"body": "Créez votre compte, activez Premium si cela correspond à votre activité, et contactez-nous pour le bonus revendeur. Pour une saisie entièrement déléguée, voir l'offre managed.",
 		"cta": "Créer un compte pro"
+	},
+	"relatedOffer": {
+		"headline": "Pas de temps pour la saisie interne ?",
+		"body": "Au lieu de tout encoder vous-même, nous pouvons digitaliser chaque véhicule — historique d'entretien, pièces, photos, profil public avec QR code et passage à l'acheteur.",
+		"cta": "Voir l'offre managed",
+		"href": "managed/"
 	},
 	"sectionLabels": {
 		"trustStripHeading": "En bref",
