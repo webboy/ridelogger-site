@@ -9,6 +9,8 @@ export type CountryPageConfig = {
 	flagCode: string;
 	instance: DeployInstance;
 	defaultLocale: Locale;
+	/** Kampanje (auto-dealers, private-sellers) — ako nema copy za defaultLocale (npr. US/en). */
+	campaignLocale?: Locale;
 	names: {
 		'sr-latn': string;
 		hr: string;
@@ -234,6 +236,26 @@ export const COUNTRY_PAGES: CountryPageConfig[] = [
 			pl: 'Słowenia',
 		},
 	},
+	{
+		path: 'us',
+		flagCode: 'us',
+		instance: 'global',
+		defaultLocale: 'en',
+		campaignLocale: 'de',
+		names: {
+			'sr-latn': 'Sjedinjene Američke Države',
+			hr: 'Sjedinjene Američke Države',
+			mk: 'Соединети Американски Држави',
+			en: 'United States',
+			de: 'Vereinigte Staaten',
+			fr: 'États-Unis',
+			it: 'Stati Uniti',
+			sl: 'Združene države Amerike',
+			tr: 'Amerika Birleşik Devletleri',
+			uk: 'Сполучені Штати',
+			pl: 'Stany Zjednoczone',
+		},
+	},
 ];
 
 export function countryPagesForInstance(instance: DeployInstance): CountryPageConfig[] {
@@ -242,6 +264,11 @@ export function countryPagesForInstance(instance: DeployInstance): CountryPageCo
 
 export function getCountryByPath(path: string): CountryPageConfig | undefined {
 	return COUNTRY_PAGES.find((c) => c.path === path);
+}
+
+/** Locale za auto-seller / managed kampanje — fallback na defaultLocale. */
+export function campaignLocaleForCountry(cfg: CountryPageConfig): Locale {
+	return cfg.campaignLocale ?? cfg.defaultLocale;
 }
 
 /** ISO 3166-1 alpha-2 for PWA `?country=` (matches API `countries.code`). */

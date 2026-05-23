@@ -1,7 +1,7 @@
 ---
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import AutoSellerLanding from '../../components/auto-seller/AutoSellerLanding.astro';
-import { countryPagesForInstance, getCountryByPath, type DeployInstance } from '../../config/countries';
+import { countryPagesForInstance, getCountryByPath, campaignLocaleForCountry, type DeployInstance } from '../../config/countries';
 import { appCountryCodeFromPath } from '../../config/countries';
 import { getAllHomeMessages, getHomeMessages } from '../../i18n/loadHome';
 import { getAppUrl } from '../../config/public';
@@ -18,7 +18,7 @@ if (!cfg) {
 	throw new Error(`Unknown country: ${param}`);
 }
 
-const locale = cfg.defaultLocale;
+const locale = campaignLocaleForCountry(cfg);
 const content = rlPrivateCampaign(locale);
 const home = getHomeMessages(locale);
 const homes = getAllHomeMessages();
