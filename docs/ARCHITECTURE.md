@@ -198,7 +198,9 @@ Pages are **statically rendered in the country's default locale**, then re-local
 
 ## E2E smoke tests
 
-Playwright, driven by `npm run test:e2e` (runs both configs sequentially). Each config **builds the site with instance-specific env** (including mailto test values for the inquiry URLs), serves it via `astro preview` on `127.0.0.1:4173`, and runs one spec:
+Playwright, driven by `npm run test:e2e` (runs both configs sequentially). **Recommended in Docker:** `make test-docker-e2e-site` from `~/sk` (service `sk-playwright-site` in `docker-compose.e2e.yml` — no API/MySQL; browsers preinstalled). Shared output paths live in `playwright.shared.ts` (`PLAYWRIGHT_E2E_TMP_OUTPUT=1` in Docker avoids bind-mount permission issues).
+
+Each config **builds the site with instance-specific env** (including mailto test values for the inquiry URLs), serves it via `astro preview` on `127.0.0.1:4173`, and runs one spec:
 
 | Config | Spec | Instance build | What it verifies |
 |---|---|---|---|

@@ -1,4 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
+import { playwrightHtmlReportDir, playwrightOutputDir } from './playwright.shared';
 
 /**
  * RL (global) build — tests `/de/private-sellers/` and `/de/auto-dealers/`.
@@ -6,10 +7,14 @@ import { defineConfig, devices } from '@playwright/test';
 export default defineConfig({
 	testDir: './e2e',
 	testMatch: 'global-landings.spec.ts',
+	outputDir: playwrightOutputDir,
 	forbidOnly: !!process.env.CI,
 	retries: process.env.CI ? 2 : 0,
 	workers: process.env.CI ? 1 : undefined,
-	reporter: 'list',
+	reporter: [
+		['list'],
+		['html', { open: 'never', outputFolder: playwrightHtmlReportDir }],
+	],
 	use: {
 		...devices['Desktop Chrome'],
 		baseURL: 'http://127.0.0.1:4173',

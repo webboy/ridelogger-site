@@ -26,6 +26,7 @@ pnpm-debug.log*
 # Playwright
 test-results/
 playwright-report/
+playwright-report-docker/
 
 # local media scratchpad (generated assets / prompts)
 /media/*

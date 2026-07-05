@@ -45,7 +45,7 @@ Compose sets `PUBLIC_APP_URL` for local PWA (`sk-app`). Override in `docker-comp
 Two production targets — see **`docs/DEPLOY_PRODUCTION.md`**:
 
 - **Balkan**: docroot `/var/www/ridelogger-site`
-- **Global** (`www.ridelogger.com`): docroot `/var/www/ridelogger-site-global`, Apache samples in **`deploy/apache-www.ridelogger.com*.conf`**
+- **Global** (`www.ridelogger.com`): docroot `/var/www/ridelogger-site-global`, Apache samples in **`deploy/apache-ridelogger.com.conf`** and **`deploy/apache-ridelogger.com-le-ssl.conf`**
 
 ## Locales / routes
 
@@ -72,13 +72,26 @@ These pages use a campaign header (no Partner PWA CTA; language switcher matches
 
 ### E2E
 
-Requires **Node >= 22.12** (see `engines`). Run:
+Requires **Node >= 22.12** (see `engines`). **Recommended:** isolated Playwright container (same pattern as User PWA / Partner PWA):
+
+```bash
+# from ~/sk
+make test-docker-e2e-site
+# debug — leave container up:
+SKIP_E2E_DOWN=1 make test-docker-e2e-site
+```
+
+Direct script: `bash ~/sk/docker/scripts/run-site-e2e.sh`
+
+Uses `docker-compose.e2e.yml` service **`sk-playwright-site`** (`mcr.microsoft.com/playwright:v1.52.0-jammy`). Astro build + preview run inside Playwright's `webServer`; no API/MySQL dependency. HTML report copied to `playwright-report-docker/` on success.
+
+**Host-only** (needs local Node 22.12+ and `npx playwright install`):
 
 ```bash
 npm run test:e2e
 ```
 
-This builds `global` and `balkan` in sequence, serves with `astro preview`, and runs Playwright smoke tests (including sample locales per instance).
+Builds `global` and `balkan` in sequence, serves with `astro preview`, and runs Playwright smoke tests (including sample locales per instance).
 
 ## Media workflow
 

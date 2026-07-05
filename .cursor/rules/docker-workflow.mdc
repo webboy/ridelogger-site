@@ -40,4 +40,15 @@ Restart posle izmene `.env` ili kad dev server „zaglaví”:
 docker restart sk-site sk-site-global
 ```
 
+## E2E (Playwright smoke)
+
+**Ne** pokretati Playwright u `sk-site` / `sk-site-global` — dev image nema browser runtime. Koristi izolovan E2E kontejner:
+
+```bash
+# iz ~/sk
+make test-docker-e2e-site
+```
+
+Detalji: `README.md` → E2E; skripta `~/sk/docker/scripts/run-site-e2e.sh`.
+
 Workspace pravilo za mapiranje projekat → kontejner: `~/sk/.cursor/rules/docker-restart-after-changes.mdc`.
