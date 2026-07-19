@@ -96,3 +96,7 @@ Builds `global` and `balkan` in sequence, serves with `astro preview`, and runs 
 ## Media workflow
 
 Generated or reference images belong under `media/` (gitignored except `README` / `.gitkeep`). Integrate approved assets from `media/generated/` into components as needed.
+
+## CI
+
+Changes merge to `main` via pull request only. The required GitHub Actions check is **`ci`** (see `.github/workflows/ci.yml`).
