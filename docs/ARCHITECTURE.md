@@ -1,6 +1,6 @@
 # Architecture — ridelogger-site
 
-**Last verified:** 2026-07-04
+**Last verified:** 2026-08-15
 
 > Ecosystem-level documentation: `~/sk/memory/docs/`.
 > Deployment is documented authoritatively in [`docs/DEPLOY_PRODUCTION.md`](./DEPLOY_PRODUCTION.md) — this file does not duplicate it.
@@ -112,7 +112,7 @@ The single source of truth for country routes. `COUNTRY_PAGES: CountryPageConfig
 | `ch` | `ch` | global | `de` | — |
 | `at` | `at` | global | `de` | — |
 | `si` | `si` | global | `sl` | — |
-| `us` | `us` | global | `en` | `de` |
+| `us` | `us` | global | `en` | — (campaign pages not emitted) |
 
 Each entry also carries `names` — the country's display name in 11 languages (used by the picker and language-aware UI).
 
@@ -122,7 +122,7 @@ Key helpers:
 |---|---|
 | `countryPagesForInstance(instance)` | Filter for `getStaticPaths` |
 | `getCountryByPath(path)` | Lookup by URL segment |
-| `campaignLocaleForCountry(cfg)` | `campaignLocale ?? defaultLocale` — used by **global** campaign pages so `us` (default `en`, no English campaign copy) renders campaigns in German |
+| `campaignLocaleForCountry(cfg)` | `campaignLocale ?? defaultLocale` — used by **global** campaign pages. **`us` does not emit campaign paths** (no EN campaign copy); other global countries use `defaultLocale`. |
 | `appCountryCodeFromPath(path)` | Uppercased `flagCode` as ISO 3166-1 alpha-2 for the PWA `?country=` param (matches API `countries.code`) |
 | `peerMarketingOrigin(selfOrigin)` | Cross-domain origin of the *other* instance: a `servisna-knjizica` host ⇒ `https://www.ridelogger.com`, anything else ⇒ `https://www.servisna-knjizica.com` |
 
@@ -176,7 +176,7 @@ Pages are **statically rendered in the country's default locale**, then re-local
 
 | Component | Role |
 |---|---|
-| `layouts/SiteLayout.astro` | Page shell for all `[country]` pages: canonical URL (from `Astro.site` + `countryPath` + `pathSuffix`), OG/Twitter meta, `SiteHeader`, `SiteFooter`, `CookieBanner`, optional `HomeLocaleScript`. Props control header variant, app CTA href override, legal-page mode, and `lockMarketingSeo` |
+| `layouts/SiteLayout.astro` | Page shell for all `[country]` pages: canonical URL, **hreflang alternates** (via `hreflangAlternates()`), OG/Twitter meta, `SiteHeader`, `SiteFooter`, `CookieBanner`, optional `HomeLocaleScript`. Props control header variant, app CTA href override, legal-page mode, and `lockMarketingSeo` |
 | `SiteHeader.astro` | Brand link, Partner PWA button (hidden on campaign pages and on the **global** instance), primary "Open app" CTA (`data-app-link`), language switcher; balkan-only Google Play promo strip with localized badge |
 | `SiteFooter.astro` | Brand + tagline, legal links (privacy/cookies/terms), and "selling cars" discovery links to the instance's campaign landings when the locale copy defines them |
 | `LanguageSwitcherCountry.astro` | `<details>`-based language dropdown; all 12 locales; `data-locale-pick` buttons |
@@ -188,6 +188,31 @@ Pages are **statically rendered in the country's default locale**, then re-local
 | `managed-dealer/ManagedDealerLanding.astro` | Managed ("we digitize your vehicles for you") dealer landing; primary CTA is the managed inquiry URL |
 | `legal/{PrivacyArticle,TosArticle,CookieArticle}.astro` | Legal article wrappers over shared renderers |
 | `mcp/McpPage.astro` | MCP connector info page (hero, connection details incl. hardcoded endpoint `https://mcp.ridelogger.com/mcp`, tool groups, safety, example prompts) with its own locale hydrator |
+| `seo/JsonLdHome.astro` | Country home only: JSON-LD `@graph` with `Organization` + `SoftwareApplication`, `alternateName`, `sameAs` both marketing origins |
+
+## Crawl / SEO (task 0087)
+
+Static artifacts generated at build time from `PUBLIC_SITE_URL` + `PUBLIC_INSTANCE`:
+
+| URL | Source | Notes |
+|---|---|---|
+| `/robots.txt` | `src/pages/robots.txt.ts` | Allows `Googlebot`, `OAI-SearchBot`, `PerplexityBot`, `GPTBot`; `Sitemap:` points to this build's origin |
+| `/sitemap.xml` | `src/pages/sitemap.xml.ts` | Lists only countries of the current instance; each `<url>` includes `xhtml:link` hreflang alternates (including cross-domain SK↔RL peers) |
+| `/llms.txt` | `src/pages/llms.txt.ts` | Human-readable URL map for the instance |
+
+**Hreflang** (`src/config/hreflang.ts`, `src/config/siteRoutes.ts`):
+
+- Emitted in `SiteLayout.astro` for all `[country]` pages and in `index.astro` (picker → every country home).
+- Country codes: regional variants for Balkan/German clusters (`sr-Latn`, `sr-Latn-BA`, `sr-Latn-ME`, `de`, `de-AT`, `de-CH`, …).
+- Campaign slug pairs: `private-sellers` ↔ `prodaja-auta`, `auto-dealers` ↔ `auto-placevi`, managed variants likewise.
+- **`x-default`** → `https://www.ridelogger.com/us/` (+ same suffix when an EN page exists; campaigns without EN US paths fall back to `/us/` home).
+- **`us` campaign paths are not built** — global campaign `getStaticPaths` excludes `us`.
+
+Reference map: `~/sk/memory/tasks/0087-site-geo-crawl-foundation/artifacts/hreflang-map.md`.
+
+**JSON-LD** on country home only: `Organization` + `SoftwareApplication` with both brand names and `sameAs` for `www.servisna-knjizica.com` and `www.ridelogger.com`.
+
+**Note:** Task 0021 HANDOFF claimed hreflang was already in `SiteLayout` — that was incorrect until 0087; canonical/OG existed earlier.
 
 ## Build outputs
 
@@ -202,12 +227,12 @@ Playwright, driven by `npm run test:e2e` (runs both configs sequentially). **Rec
 
 Each config **builds the site with instance-specific env** (including mailto test values for the inquiry URLs), serves it via `astro preview` on `127.0.0.1:4173`, and runs one spec:
 
-| Config | Spec | Instance build | What it verifies |
+| Config | Specs | Instance build | What it verifies |
 |---|---|---|---|
-| `playwright.config.ts` | `e2e/global-landings.spec.ts` | global (`PUBLIC_APP_URL=https://app.ridelogger.com`) | `/de/private-sellers/`: RideLogger title, hero CTA points to `app.ridelogger.com` with `lang=de`, no Partner link in header, language switcher present. `/de/auto-dealers/`: title + app CTA. `/de/auto-dealers/managed/`: managed CTA is the configured `mailto:`. UTM params from the landing URL hydrate into app links. Mobile-viewport smoke. `/fr/private-sellers/`: `lang=fr` in app link |
-| `playwright.balkan.config.ts` | `e2e/balkan-landings.spec.ts` | balkan (`PUBLIC_APP_URL=https://app.servisna-knjizica.com`) | Mirror checks on `/sr/prodaja-auta/`, `/sr/auto-placevi/`, `/sr/auto-placevi/managed/` (`lang=sr-Latn`), UTM hydration, mobile smoke, `/mk/prodaja-auta/` (`lang=mk`, Cyrillic title) |
+| `playwright.config.ts` | `e2e/global-landings.spec.ts`, `e2e/geo-crawl-global.spec.ts` | global | Campaign landings (DE/FR) + robots/sitemap/llms, hreflang SK↔RL, JSON-LD, US campaigns absent |
+| `playwright.balkan.config.ts` | `e2e/balkan-landings.spec.ts`, `e2e/geo-crawl-balkan.spec.ts` | balkan | Campaign landings (SR/MK) + crawl artifacts for SK origin |
 
-Notes: the homepage, picker, legal, and MCP pages are **not** covered by e2e — only campaign landings.
+Notes: legal and MCP pages are not covered by campaign e2e; geo-crawl specs cover home hreflang/JSON-LD and static crawl files.
 
 ## Build-time environment variables (`PUBLIC_*`)
 

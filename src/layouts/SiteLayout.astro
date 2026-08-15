@@ -8,6 +8,7 @@ import HomeLocaleScript from '../components/HomeLocaleScript.astro';
 import type { HomeMessages } from '../types/home';
 import type { LegalBundle } from '../i18n/loadLegal';
 import { appCountryCodeFromPath } from '../config/countries';
+import { hreflangAlternates } from '../config/hreflang';
 
 interface Props {
 	countryPath: string;
@@ -72,6 +73,7 @@ const pathTail =
 const canonical = pageUrl(pathTail);
 const year = new Date().getFullYear();
 const appCountryCode = appCountryCodeFromPath(countryPath);
+const alternates = hreflangAlternates({ countryPath, pathSuffix });
 ---
 
 <!doctype html>
@@ -82,6 +84,11 @@ const appCountryCode = appCountryCodeFromPath(countryPath);
 		<title>{title}</title>
 		<meta name="description" content={description} />
 		<link rel="canonical" href={canonical} />
+		{
+			alternates.map((alt) => (
+				<link rel="alternate" hreflang={alt.hreflang} href={alt.href} />
+			))
+		}
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
 		<meta property="og:type" content="website" />

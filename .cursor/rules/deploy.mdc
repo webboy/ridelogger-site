@@ -15,3 +15,5 @@ Isti sadržaj u repou: **`docs/DEPLOY_PRODUCTION.md`**.
 4. Apache `DocumentRoot` za `www.servisna-knjizica.com`: `/var/www/ridelogger-site` (HTTP + HTTPS vhostovi u `sites-available/servisna-knjizica.com*.conf`)
 
 Posle izmene vhosta: `apache2ctl configtest && systemctl reload apache2`.
+
+**Apex:** `servisna-knjizica.com` mora 301 → `https://www.servisna-knjizica.com`. Nikad ne `a2ensite 000-default` / `default-ssl` na ovom dropletu (hostname krade apex i vraća DO LAMP iz `/var/www/html` — Safe Browsing rizik). Detalji: `docs/DEPLOY_PRODUCTION.md` → sekcija „Apex“.

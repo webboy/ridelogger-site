@@ -1,6 +1,7 @@
 ---
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import HomePage from '../../components/home/HomePage.astro';
+import JsonLdHome from '../../components/seo/JsonLdHome.astro';
 import { countryPagesForInstance, getCountryByPath, type DeployInstance } from '../../config/countries';
 import { getHomeMessages, getAllHomeMessages } from '../../i18n/loadHome';
 
@@ -20,6 +21,7 @@ const home = getHomeMessages(locale);
 const homes = getAllHomeMessages();
 const title = home.meta.title;
 const description = home.meta.description;
+const instance = (import.meta.env.PUBLIC_INSTANCE || 'balkan') as DeployInstance;
 ---
 
 <SiteLayout
@@ -30,5 +32,6 @@ const description = home.meta.description;
 	home={home}
 	homes={homes}
 >
+	<JsonLdHome locale={locale} instance={instance} countryPath={cfg.path} description={description} />
 	<HomePage locale={locale} home={home} countryPath={cfg.path} />
 </SiteLayout>

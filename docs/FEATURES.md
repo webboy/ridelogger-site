@@ -1,6 +1,6 @@
 # Features — ridelogger-site
 
-**Last verified:** 2026-07-04
+**Last verified:** 2026-08-15
 
 > Ecosystem-level documentation: `~/sk/memory/docs/`.
 > Deployment: [`docs/DEPLOY_PRODUCTION.md`](./DEPLOY_PRODUCTION.md) (authoritative). Technical architecture: [`docs/ARCHITECTURE.md`](./ARCHITECTURE.md).
@@ -18,6 +18,7 @@
 | 7 | Cookie consent banner | all pages | both |
 | 8 | Dealer inquiry CTAs (mailto/form) | dealer + managed landings | both |
 | 9 | CTA wiring to User PWA / Partner PWA | header, home, campaigns, MCP | both |
+| 10 | Crawl / GEO hygiene | `/robots.txt`, `/sitemap.xml`, `/llms.txt`, hreflang, JSON-LD | both |
 
 ---
 
@@ -47,7 +48,7 @@ Marketing/documentation page for the Claude MCP connector. Content: hero with "O
 
 ## 5. Campaign landing pages — global (RideLogger)
 
-Built only when `PUBLIC_INSTANCE=global`; one page per global country (de, fr, it, ch, at, si, us). Copy locale = `campaignLocaleForCountry()`: the country's `defaultLocale`, except `us` which uses `campaignLocale: 'de'` (there is no English campaign copy — US campaign pages render in German). Copy JSON: `src/i18n/messages/autoSeller/rl-{de,fr,it,sl}-{private,dealers,managed-dealers}.json` via `src/i18n/autoSellerCampaigns.ts` / `managedDealerCampaigns.ts`. All use the campaign header variant (Partner link hidden, language switcher kept) and `lockMarketingSeo` (title/description stay as SSR'd even after language switch).
+Built only when `PUBLIC_INSTANCE=global`; one page per global country **except `us`** (no EN campaign copy — US hub is home-only). Copy locale = `campaignLocaleForCountry()` → country's `defaultLocale`. Copy JSON: `src/i18n/messages/autoSeller/rl-{de,fr,it,sl}-{private,dealers,managed-dealers}.json` via `src/i18n/autoSellerCampaigns.ts` / `managedDealerCampaigns.ts`. All use the campaign header variant (Partner link hidden, language switcher kept) and `lockMarketingSeo` (title/description stay as SSR'd even after language switch).
 
 | Page | Route | Source page | Purpose | CTA targets (from code) |
 |---|---|---|---|---|
@@ -97,3 +98,15 @@ Both inquiry CTAs are plain links whose targets come from build-time env (`mailt
 **Partner PWA:** a ghost button in the header (`getPartnerAppUrl()` → `PUBLIC_PARTNER_APP_URL` or instance default `partner.servisna-knjizica.com` / `partner.ridelogger.com`). It is shown only on the **balkan** instance and never on campaign pages (`showPartnerLink = !isCampaign && instance !== 'global'` in `SiteHeader.astro`) — the global header has no Partner link at all. No `lang`/`country` params are appended to the Partner URL.
 
 **Google Play (balkan only):** a header promo strip links to the SK Android listing (`src/utils/googlePlayBadge.ts`, `id=app.servisnaknjizica`) with a locale-matched badge image from `public/badges/google-play/`; the badge swaps with the client-side language switch.
+
+## 10. Crawl / GEO hygiene
+
+- **Routes:** `/robots.txt`, `/sitemap.xml`, `/llms.txt` — **Source:** `src/pages/{robots.txt,sitemap.xml,llms.txt}.ts`, `src/config/crawlArtifacts.ts`, `src/config/siteRoutes.ts`, `src/config/hreflang.ts`
+
+Per-instance static files at build time. `robots.txt` explicitly allows search/AI crawlers (`Googlebot`, `OAI-SearchBot`, `PerplexityBot`, `GPTBot`) and references the instance sitemap. `sitemap.xml` lists only URLs for countries in the current build; each entry includes cross-domain `xhtml:link` hreflang alternates (SK↔RL). `llms.txt` is a short human-readable URL index.
+
+**Hreflang** in HTML (`SiteLayout.astro`, root picker): alternate links for all equivalent country URLs, regional codes for `sr`/`ba`/`me` and `de`/`at`/`ch`, campaign slug mapping (`private-sellers` ↔ `prodaja-auta`, etc.), `x-default` → `https://www.ridelogger.com/us/` (EN hub).
+
+**JSON-LD** on country home pages only (`JsonLdHome.astro`): `Organization` + `SoftwareApplication` with both product names and `sameAs` linking both `www.servisna-knjizica.com` and `www.ridelogger.com`.
+
+E2E: `e2e/geo-crawl-global.spec.ts`, `e2e/geo-crawl-balkan.spec.ts` (via `make test-docker-e2e-site`).

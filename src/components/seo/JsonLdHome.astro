@@ -1,0 +1,55 @@
+---
+import type { Locale } from '../../i18n/config';
+import { brandName } from '../../i18n/config';
+import { MARKETING_ORIGINS } from '../../config/siteRoutes';
+import { getAppUrl } from '../../config/public';
+
+interface Props {
+	locale: Locale;
+	instance: 'balkan' | 'global';
+	countryPath: string;
+	description: string;
+}
+
+const { locale, instance, countryPath, description } = Astro.props;
+
+function documentLang(loc: Locale): string {
+	if (loc === 'sr-latn') return 'sr-Latn';
+	if (loc === 'sr-cyrl') return 'sr-Cyrl';
+	return loc;
+}
+
+const productName = brandName(locale);
+const alternateBrand = instance === 'balkan' ? 'RideLogger' : 'Servisna Knjižica';
+const appUrl = getAppUrl(locale, null);
+const inLanguage = documentLang(locale);
+
+const graph = {
+	'@context': 'https://schema.org',
+	'@graph': [
+		{
+			'@type': 'Organization',
+			'@id': `${MARKETING_ORIGINS[instance]}/#organization`,
+			name: productName,
+			alternateName: [alternateBrand, 'Servisna Knjižica', 'RideLogger'],
+			url: MARKETING_ORIGINS[instance],
+			sameAs: [MARKETING_ORIGINS.balkan, MARKETING_ORIGINS.global],
+		},
+		{
+			'@type': 'SoftwareApplication',
+			'@id': `${MARKETING_ORIGINS[instance]}/#software`,
+			name: productName,
+			alternateName: [alternateBrand, 'Servisna Knjižica', 'RideLogger'],
+			applicationCategory: 'UtilitiesApplication',
+			operatingSystem: 'Web, Android, iOS',
+			description,
+			url: appUrl,
+			inLanguage,
+			provider: { '@id': `${MARKETING_ORIGINS[instance]}/#organization` },
+			sameAs: [MARKETING_ORIGINS.balkan, MARKETING_ORIGINS.global],
+		},
+	],
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(graph)} />
