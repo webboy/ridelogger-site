@@ -1,0 +1,89 @@
+{
+	"meta": {
+		"title": "Digitalna servisna knjižica — Servisna Knjižica",
+		"description": "Servisna Knjižica je digitalna servisna knjižica za istoriju servisa, gorivo, troškove i podsetnike — za jedno ili više vozila, u pregledaču i na telefonu.",
+		"heroImageAlt": "Ilustracija digitalne servisne knjižice: istorija servisa, gorivo i troškovi na telefonu i računaru."
+	},
+	"hero": {
+		"eyebrow": "Digitalna servisna knjižica",
+		"headline": "Šta je digitalna servisna knjižica?",
+		"sub": "Servisna Knjižica je digitalna servisna knjižica — aplikacija u kojoj vozila imaju jednu jasnu istoriju: servisi, gorivo, troškovi i podsetnici za održavanje. Radi u pregledaču i na telefonu, za jedno ili više vozila. Na drugim tržištima isti proizvod poznaješ kao RideLogger.",
+		"primaryCta": "Otvori aplikaciju",
+		"secondaryCta": "Kako radi",
+		"secondaryHref": "#how"
+	},
+	"intro": {
+		"headline": "Zašto digitalna umesto papira?",
+		"body": "Papirna knjižica se gubi, zamagljuje i retko prati gorivo ili sitne troškove. Digitalna servisna knjižica drži sve na jednom mestu — sa podsetnicima pre isteka registracije, servisa ili zamene guma — i lako se deli pri prodaji vozila."
+	},
+	"benefits": {
+		"headline": "Šta dobijaš",
+		"items": [
+			{
+				"title": "Servisna istorija",
+				"body": "Unesi servise sa datumom, kilometražom i napomenama. Fotografije računa ostaju uz zapis."
+			},
+			{
+				"title": "Gorivo i troškovi",
+				"body": "Prati potrošnju goriva, parking, registraciju i ostale troškove po vozilu — pregledno kroz vreme."
+			},
+			{
+				"title": "Podsetnici",
+				"body": "Podesi podsetnike za servis, tehnički pregled, osiguranje ili zamenu guma — pre nego što zaboraviš."
+			},
+			{
+				"title": "Više vozila",
+				"body": "Porodica ili mali flota: sva vozila u jednom nalogu, svako sa svojom istorijom."
+			},
+			{
+				"title": "Web i telefon",
+				"body": "Koristi pregledač na računaru ili aplikaciju na telefonu — isti podaci, bez instalacije obavezan za start."
+			}
+		]
+	},
+	"howItWorks": {
+		"headline": "Kako početi",
+		"steps": [
+			{
+				"title": "Dodaj vozilo",
+				"body": "Unesi marku, model i trenutnu kilometražu — ili više vozila odjednom."
+			},
+			{
+				"title": "Evidentiraj servise i troškove",
+				"body": "Dodaj servise, sipanja goriva i troškove kad god se dese; istorija raste sama."
+			},
+			{
+				"title": "Podesi podsetnike",
+				"body": "Izaberi šta želiš da te podseti — servis, registracija, gume — i nastavi da voziš mirno."
+			}
+		]
+	},
+	"faq": {
+		"items": [
+			{
+				"q": "Da li je Servisna Knjižica ista aplikacija kao RideLogger?",
+				"a": "Da — isti proizvod, drugačiji naziv na balkanskom tržištu (Servisna Knjižica) i globalno (RideLogger)."
+			},
+			{
+				"q": "Da li moram da instaliram aplikaciju?",
+				"a": "Ne moraš odmah. Možeš početi u web pregledaču; na telefonu je dostupna i aplikacija za Android."
+			},
+			{
+				"q": "Koliko vozila mogu da pratim?",
+				"a": "Više vozila u jednom nalogu — pogodno za porodicu ili ako voziš i lično i službeno vozilo."
+			},
+			{
+				"q": "Da li podaci pomažu pri prodaji?",
+				"a": "Uredna servisna istorija olakšava pregovore — kupac vidi šta je urađeno na vozilu, bez nagađanja."
+			}
+		]
+	},
+	"closing": {
+		"headline": "Spreman za digitalnu servisnu knjižicu?",
+		"body": "Otvori Servisnu Knjižicu, dodaj vozilo i počni da beležiš servise i troškove — besplatno za start.",
+		"cta": "Otvori Servisnu Knjižicu"
+	},
+	"sectionLabels": {
+		"faqHeading": "Česta pitanja"
+	}
+}

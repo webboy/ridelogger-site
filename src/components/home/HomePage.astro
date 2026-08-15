@@ -31,6 +31,13 @@ const testimonialAvatars = [
 			<div class="hero__eyebrow" data-hk="hero.eyebrow">{home.hero.eyebrow}</div>
 			<h1 data-hk="hero.headline">{home.hero.headline}</h1>
 			<p class="lead" data-hk="hero.sub">{home.hero.sub}</p>
+			{
+				home.hero.definition && (
+					<p class="lead" data-hk="hero.definition">
+						{home.hero.definition}
+					</p>
+				)
+			}
 			<div class="hero__actions">
 				<a class="btn btn--primary" data-app-link href={getAppUrl(locale, appCountry)} rel="noopener">
 					<span data-hk="hero.primaryCta">{home.hero.primaryCta}</span>

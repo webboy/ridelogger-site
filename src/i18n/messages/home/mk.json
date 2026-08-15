@@ -20,7 +20,8 @@
         "secondaryCta": "Како функционира",
         "placeholderTitle": "Hero визуал",
         "placeholderBody": "Pending asset: add a generated homepage hero to media/generated/ (task 0021 image workflow), then integrate it here.",
-        "imageAlt": "Илустрација на производот: десктоп контролна табла и телефонска апликација за возила, трошоци и потсетници за одржување."
+        "imageAlt": "Илустрација на производот: десктоп контролна табла и телефонска апликација за возила, трошоци и потсетници за одржување.",
+        "definition": "Servisna Knjižica е дигитална сервисна книжица за сервиси, гориво, трошоци и потсетници — за едно или повеќе возила, во прелистувач и на телефон. На други пазари истиот производ е RideLogger."
     },
     "trust": {
         "title": "Дизајнирано за прегледност",
@@ -139,6 +140,7 @@
         "googlePlayBadgeAlt": "Преземи ја апликацијата од Google Play",
         "sellingCarsTitle": "Го продавате возилото?",
         "sellingPrivateLabel": "Приватна продажба",
-        "sellingDealersLabel": "Плацеви и трговци"
+        "sellingDealersLabel": "Плацеви и трговци",
+        "geoIntentLabel": "Дигитална сервисна книжица"
     }
 }

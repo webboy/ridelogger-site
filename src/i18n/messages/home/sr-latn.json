@@ -16,6 +16,7 @@
         "eyebrow": "Održavanje i troškovi",
         "headline": "Istorija vozila, konačno na jednom mestu.",
         "sub": "Beležite servise, gorivo i troškove uz podsetnike koji pomažu da izbegnete skupa iznenađenja.",
+        "definition": "Servisna Knjižica je digitalna servisna knjižica za istoriju servisa, gorivo, troškove i podsetnike, za jedno ili više vozila, u pregledaču i na telefonu. Na drugim tržištima isti proizvod radi kao RideLogger.",
         "primaryCta": "Otvori web aplikaciju",
         "secondaryCta": "Kako funkcioniše",
         "placeholderTitle": "Hero vizuel",
@@ -139,6 +140,7 @@
         "googlePlayBadgeAlt": "Preuzmi aplikaciju na Google Play-u",
         "sellingCarsTitle": "Prodajete vozilo?",
         "sellingPrivateLabel": "Privatni prodavci",
-        "sellingDealersLabel": "Auto placevi"
+        "sellingDealersLabel": "Auto placevi",
+        "geoIntentLabel": "Digitalna servisna knjižica"
     }
 }

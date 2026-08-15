@@ -1,0 +1,89 @@
+{
+	"meta": {
+		"title": "Digitales Serviceheft — RideLogger",
+		"description": "RideLogger ist ein digitales Serviceheft für Servicehistorie, Kraftstoff, Kosten und Erinnerungen — für ein oder mehrere Fahrzeuge, im Browser und am Handy.",
+		"heroImageAlt": "Illustration eines digitalen Servicehefts: Servicehistorie, Kraftstoff und Kosten auf Smartphone und Desktop."
+	},
+	"hero": {
+		"eyebrow": "Digitales Serviceheft",
+		"headline": "Was ist ein digitales Serviceheft?",
+		"sub": "RideLogger ist ein digitales Serviceheft — eine App, in der jedes Fahrzeug eine klare Historie hat: Wartung, Kraftstoff, Kosten und Erinnerungen für anstehende Servicearbeiten. Es läuft im Browser und am Handy, für ein oder mehrere Fahrzeuge. Auf dem Balkan heißt dasselbe Produkt Servisna Knjižica.",
+		"primaryCta": "Web-App öffnen",
+		"secondaryCta": "So funktioniert’s",
+		"secondaryHref": "#how"
+	},
+	"intro": {
+		"headline": "Warum digital statt Papier?",
+		"body": "Das Papier-Serviceheft geht verloren, wird unleserlich und erfasst selten Kraftstoff oder kleinere Kosten. Ein digitales Serviceheft bündelt alles an einem Ort — mit Erinnerungen vor TÜV, Service oder Reifenwechsel — und lässt sich beim Verkauf leicht teilen."
+	},
+	"benefits": {
+		"headline": "Das bekommst du",
+		"items": [
+			{
+				"title": "Servicehistorie",
+				"body": "Trage Wartungen mit Datum, Kilometerstand und Notizen ein. Rechnungsfotos bleiben am Eintrag."
+			},
+			{
+				"title": "Kraftstoff & Kosten",
+				"body": "Verfolge Verbrauch, Parken, Versicherung und andere Ausgaben pro Fahrzeug — übersichtlich über die Zeit."
+			},
+			{
+				"title": "Erinnerungen",
+				"body": "Stelle Erinnerungen für Service, HU, Versicherung oder Reifen ein — bevor du es vergisst."
+			},
+			{
+				"title": "Mehrere Fahrzeuge",
+				"body": "Familie oder kleiner Fuhrpark: alle Fahrzeuge in einem Konto, jedes mit eigener Historie."
+			},
+			{
+				"title": "Web & Handy",
+				"body": "Nutze den Browser am PC oder die App am Smartphone — dieselben Daten, kein Muss zur Installation für den Start."
+			}
+		]
+	},
+	"howItWorks": {
+		"headline": "So startest du",
+		"steps": [
+			{
+				"title": "Fahrzeug anlegen",
+				"body": "Marke, Modell und aktuellen Kilometerstand eintragen — oder gleich mehrere Fahrzeuge."
+			},
+			{
+				"title": "Service und Kosten erfassen",
+				"body": "Wartungen, Tankvorgänge und Ausgaben eintragen, wenn sie anfallen — die Historie wächst von selbst."
+			},
+			{
+				"title": "Erinnerungen setzen",
+				"body": "Wähle, wofür du erinnert werden willst — Service, HU, Reifen — und fahre beruhigt weiter."
+			}
+		]
+	},
+	"faq": {
+		"items": [
+			{
+				"q": "Ist RideLogger dieselbe App wie Servisna Knjižica?",
+				"a": "Ja — dasselbe Produkt, anderer Name auf dem Balkan (Servisna Knjižica) und global (RideLogger)."
+			},
+			{
+				"q": "Muss ich eine App installieren?",
+				"a": "Nicht sofort. Du kannst im Browser starten; am Handy gibt es auch eine Android-App."
+			},
+			{
+				"q": "Wie viele Fahrzeuge kann ich tracken?",
+				"a": "Mehrere Fahrzeuge in einem Konto — praktisch für Familie oder wenn du privat und dienstlich fährst."
+			},
+			{
+				"q": "Helfen die Daten beim Verkauf?",
+				"a": "Eine gepflegte Servicehistorie erleichtert Verhandlungen — der Käufer sieht, was am Fahrzeug gemacht wurde."
+			}
+		]
+	},
+	"closing": {
+		"headline": "Bereit für dein digitales Serviceheft?",
+		"body": "Öffne RideLogger, lege ein Fahrzeug an und beginne mit Wartung und Kosten — kostenlos zum Start.",
+		"cta": "RideLogger öffnen"
+	},
+	"sectionLabels": {
+		"faqHeading": "Häufige Fragen"
+	}
+}

@@ -20,7 +20,8 @@
         "secondaryCta": "Comment ca marche",
         "placeholderTitle": "Visuel principal",
         "placeholderBody": "Ressource en attente : ajoutez un visuel d'accueil genere dans media/generated/ (workflow image de la tache 0021), puis integrez-le ici.",
-        "imageAlt": "Illustration produit : tableau de bord desktop et application mobile pour vehicules, depenses et rappels d'entretien."
+        "imageAlt": "Illustration produit : tableau de bord desktop et application mobile pour vehicules, depenses et rappels d'entretien.",
+        "definition": "RideLogger est un carnet d'entretien numérique pour l'historique des services, le carburant, les dépenses et les rappels — pour un ou plusieurs véhicules, sur le web et le téléphone. Sur les Balkans, le même produit s'appelle Servisna Knjižica."
     },
     "trust": {
         "title": "Pense pour la clarte",
@@ -139,6 +140,7 @@
         "googlePlayBadgeAlt": "Disponible sur Google Play",
         "sellingCarsTitle": "Vous vendez un vehicule ?",
         "sellingPrivateLabel": "Vente entre particuliers",
-        "sellingDealersLabel": "Professionnels"
+        "sellingDealersLabel": "Professionnels",
+        "geoIntentLabel": "Carnet d'entretien numérique"
     }
 }

@@ -22,7 +22,8 @@ export type RouteFamily =
 	| 'mcp'
 	| 'campaign-private'
 	| 'campaign-dealers'
-	| 'campaign-managed';
+	| 'campaign-managed'
+	| 'geo-service-logbook';
 
 /** Shared legal / MCP slugs (same on both instances). */
 export const SHARED_PATH_SUFFIXES = ['privacy', 'terms', 'cookies', 'mcp'] as const;
@@ -41,9 +42,33 @@ export const CAMPAIGN_SUFFIX_BY_FAMILY: Record<
 
 const CAMPAIGN_FAMILIES = ['campaign-private', 'campaign-dealers', 'campaign-managed'] as const;
 
+/** Per-country GEO intent slug (task 0088). Hub locales only — not hr/mk/fr/it/si. */
+export const GEO_SERVICE_LOGBOOK_SUFFIX_BY_COUNTRY: Record<string, string> = {
+	sr: 'digitalna-servisna-knjizica',
+	ba: 'digitalna-servisna-knjizica',
+	me: 'digitalna-servisna-knjizica',
+	de: 'digitales-serviceheft',
+	at: 'digitales-serviceheft',
+	ch: 'digitales-serviceheft',
+	us: 'digital-service-logbook',
+};
+
+export const GEO_INTENT_BALKAN_COUNTRIES = ['sr', 'ba', 'me'] as const;
+export const GEO_INTENT_DE_COUNTRIES = ['de', 'at', 'ch'] as const;
+export const GEO_INTENT_EN_COUNTRIES = ['us'] as const;
+
 /** US has no campaign pages (no EN campaign copy). */
 export function countryEmitsCampaigns(countryPath: string): boolean {
 	return countryPath !== EN_HUB_COUNTRY;
+}
+
+/** Country emits a GEO service-logbook intent page (sr/de/en hubs only). */
+export function countryEmitsGeoIntent(countryPath: string): boolean {
+	return countryPath in GEO_SERVICE_LOGBOOK_SUFFIX_BY_COUNTRY;
+}
+
+export function geoIntentSuffixForCountry(countryPath: string): string | null {
+	return GEO_SERVICE_LOGBOOK_SUFFIX_BY_COUNTRY[countryPath] ?? null;
 }
 
 export function marketingOriginForInstance(instance: DeployInstance): string {
@@ -104,6 +129,10 @@ export function pathSuffixToFamily(pathSuffix: string): RouteFamily {
 		}
 	}
 
+	if (Object.values(GEO_SERVICE_LOGBOOK_SUFFIX_BY_COUNTRY).includes(pathSuffix)) {
+		return 'geo-service-logbook';
+	}
+
 	throw new Error(`Unknown path suffix: ${pathSuffix}`);
 }
 
@@ -125,6 +154,8 @@ export function pathSuffixForCountry(countryPath: string, family: RouteFamily): 
 		case 'campaign-managed':
 			if (!countryEmitsCampaigns(countryPath)) return null;
 			return CAMPAIGN_SUFFIX_BY_FAMILY[family][cfg.instance];
+		case 'geo-service-logbook':
+			return geoIntentSuffixForCountry(countryPath);
 		default:
 			return null;
 	}
@@ -163,6 +194,7 @@ export function sitePagesForInstance(instance: DeployInstance): SitePageRef[] {
 		'campaign-private',
 		'campaign-dealers',
 		'campaign-managed',
+		'geo-service-logbook',
 	];
 
 	for (const cfg of countryPagesForInstance(instance)) {

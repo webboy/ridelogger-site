@@ -19,6 +19,7 @@
 | 8 | Dealer inquiry CTAs (mailto/form) | dealer + managed landings | both |
 | 9 | CTA wiring to User PWA / Partner PWA | header, home, campaigns, MCP | both |
 | 10 | Crawl / GEO hygiene | `/robots.txt`, `/sitemap.xml`, `/llms.txt`, hreflang, JSON-LD | both |
+| 11 | GEO hub + intent pages | Home `hero.definition` SSR; intent landings sr/de/en | both |
 
 ---
 
@@ -109,4 +110,20 @@ Per-instance static files at build time. `robots.txt` explicitly allows search/A
 
 **JSON-LD** on country home pages only (`JsonLdHome.astro`): `Organization` + `SoftwareApplication` with both product names and `sameAs` linking both `www.servisna-knjizica.com` and `www.ridelogger.com`.
 
-E2E: `e2e/geo-crawl-global.spec.ts`, `e2e/geo-crawl-balkan.spec.ts` (via `make test-docker-e2e-site`).
+E2E: `e2e/geo-crawl-global.spec.ts`, `e2e/geo-crawl-balkan.spec.ts`, `e2e/geo-hub-global.spec.ts`, `e2e/geo-hub-balkan.spec.ts` (via `make test-docker-e2e-site`).
+
+## 11. GEO hub + intent pages (task 0088)
+
+Hub locales **sr** (balkan), **de** (global), **en/us** (global) get an SSR **`hero.definition`** paragraph on home — explicit category noun (digitalna servisna knjižica / digitales Serviceheft / digital service logbook) plus one cross-brand mention (SK↔RL).
+
+**Intent landing pages** (not blog; `lockMarketingSeo={true}`):
+
+| Instance | Countries | Slug |
+|----------|-----------|------|
+| balkan | sr, ba, me | `/digitalna-servisna-knjizica/` |
+| global | de, at, ch | `/digitales-serviceheft/` |
+| global | us | `/digital-service-logbook/` |
+
+- **Source:** `src/pages/[country]/{digitalna-servisna-knjizica,digitales-serviceheft,digital-service-logbook}.astro`, `src/components/geo/GeoIntentLanding.astro`, `src/i18n/messages/geo/service-logbook/{sr-latn,de,en}.json`, `src/config/siteRoutes.ts` (`geo-service-logbook` family, `countryEmitsGeoIntent()`).
+- **Footer discovery link** when `countryEmitsGeoIntent(countryPath)` (`footer.geoIntentLabel` in home JSON).
+- **Hreflang trio** links SR ↔ DE ↔ EN intent URLs; `x-default` → `https://www.ridelogger.com/us/digital-service-logbook/`.

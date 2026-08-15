@@ -1,0 +1,48 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import GeoIntentLanding from '../../components/geo/GeoIntentLanding.astro';
+import {
+	appCountryCodeFromPath,
+	countryPagesForInstance,
+	getCountryByPath,
+	type DeployInstance,
+} from '../../config/countries';
+import { GEO_INTENT_BALKAN_COUNTRIES } from '../../config/siteRoutes';
+import { getAllHomeMessages, getHomeMessages } from '../../i18n/loadHome';
+import { geoServiceLogbookContent } from '../../i18n/geoServiceLogbook';
+import { getAppUrl } from '../../config/public';
+
+export function getStaticPaths() {
+	const inst = (import.meta.env.PUBLIC_INSTANCE || 'balkan') as DeployInstance;
+	if (inst !== 'balkan') return [];
+	return countryPagesForInstance('balkan')
+		.filter((c) => (GEO_INTENT_BALKAN_COUNTRIES as readonly string[]).includes(c.path))
+		.map((c) => ({ params: { country: c.path } }));
+}
+
+const param = Astro.params.country;
+const cfg = getCountryByPath(param ?? '');
+if (!cfg) {
+	throw new Error(`Unknown country: ${param}`);
+}
+
+const locale = cfg.defaultLocale;
+const content = geoServiceLogbookContent(locale);
+const home = getHomeMessages(locale);
+const homes = getAllHomeMessages();
+const appCountry = appCountryCodeFromPath(param ?? '');
+const appUrl = getAppUrl(locale, appCountry);
+---
+
+<SiteLayout
+	countryPath={cfg.path}
+	locale={locale}
+	title={content.meta.title}
+	description={content.meta.description}
+	home={home}
+	homes={homes}
+	lockMarketingSeo={true}
+	pathSuffix="digitalna-servisna-knjizica"
+>
+	<GeoIntentLanding content={content} appUrl={appUrl} />
+</SiteLayout>

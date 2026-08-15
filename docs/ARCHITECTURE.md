@@ -205,8 +205,9 @@ Static artifacts generated at build time from `PUBLIC_SITE_URL` + `PUBLIC_INSTAN
 - Emitted in `SiteLayout.astro` for all `[country]` pages and in `index.astro` (picker → every country home).
 - Country codes: regional variants for Balkan/German clusters (`sr-Latn`, `sr-Latn-BA`, `sr-Latn-ME`, `de`, `de-AT`, `de-CH`, …).
 - Campaign slug pairs: `private-sellers` ↔ `prodaja-auta`, `auto-dealers` ↔ `auto-placevi`, managed variants likewise.
-- **`x-default`** → `https://www.ridelogger.com/us/` (+ same suffix when an EN page exists; campaigns without EN US paths fall back to `/us/` home).
+- **`x-default`** → `https://www.ridelogger.com/us/` (+ same suffix when an EN page exists; campaigns without EN US paths fall back to `/us/` home; **GEO intent** `geo-service-logbook` family uses `/us/digital-service-logbook/`).
 - **`us` campaign paths are not built** — global campaign `getStaticPaths` excludes `us`.
+- **GEO intent pages (task 0088):** route family `geo-service-logbook` — per-country slug (`digitalna-servisna-knjizica` on sr/ba/me, `digitales-serviceheft` on de/at/ch, `digital-service-logbook` on us). Cross-domain hreflang trio links all three hub intents; `x-default` → EN intent URL.
 
 Reference map: `~/sk/memory/tasks/0087-site-geo-crawl-foundation/artifacts/hreflang-map.md`.
 
@@ -229,8 +230,8 @@ Each config **builds the site with instance-specific env** (including mailto tes
 
 | Config | Specs | Instance build | What it verifies |
 |---|---|---|---|
-| `playwright.config.ts` | `e2e/global-landings.spec.ts`, `e2e/geo-crawl-global.spec.ts` | global | Campaign landings (DE/FR) + robots/sitemap/llms, hreflang SK↔RL, JSON-LD, US campaigns absent |
-| `playwright.balkan.config.ts` | `e2e/balkan-landings.spec.ts`, `e2e/geo-crawl-balkan.spec.ts` | balkan | Campaign landings (SR/MK) + crawl artifacts for SK origin |
+| `playwright.config.ts` | `e2e/global-landings.spec.ts`, `e2e/geo-crawl-global.spec.ts`, `e2e/geo-hub-global.spec.ts` | global | Campaign landings (DE/FR) + crawl artifacts + GEO hub definition + intent pages |
+| `playwright.balkan.config.ts` | `e2e/balkan-landings.spec.ts`, `e2e/geo-crawl-balkan.spec.ts`, `e2e/geo-hub-balkan.spec.ts` | balkan | Campaign landings (SR/MK) + crawl artifacts + GEO hub definition + intent pages |
 
 Notes: legal and MCP pages are not covered by campaign e2e; geo-crawl specs cover home hreflang/JSON-LD and static crawl files.
 

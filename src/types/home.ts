@@ -17,6 +17,8 @@ export interface HomeMessages {
 		eyebrow: string;
 		headline: string;
 		sub: string;
+		/** SSR category definition (GEO hub locales). Max ~2 sentences. */
+		definition?: string;
 		primaryCta: string;
 		secondaryCta: string;
 		placeholderTitle: string;
@@ -79,5 +81,7 @@ export interface HomeMessages {
 		sellingCarsTitle?: string;
 		sellingPrivateLabel?: string;
 		sellingDealersLabel?: string;
+		/** Footer discovery link to GEO intent landing (hub locales only). */
+		geoIntentLabel?: string;
 	};
 }

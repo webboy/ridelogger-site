@@ -20,7 +20,8 @@
         "secondaryCta": "Kako deluje",
         "placeholderTitle": "Glavni vizual",
         "placeholderBody": "Cakajoca vsebina: dodajte ustvarjeno naslovno ilustracijo v media/generated/ (slikovni workflow naloge 0021), nato jo vkljucite tukaj.",
-        "imageAlt": "Ilustracija izdelka: namizna nadzorna plosca in mobilna aplikacija za vozila, stroske in opomnike za vzdrzevanje."
+        "imageAlt": "Ilustracija izdelka: namizna nadzorna plosca in mobilna aplikacija za vozila, stroske in opomnike za vzdrzevanje.",
+        "definition": "RideLogger je digitalna servisna knjižica za zgodovino servisov, gorivo, stroške in opomnike — za eno ali več vozil, v brskalniku in na telefonu. Na Balkanu isti produkt nosi ime Servisna Knjižica."
     },
     "trust": {
         "title": "Zasnovano za jasnost",
@@ -139,6 +140,7 @@
         "googlePlayBadgeAlt": "Prenesi v Google Play",
         "sellingCarsTitle": "Prodajate vozilo?",
         "sellingPrivateLabel": "Zasebna prodaja",
-        "sellingDealersLabel": "Trgovci in plac"
+        "sellingDealersLabel": "Trgovci in plac",
+        "geoIntentLabel": "Digitalna servisna knjižica"
     }
 }

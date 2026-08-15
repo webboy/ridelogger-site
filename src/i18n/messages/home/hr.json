@@ -20,7 +20,8 @@
         "secondaryCta": "Kako funkcionira",
         "placeholderTitle": "Hero vizual",
         "placeholderBody": "Slika još nije spremna: dodajte generirani hero u media/generated/ (task 0021), zatim ga integrirajte ovdje.",
-        "imageAlt": "Ilustracija proizvoda: desktop nadzorna ploča i mobilna aplikacija za vozila, troškove i podsjetnike na servis."
+        "imageAlt": "Ilustracija proizvoda: desktop nadzorna ploča i mobilna aplikacija za vozila, troškove i podsjetnike na servis.",
+        "definition": "Servisna Knjižica je digitalna servisna knjižica za servise, gorivo, troškove i podsjetnike — za jedno ili više vozila, u pregledniku i na telefonu. Na drugim tržištima isti proizvod poznat je kao RideLogger."
     },
     "trust": {
         "title": "Dizajnirano za jasnoću",
@@ -139,6 +140,7 @@
         "googlePlayBadgeAlt": "Preuzmi aplikaciju na Google Playu",
         "sellingCarsTitle": "Prodajete vozilo?",
         "sellingPrivateLabel": "Privatna prodaja",
-        "sellingDealersLabel": "Placevi i trgovci"
+        "sellingDealersLabel": "Placevi i trgovci",
+        "geoIntentLabel": "Digitalna servisna knjižica"
     }
 }

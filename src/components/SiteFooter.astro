@@ -3,7 +3,7 @@ import type { HomeMessages } from '../types/home';
 import type { Locale } from '../i18n/config';
 import { brandName } from '../i18n/config';
 import { countryPagesForInstance } from '../config/countries';
-import { countryEmitsCampaigns } from '../config/siteRoutes';
+import { countryEmitsCampaigns, countryEmitsGeoIntent, geoIntentSuffixForCountry } from '../config/siteRoutes';
 
 interface Props {
 	countryPath: string;
@@ -27,6 +27,13 @@ const sellingPrivateHref =
 	inst === 'global' ? `/${countryPath}/private-sellers/` : `/${countryPath}/prodaja-auta/`;
 const sellingDealersHref =
 	inst === 'global' ? `/${countryPath}/auto-dealers/` : `/${countryPath}/auto-placevi/`;
+
+const geoIntent =
+	home.footer.geoIntentLabel &&
+	countryPathsThisInstance.includes(countryPath) &&
+	countryEmitsGeoIntent(countryPath);
+const geoIntentSuffix = geoIntent ? geoIntentSuffixForCountry(countryPath) : null;
+const geoIntentHref = geoIntentSuffix ? `/${countryPath}/${geoIntentSuffix}/` : null;
 ---
 
 <footer class="site-footer">
@@ -46,6 +53,15 @@ const sellingDealersHref =
 						{' · '}
 						<a href={sellingDealersHref} data-hk="footer.sellingDealersLabel">
 							{home.footer.sellingDealersLabel}
+						</a>
+					</p>
+				)
+			}
+			{
+				geoIntent && geoIntentHref && (
+					<p class="muted site-footer__geo-intent" style="margin-top: 1rem; font-size: 0.95rem">
+						<a href={geoIntentHref} data-hk="footer.geoIntentLabel">
+							{home.footer.geoIntentLabel}
 						</a>
 					</p>
 				)
