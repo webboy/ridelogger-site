@@ -20,7 +20,8 @@
         "secondaryCta": "Nasıl çalışır?",
         "placeholderTitle": "Kahraman görseli",
         "placeholderBody": "Bekleyen varlık: oluşturulan bir ana sayfa kahramanını medya/oluşturulan/ (görev 0021 görüntü iş akışı) dosyasına ekleyin ve ardından buraya entegre edin.",
-        "imageAlt": "Ürün illüstrasyonu: araçlar, giderler ve bakım hatırlatıcıları için masaüstü kontrol paneli ve telefon uygulaması."
+        "imageAlt": "Ürün illüstrasyonu: araçlar, giderler ve bakım hatırlatıcıları için masaüstü kontrol paneli ve telefon uygulaması.",
+        "definition": "RideLogger; servis geçmişi, yakıt, giderler ve hatırlatıcılar için dijital bir bakım defteridir — bir veya daha fazla araç için, web ve telefonda. Balkanlarda aynı ürün Servisna Knjižica adıyla bilinir."
     },
     "trust": {
         "title": "Netlik için tasarlandı",
@@ -136,6 +137,7 @@
     "footer": {
         "tagline": "Gerçek anlamda araç kullanan kişiler için araç bakım kayıt defteri.",
         "note": "Ürün adları ve stok durumu değişebilir; web uygulaması birincil giriş noktası olmaya devam ediyor.",
-        "googlePlayBadgeAlt": "Google Play'den edinin"
+        "googlePlayBadgeAlt": "Google Play'den edinin",
+        "geoIntentLabel": "Dijital bakım defteri"
     }
 }

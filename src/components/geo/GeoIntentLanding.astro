@@ -1,0 +1,133 @@
+---
+import type { GeoIntentLandingContent } from '../../types/geoIntentLanding';
+
+interface Props {
+	content: GeoIntentLandingContent;
+	appUrl: string;
+}
+
+const { content: c, appUrl } = Astro.props;
+
+const faqHeading = c.sectionLabels?.faqHeading ?? 'FAQ';
+
+const howIcons = [
+	'<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
+	'<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>',
+	'<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/><path d="M12 2v4"/></svg>',
+];
+---
+
+<section class="hero">
+	<div class="shell hero__grid">
+		<div>
+			<div class="hero__eyebrow">{c.hero.eyebrow}</div>
+			<h1>{c.hero.headline}</h1>
+			<p class="lead">{c.hero.sub}</p>
+			<div class="hero__actions">
+				<a class="btn btn--primary" href={appUrl} rel="noopener" data-app-link>
+					{c.hero.primaryCta}
+				</a>
+				{
+					c.hero.secondaryHref.startsWith('#') ? (
+						<a class="btn btn--ghost" href={c.hero.secondaryHref}>
+							{c.hero.secondaryCta}
+						</a>
+					) : (
+						<a class="btn btn--ghost" href={c.hero.secondaryHref}>
+							{c.hero.secondaryCta}
+						</a>
+					)
+				}
+			</div>
+		</div>
+		<div class="hero__art hero__art--image">
+			<img
+				src="/images/home-hero.jpg"
+				width="1024"
+				height="682"
+				alt={c.meta.heroImageAlt}
+				loading="eager"
+				fetchpriority="high"
+				decoding="async"
+			/>
+		</div>
+	</div>
+</section>
+
+<section class="section" aria-labelledby="geo-intro-title">
+	<div class="shell">
+		<h2 id="geo-intro-title">{c.intro.headline}</h2>
+		<p class="muted" style="max-width: 52rem; font-size: 1.05rem; line-height: 1.55">{c.intro.body}</p>
+	</div>
+</section>
+
+<section class="section" aria-labelledby="geo-benefits-title">
+	<div class="shell">
+		<h2 id="geo-benefits-title">{c.benefits.headline}</h2>
+		<div class="grid grid--3">
+			{
+				c.benefits.items.map((item) => (
+					<div class="card">
+						<h3 style="margin-top: 0">{item.title}</h3>
+						<p class="muted" style="margin: 0; line-height: 1.55">
+							{item.body}
+						</p>
+					</div>
+				))
+			}
+		</div>
+	</div>
+</section>
+
+<section class="section" id="how" aria-labelledby="geo-how-title">
+	<div class="shell">
+		<h2 id="geo-how-title">{c.howItWorks.headline}</h2>
+		<div class="steps">
+			{
+				c.howItWorks.steps.map((step, i) => (
+					<div class="steps__item">
+						<span class="steps__icon" set:html={howIcons[i % howIcons.length]} />
+						<div>
+							<h3 style="margin: 0 0 0.35rem">{step.title}</h3>
+							<p class="muted" style="margin: 0; line-height: 1.55">
+								{step.body}
+							</p>
+						</div>
+					</div>
+				))
+			}
+		</div>
+	</div>
+</section>
+
+<section class="section" aria-labelledby="geo-faq-title">
+	<div class="shell">
+		<h2 id="geo-faq-title">{faqHeading}</h2>
+		<div class="faq">
+			{
+				c.faq.items.map((item) => (
+					<details class="faq__item">
+						<summary>{item.q}</summary>
+						<p class="muted" style="margin: 0.75rem 0 0; line-height: 1.55">
+							{item.a}
+						</p>
+					</details>
+				))
+			}
+		</div>
+	</div>
+</section>
+
+<section class="section section--cta">
+	<div class="shell">
+		<div class="cta-band">
+			<h2 style="margin-top: 0">{c.closing.headline}</h2>
+			<p class="muted" style="max-width: 42rem; margin: 0 auto 1.25rem; line-height: 1.55">
+				{c.closing.body}
+			</p>
+			<a class="btn btn--primary" href={appUrl} rel="noopener" data-app-link>
+				{c.closing.cta}
+			</a>
+		</div>
+	</div>
+</section>

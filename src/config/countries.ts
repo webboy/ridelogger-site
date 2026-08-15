@@ -9,7 +9,7 @@ export type CountryPageConfig = {
 	flagCode: string;
 	instance: DeployInstance;
 	defaultLocale: Locale;
-	/** Kampanje (auto-dealers, private-sellers) — ako nema copy za defaultLocale (npr. US/en). */
+	/** Kampanje (auto-dealers, private-sellers) — legacy override; US campaigns are not emitted. */
 	campaignLocale?: Locale;
 	names: {
 		'sr-latn': string;
@@ -241,7 +241,6 @@ export const COUNTRY_PAGES: CountryPageConfig[] = [
 		flagCode: 'us',
 		instance: 'global',
 		defaultLocale: 'en',
-		campaignLocale: 'de',
 		names: {
 			'sr-latn': 'Sjedinjene Američke Države',
 			hr: 'Sjedinjene Američke Države',

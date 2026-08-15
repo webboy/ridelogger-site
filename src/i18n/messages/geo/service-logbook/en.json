@@ -1,0 +1,89 @@
+{
+	"meta": {
+		"title": "Digital service logbook — RideLogger",
+		"description": "RideLogger is a digital vehicle maintenance logbook for service history, fuel, expenses and reminders — for one or more vehicles, on web and phone.",
+		"heroImageAlt": "Illustration of a digital service logbook: service history, fuel and expenses on phone and desktop."
+	},
+	"hero": {
+		"eyebrow": "Digital service logbook",
+		"headline": "What is a digital service logbook?",
+		"sub": "RideLogger is a digital vehicle maintenance logbook — an app where each vehicle has one clear history: services, fuel, expenses and maintenance reminders. It works in the browser and on your phone, for one or many vehicles. In the Balkans the same product is called Servisna Knjižica.",
+		"primaryCta": "Open web app",
+		"secondaryCta": "How it works",
+		"secondaryHref": "#how"
+	},
+	"intro": {
+		"headline": "Why digital instead of paper?",
+		"body": "Paper logbooks get lost, fade and rarely track fuel or small costs. A digital service logbook keeps everything in one place — with reminders before registration, service or tyre changes — and is easy to share when you sell the car."
+	},
+	"benefits": {
+		"headline": "What you get",
+		"items": [
+			{
+				"title": "Service history",
+				"body": "Log services with date, mileage and notes. Receipt photos stay with the entry."
+			},
+			{
+				"title": "Fuel & expenses",
+				"body": "Track fuel use, parking, insurance and other costs per vehicle — clearly over time."
+			},
+			{
+				"title": "Reminders",
+				"body": "Set reminders for service, inspection, insurance or tyres — before you forget."
+			},
+			{
+				"title": "Multiple vehicles",
+				"body": "Family or small fleet: all vehicles in one account, each with its own history."
+			},
+			{
+				"title": "Web & phone",
+				"body": "Use the browser on desktop or the app on your phone — same data, no install required to start."
+			}
+		]
+	},
+	"howItWorks": {
+		"headline": "How to start",
+		"steps": [
+			{
+				"title": "Add a vehicle",
+				"body": "Enter make, model and current mileage — or several vehicles at once."
+			},
+			{
+				"title": "Log services and costs",
+				"body": "Add services, fill-ups and expenses as they happen; the history builds itself."
+			},
+			{
+				"title": "Set reminders",
+				"body": "Choose what to be reminded about — service, registration, tyres — and keep driving with peace of mind."
+			}
+		]
+	},
+	"faq": {
+		"items": [
+			{
+				"q": "Is RideLogger the same app as Servisna Knjižica?",
+				"a": "Yes — the same product, different name in the Balkans (Servisna Knjižica) and globally (RideLogger)."
+			},
+			{
+				"q": "Do I need to install an app?",
+				"a": "Not right away. You can start in the browser; an Android app is also available on your phone."
+			},
+			{
+				"q": "How many vehicles can I track?",
+				"a": "Multiple vehicles in one account — handy for families or if you drive both personal and work cars."
+			},
+			{
+				"q": "Does the history help when selling?",
+				"a": "A well-kept service history makes negotiations easier — buyers see what was done on the car."
+			}
+		]
+	},
+	"closing": {
+		"headline": "Ready for a digital service logbook?",
+		"body": "Open RideLogger, add a vehicle and start logging services and expenses — free to get started.",
+		"cta": "Open RideLogger"
+	},
+	"sectionLabels": {
+		"faqHeading": "FAQ"
+	}
+}

@@ -16,6 +16,7 @@
         "eyebrow": "Maintenance & costs",
         "headline": "Your vehicle history, finally in one place.",
         "sub": "Record services, fuel and expenses with reminders that help you avoid costly surprises.",
+        "definition": "RideLogger is a digital vehicle maintenance logbook for service history, fuel, expenses and reminders, for one or more vehicles, on web and phone. In the Balkans the same product is Servisna Knjižica.",
         "primaryCta": "Open web app",
         "secondaryCta": "How it works",
         "placeholderTitle": "Hero visual",
@@ -136,6 +137,7 @@
     "footer": {
         "tagline": "Vehicle maintenance logbook for people who drive for real.",
         "note": "Product names and availability may evolve; the web app remains the primary entry point.",
-        "googlePlayBadgeAlt": "Get it on Google Play"
+        "googlePlayBadgeAlt": "Get it on Google Play",
+        "geoIntentLabel": "Digital service logbook"
     }
 }

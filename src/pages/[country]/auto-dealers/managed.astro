@@ -1,7 +1,8 @@
 ---
 import SiteLayout from '../../../layouts/SiteLayout.astro';
 import ManagedDealerLanding from '../../../components/managed-dealer/ManagedDealerLanding.astro';
-import { countryPagesForInstance, getCountryByPath, campaignLocaleForCountry, type DeployInstance } from '../../../config/countries';
+import { getCountryByPath, campaignLocaleForCountry, type DeployInstance } from '../../../config/countries';
+import { globalCampaignCountryPaths } from '../../../config/crawlArtifacts';
 import { appCountryCodeFromPath } from '../../../config/countries';
 import { getAllHomeMessages, getHomeMessages } from '../../../i18n/loadHome';
 import { getAppUrl, getManagedDealerInquiryUrl } from '../../../config/public';
@@ -10,7 +11,7 @@ import { rlManagedDealersCampaign } from '../../../i18n/managedDealerCampaigns';
 export function getStaticPaths() {
 	const inst = (import.meta.env.PUBLIC_INSTANCE || 'balkan') as DeployInstance;
 	if (inst !== 'global') return [];
-	return countryPagesForInstance('global').map((c) => ({ params: { country: c.path } }));
+	return globalCampaignCountryPaths().map((country) => ({ params: { country } }));
 }
 const param = Astro.params.country;
 const cfg = getCountryByPath(param ?? '');

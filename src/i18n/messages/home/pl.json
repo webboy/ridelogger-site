@@ -20,7 +20,8 @@
         "secondaryCta": "Jak to działa",
         "placeholderTitle": "Wizualizacja bohatera",
         "placeholderBody": "Oczekujący zasób: dodaj wygenerowany bohater strony głównej do multimediów/wygenerowanych/ (obieg obrazu zadania 0021), a następnie zintegruj go tutaj.",
-        "imageAlt": "Ilustracja produktu: pulpit nawigacyjny i aplikacja na telefon wyświetlająca przypomnienia o pojazdach, wydatkach i konserwacji."
+        "imageAlt": "Ilustracja produktu: pulpit nawigacyjny i aplikacja na telefon wyświetlająca przypomnienia o pojazdach, wydatkach i konserwacji.",
+        "definition": "RideLogger to cyfrowa książka serwisowa historii napraw, paliwa, kosztów i przypomnień — dla jednego lub wielu pojazdów, w przeglądarce i na telefonie. Na Bałkanach ten sam produkt nazywa się Servisna Knjižica."
     },
     "trust": {
         "title": "Zaprojektowane z myślą o przejrzystości",
@@ -136,6 +137,7 @@
     "footer": {
         "tagline": "Dziennik konserwacji pojazdów dla osób, które jeżdżą naprawdę.",
         "note": "Nazwy produktów i ich dostępność mogą ulegać zmianom; aplikacja internetowa pozostaje głównym punktem wejścia.",
-        "googlePlayBadgeAlt": "Pobierz aplikację z Google Play"
+        "googlePlayBadgeAlt": "Pobierz aplikację z Google Play",
+        "geoIntentLabel": "Cyfrowa książka serwisowa"
     }
 }

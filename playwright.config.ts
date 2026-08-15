@@ -6,7 +6,7 @@ import { playwrightHtmlReportDir, playwrightOutputDir } from './playwright.share
  */
 export default defineConfig({
 	testDir: './e2e',
-	testMatch: 'global-landings.spec.ts',
+	testMatch: ['global-landings.spec.ts', 'geo-crawl-global.spec.ts', 'geo-hub-global.spec.ts'],
 	outputDir: playwrightOutputDir,
 	forbidOnly: !!process.env.CI,
 	retries: process.env.CI ? 2 : 0,

@@ -127,7 +127,52 @@ apache2ctl configtest && systemctl reload apache2
 
 Ranije je `www.servisna-knjizica.com` koristio **`/var/www/ridelogger-legacy/public`**. Astro statika je u `/var/www/ridelogger-site`.
 
+### Apex (`servisna-knjizica.com`) — obavezno
+
+Hostname dropleta je `servisna-knjizica`, pa Apache **`000-default`** / **`default-ssl`** (bez eksplicitnog `ServerName`) nasleđuju taj FQDN i **kradu** apex pre marketing vhosta. Posledica (viđeno 2026-07-20): apex je služio stari DigitalOcean LAMP `index.html` iz `/var/www/html` + self-signed cert — Google Safe Browsing je označio domen (sample URL sa `fbclid` na apexu).
+
+**Trajno stanje:**
+
+- `000-default` i `default-ssl` **disabled** (`a2dissite`).
+- HTTP (`servisna-knjizica.com.conf`): `ServerName` + `ServerAlias www` → **301** na `https://www.servisna-knjizica.com%{REQUEST_URI}`.
+- HTTPS (`servisna-knjizica.com-le-ssl.conf`): `ServerName www`, `ServerAlias` apex, `DocumentRoot /var/www/ridelogger-site`, apex → **301** na www; LE cert `live/servisna-knjizica.com` (SAN: apex + www).
+- DO placeholder: `/var/www/html/index.html` uklonjen/backupovan (ne vraćati).
+
+Provera:
+
+```bash
+curl -sSI http://servisna-knjizica.com/ | head -5
+# očekivano: 301 → https://www.servisna-knjizica.com/
+curl -sSI https://servisna-knjizica.com/ | head -5
+# očekivano: 301 → https://www.servisna-knjizica.com/
+curl -fsS https://www.servisna-knjizica.com/ | head -c 200
+# očekivano: Astro HTML (Digitalna servisna knjižica), NE DigitalOcean LAMP
+```
+
+Posle fixa: u Search Console → Security Issues → **Request a review** (tek kad provere gore prolaze).
+
+### Crawl artifacts (posle deploya)
+
+Proveri da Apache servira statičke fajlove iz docroot-a (404 na produkciji obično znači da build nije rsync-ovan ili vhost ne pokazuje na pravi folder):
+
+```bash
+# Balkan
+curl -sSI https://www.servisna-knjizica.com/robots.txt | head -3
+curl -sSI https://www.servisna-knjizica.com/sitemap.xml | head -3
+curl -sSI https://www.servisna-knjizica.com/llms.txt | head -3
+
+# Global
+curl -sSI https://www.ridelogger.com/robots.txt | head -3
+curl -sSI https://www.ridelogger.com/sitemap.xml | head -3
+curl -sSI https://www.ridelogger.com/llms.txt | head -3
+```
+
+Očekivano: **HTTP 200**; `robots.txt` sadrži `Sitemap:` sa odgovarajućim origin-om; global sitemap `<loc>` URL-ovi su samo pod `www.ridelogger.com`, balkan samo pod `www.servisna-knjizica.com` (peer hreflang URL-ovi mogu biti u `xhtml:link` unutar sitemap-a).
+
+**WAF / bot blocking:** proveri da Cloudflare ili server firewall ne seče `OAI-SearchBot`, `PerplexityBot`, ili `Googlebot` na marketing domenima. Ako se botovi blokiraju, hreflang/sitemap ne pomažu — prvo dozvoliti crawl.
+
 ### Apache — održavanje servera
 
 - U **`sites-enabled`** ne ostavljati `*.bak` fajlove (Apache ih čita kao konfiguraciju).
-- Globalno **`ServerName`** u `/etc/apache2/apache2.conf` uklanja upozorenje o FQDN.
+- **Ne** ponovo `a2ensite 000-default` / `default-ssl` dok je hostname dropleta vezan za marketing domen.
+- Globalno **`ServerName`** u `/etc/apache2/apache2.conf` uklanja upozorenje o FQDN (poželjno nešto što nije javni marketing host).

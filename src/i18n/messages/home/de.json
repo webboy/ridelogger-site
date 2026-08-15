@@ -16,6 +16,7 @@
         "eyebrow": "Wartung & Kosten",
         "headline": "Deine Fahrzeughistorie – endlich gebündelt.",
         "sub": "Erfasse Service, Kraftstoff und Ausgaben mit Erinnerungen, die teure Überraschungen vermeiden helfen.",
+        "definition": "RideLogger ist ein digitales Serviceheft für Servicehistorie, Kraftstoff, Kosten und Erinnerungen, für ein oder mehrere Fahrzeuge, im Browser und am Handy. Auf dem Balkan heißt dasselbe Produkt Servisna Knjižica.",
         "primaryCta": "Web-App öffnen",
         "secondaryCta": "So funktioniert’s",
         "placeholderTitle": "Hero-Grafik",
@@ -139,6 +140,7 @@
         "googlePlayBadgeAlt": "Jetzt bei Google Play",
         "sellingCarsTitle": "Fahrzeug verkaufen?",
         "sellingPrivateLabel": "Privatverkauf",
-        "sellingDealersLabel": "Händler & Plätze"
+        "sellingDealersLabel": "Händler & Plätze",
+        "geoIntentLabel": "Digitales Serviceheft"
     }
 }

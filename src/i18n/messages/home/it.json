@@ -20,7 +20,8 @@
         "secondaryCta": "Come funziona",
         "placeholderTitle": "Visual hero",
         "placeholderBody": "Risorsa in sospeso: aggiungi un'immagine hero generata per la home in media/generated/ (workflow immagini task 0021), poi integrala qui.",
-        "imageAlt": "Illustrazione prodotto: dashboard desktop e app mobile per veicoli, spese e promemoria di manutenzione."
+        "imageAlt": "Illustrazione prodotto: dashboard desktop e app mobile per veicoli, spese e promemoria di manutenzione.",
+        "definition": "RideLogger è un libretto di manutenzione digitale per storico interventi, carburante, spese e promemoria — per uno o più veicoli, su web e telefono. Nei Balcani lo stesso prodotto si chiama Servisna Knjižica."
     },
     "trust": {
         "title": "Pensato per la chiarezza",
@@ -139,6 +140,7 @@
         "googlePlayBadgeAlt": "Disponibile su Google Play",
         "sellingCarsTitle": "Stai vendendo un veicolo?",
         "sellingPrivateLabel": "Privati",
-        "sellingDealersLabel": "Dealer e professionisti"
+        "sellingDealersLabel": "Dealer e professionisti",
+        "geoIntentLabel": "Libretto di manutenzione digitale"
     }
 }
