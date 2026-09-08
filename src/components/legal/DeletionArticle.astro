@@ -1,0 +1,13 @@
+---
+import type { LegalBundle } from '../../i18n/loadLegal';
+import { renderDeletionArticleHtml, type DeletionKind } from '../../utils/renderDeletionArticleHtml';
+
+interface Props {
+	legal: LegalBundle;
+	kind: DeletionKind;
+}
+
+const { legal, kind } = Astro.props;
+---
+
+<div set:html={renderDeletionArticleHtml(legal, kind)} />

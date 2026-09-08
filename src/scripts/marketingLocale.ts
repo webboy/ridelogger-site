@@ -10,6 +10,7 @@ import type { HomeMessages } from '../types/home';
 import type { LegalBundle } from '../i18n/loadLegal';
 import type { DeployInstance } from '../config/countries';
 import { renderCookieArticleHtml } from '../utils/renderCookieArticleHtml';
+import { renderDeletionArticleHtml } from '../utils/renderDeletionArticleHtml';
 import { renderPrivacyArticleHtml } from '../utils/renderPrivacyArticleHtml';
 import { renderTosArticleHtml } from '../utils/renderTosArticleHtml';
 import { googlePlayBadgeImageSrc } from '../utils/googlePlayBadge';
@@ -25,7 +26,7 @@ export type MarketingLocaleInit = {
 	storageInstance: DeployInstance;
 	/** When true, do not overwrite document title / meta description from home messages (e.g. campaign landings). */
 	lockDocumentSeo?: boolean;
-	legalPage?: 'privacy' | 'cookies' | 'tos';
+	legalPage?: 'privacy' | 'cookies' | 'tos' | 'account-deletion' | 'data-deletion';
 	legals?: Record<Locale, LegalBundle>;
 	privacyUrl?: string;
 };
@@ -104,6 +105,10 @@ function replaceLegalArticle(init: MarketingLocaleInit, loc: Locale) {
 	} else if (init.legalPage === 'tos') {
 		const privacyUrl = init.privacyUrl ?? '';
 		article.outerHTML = renderTosArticleHtml(bundle, privacyUrl);
+	} else if (init.legalPage === 'account-deletion') {
+		article.outerHTML = renderDeletionArticleHtml(bundle, 'account');
+	} else if (init.legalPage === 'data-deletion') {
+		article.outerHTML = renderDeletionArticleHtml(bundle, 'data');
 	} else {
 		const privacyUrl = init.privacyUrl ?? '';
 		article.outerHTML = renderCookieArticleHtml(bundle, privacyUrl);
@@ -186,6 +191,12 @@ export function initMarketingLocale(init: MarketingLocaleInit): void {
 				} else if (init.legalPage === 'tos') {
 					document.title = leg.tos.meta_title;
 					setMetaDescription(leg.tos.meta_description);
+				} else if (init.legalPage === 'account-deletion') {
+					document.title = leg.account_deletion.meta_title;
+					setMetaDescription(leg.account_deletion.meta_description);
+				} else if (init.legalPage === 'data-deletion') {
+					document.title = leg.data_deletion.meta_title;
+					setMetaDescription(leg.data_deletion.meta_description);
 				} else {
 					document.title = leg.cookie_policy.meta_title;
 					setMetaDescription(leg.cookie_policy.meta_description);

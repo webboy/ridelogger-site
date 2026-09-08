@@ -12,11 +12,11 @@
     },
     "privacy_v2": {
         "meta_title": "Politika privatnosti",
-        "meta_description": "Politika privatnosti za Servisna Knjižica: rukovalac Green Line Trading LTD, kategorije podataka, pravni osnovi, prava korisnika i kontakt.",
-        "updated_line": "Poslednje ažuriranje: 2026-04-21 · Verzija 2.3",
+        "meta_description": "Politika privatnosti za RideLogger (poznat i kao Servisna Knjižica): rukovalac Green Line Trading LTD, kategorije podataka, pravni osnovi, prava korisnika i kontakt.",
+        "updated_line": "Poslednje ažuriranje: 2026-09-06 · Verzija 2.5",
         "h1": "Politika privatnosti",
         "s1_title": "1) Ko je rukovalac podacima",
-        "s1_intro": "Rukovalac podataka i vlasnik projekta Servisna Knjižica je:",
+        "s1_intro": "Rukovalac podataka i vlasnik RideLogger (poznat i kao Servisna Knjižica) je:",
         "s1_li_company": "<strong>Naziv pravnog lica:</strong> Green Line Trading LTD",
         "s1_li_address": "<strong>Adresa sedišta:</strong> 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ, United Kingdom",
         "s1_li_phone": "<strong>Kontakt telefon:</strong> +44 203 961 0066",
@@ -27,7 +27,7 @@
         "s1_li_dpo": "<strong>DPO:</strong> Nemanja Milenković",
         "s1_li_dpo_email": "<strong>E-mail DPO:</strong> <a href=\"mailto:nemanjam@greenlinetrading.co.uk\">nemanjam@greenlinetrading.co.uk</a>",
         "s2_title": "2) Na koga se politika odnosi",
-        "s2_body": "Ova politika se odnosi na obradu podataka korisnika web i mobilne aplikacije Servisna Knjižica, kao i posetilaca sajta.",
+        "s2_body": "Ova politika se odnosi na obradu podataka korisnika web i mobilne aplikacije RideLogger / Servisna Knjižica, kao i posetilaca sajta.",
         "s3_title": "3) Koje podatke prikupljamo",
         "s3_intro": "U zavisnosti od načina korišćenja usluge, možemo obrađivati sledeće kategorije podataka:",
         "s3_cat1_title": "Podaci naloga",
@@ -106,7 +106,9 @@
         "s13_li_address": "<strong>Adresa:</strong> 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ, United Kingdom",
         "s13_li_phone": "<strong>Telefon:</strong> +44 203 961 0066",
         "s13_li_website": "<strong>Website:</strong> <a href=\"https://www.greenlinetrading.co.uk/\" target=\"_blank\" rel=\"noopener noreferrer\">https://www.greenlinetrading.co.uk/</a>",
-        "s13_li_email": "<strong>E-mail:</strong> <a href=\"mailto:nemanjam@greenlinetrading.co.uk\">nemanjam@greenlinetrading.co.uk</a>"
+        "s13_li_email": "<strong>E-mail:</strong> <a href=\"mailto:nemanjam@greenlinetrading.co.uk\">nemanjam@greenlinetrading.co.uk</a>",
+        "s10_deletion_title": "Brisanje naloga i podataka (RideLogger / Servisna Knjižica)",
+        "s10_deletion_body": "Da obrišeš RideLogger ili Servisna Knjižica nalog i povezane lične podatke, pošalji mejl sa registrovane adrese na nemanjam@greenlinetrading.co.uk sa naslovom „Delete RideLogger / Servisna Knjižica account“. Rukovalac: Green Line Trading LTD."
     },
     "cookie_policy": {
         "meta_title": "Politika kolačića — Servisna Knjižica",
@@ -155,5 +157,35 @@
         "updated_line": "Poslednje ažuriranje: 2026-04-24 · Verzija 1.0",
         "h1": "Uslovi korišćenja",
         "content_html": "<p><strong>RideLogger</strong> (poznat kao <strong>Servisna Knjižica</strong> na tržištima Balkana) je digitalna servisna knjižica za beleženje točenja goriva, servisa, troškova, punjenja EV vozila i podsetnika za održavanje. Ovi Uslovi čine obavezujući sporazum između tebe i kompanije <strong>Green Line Trading LTD</strong>, koja upravlja servisom.</p>\n<h2>1. O nama</h2>\n<ul>\n<li><strong>Pravno lice:</strong> Green Line Trading LTD</li>\n<li><strong>Matični broj (UK):</strong> 13072235 (<a href=\"https://find-and-update.company-information.service.gov.uk/company/13072235\" target=\"_blank\" rel=\"noopener noreferrer\">Companies House</a>)</li>\n<li><strong>Sedište:</strong> 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ, United Kingdom</li>\n<li><strong>Kontakt:</strong> <a href=\"mailto:nemanjam@greenlinetrading.co.uk\">nemanjam@greenlinetrading.co.uk</a></li>\n</ul>\n<h2>2. Prihvatanje ovih Uslova</h2>\n<p>Kreiranjem naloga ili korišćenjem servisa potvrđuješ da imaš najmanje 16 godina, da si pročitao/la ove Uslove i da si saglasan/na sa njima. Ako se ne slažeš, molimo te da ne koristiš servis.</p>\n<h2>3. O servisu</h2>\n<p>RideLogger omogućava da beležiš gorivo, servise, troškove, punjenja EV vozila i podsetnike za vozila koja poseduješ ili kojima upravljaš. Podaci su podrazumevano privatni za tvoj nalog. Servis se nudi kao web aplikacija i kao mobilne aplikacije (iOS i Android).</p>\n<h2>4. Tvoj nalog</h2>\n<ul>\n<li>Odgovoran/na si za čuvanje svojih pristupnih podataka i za sve što se dešava pod tvojim nalogom.</li>\n<li>Pri registraciji unesi tačne podatke.</li>\n<li>Jedan nalog po osobi (ili po pravnom licu za poslovne / dealer naloge).</li>\n<li>Nemoj da deliš nalog sa nepovezanim trećim licima.</li>\n</ul>\n<h2>5. Besplatna verzija i Premium</h2>\n<p>Osnovno korišćenje servisne knjižice je besplatno. Neke funkcije (na primer više priloga po zapisu, prilagođeni podsetnici, proširena istorija, dealer / multi-vehicle alati) deo su <strong>Premium</strong> pretplate.</p>\n<ul>\n<li>Premium se naplaćuje unapred, u ponavljajućim ciklusima, sve dok ga ne otkažeš.</li>\n<li>Premium možeš otkazati u bilo kom trenutku iz podešavanja naloga; pristup traje do isteka tekućeg ciklusa.</li>\n<li>Osim ako primenljivo potrošačko pravo ne nalaže drugačije, pretplata se ne refundira za deo iskorišćenog perioda.</li>\n<li>Cene i funkcije se mogu menjati; materijalne izmene važe za buduće cikluse naplate, ne za ciklus koji si već platio/la.</li>\n</ul>\n<p>Ako si potrošač iz EU ili UK, zadržavaš sva obavezna zakonska prava na otkaz i povraćaj sredstava iz lokalnog propisa o zaštiti potrošača; ovi Uslovi ta prava ne ograničavaju.</p>\n<h2>6. Tvoji podaci, naša uloga</h2>\n<p>Vlasnik si sadržaja koji unosiš u RideLogger (podaci o vozilu, servisni zapisi, beleške, fotografije, prilozi). Mi taj sadržaj samo čuvamo i obrađujemo kako bismo ti pružili servis.</p>\n<p>Možemo da računamo <strong>anonimizovane i agregirane statistike</strong> iz ukupnog korišćenja servisa (na primer: tipičnu potrošnju goriva za dati model) radi unapređenja proizvoda i deljenja opštih uvida. Anonimizovani podaci se ne mogu povezati s tobom.</p>\n<p>Za obradu ličnih podataka pogledaj našu <a href=\":privacy_url\">Politiku privatnosti</a>. Tvoja prava po GDPR-u (i UK-GDPR-u gde je primenljivo) tamo su detaljno opisana.</p>\n<h2>7. AI asistent</h2>\n<p>RideLogger uključuje opcioni <strong>AI asistent</strong>. Kada ga koristiš, tvoje poruke i relevantan kontekst vozila šalju se pružaocu velikog jezičkog modela (trenutno <strong>OpenAI</strong>) radi generisanja odgovora.</p>\n<ul>\n<li>Korišćenjem AI asistenta saglašavaš se sa ovom obradom.</li>\n<li>Integraciju konfigurišemo tako da tvoj sadržaj, u meri u kojoj to uslovi pružaoca dozvoljavaju, nije korišćen za obuku njihovih javnih modela.</li>\n<li>Asistent povremeno može dati netačne ili nepotpune odgovore. Nemoj se oslanjati na njega kod odluka od značaja za bezbednost (npr. da li je vozilo bezbedno za vožnju). Koristi sopstvenu procenu ili se obrati kvalifikovanom mehaničaru.</li>\n<li>Možeš izabrati da ne koristiš AI asistenta i da dalje normalno koristiš ostatak servisa.</li>\n</ul>\n<h2>8. Pružaoci trećih strana</h2>\n<p>Za rad servisa koristimo pouzdane pružaoce za hosting, plaćanja, isporuku e-pošte i AI funkciju. Oni obrađuju podatke samo u meri potrebnoj za svoj deo servisa. Ne prodajemo tvoje lične podatke.</p>\n<h2>9. Prihvatljivo korišćenje</h2>\n<p>Molimo te da RideLogger ne koristiš za:</p>\n<ul>\n<li>postavljanje sadržaja koji je nezakonit, krši prava, podstiče mržnju ili šteti;</li>\n<li>pokušaje narušavanja, preopterećenja, reverznog inženjeringa ili skrejpovanja servisa;</li>\n<li>lažno predstavljanje ili pogrešno prikazivanje podataka o vozilu;</li>\n<li>korišćenje automatizovanih alata na način koji ometa servis drugim korisnicima.</li>\n</ul>\n<h2>10. Brisanje naloga</h2>\n<p>Nalog možeš obrisati u bilo kom trenutku iz aplikacije. Nakon brisanja, lični podaci i sadržaj servisne knjižice uklanjaju se iz aktivnog servisa u razumnom roku, uz kratko zadržavanje u rezervnim kopijama iz sigurnosnih i zakonskih razloga, kako je opisano u Politici privatnosti.</p>\n<h2>11. Obustava i raskid od naše strane</h2>\n<p>Možemo obustaviti ili ukinuti naloge koji značajno krše ove Uslove, zloupotrebljavaju servis ili ugrožavaju druge korisnike. Kada je razumno, prvo ćemo upozoriti i dati priliku za ispravku. Ako si platio/la Premium, a mi raskinemo nalog iz razloga koji nisu tvoje kršenje uslova, refundiraćemo unapred uplaćen, neiskorišćen deo.</p>\n<h2>12. Servis „kakav jeste\"</h2>\n<p>RideLogger gradimo i održavamo pažljivo, ali servis se pruža <strong>„kakav jeste\"</strong>. Ne garantujemo neprekidnu dostupnost, naročito na besplatnoj verziji. Moguća su planirana održavanja, incidenti i prekidi. Ništa u ovim Uslovima ne isključuje odgovornost koja se po primenljivom pravu ne može isključiti, a tvoja zakonska potrošačka prava ostaju netaknuta.</p>\n<h2>13. Ograničenje odgovornosti</h2>\n<p>U najvećoj meri dozvoljenoj zakonom, Green Line Trading LTD ne odgovara za posredne ili posledične štete (poput izgubljene dobiti, izgubljenih podataka preko retencije koju nudimo, ili zastoja vozila). Naša ukupna odgovornost za bilo koji zahtev u vezi sa servisom ograničena je na iznos koji si nam platio/la u 12 meseci pre događaja iz kojeg zahtev proističe, ili 50 EUR — šta god je veće.</p>\n<h2>14. Izmene ovih Uslova</h2>\n<p>Uslove povremeno možemo ažurirati. Menja se datum „poslednje ažuriranje\" na vrhu. Za materijalne izmene obavestićemo te u aplikaciji ili e-poštom unapred. Ako nastaviš da koristiš servis nakon stupanja izmena na snagu, prihvataš ažurirane Uslove.</p>\n<h2>15. Merodavno pravo i sporovi</h2>\n<p>Ovi Uslovi regulisani su zakonima <strong>Engleske i Velsa</strong>, gde je Green Line Trading LTD registrovan. Ako si potrošač iz EU ili UK, zadržavaš zaštitu obaveznih odredbi prava zemlje u kojoj boraviš i možeš pokrenuti postupak i tamo. Za korisnike koji nisu potrošači, isključivo su nadležni sudovi Engleske i Velsa.</p>\n<h2>16. Kontakt</h2>\n<p>Pitanja u vezi sa ovim Uslovima? Piši nam na <a href=\"mailto:nemanjam@greenlinetrading.co.uk\">nemanjam@greenlinetrading.co.uk</a>.</p>"
+    },
+    "account_deletion": {
+        "meta_title": "Obriši RideLogger nalog (Servisna Knjižica)",
+        "meta_description": "Kako obrisati RideLogger / Servisna Knjižica nalog. Rukovalac: Green Line Trading LTD.",
+        "updated_line": "Poslednje ažuriranje: 2026-09-06",
+        "h1": "Obriši RideLogger nalog",
+        "intro": "RideLogger je Google Play i međunarodno ime ove aplikacije. Na Balkanu se ista aplikacija objavljuje kao Servisna Knjižica. Oba imena su isti proizvod, rukovalac je Green Line Trading LTD (UK broj kompanije 13072235).",
+        "how_title": "Kako zatražiti brisanje naloga",
+        "how_intro": "Brisanje RideLogger / Servisna Knjižica naloga možeš zatražiti u bilo kom trenutku:",
+        "li1": "Pošalji mejl sa adrese registrovane na nalogu na nemanjam@greenlinetrading.co.uk",
+        "li2": "Naslov: Delete RideLogger / Servisna Knjižica account",
+        "li3": "Navedi email adresu RideLogger / Servisna Knjižica naloga",
+        "timing_title": "Šta sledi",
+        "timing": "Nakon provere, lične podatke i sadržaj servisne knjižice uklanjamo iz aktivnog RideLogger / Servisna Knjižica servisa u razumnom roku, obično u roku od 30 dana. Rezervne kopije mogu ostati do 90 dana iz sigurnosnih i zakonskih razloga, zatim se brišu ili anonimizuju, osim ako zakon ne zahteva duže.",
+        "operator": "Rukovalac: Green Line Trading LTD, 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ, United Kingdom."
+    },
+    "data_deletion": {
+        "meta_title": "Obriši RideLogger lične podatke (Servisna Knjižica)",
+        "meta_description": "Kako zatražiti brisanje ličnih podataka u RideLogger / Servisna Knjižica. Rukovalac: Green Line Trading LTD.",
+        "updated_line": "Poslednje ažuriranje: 2026-09-06",
+        "h1": "Zahtev za brisanje RideLogger ličnih podataka",
+        "intro": "Ova stranica objašnjava kako zatražiti brisanje ličnih podataka koje obrađuje RideLogger, poznat i kao Servisna Knjižica. Rukovalac je Green Line Trading LTD (UK broj kompanije 13072235).",
+        "how_title": "Kako zatražiti brisanje podataka",
+        "how_intro": "Brisanje ličnih podataka vezanih za RideLogger / Servisna Knjižica nalog možeš zatražiti u bilo kom trenutku:",
+        "li1": "Pošalji mejl na nemanjam@greenlinetrading.co.uk sa registrovane adrese",
+        "li2": "Naslov: Delete RideLogger / Servisna Knjižica personal data",
+        "li3": "Navedi koje RideLogger / Servisna Knjižica podatke želiš obrisati (nalog, vozila, zapisi, fajlovi)",
+        "timing_title": "Šta sledi",
+        "timing": "Provereni zahtevi za brisanje RideLogger / Servisna Knjižica podataka izvršavaju se u razumnom roku, obično u roku od 30 dana. Pojedini zapisi ostaju ako to zakon zahteva. Rezervne kopije se uklanjaju ili anonimizuju u roku od 90 dana.",
+        "operator": "Rukovalac: Green Line Trading LTD, 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ, United Kingdom."
     }
 }

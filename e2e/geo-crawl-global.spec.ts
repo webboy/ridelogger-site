@@ -110,4 +110,37 @@ test.describe('GEO crawl artifacts (global)', () => {
 			true,
 		);
 	});
+
+	test('/us/account-deletion/ names RideLogger, Servisna Knjižica and Green Line Trading LTD', async ({
+		request,
+	}) => {
+		const res = await request.get('/us/account-deletion/');
+		expect(res.status()).toBe(200);
+		const html = await res.text();
+		expect(html).toContain('RideLogger');
+		expect(html).toContain('Servisna Knjižica');
+		expect(html).toContain('Green Line Trading LTD');
+		const links = hreflangLinks(html);
+		expect(
+			links.some((l) => l.hreflang === 'sr-Latn' && l.href === `${SK_ORIGIN}/sr/account-deletion/`),
+		).toBe(true);
+	});
+
+	test('/us/data-deletion/ names RideLogger, Servisna Knjižica and Green Line Trading LTD', async ({
+		request,
+	}) => {
+		const res = await request.get('/us/data-deletion/');
+		expect(res.status()).toBe(200);
+		const html = await res.text();
+		expect(html).toContain('RideLogger');
+		expect(html).toContain('Servisna Knjižica');
+		expect(html).toContain('Green Line Trading LTD');
+	});
+
+	test('sitemap lists Play deletion URLs', async ({ request }) => {
+		const res = await request.get('/sitemap.xml');
+		const body = await res.text();
+		expect(body).toContain(`${RL_ORIGIN}/us/account-deletion/`);
+		expect(body).toContain(`${RL_ORIGIN}/us/data-deletion/`);
+	});
 });

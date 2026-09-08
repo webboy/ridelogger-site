@@ -160,6 +160,8 @@ export function renderPrivacyArticleHtml(legal: LegalBundle): string {
 	</ul>
 	<p>${raw(p.s10_request)}</p>
 	<p>${esc(p.s10_complaint)}</p>
+	<h2>${esc(p.s10_deletion_title)}</h2>
+	<p>${esc(p.s10_deletion_body)}</p>
 
 	<h2>${esc(p.s11_title)}</h2>
 	<p>${esc(p.s11_body)}</p>

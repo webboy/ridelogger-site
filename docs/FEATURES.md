@@ -1,6 +1,6 @@
 # Features — ridelogger-site
 
-**Last verified:** 2026-08-15
+**Last verified:** 2026-09-06
 
 > Ecosystem-level documentation: `~/sk/memory/docs/`.
 > Deployment: [`docs/DEPLOY_PRODUCTION.md`](./DEPLOY_PRODUCTION.md) (authoritative). Technical architecture: [`docs/ARCHITECTURE.md`](./ARCHITECTURE.md).
@@ -11,7 +11,7 @@
 |---|---|---|---|
 | 1 | Country picker | `/` | both |
 | 2 | Localized country homepages | `/{country}/` | both |
-| 3 | Legal pages | `/{country}/privacy/`, `/terms/`, `/cookies/` | both |
+| 3 | Legal pages | `/{country}/privacy/`, `/terms/`, `/cookies/`, `/account-deletion/`, `/data-deletion/` | both |
 | 4 | MCP info page | `/{country}/mcp/` | both |
 | 5 | Campaign landings — global (RL) | `/{country}/private-sellers/`, `/auto-dealers/`, `/auto-dealers/managed/` | global |
 | 6 | Campaign landings — balkan (SK) | `/{country}/prodaja-auta/`, `/auto-placevi/`, `/auto-placevi/managed/` | balkan |
@@ -35,11 +35,18 @@ Instance-aware landing page. Two country groups rendered over a Europe-map panel
 
 One statically generated homepage per country of the current instance, rendered in the country's `defaultLocale` (`src/config/countries.ts`). Sections: hero with app CTA, trust strip, problem/solution, how-it-works, features grid, app screenshot showcase, security, testimonials, closing CTA. Visitors can switch among all 12 locales client-side (`HomeLocaleScript` → `src/scripts/marketingLocale.ts`); the choice persists per country + instance in `localStorage` and can be preset via `?lang=`. The visible brand name follows the selected *language* (`brandName()`): Balkan languages show "Servisna Knjižica", others show "RideLogger". Footer shows discovery links to the instance's campaign landings when the locale copy defines `footer.sellingCarsTitle` etc. (`SiteFooter.astro`).
 
-## 3. Legal pages (privacy / terms / cookies)
+## 3. Legal pages (privacy / terms / cookies / deletion)
 
-- **Routes:** `/{country}/privacy/`, `/{country}/terms/`, `/{country}/cookies/` — **Source:** `src/pages/[country]/{privacy,terms,cookies}.astro`, `src/components/legal/*.astro`, `src/utils/render{Privacy,Tos,Cookie}ArticleHtml.ts`, `src/utils/legalReplace.ts`, `src/data/legal/*.json`
+- **Routes:** `/{country}/privacy/`, `/{country}/terms/`, `/{country}/cookies/`, `/{country}/account-deletion/`, `/{country}/data-deletion/` — **Source:** `src/pages/[country]/{privacy,terms,cookies,account-deletion,data-deletion}.astro`, `src/components/legal/*.astro`, `src/utils/render{Privacy,Tos,Cookie,Deletion}ArticleHtml.ts`, `src/utils/legalReplace.ts`, `src/data/legal/*.json`
 
-Per-locale legal content stored as JSON bundles (`privacy_v2`, `tos`, `cookie_policy` keys) and rendered to HTML by shared renderer functions used both at build time and by the client-side language switcher (switching language swaps the entire article plus title/meta without navigation). `:privacy_url` placeholders in ToS/cookie copy (a legacy Laravel convention) are replaced with the country's canonical privacy URL. Every country of the instance gets all three pages.
+Per-locale legal content stored as JSON bundles (`privacy_v2`, `tos`, `cookie_policy`, `account_deletion`, `data_deletion` keys) and rendered to HTML by shared renderer functions used both at build time and by the client-side language switcher (switching language swaps the entire article plus title/meta without navigation). `:privacy_url` placeholders in ToS/cookie copy (a legacy Laravel convention) are replaced with the country's canonical privacy URL. Every country of the instance gets all five pages.
+
+**Play Data safety (task 0091):** Google requires the account-deletion and data-deletion URLs to name the Play listing entity. Canonical Console URLs:
+
+- `https://www.ridelogger.com/us/account-deletion/`
+- `https://www.ridelogger.com/us/data-deletion/`
+
+Copy on those pages (and privacy intros) always includes **RideLogger**, **Servisna Knjižica**, and **Green Line Trading LTD**. Deletion is requested by email from the registered address.
 
 ## 4. MCP info page
 

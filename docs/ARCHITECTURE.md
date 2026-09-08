@@ -1,6 +1,6 @@
 # Architecture — ridelogger-site
 
-**Last verified:** 2026-08-15
+**Last verified:** 2026-09-06
 
 > Ecosystem-level documentation: `~/sk/memory/docs/`.
 > Deployment is documented authoritatively in [`docs/DEPLOY_PRODUCTION.md`](./DEPLOY_PRODUCTION.md) — this file does not duplicate it.
@@ -37,7 +37,7 @@
 | `src/i18n/` | Locale registry (`config.ts`), message loaders, campaign/MCP copy |
 | `src/i18n/messages/home/` | Homepage copy, one JSON per locale (12 files) |
 | `src/i18n/messages/autoSeller/` | Campaign landing copy, one JSON per brand×locale×segment (21 files) |
-| `src/data/legal/` | Legal content (privacy, ToS, cookie policy, cookie banner) — one JSON per locale |
+| `src/data/legal/` | Legal content (privacy, ToS, cookie policy, account/data deletion, cookie banner) — one JSON per locale |
 | `src/components/` | Header, footer, language switcher, cookie banner, home/campaign/legal/MCP sections |
 | `src/layouts/SiteLayout.astro` | Shared page shell (head/meta/canonical, header, footer, cookie banner, locale script) |
 | `src/scripts/marketingLocale.ts` | Client-side locale switching engine (bundled, not inline) |

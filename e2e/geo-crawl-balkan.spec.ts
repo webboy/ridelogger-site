@@ -86,4 +86,28 @@ test.describe('GEO crawl artifacts (balkan)', () => {
 		) as { sameAs: string[] } | undefined;
 		expect(withSameAs?.sameAs).toEqual(expect.arrayContaining([RL_ORIGIN, SK_ORIGIN]));
 	});
+
+	test('/sr/account-deletion/ names RideLogger and Servisna Knjižica', async ({ request }) => {
+		const res = await request.get('/sr/account-deletion/');
+		expect(res.status()).toBe(200);
+		const html = await res.text();
+		expect(html).toContain('RideLogger');
+		expect(html).toContain('Servisna Knjižica');
+		expect(html).toContain('Green Line Trading LTD');
+	});
+
+	test('/sr/privacy/ names both brands', async ({ request }) => {
+		const res = await request.get('/sr/privacy/');
+		expect(res.status()).toBe(200);
+		const html = await res.text();
+		expect(html).toContain('RideLogger');
+		expect(html).toContain('Servisna Knjižica');
+	});
+
+	test('sitemap lists Play deletion URLs', async ({ request }) => {
+		const res = await request.get('/sitemap.xml');
+		const body = await res.text();
+		expect(body).toContain(`${SK_ORIGIN}/sr/account-deletion/`);
+		expect(body).toContain(`${SK_ORIGIN}/sr/data-deletion/`);
+	});
 });

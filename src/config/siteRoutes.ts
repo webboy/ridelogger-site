@@ -19,6 +19,8 @@ export type RouteFamily =
 	| 'privacy'
 	| 'terms'
 	| 'cookies'
+	| 'account-deletion'
+	| 'data-deletion'
 	| 'mcp'
 	| 'campaign-private'
 	| 'campaign-dealers'
@@ -26,7 +28,14 @@ export type RouteFamily =
 	| 'geo-service-logbook';
 
 /** Shared legal / MCP slugs (same on both instances). */
-export const SHARED_PATH_SUFFIXES = ['privacy', 'terms', 'cookies', 'mcp'] as const;
+export const SHARED_PATH_SUFFIXES = [
+	'privacy',
+	'terms',
+	'cookies',
+	'account-deletion',
+	'data-deletion',
+	'mcp',
+] as const;
 
 export type SharedPathSuffix = (typeof SHARED_PATH_SUFFIXES)[number];
 
@@ -120,6 +129,8 @@ export function pathSuffixToFamily(pathSuffix: string): RouteFamily {
 	if (pathSuffix === 'privacy') return 'privacy';
 	if (pathSuffix === 'terms') return 'terms';
 	if (pathSuffix === 'cookies') return 'cookies';
+	if (pathSuffix === 'account-deletion') return 'account-deletion';
+	if (pathSuffix === 'data-deletion') return 'data-deletion';
 	if (pathSuffix === 'mcp') return 'mcp';
 
 	for (const family of CAMPAIGN_FAMILIES) {
@@ -147,6 +158,8 @@ export function pathSuffixForCountry(countryPath: string, family: RouteFamily): 
 		case 'privacy':
 		case 'terms':
 		case 'cookies':
+		case 'account-deletion':
+		case 'data-deletion':
 		case 'mcp':
 			return family;
 		case 'campaign-private':
@@ -190,6 +203,8 @@ export function sitePagesForInstance(instance: DeployInstance): SitePageRef[] {
 		'privacy',
 		'terms',
 		'cookies',
+		'account-deletion',
+		'data-deletion',
 		'mcp',
 		'campaign-private',
 		'campaign-dealers',
